@@ -1,12 +1,50 @@
 @import '../../sass/_vars'
+@import '../../sass/_mixins/_media'
 
 .top-bar
-    background: $white
-    color: $muted
+    height: 95px
+    color: $muted-light
+    +respond-to(phone-land)
+        height: 50px
+        display: flex
+        align-content: center
 
-    a
-        text-decoration: none
-        color: red
-
-    .top-bar__action
+    &__compare,
+    &__favorite
         color: $muted-light
+
+    &__phone
+        color: $black
+
+    &__email
+        color: $muted-light
+
+    &__logo
+        +respond-to(phone-land)
+            display: flex
+            max-width: 90px
+
+
+.site-header__nav
+    padding: 90px 0 40px 0
+    font-weight: 500
+    +respond-to(tablet)
+        padding: 0
+
+    &_square
+        height: 5px
+        width: 5px
+        color: $primary
+        display: none
+
+    .nav-item
+        margin-right: 8px
+
+    .nav-link
+        color: $muted
+
+        &:hover
+            color: $primary
+
+        &:hover > .site-haeder__nav_square
+            display: block

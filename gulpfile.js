@@ -36,7 +36,7 @@ function concatCSSLibs() {
     return src(
         [
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
-            './node_modules/@fortawesome/fontawesome-free/css/all.css',
+            './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
         ],
         { allowEmpty: true }
     )
@@ -46,7 +46,7 @@ function concatCSSLibs() {
 }
 
 function compileSASS() {
-    return src(['./src/sass/**/*.sass', './src/components/**/*.sass', 'src/*.sass'])
+    return src(['./src/sass/**/*.sass'])
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({ cascade: false }))
@@ -109,7 +109,7 @@ function serve() {
 
 function watchALL() {
     watch('src/sass/**/*.sass', compileSASS);
-    watch('src/*.sass', compileSASS);
+    // watch('src/*.sass', compileSASS);
     watch('src/components/**/*.sass', compileSASS);
     watch('src/ts/**/*.ts', transpileTS);
     watch('src/**/**/*.html', compileHtml);

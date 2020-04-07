@@ -1,0 +1,45 @@
+@import '../vars'
+
+// Media queries
+@mixin respond-to($media, $rule: 'max')
+	@if $media == phone
+		@media only screen and (max-width: $small - 1)
+			@content
+
+	@else if $media == phone-land
+		@media only screen and (max-width: $medium - 1)
+			@content
+
+	@else if $media == tablet
+		@media only screen and (max-width: $large - 1)
+			@content
+
+	@else if $media == laptop
+		@media only screen and (max-width: $xlarge - 1)
+			@content
+
+	@else
+		@media only screen and (#{$rule}-width: $media)
+			@content
+
+
+// @mixin respond-to($media, $rule: 'max', $dpi: '220dpi')
+// 	@if $media == phone
+// 		@media only screen and (max-width: $small - 1) and (max-resolution: $dpi)
+// 			@content
+//
+// 	@else if $media == phone-land
+// 		@media only screen and (max-width: $medium - 1) and (max-resolution: $dpi)
+// 			@content
+//
+// 	@else if $media == tablet
+// 		@media only screen and (max-width: $large - 1) and (max-resolution: $dpi)
+// 			@content
+//
+// 	@else if $media == laptop
+// 		@media only screen and (max-width: $xlarge - 1) and (max-resolution: $dpi)
+// 			@content
+//
+// 	@else
+// 		@media only screen and (#{$rule}-width: $media) and (max-resolution: $dpi)
+// 			@content

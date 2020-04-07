@@ -46,7 +46,7 @@ function concatCSSLibs() {
 }
 
 function compileSASS() {
-    return src(['./src/sass/**/*.sass', './src/components/**/*.sass'])
+    return src(['./src/sass/**/*.sass', './src/components/**/*.sass', 'src/*.sass'])
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({ cascade: false }))
@@ -109,9 +109,11 @@ function serve() {
 
 function watchALL() {
     watch('src/sass/**/*.sass', compileSASS);
+    watch('src/*.sass', compileSASS);
     watch('src/components/**/*.sass', compileSASS);
     watch('src/ts/**/*.ts', transpileTS);
-    watch('src/**/*.html', compileHtml);
+    watch('src/**/**/*.html', compileHtml);
+    watch('src/*.html', compileHtml);
 }
 
 function clearDist() {

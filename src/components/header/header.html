@@ -27,7 +27,7 @@
             <div class="top-bar bg-white position-fixed w-100 p-0 py-md-3 py-lg-4">
                 <div class="container">
                     <div class="row w-100 justify-content-between">
-                        <div class="d-flex mr-xl-5 mr-4">
+                        <div>
                             <a href="/" class="pl-3 top-bar__logo">
                                 <!-- <img src="src/img/logo/logo-sm.png" alt="Главная – Pro Стеллаж"
                                         class="top-bar__logo img-fluid" title="Главная – Pro Стеллаж" /> -->
@@ -87,18 +87,13 @@
 
                         <div class="d-flex justify-content-between position-relative  top-bar__search_area">
 
-                            <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-location">
-                                <div>
-                                    <div>Санкт-Петербург,</div>
-                                    <div> ул. Зайцева, 41</div>
-                                </div>
-
+                            <div class="d-none text-muted d-lg-block mr-xl-5 mr-3 top-bar__work-location">
+                                <div>Санкт-Петербург,</div>
+                                <div> ул. Зайцева, 41</div>
                             </div>
-                            <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-time">
-                                <div>
-                                    <div>Пн-Пт 10.00–19.00</div>
-                                    <div>Сб-Вс 11.00-18.00</div>
-                                </div>
+                            <div class="d-none text-muted d-lg-block mr-xl-5 mr-3 top-bar__work-time">
+                                <div>Пн-Пт 10.00–19.00</div>
+                                <div>Сб-Вс 11.00-18.00</div>
                             </div>
 
                             <div class="mr-xl-5 mr-3 d-none d-md-block top-bar__contact">
@@ -114,33 +109,33 @@
                             </div>
 
                             <div
-                                class="top-bar__action d-none ml-lx-5 ml-3 d-md-flex text-decoration-none align-items-center justify-content-lx-between">
+                                class="top-bar__action d-none ml-lx-5 ml-5 d-md-flex text-decoration-none align-items-center justify-content-lx-between">
                                 <a href="favorites.html" class="mr-xl-5 mr-3 text-decoration-none top-bar__favorite"
                                     id="msFavoriter">
                                     <i class="fas fa-heart"></i>
                                     <span>Избранное</span>
                                 </a>
 
-                                <a href="sravnenie-tovarov.html"
-                                    class="mr-xl-5 mr-3 text-decoration-none top-bar__compare" id="msCompare">
+                                <a href="sravnenie-tovarov.html" class="mr-3 text-decoration-none top-bar__compare"
+                                    id="msCompare">
                                     <i class="fas fa-list-ul"></i>
                                     <span>Сравнение</span>
                                 </a>
                             </div>
 
 
-                            <div class="mr-xl-5 mr-3 d-flex align-items-center">
-                                <i class="fas fa-search top-bar__search-btn"></i>
-                            </div>
+                            <button class="pl-4 top-bar__search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
 
-                            <form action="/"
-                                class="position-absolute d-flex align-items-center justify-content-between top-bar__search-box_hidden">
+                            <form action="/" id="searchForm"
+                                class="position-absolute align-items-center bg-white justify-content-between top-bar__search-box_hidden">
                                 <button class="p-0" type="submit">
                                     <i class="fas fa-search pr-2"></i>
                                 </button>
                                 <input class="search-box w-100" type="text" name="search"
                                     placeholder="Поиск товаров на сайте">
-                                <button class="p-0" type="button">
+                                <button class="p-0 search-box__close" type="button">
                                     <i class="fas fa-times pl-2"></i>
                                 </button>
                             </form>

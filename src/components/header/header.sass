@@ -10,33 +10,44 @@
         align-content: center
 
     &__compare,
-    &__favorite
+    &__favorite,
+    &__email
         color: $muted-light
+        transition: $transition
+
+        &:hover
+            color: $muted-light
+
+        &:hover i
+            color: $primary
 
     &__phone
         color: $black
-
-    &__email
-        color: $muted-light
 
     &__logo
         +respond-to(phone-land)
             display: flex
             max-width: 90px
 
-    &__search-btn:hover
-        color: $primary
-        cursor: pointer
+    &__search-btn
+        color: $muted-light
+
+        &:hover
+            color: $primary
+            cursor: pointer
+
+    button,
+    input
+        border: none
+        outline: none
+        background: none
 
     &__search-box_hidden
         z-index: 999
-        background: #fff
-        padding: 15px
+        padding: 13px 15px
         box-shadow: 0px 6px 20px -13px rgba(3,3,3,.1)
-        width: 100%
-
-        button
-            border: none
+        display: none
+        transition: display $transition
 
         i
             font-size: 18px
@@ -50,8 +61,8 @@
             font-size: 20px
             color: $muted-light
 
-        .search-box
-            border: none
+            &:hover
+                color: $primary
 
 
 .site-header__nav
@@ -63,21 +74,23 @@
     &_square
         transition: $transition
         font-size: 6px
-        color: $primary
         opacity: 0
 
     &-item
         margin-right: 8px
+        color: $primary
+        transition: $transition
 
         &:hover .site-header__nav_square
             opacity: 1
+
+        &:hover .site-header__nav-link
+            color: $primary
 
     &-link
         color: $muted
         transition: $transition
 
-        &:hover
-            color: $primary
 
     
     

@@ -85,114 +85,131 @@
                             </a>
                         </div>
 
-                        <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-location">
-                            <div>
-                                <div>Санкт-Петербург,</div>
-                                <div> ул. Зайцева, 41</div>
+                        <div class="d-flex justify-content-between position-relative  top-bar__search_area">
+
+                            <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-location">
+                                <div>
+                                    <div>Санкт-Петербург,</div>
+                                    <div> ул. Зайцева, 41</div>
+                                </div>
+
+                            </div>
+                            <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-time">
+                                <div>
+                                    <div>Пн-Пт 10.00–19.00</div>
+                                    <div>Сб-Вс 11.00-18.00</div>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="d-none d-lg-block mr-xl-5 mr-3 top-bar__work-time">
-                            <div>
-                                <div>Пн-Пт 10.00–19.00</div>
-                                <div>Сб-Вс 11.00-18.00</div>
+                            <div class="mr-xl-5 mr-3 d-none d-md-block top-bar__contact">
+                                <div>
+                                    <a href="tel:+78125650359"
+                                        class="top-bar__phone font-weight-bold text-decoration-none d-block ya-phone">
+                                        8 (812)565 03 59
+                                    </a>
+                                    <a href="#" class="top-bar__email text-decoration-none">
+                                        <span>info@stillage.pro</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="mr-xl-5 mr-3 d-none d-md-block top-bar__contact">
-                            <div>
-                                <a href="tel:+78125650359"
-                                    class="top-bar__phone font-weight-bold text-decoration-none d-block ya-phone">
-                                    8 (812)565 03 59
+                            <div
+                                class="top-bar__action d-none ml-lx-5 ml-3 d-md-flex text-decoration-none align-items-center justify-content-lx-between">
+                                <a href="favorites.html" class="mr-xl-5 mr-3 text-decoration-none top-bar__favorite"
+                                    id="msFavoriter">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Избранное</span>
                                 </a>
-                                <a href="#" class="top-bar__email text-decoration-none">
-                                    <span>info@stillage.pro</span>
+
+                                <a href="sravnenie-tovarov.html"
+                                    class="mr-xl-5 mr-3 text-decoration-none top-bar__compare" id="msCompare">
+                                    <i class="fas fa-list-ul"></i>
+                                    <span>Сравнение</span>
                                 </a>
                             </div>
-                        </div>
 
-                        <div
-                            class="top-bar__action d-none ml-lx-5 ml-3 d-md-flex text-decoration-none align-items-center justify-content-lx-between">
-                            <a href="favorites.html" class="mr-xl-5 mr-3 text-decoration-none top-bar__favorite"
-                                id="msFavoriter">
-                                <i class="fas fa-heart"></i>
-                                <span>Избранное</span>
-                            </a>
 
-                            <a href="sravnenie-tovarov.html" class="mr-xl-5 mr-3 text-decoration-none top-bar__compare"
-                                id="msCompare">
-                                <i class="fas fa-list-ul"></i>
-                                <span>Сравнение</span>
-                            </a>
-
-                            <div class="mr-xl-5 mr-3">
-                                <i class="fas fa-search"></i>
+                            <div class="mr-xl-5 mr-3 d-flex align-items-center">
+                                <i class="fas fa-search top-bar__search-btn"></i>
                             </div>
 
-                            <div>
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
+                            <form action="/"
+                                class="position-absolute d-flex align-items-center justify-content-between top-bar__search-box_hidden">
+                                <button class="p-0" type="submit">
+                                    <i class="fas fa-search pr-2"></i>
+                                </button>
+                                <input class="search-box w-100" type="text" name="search"
+                                    placeholder="Поиск товаров на сайте">
+                                <button class="p-0" type="button">
+                                    <i class="fas fa-times pl-2"></i>
+                                </button>
+                            </form>
                         </div>
 
-                        <div class="d-none d-md-flex d-lg-none py-2 ml-3 top-bar__work-info-line">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+
+
+                        <div class="d-none d-md-flex d-lg-none py-3 ml-3 top-bar__work-info-line">
                             Санкт-Петербург, ул. Зайцева - 41 Пн-Пт 10.00–19.00 | Сб-Вс 11.00-18.00
                         </div>
 
                     </div>
                 </div>
-            </!DOCTYPE>
+            </div>
 
             <div class="site-header__nav bg-white w-100">
                 <div class="container  position-relative d-flex">
                     <nav>
                         <ul class="nav align-items-end d-none d-lg-flex">
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link pl-0">
-                                    <i class="fas fa-bars"></i>
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pl-0 pr-2">
+                                    <i class="fas fa-bars"></i> &nbsp;
                                     Каталог товаров
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Акции
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
 
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Новости
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
 
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Выкуп б/у стеллажей
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
 
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Информация
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
 
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Контакты
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
 
-                            <li class="site-header__nav-item nav-item">
-                                <a href="catalog/" class="site-header__nav-link nav-link">
+                            <li class="site-header__nav-item nav-item d-flex align-items-center">
+                                <a href="catalog/" class="site-header__nav-link nav-link pr-2">
                                     Прайс
                                 </a>
-                                <span class="site-haeder__nav_square"></span>
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </li>
                         </ul>
                     </nav>

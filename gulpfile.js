@@ -92,7 +92,7 @@ function transpileTS() {
  * Html processing
  */
 function compileHtml() {
-    return src('./src/**/**/**/*.html')
+    return src('./src/**/*.html')
         .pipe(
             fileinclude({
                 prefix: '@@',

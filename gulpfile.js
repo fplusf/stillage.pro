@@ -11,6 +11,7 @@ const groupMQ = require('gulp-group-css-media-queries');
 const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const del = require('del');
+const imagemin = require('gulp-imagemin');
 const ts = require('gulp-typescript'),
     tsProject = ts.createProject('tsconfig.json');
 
@@ -18,6 +19,13 @@ const cssNanoConfig = {
     discardComments: { removeAll: true },
     autoprefixer: false,
 };
+
+/*
+ * Public tasks
+ */
+function compressImg() {
+    return src('src/img/**/*').pipe(imagemin()).pipe(dest('dist/img'));
+}
 
 /**
  * CSS processing
@@ -125,7 +133,14 @@ function clearDist() {
  */
 const defaultTasks = parallel(
     series(
-        parallel(series(compileBootstrap, concatCSSLibs), compileSASS, concatJSLibs, transpileTS, compileHtml),
+        parallel(
+            series(compileBootstrap, concatCSSLibs),
+            compileSASS,
+            concatJSLibs,
+            transpileTS,
+            compileHtml,
+            compressImg
+        ),
         serve
     ),
     watchALL

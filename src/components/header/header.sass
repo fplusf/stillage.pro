@@ -2,8 +2,8 @@
 @import '../../sass/_mixins/_media'
 
 .top-bar
-    color: $muted-light
-    border-bottom: 1px solid lighten($muted, 40%)
+    color: $light-gray 
+    border-bottom: 1px solid lighten($gray, 40%)
     +respond-to(phone-land)
         height: 50px
         display: flex
@@ -16,11 +16,11 @@
     &__compare,
     &__favorite,
     &__email
-        color: $muted-light
+        color: $light-gray 
         transition: $transition
 
         &:hover
-            color: $muted-light
+            color: $light-gray 
 
         &:hover i
             color: $primary
@@ -39,7 +39,7 @@
             right: 0
 
     &__search-btn
-        color: $muted-light
+        color: $light-gray 
 
         &:hover
             color: $primary
@@ -58,20 +58,20 @@
     &__cart-amount
         font-size: 16px
         color: $black
-        font-weight: bold
 
     &__cart_total-amount
+        font-weight: bold
         font: bold 16px
 
     button,
     input
-        color: $muted-light
+        color: $light-gray 
         border: none
         outline: none
         background: none
 
     &__search-box_hidden
-        z-index: 999
+        z-index: 23
         padding: 13px 15px
         box-shadow: 0px 6px 20px -13px rgba(3,3,3,.1)
         display: none
@@ -91,7 +91,7 @@
 
         .fa-times
             font-size: 20px
-            color: $muted-light
+            color: $light-gray 
 
             &:hover
                 color: $primary
@@ -108,15 +108,20 @@
             height: 3px
             width: 25px
             margin-bottom: 4px
-            background: $muted
+            background: $gray
 
         .bar2
             width: 15px
+
+    &__cart_button
+        z-index: 22
 
 
 .site-header__nav
     padding: 100px 0 30px 0
     font-weight: 500
+    z-index: 1
+
     +respond-to(tablet)
         padding: 0
 
@@ -137,7 +142,7 @@
             color: $primary
 
     &-link
-        color: $muted
+        color: $gray
         transition: $transition
 
 

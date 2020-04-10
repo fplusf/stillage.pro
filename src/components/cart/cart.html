@@ -1,13 +1,19 @@
-<div class="cart-wrapper">
-    <div class="cart__elements">
-        <div class="cart__elements_image">
-            <img src="../../img/cart/image 88.png" alt="Product picture" class="img-fluid">
+<div class="cart-wrapper position-absolute p-5 flex-column">
+    <div class="cart-items d-flex flex-column py-5">
+        @@include('src/components/cart/cart-item/cart-item.html')
+        @@include('src/components/cart/cart-item/cart-item.html')
+    </div>
+    <div class="cart__total-info d-flex justify-content-between align-items-end mb-4">
+        <div class="cart__total-info_product">
+            Всего товаров: <span class="cart__total-info_product_count">2</span>
         </div>
-        <div class="cart__elements_description"></div>
-        <div class="cart__elements_price"></div>
+        <div class="cart__total-info_price">
+            На сумму: <span class="cart__total-info_product_price">&nbsp;12 690 ₽</span>
+        </div>
     </div>
 
-    <div class="cart__info"></div>
-
-    <div class="cart__buttons"></div>
+    <div class="cart__buttons d-flex justify-content-between">
+        <button class="cart__buttons_go-to-cart">Перейти в корзину</button>
+        <button class="cart__buttons_buy-by-click">Купить в один клик</button>
+    </div>
 </div>

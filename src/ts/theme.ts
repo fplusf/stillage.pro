@@ -1,6 +1,8 @@
 const searchForm = document.getElementById('searchForm'),
     searchBtn = document.querySelector('.top-bar__search-btn'),
-    searchClose = document.querySelector('.search-box__close');
+    searchClose = document.querySelector('.search-box__close'),
+    cartButton = document.querySelector('.top-bar__cart_button'),
+    cartWrapper = document.querySelector('.cart-wrapper');
 
 /**
  * Manipulate search box.
@@ -14,5 +16,8 @@ searchClose.addEventListener('click', () => {
 });
 
 /**
- * Manipulate search box.
+ * Manipulate cart.
  */
+cartButton.addEventListener('click', () => {
+    cartWrapper.classList.toggle('cart-wrapper_visible');
+});

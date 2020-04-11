@@ -18,11 +18,13 @@
 </head>
 
 <body>
+
     <!-- Sections -->
     <main id="siteContent" class="site-content">
         <!-- Site header goes here -->
 
         <header id="siteHeader" class="site-header bg-white">
+
 
             <div class="top-bar bg-white position-fixed w-100 p-0 py-md-3 py-lg-4">
                 <div class="container">
@@ -54,7 +56,7 @@
 
                             <div class="d-none pt-1 d-md-block top-bar__contact">
                                 <a href="tel:+78125650359"
-                                    class="top-bar__phone font-weight-bold text-decoration-none d-block ya-phone">
+                                    class="top-bar__phone font-weight-bold text-decoration-none d-block">
                                     8 (812)565 03 59
                                 </a>
                                 <a href="#" class="top-bar__email text-decoration-none">
@@ -65,9 +67,9 @@
 
 
                         <div
-                            class="top-bar__action d-none ml-lx-5 ml-3 d-md-flex text-decoration-none align-items-center justify-content-between">
+                            class="top-bar__action d-none ml-lx-4 ml-3 d-md-flex text-decoration-none align-items-center justify-content-between">
                             <a href="favorites.html"
-                                class="d-flex align-items-center mr-4 text-decoration-none top-bar__favorite"
+                                class="d-flex align-items-center mr-3 text-decoration-none top-bar__favorite"
                                 id="msFavoriter">
                                 <i class="fas fa-heart mr-1"></i>
                                 <span>Избранное</span>
@@ -80,23 +82,29 @@
                                 <span>Сравнение</span>
                             </a>
 
-                            <button class="pl-4 d-flex mr-2 top-bar__search-btn">
+                            <button class="pl-4 d-flex mr-3 top-bar__search-btn">
                                 <i class="fas fa-search"></i>
                             </button>
 
                             <div
                                 class="d-flex justify-content-between position-relative align-items-center top-bar__cart-amount">
-                                <button class="mr-2 top-bar__cart_button position-relative">
+
+
+                                <div class="cart-overlay"></div>
+
+                                @@include('src/components/cart/cart.html')
+
+
+
+                                <div class="mr-3 top-bar__cart_button position-relative">
                                     <i class="fas fa-shopping-cart"></i>
                                     <div
                                         class="position-absolute text-white d-flex align-items-center justify-content-center top-bar__circle-badge">
                                         12
                                     </div>
-                                </button>
+                                </div>
 
                                 <span class="text-black bold top-bar__cart_total-amount">12 690 ₽</span>
-
-                                @@include('src/components/cart/cart.html')
 
                             </div>
 
@@ -107,7 +115,7 @@
                             <button class="p-0" type="submit">
                                 <i class="fas fa-search pr-2"></i>
                             </button>
-                            <input class="search-box w-100" type="text" name="search"
+                            <input id="search-input" w-100" type="text" name="search"
                                 placeholder="Поиск товаров на сайте">
                             <button class="p-0 search-box__close" type="button">
                                 <i class="fas fa-times pl-2"></i>

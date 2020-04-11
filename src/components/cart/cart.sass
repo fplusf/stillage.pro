@@ -2,10 +2,12 @@
 
 .cart-wrapper
     display: none
+    padding: 60px 40px 40px
     background: $white
     font-size: 14px
+    visibility: hidden
+    transition: $transition
     font-family: 'Museo Sans Cyrl'
-    z-index: 20
 
     .cart__item
         height: 100px
@@ -14,7 +16,6 @@
             flex: 1
 
         &_info
-            flex: 6
             min-width: 200px
 
         &_price
@@ -47,12 +48,12 @@
 
         &__title,
         &__description
-            font-size: 12px
-
-        &__description
+            font-size: 14px
+            cursor: pointer
 
     .cart__total-info
         font-size: 18px
+        margin-bottom: 40px
 
         &_product_price
             font-size: 32px
@@ -60,7 +61,6 @@
             line-height: 0
 
     .cart__buttons
-        // height: 70px
         background: $white
         outline: none
         font-size: 16px
@@ -79,5 +79,9 @@
 
 .cart-wrapper_visible
     display: flex
-    top: -13px
-    right: 17px
+    visibility: visible
+    position: absolute
+    top: -21px
+    right: 37px
+    max-width: 500px
+    z-index: 23

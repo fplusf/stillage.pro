@@ -1,9 +1,11 @@
-<div class="cart-wrapper position-absolute p-5 flex-column">
-    <div class="cart-items d-flex flex-column py-5">
+<div class="cart-wrapper flex-column">
+
+    <div class="cart-items d-flex flex-column py-4">
+
         @@include('src/components/cart/cart-item/cart-item.html')
         @@include('src/components/cart/cart-item/cart-item.html')
     </div>
-    <div class="cart__total-info d-flex justify-content-between align-items-end mb-4">
+    <div class="cart__total-info d-flex justify-content-between align-items-end">
         <div class="cart__total-info_product">
             Всего товаров: <span class="cart__total-info_product_count">2</span>
         </div>

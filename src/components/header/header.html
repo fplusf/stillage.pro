@@ -94,8 +94,6 @@
 
                                 @@include('src/components/cart/cart.html')
 
-
-
                                 <div class="mr-3 top-bar__cart_button position-relative">
                                     <i class="fas fa-shopping-cart"></i>
                                     <div
@@ -117,7 +115,7 @@
                             </button>
                             <input id="search-input" w-100" type="text" name="search"
                                 placeholder="Поиск товаров на сайте">
-                            <button class="p-0 search-box__close" type="button">
+                            <button class="p-0 search-box__close" type="button" onclick="document.getElementById('searchForm').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
                         </form>

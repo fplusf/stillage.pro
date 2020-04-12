@@ -1,0 +1,26 @@
+@import '../../../sass/_vars'
+
+.product-catalog__list
+    list-style: none
+    padding: 60px 30px 15px
+    min-width: 400px
+    height: 100%
+    
+    &__item
+        margin: 14px 0
+
+        &__link
+            color: $black
+            transition: $transition
+            
+            &:hover
+                color: $primary
+
+        &_icon
+            width: 30px
+            display: inline-block
+            text-align: center
+
+        &:hover &__catalog_hover
+            visibility: visible
+            opacity: 1

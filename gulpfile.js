@@ -117,7 +117,7 @@ function serve() {
 
 function watchALL() {
     watch('src/sass/**/*.sass', compileSASS);
-    // watch('src/*.sass', compileSASS);
+    watch('src/img/**/*.png');
     watch('src/components/**/*.sass', compileSASS);
     watch('src/ts/**/*.ts', transpileTS);
     watch('src/**/**/*.html', compileHtml);

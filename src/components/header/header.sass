@@ -10,9 +10,9 @@
     left: 0
     width: 100%
     height: 100%
-    background: $light-gray
+    background: $gray
     opacity: 0
-    z-index: 4
+    z-index: 33
     cursor: pointer
     transition: $transition
     visibility: hidden
@@ -22,9 +22,9 @@
     opacity: 0.8
 
 .top-bar
-    color: $light-gray 
+    color: $gray
     border-bottom: 1px solid lighten($gray, 40%)
-    z-index: 3
+    z-index: 34
 
     +respond-to(phone-land)
         height: 50px
@@ -38,11 +38,11 @@
     &__compare,
     &__favorite,
     &__email
-        color: $light-gray 
+        color: $gray
         transition: $transition
 
         &:hover
-            color: $light-gray 
+            color: $gray
 
         &:hover i
             color: $primary
@@ -64,7 +64,7 @@
             right: 0
 
     &__search-btn
-        color: $light-gray 
+        color: $gray 
 
         &:hover
             color: $primary
@@ -82,7 +82,7 @@
 
     button,
     input
-        color: $light-gray 
+        color: $gray
         border: none
         outline: none
         background: none
@@ -91,14 +91,19 @@
         z-index: 23
         padding: 13px 15px
         box-shadow: 0px 6px 20px -13px rgba(3,3,3,.1)
-        display: none
+        display: flex
+        left: 120px
+        right: 120px
+        max-width: 80%
+        visibility: hidden
+        opacity: 0
+        transition: all 2s easy
 
         input
             color: $black
             width: 100%
 
-            &:focus
-                
+            &:focus           
             
         i
             font-size: 18px
@@ -109,16 +114,15 @@
 
         .fa-times
             font-size: 20px
-            color: $light-gray 
+            color: $gray 
 
             &:hover
                 color: $primary
 
     &__search-box_show
-        max-width: 80%
-        display: flex
-        left: 120px
-        right: 120px
+        visibility: visible
+        opacity: 1
+        
                 
     &__hamburger-menu
         margin-top: 15px
@@ -135,9 +139,8 @@
 
     &__cart_button
         z-index: 223
-        color: $light-gray
+        color: $gray
         cursor: pointer
-        font-family: 'Museo Sans Cyrl'
 
     &__circle-badge
         height: 20px
@@ -153,7 +156,7 @@
 .site-header__nav
     padding: 100px 0 30px 0
     font-weight: 500
-    z-index: 1
+    z-index: 26
 
     +respond-to(tablet)
         padding: 0
@@ -167,12 +170,31 @@
         margin-right: 8px
         color: $primary
         transition: $transition
+        position: relative
+
+        &__catalog_hover
+            display: block
+            visibility: hidden
+            transition: all $transition easy
+            opacity: 0
+            position: absolute
+            top: -5px
+            left: -25px
+            background: $white
+            z-index: 22
 
         &:hover .site-header__nav_square
             opacity: 1
 
         &:hover .site-header__nav-link
             color: $primary
+
+        &:hover &__catalog_hover
+            visibility: visible
+            opacity: 1
+
+        a:first-child
+            z-index: 24
 
     &-link
         color: $gray

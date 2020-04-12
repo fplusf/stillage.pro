@@ -110,12 +110,13 @@
 
                         <form action="/" id="searchForm"
                             class="position-absolute align-items-center bg-white justify-content-between top-bar__search-box_hidden">
-                            <button class="p-0" type="submit">
+                            <button class="p-0 mr-3" type="submit">
                                 <i class="fas fa-search pr-2"></i>
                             </button>
                             <input id="search-input" w-100" type="text" name="search"
                                 placeholder="Поиск товаров на сайте">
-                            <button class="p-0 search-box__close" type="button" onclick="document.getElementById('searchForm').reset()">
+                            <button class="p-0 search-box__close" type="button"
+                                onclick="document.getElementById('searchForm').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
                         </form>
@@ -132,12 +133,17 @@
             <div class="site-header__nav bg-white w-100">
                 <div class="container  position-relative d-flex">
                     <ul class="nav align-items-end d-none d-lg-flex">
+
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
                             <a href="catalog/" class="site-header__nav-link nav-link pl-0 pr-2">
-                                <i class="fas fa-bars"></i> &nbsp;
+                                <i class="fas fa-bars mr-2"></i>
                                 Каталог товаров
                             </a>
                             <i class="fas fa-square-full site-header__nav_square"></i>
+
+                            <div class="site-header__nav-item__catalog_hover">
+                                @@include('src/components/product-catalog-hover/first-level/catalog.html')
+                            </div>
                         </li>
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
                             <a href="catalog/" class="site-header__nav-link nav-link pr-2">

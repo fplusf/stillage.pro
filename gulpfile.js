@@ -45,6 +45,8 @@ function concatCSSLibs() {
         [
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
             './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+            './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
+            './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         ],
         { allowEmpty: true }
     )
@@ -70,7 +72,7 @@ function compileSASS() {
  * JS processing
  */
 function concatJSLibs() {
-    return src(['./node_modules/jquery/dist/jquery.js'])
+    return src(['./node_modules/jquery/dist/jquery.js', './node_modules/owl.carousel/dist/owl.carousel.min.js'])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(dest('dist/js'));

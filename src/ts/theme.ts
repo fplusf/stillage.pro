@@ -11,7 +11,7 @@ const searchForm = document.getElementById('searchForm'),
  */
 searchBtn.addEventListener('click', function () {
     searchForm.classList.add('top-bar__search-box_show');
-    searchInput.focus()
+    searchInput.focus();
 });
 
 searchClose.addEventListener('click', () => {
@@ -30,4 +30,26 @@ cartButton.addEventListener('click', () => {
 cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('cart-wrapper_visible');
     cartOverlay.classList.remove('show-cart-overlay');
+});
+
+/**
+ * Owl carousel setup.
+ */
+$(document).ready(function () {
+    (<any>$('.owl-carousel')).owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 5,
+            },
+        },
+    });
 });

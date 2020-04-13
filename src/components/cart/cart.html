@@ -10,12 +10,18 @@
             Всего товаров: <span class="cart__total-info_product_count">2</span>
         </div>
         <div class="cart__total-info_price">
-            На сумму: <span class="cart__total-info_product_price">&nbsp;12 690 ₽</span>
+            На сумму: <span class="cart__total-info_product_price pl-2">12 690 ₽</span>
         </div>
     </div>
 
     <div class="cart__buttons d-flex justify-content-between">
-        <button class="cart__buttons_go-to-cart">Перейти в корзину</button>
-        <button class="cart__buttons_buy-by-click">Купить в один клик</button>
+
+        @@include('src/components/buttons/outline-button.html', {
+            "title": "Перейти в корзину"
+        })
+
+        @@include('src/components/buttons/outline-gray-button.html', {
+            "title": "Купить в один клик"
+        })
     </div>
 </div>

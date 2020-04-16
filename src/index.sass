@@ -47,6 +47,9 @@ body
 .owl-carousel .owl-nav button.owl-prev
     background: $gray
 
+.owl-item .active
+    z-index: 133 !important
+
 .owl-slide1,
 .owl-slide2,
 .owl-slide3
@@ -58,14 +61,55 @@ body
     background-position: center
 
 .owl-slide1
+    z-index: 33
     background-image: linear-gradient(to left, rgba(26, 32, 39, 0) 7.09%, rgba(32, 41, 51, 0.506293) 47.57%), url('../img/slider/image 93fhd.png')
-         
+    &-rectangle,
+    &-rectangle2
+        background: none
+        border: 1px solid $primary
+        height: 40rem
+        width: 40rem
+        position: absolute
+        transform: rotate(45deg)
+        right: -20rem
+        z-index: 1
+
+    &_rectangle-wrapper
+        // right: -10rem
+
+    &-rectangle2
+        right: -35rem
+        z-index: 2
+
+    &-rectangle3
+        position: absolute
+        right: -10rem
+        top: 14rem
+        background: $dark-gray
+        width: 200px
+        height: 200px
+        transform: rotate(45deg)
+
 
 .owl-slide2
     background-image: url('../img/slider/Mask Group.png')
 
+    &__logo
+        width: 230px !important
+
+    &__header
+        color: $black
+        width: 90%
+
 .owl-slide3
-    background-image: url('../img/slider/Group 545.png')
+    // background-image: url('../img/slider/Group 545.png')
+    background: $primary
+
+    &__img
+        width: 80% !important
+
+    button
+        color: $white
 
 .owl-controls
     position: absolute

@@ -17,6 +17,7 @@ body
 .owl-carousel
     position: relative
     height: 100%
+    font-family: 'Museo Sans Cyrl'
 
 .owl-theme
     & .owl-nav
@@ -47,9 +48,6 @@ body
 .owl-carousel .owl-nav button.owl-prev
     background: $gray
 
-.owl-item .active
-    z-index: 133 !important
-
 .owl-slide1,
 .owl-slide2,
 .owl-slide3
@@ -61,49 +59,34 @@ body
     background-position: center
 
 .owl-slide1
-    z-index: 33
     background-image: linear-gradient(to left, rgba(26, 32, 39, 0) 7.09%, rgba(32, 41, 51, 0.506293) 47.57%), url('../img/slider/image 93fhd.png')
-    &-rectangle,
-    &-rectangle2
-        background: none
-        border: 1px solid $primary
-        height: 40rem
-        width: 40rem
-        position: absolute
-        transform: rotate(45deg)
-        right: -20rem
-        z-index: 1
-
-    &_rectangle-wrapper
-        // right: -10rem
-
-    &-rectangle2
-        right: -35rem
-        z-index: 2
-
-    &-rectangle3
-        position: absolute
-        right: -10rem
-        top: 14rem
-        background: $dark-gray
-        width: 200px
-        height: 200px
-        transform: rotate(45deg)
-
+    
+    &__rectangle
+        right: 0
+        width: auto !important
+    
+    &__header
+        display: block
+        width: 80%
+     
 
 .owl-slide2
+    background-color: $light-gray
     background-image: url('../img/slider/Mask Group.png')
 
     &__logo
         width: 230px !important
 
-    &__header
+    &__title
         color: $black
         width: 90%
 
 .owl-slide3
-    // background-image: url('../img/slider/Group 545.png')
     background: $primary
+
+    &__description
+        width: 70%
+        margin-bottom: 5rem
 
     &__img
         width: 80% !important
@@ -131,7 +114,7 @@ body
             text-align: center
             font-size: .9em
             border-radius: 3px
-            color: #FFF
+            color: $white
             background: #000
             opacity: .6
             text-transform: capitalize

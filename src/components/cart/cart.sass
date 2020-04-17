@@ -7,7 +7,6 @@
     font-size: 14px
     visibility: hidden
     transition: $transition
-    font-family: 'Museo Sans Cyrl'
 
     .cart__item
         height: 100px
@@ -62,9 +61,9 @@
             line-height: 0
 
     .cart__buttons
-        background: $white
-        outline: none
-        font-size: 16px
+        .outline-white-button
+            color: $gray
+            border-color: $gray
 
         &_go-to-cart,
         &_buy-by-click

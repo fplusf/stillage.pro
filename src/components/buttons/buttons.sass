@@ -1,4 +1,5 @@
 @import '../../sass/_vars'
+@import '../../sass/_mixins/_media'
 
 .outline-button,
 .outline-white-button,
@@ -9,6 +10,8 @@
     width: 200px
     height: 40px
     background: none
+    +respond-to(phone)
+        width: 100%
 
 .outline-button
     border: 1px solid $primary

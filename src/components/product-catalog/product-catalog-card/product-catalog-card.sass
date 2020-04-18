@@ -1,14 +1,27 @@
-.product-card-simple
-    box-shadow: $shadow
-    height: 300px
+.product-card
 
-    .info
+    &-simple,
+    &-horizontal
+        box-shadow: $shadow
+        height: 300px
+        color: $black
+        &:hover .info__button
+            color: $primary
 
-        &__button
+        .info__button
             background: none
             border: none
             color: $gray
             transition: $transition
 
-            &:hover
-                color: $primary
+    &-horizontal
+        .info
+            flex: 1
+            &__button
+                right: 37px
+
+        &__photo
+            flex: 2
+
+            img
+                max-height: 100%

@@ -62,29 +62,29 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 @@include('./src/components/predominantly-card/predominantly.html', {
-                    "title": "Собственный склад",
-                    "description": "Оборудование всегда в наличии в Санкт-Петербурге"
+                "title": "Собственный склад",
+                "description": "Оборудование всегда в наличии в Санкт-Петербурге"
                 })
             </div>
 
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 @@include('./src/components/predominantly-card/predominantly.html', {
-                    "title": "Call-center",
-                    "description": "Оперативно обрабатывает ваши заявки"
+                "title": "Call-center",
+                "description": "Оперативно обрабатывает ваши заявки"
                 })
             </div>
 
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 @@include('./src/components/predominantly-card/predominantly.html', {
-                    "title": "Бесплатная доставка",
-                    "description": "При суммарной стоимости заказа свыше 60 000"
+                "title": "Бесплатная доставка",
+                "description": "При суммарной стоимости заказа свыше 60 000"
                 })
             </div>
 
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 @@include('./src/components/predominantly-card/predominantly.html', {
-                    "title": "Изготовим на заказ",
-                    "description": "Сделаем на заказ по эскизам заказчика!"
+                "title": "Изготовим на заказ",
+                "description": "Сделаем на заказ по эскизам заказчика!"
                 })
             </div>
         </div>
@@ -93,9 +93,13 @@
 
 <!-- Product catalog cards -->
 <sectoin class="lp-section">
-    @@include('./src/components/product-catalog/product-catalog.html',  {
-        "largeCardPosition": 7
+    @@include('./src/components/product-catalog/product-catalog.html', {
+    "largeCardPosition": 7
     })
 </sectoin>
+
+<section class="lp-section">
+@@include('src/components/working-way/working-way.html')
+</section>
 
 @@include('src/components/footer/footer.html')

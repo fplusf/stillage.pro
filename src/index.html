@@ -93,13 +93,19 @@
 
 <!-- Product catalog cards -->
 <sectoin class="lp-section">
-    @@include('./src/components/product-catalog/product-catalog.html', {
-    "largeCardPosition": 7
-    })
+    @@include('./src/components/product-catalog/product-catalog.html')
 </sectoin>
 
+
+<!-- Working way -->
 <section class="lp-section">
 @@include('src/components/working-way/working-way.html')
 </section>
+
+<!-- Action catalog cards -->
+<sectoin class="lp-section action-section">
+    @@include('./src/components/action-catalog/action-catalog.html')
+</sectoin>
+
 
 @@include('src/components/footer/footer.html')

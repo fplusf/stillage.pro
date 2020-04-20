@@ -1,0 +1,49 @@
+<div class="action-card">
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="header__badge text-center">
+            @@badge
+        </div>
+
+        <div class="header__actions d-flex">
+            <a href="sravnenie-tovarov.html"
+                class="d-flex align-items-center mr-3 text-decoration-none top-bar__compare" id="msCompare">
+                <i class="fas fa-list-ul mr-1"></i>
+            </a>
+
+            <a href="favorites.html" class="d-flex align-items-center mr-3 text-decoration-none top-bar__favorite"
+                id="msFavoriter">
+                <i class="far fa-heart"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="img">
+        <img src="@@photo" alt="Action card image">
+    </div>
+
+    <div class="d-flex justify-content-between flex-column align-items-center">
+        <h6 class="action-card__title">
+            @@title
+        </h6>
+        <span class="action-card__info gray">
+            @@info
+        </span>
+    </div>
+
+    <div class="footer">
+        <div class="footer__prices">
+            <span class="old-price dark-gray">@@oldPrice</span>
+            <div class="new-price">@@price</div>
+        </div>
+
+        <button class="add-to-cart">@@button</button>
+
+        <div class="hover-content">
+            @@include('./src/components/buttons/add-remove.html', {
+            "action": "—",
+            "background": "gray"
+            })
+        </div>
+    </div>
+</div>

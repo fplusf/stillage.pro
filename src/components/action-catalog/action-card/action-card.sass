@@ -1,6 +1,10 @@
 .action-card
     background: $white
     padding: 20px
+    cursor: pointer
+
+    .visible-content
+        box-shadow: $shadow
 
     .header
         &__badge
@@ -10,4 +14,31 @@
             background-color: $primary
             transform: translateX(-20px)
 
-            
+    &__title:hover
+        color: $black
+
+    .footer
+        .old-price
+            text-decoration: line-through
+
+        .new-price
+            font-size: 24px
+
+        .add-to-cart
+            background: none
+            border: none
+            height: 30px
+
+    &:hover .hover-content
+        animation: hover-content $transition cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        opacity: 1
+
+    .hover-content
+        opacity: 0
+
+    @keyframes hover-content
+        0%
+            transform: translateY(-20px)
+
+        100%
+            transform: translateY(0px)

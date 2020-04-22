@@ -243,21 +243,22 @@
                         о новинках и акциях первыми</p
                     >
                 </div>
-                <div class="col-12 col-sm-6 col-lg-6 mt-2 d-none d-sm-none d-md-block">
-                    <div class="d-flex mb-3">
-                         <div class="mr-3">
+                <div class="col-12 col-sm-6 col-lg-6 mt-2 d-none d-sm-none d-md-block p-0">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
                             @@include('src/components/input/input.html', {
                                 "title": "Адрес электронной почты"
                             })
-                        </div>     
-                        <div class="d-none d-xl-block d-lg-block">
-                            @@include('src/components/buttons/outline-white-button.html', {
-                        "title": "Подробнее"
-                        })
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="d-none d-xl-block d-lg-block catalog__button">
+                                @@include('src/components/buttons/outline-white-button.html', {
+                                "title": "Подробнее"
+                            })
                         </div> 
-                        
+                        </div>
                     </div>
-                    <div class="custom-control custom-checkbox mr-sm-2">
+                    <div class="custom-control custom-checkbox mr-sm-2 mt-2">
                         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
                         <label class="text-white custom-control-label" for="customControlAutosizing">Я согласен на обработку персональных <br> данных, а также с условиями подписки</label>
                     </div>

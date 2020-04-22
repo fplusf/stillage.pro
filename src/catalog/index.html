@@ -234,48 +234,8 @@
         @@include('src/components/working-way/working-way.html')
     </div>
     <div class="catalog__red">
-        <div class="container pt-5 pb-5">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-6">
-                    <h1 class="catalog__red__color-white"><strong>Будьте в курсе</strong></h1>
-                    <p class="catalog__red__color-white"
-                        >Подпишитесь на рассылку и узнавайте <br />
-                        о новинках и акциях первыми</p
-                    >
-                </div>
-                <div class="col-12 col-sm-6 col-lg-6 mt-2 d-none d-sm-none d-md-block p-0">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            @@include('src/components/input/input.html', {
-                                "title": "Адрес электронной почты"
-                            })
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="d-none d-xl-block d-lg-block catalog__button">
-                                @@include('src/components/buttons/outline-white-button.html', {
-                                "title": "Подробнее"
-                            })
-                        </div> 
-                        </div>
-                    </div>
-                    <div class="custom-control custom-checkbox mr-sm-2 mt-2">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="text-white custom-control-label" for="customControlAutosizing">Я согласен на обработку персональных <br> данных, а также с условиями подписки</label>
-                    </div>
-                </div>
-            </div>
-            <div class="d-block d-xl-none d-lg-none mt-4">
-                @@include('src/components/input/input.html', {
-                    "title": "Адрес электронной почты"
-                })
-                <div class="custom-control custom-checkbox mt-3 mb-5">
-                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                    <label class="text-white custom-control-label" for="customControlAutosizing">Я согласен на обработку персональных <br> данных, а также с условиями подписки</label>
-                </div>  
-                @@include('src/components/buttons/outline-white-button.html', {
-            "title": "Подробнее"
-            })
-            </div> 
+        <div class="container">
+            @@include('src/components/course/course.html')
         </div>
     </div>
     <div class="catalog__gray">

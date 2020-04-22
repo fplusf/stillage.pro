@@ -1,0 +1,19 @@
+@@include('src/components/header/header.html', {"title": "Главная"})
+<!-- Page content goes here -->
+
+<section class="news">
+    <div class="container pt-5 pb-5">
+        <h2 class="text-muted pb-5">
+            <strong>
+                Новости
+            </strong>
+        </h2>
+        @@include('src/components/news-card/news-card.html')
+    </div>
+    <div class="catalog__work pt-5">
+        @@include('src/components/course/course.html')
+    </div>
+</section>
+
+<!-- Page content goes abover -->
+@@include('src/components/footer/footer.html')

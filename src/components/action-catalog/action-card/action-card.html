@@ -1,7 +1,7 @@
-<div class="action-card">
+<div class="action-card position-relative">
 
     <div class="header d-flex justify-content-between align-items-center">
-        <div class="header__badge text-center">
+        <div class="header__badge @@bagdeBg text-center">
             @@badge
         </div>
 
@@ -19,9 +19,9 @@
         </div>
     </div>
 
-    <div class="img">
+    <div class="action-card__img-wrapper d-flex justify-content-center">
         <a href="@@link" class="text-decoration-none">
-            <img src="@@photo" alt="Action card image">
+            <img src="@@photo" class="action-card__img" alt="Action card image">
         </a>
     </div>
 
@@ -44,7 +44,7 @@
         <button class="add-to-cart align-self-end dark-gray">@@button</button>
     </div>
 
-    <div class="hover-content">
+    <div class="hover-content position-absolute">
         <div class="d-flex justify-content-between mb-3">
             @@include('./src/components/buttons/add-remove.html', {
             "action": "—",

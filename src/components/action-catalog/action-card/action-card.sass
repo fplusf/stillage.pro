@@ -2,6 +2,7 @@
     background: $white
     padding: 20px
     cursor: pointer
+    // +respond-to(tablet)
     margin-bottom: 100px
 
     .visible-content
@@ -48,6 +49,7 @@
         height: 100px
         background: $white  
         padding: 0 20px 
+        transform: translateY(-20px)
 
     &:hover .hover-content
         animation: hover-content $transition cubic-bezier(0.250, 0.460, 0.450, 0.940) both
@@ -59,6 +61,13 @@
 
         100%
             transform: translateY(0px)
+
+    .horizontal-content
+        &__text
+            flex: 1
+
+        &__img
+            flex: 2
 
 .view-more:hover
     color: $primary

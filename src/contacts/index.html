@@ -3,7 +3,7 @@
 <section class="contacts lp-section">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-5 mr-5">
+            <div class="col-12 col-lg-5 mr-lg-5 mb-5 mb-lg-0">
                 <h3 class="dark-gray mb-5">Контакты</h3>
                 <div class="col-12 address pl-0 w-100 d-flex mb-5 justify-content-between">
                     <div class="col-6 pl-0 address__location">
@@ -24,16 +24,23 @@
                         Сб-Вс 11.00-18.00
                     </div>
 
-                    <div class="col-6 pl-0 schedule__requisites">
+                    <div class="col-6 d-none d-sm-block pl-0 schedule__requisites">
                         @@include('src/components/buttons/button.html', {
                         "title": "Реквизиты",
                         "color": "black"
                         })
                     </div>
                 </div>
+
+                <div class="col-12 mt-4 d-block d-sm-none pl-0 schedule__requisites">
+                    @@include('src/components/buttons/button.html', {
+                    "title": "Реквизиты",
+                    "color": "black"
+                    })
+                </div>
             </div>
 
-            <div class="col-12 col-md-4 ml-5">
+            <div class="col-12 col-lg-4 ml-lg-5">
                 <h3 class="dark-gray mb-5">Социальные сети</h3>
 
                 <div class="social-media d-flex justify-content-between">

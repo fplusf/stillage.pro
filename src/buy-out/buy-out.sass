@@ -1,0 +1,41 @@
+@import '../sass/_vars'
+
+.buyout
+    &__color-header
+        color: $dark-gray
+    &__light-gray
+        background-color: $light-gray
+        &__responsive
+            &__square
+                width: 15px
+                height: 15px
+                background: $black
+                position: relative
+                margin-left: -8px
+            &__block
+                +respond-to(phone-land)
+                    border-left: 1px solid;
+                    margin-left: 8px
+            &__block-none
+                +respond-to(phone-land)
+                    margin-left: 8px
+            &__media-body
+                margin-top: -2px
+    &__red
+        background: $primary
+        &__color-white
+            color: $white
+    &__text
+        max-width: 215px
+        +respond-to(phone-land)
+            margin-bottom: 50px
+
+    &__square
+        position: relative
+        margin-top: -8px
+        &__commons
+            width: 15px
+            height: 15px
+            background: $black
+    &__border-bottom
+        border-bottom: 1px solid $black

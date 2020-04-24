@@ -156,7 +156,7 @@
 .site-header__nav
     padding: 100px 0 30px 0
     font-weight: 500
-    z-index: 18
+    z-index: 2
 
     +respond-to(tablet)
         padding: 0
@@ -171,7 +171,6 @@
         color: $primary
         transition: $transition
         position: relative
-        z-index: 19
 
         &__catalog_hover
             display: block
@@ -194,9 +193,9 @@
             visibility: visible
             opacity: 1
 
-    a:first-child
-        z-index: 21
-
     &-link
         color: $dark-gray
         transition: $transition
+
+    .caltalog-link
+        z-index: 33

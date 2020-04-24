@@ -1,20 +1,28 @@
 @@include('src/components/header/header.html', {"title": "Главная"})
 <!-- Page content goes here -->
 
-<section class="news ls-section">
-    <h2 class="text-muted pb-5">
-        <strong>
+<section class="news lp-section">
+    <div class="container">
+        <h3 class="text-muted pb-5">
             Новости
-        </strong>
-    </h2>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-6">
-            @@include('src/components/news-card/news-card.html', { "photo": "../img/news/image152.png", "date": "31
-            марта 2020", "title": "PRO Стеллаж продолжает работать для Вас!", "description": "цц" })
-        </div>
-        <div class="col-12 col-sm-6 col-md-6">
-            @@include('src/components/news-card/news-card.html', { "photo": "../img/product-catalog/Rectangle 95.png",
-            "date": "31 марта 2020", "title": "PRO Стеллаж продолжает работать для Вас!", "description": "цц" })
+        </h3>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6">
+                @@include('./src/components/news-card/news-card.html', {
+                "photo": "../img/news/image152.png",
+                "date": "31 марта 2020",
+                "title": "PRO Стеллаж продолжает работать для Вас!",
+                "description": "цц"
+                })
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+                @@include('./src/components/news-card/news-card.html', {
+                "photo": "../img/news/image 90.png",
+                "date": "31 марта 2020",
+                "title": "Fuck suck sucksucksuck",
+                "description": "цц"
+                })
+            </div>
         </div>
     </div>
 </section>

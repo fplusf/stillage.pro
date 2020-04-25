@@ -1,6 +1,28 @@
 @import '../sass/_vars'
 
 .buyout
+    &__img-header
+        background-image: linear-gradient(180deg,rgba(0, 0, 0, 0) -18.91%,rgba(0, 0, 0, 0.59) 57.57%),url(../img/buy-out/photo1.png)
+        background-repeat: round
+        height: 510px
+        +respond-to(tablet)
+            margin-top: 132px
+        &__block
+            height: 100%
+            &__title
+                font-size: 2rem
+                +respond-to(tablet)
+                    font-size: 2rem
+                +respond-to(phone-land)
+                    font-size: 20px
+
+        &__list-item
+            font-size: 16px
+            +respond-to(tablet)
+                margin-left: -30px
+            +respond-to(phone-land)
+                margin-left: -20px
+
     &__color-header
         color: $dark-gray
     &__light-gray

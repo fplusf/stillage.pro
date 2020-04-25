@@ -1,0 +1,47 @@
+<div class="call__us">
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-6">
+                    <h4 class="call__us__color-white mb-4 white">Позвоните или напишите нам</h4>
+                    <div class="media">
+                        <label for="staticEmail" class="mr-4 p-0 white">Телефон</label>
+                        <div class="white media-body">
+                            +7 (812) 565 03 59
+                        </div>
+                    </div>
+                    <div class="media">
+                        <label for="staticEmail" class="mr-5 p-0 white">Email</label>
+                        <div class="white media-body">
+                            info@stillage.pro
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-6 d-none d-sm-none d-md-block p-0">
+                    <h4 class="call__us__color-white mb-4 white">
+                        Оставьте номер
+                    </h4>
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-none d-xl-block d-lg-block">
+                            @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="d-none d-xl-block d-lg-block catalog__button">
+                                @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-xl-none d-lg-none mt-4">
+                @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
+                <div class="custom-control custom-checkbox mt-3 mb-5">
+                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing" />
+                    <label class="text-white custom-control-label" for="customControlAutosizing"
+                        >Я согласен на обработку персональных <br />
+                        данных, а также с условиями подписки</label
+                    >
+                </div>
+                @@include('src/components/buttons/outline-white-button.html', { "title": "Подробнее" })
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,71 @@
+@@include('src/components/header/header.html', {"title": "Главная"})
+<!-- Page content goes here -->
+
+<section class="information pt-5">
+    <div class="container mb-5 pb-5">
+        <div class="media pb-5">
+            <h3 class="media-body text-muted m-0">
+                Информация
+            </h3>
+            <div class="align-self-center">
+                Выберите нужный раздел и он раскроется  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                @@include('./src/components/button-information/button-information.html', 
+                { "title": "Доставка и оплата" })
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                @@include('./src/components/button-information/button-information.html', 
+                { "title": "Возврат и гарантия" })
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                @@include('./src/components/button-information/button-information.html', 
+                { "title": "Сертификаты, лицензии" })
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                @@include('./src/components/button-information/button-information.html', 
+                { "title": "Инструкции по сборке" })
+            </div>
+        </div>
+    </div>
+    <div class="information__about">
+        @@include('src/components/about/about.html')
+    </div>
+    <div class="container">
+        <div class="information__reviews pb-5 pt-5">
+            <div class="media pb-5">
+                <div class="media-body">
+                    <h2>Отзывы</h2>
+                </div>
+                <div class="ml-2 align-self-center">
+                    <ul class="nav align-items-end d-none d-lg-flex">
+                        <li class="site-header__nav-item nav-item d-flex align-items-center m-0">
+                            <a href="/catalog/catalog.html" class="site-header__nav-link nav-link pr-2">
+                                Facebook
+                            </a>
+                            <i class="fas fa-square-full site-header__nav_square"></i>
+                        </li>
+                        <li class="site-header__nav-item nav-item d-flex align-items-center m-0 pl-0">
+                            <a href="/news/news.html" class="site-header__nav-link nav-link pr-2">
+                                Вконтакте
+                            </a>
+                            <i class="fas fa-square-full site-header__nav_square"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <img src="../img/review/image 47.png" class="mb-3" alt="Отзывы">
+            </div>
+        </div>
+
+    </div>
+    <div>
+        @@include('src/components/call-us/call-us.html')
+    </div>
+</section>
+
+<!-- Page content goes abover -->
+@@include('src/components/footer/footer.html')

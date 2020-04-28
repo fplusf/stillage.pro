@@ -132,7 +132,8 @@
                     <ul class="nav align-items-end d-none d-lg-flex">
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/catalog/catalog.html" class="site-header__nav-link nav-link caltalog-link pl-0 pr-2">
+                            <a href="/catalog/catalog.html"
+                                class="site-header__nav-link nav-link caltalog-link pl-0 pr-2">
                                 <i class="fas fa-bars mr-2"></i>
                                 Каталог товаров
                             </a>
@@ -154,7 +155,7 @@
                                 Новости
                             </a>
                             <i class="fas fa-square-full site-header__nav_square"></i>
-                           
+
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
@@ -179,9 +180,15 @@
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="catalog/" class="site-header__nav-link nav-link pr-2">
+                            
+                            <div class="cart-overlay price-overlay"></div>
+                            
+                            @@include('src/price/price.html')
+                            
+                            <a href="#" class="site-header__nav-link nav-link price-link pr-2">
                                 Прайс
                             </a>
+                            
                             <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
                     </ul>

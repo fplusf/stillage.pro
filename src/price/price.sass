@@ -1,0 +1,33 @@
+.price-form
+    display: none
+    padding: 60px 40px
+    background: $white
+    font-size: 14px
+    visibility: hidden
+    opacity: 0
+    transition: $transition
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-100%, 0)
+
+    input
+        border: none
+        border-bottom: 1px solid $gray
+        width: 100%
+        transition: $transition
+
+    .input-poluted
+        border-bottom: 1px solid $black
+
+    &__confidentiality
+        font-size: 12px
+        font-weight: 400
+
+.price-form__visible
+    display: block
+    visibility: visible
+    opacity: 1
+    width: 400px
+    height: 500px
+    z-index: 37

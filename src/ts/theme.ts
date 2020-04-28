@@ -4,7 +4,10 @@ const searchForm = document.getElementById('searchForm'),
     searchClose = document.querySelector('.search-box__close'),
     cartButton = document.querySelector('.top-bar__cart_button'),
     cartWrapper = document.querySelector('.cart-wrapper'),
-    cartOverlay = document.querySelector('.cart-overlay');
+    cartOverlay = document.querySelector('.cart-overlay'),
+    priceLink = document.querySelector('.price-link'),
+    priceForm = document.querySelector('.price-form'),
+    priceFormInputs = document.querySelectorAll('.price-form__input');
 
 /**
  * Manipulate search box.
@@ -30,7 +33,28 @@ cartButton.addEventListener('click', () => {
 cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('cart-wrapper_visible');
     cartOverlay.classList.remove('show-cart-overlay');
+    priceForm.classList.remove('price-form__visible');
 });
+
+/**
+ * Manipulate price.
+ */
+priceLink.addEventListener('click', () => {
+    priceForm.classList.toggle('price-form__visible');
+    cartOverlay.classList.toggle('show-cart-overlay');
+});
+
+// Change Price Form input view depending on values.
+priceFormInputs.forEach((input) => {
+    input.addEventListener('input', (event) => {
+        if ((<HTMLInputElement>event.target).value.length > 0) {
+            input.classList.add('input-poluted');
+        } else {
+            input.classList.remove('input-poluted');
+        }
+    });
+});
+
 
 /**
  * Owl carousel setup.
@@ -49,7 +73,7 @@ $(document).ready(function () {
             },
             1000: {
                 items: 1,
-            }
+            },
         },
     });
 });

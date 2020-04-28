@@ -1,6 +1,28 @@
 .actions-slide1,
 .actions-slide2,
 .actions-slide3
-    height: 70vh
+    height: 50vh
+    +respond-to(phone-land)
+        height: 80vh
+
+
 
 .actions-slide1
+    &__rectangle
+        left: 0
+        max-width: 50%
+        height: 100%
+        +respond-to(phone-land)
+             transform: rotate(90deg)
+             max-width: 100%
+             top: 0
+
+    &__cart
+        right: 0
+        max-width: 70%
+        +respond-to(phone-land)
+             bottom: 0
+             max-width: 100%
+
+.polygon-area
+    clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%)

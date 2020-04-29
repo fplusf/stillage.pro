@@ -12,8 +12,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
-const ts = require('gulp-typescript'),
-    tsProject = ts.createProject('tsconfig.json');
+// const ts = require('gulp-typescript'),
+//     tsProject = ts.createProject('tsconfig.json');
 
 const cssNanoConfig = {
     discardComments: { removeAll: true },
@@ -78,17 +78,17 @@ function concatJSLibs() {
         .pipe(dest('dist/js'));
 }
 
-function transpileTS() {
-    return tsProject
-        .src()
-        .pipe(sourcemaps.init())
-        .pipe(tsProject())
-        .js.pipe(uglify())
-        .pipe(sourcemaps.write('maps'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest('./dist/js'))
-        .pipe(browserSync.reload({ stream: true }));
-}
+// function transpileTS() {
+//     return tsProject
+//         .src()
+//         .pipe(sourcemaps.init())
+//         .pipe(tsProject())
+//         .js.pipe(uglify())
+//         .pipe(sourcemaps.write('maps'))
+//         .pipe(rename({ suffix: '.min' }))
+//         .pipe(dest('./dist/js'))
+//         .pipe(browserSync.reload({ stream: true }));
+// }
 
 /**
  * Html processing
@@ -122,7 +122,6 @@ function watchALL() {
     watch('src/**/*.sass', compileSASS);
     watch('src/components/**/*.sass', compileSASS);
     watch('src/img/**/*.*');
-    watch('src/ts/**/*.ts', transpileTS);
     watch('src/**/**/*.html', compileHtml);
     watch('src/**/*.html', compileHtml);
     watch('src/*.html', compileHtml);
@@ -141,7 +140,6 @@ const defaultTasks = parallel(
             series(compileBootstrap, concatCSSLibs),
             compileSASS,
             concatJSLibs,
-            transpileTS,
             compileHtml,
             compressImg
         ),

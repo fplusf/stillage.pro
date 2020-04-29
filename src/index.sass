@@ -61,8 +61,7 @@ a, button
     transition: $transition
     
 
-//////////////////////////
-
+///////////  Owl Carousel customized styles  ///////////////
 
 .carousel-section
     height: 100%
@@ -72,6 +71,9 @@ a, button
     height: 100%
     font-family: 'Museo Sans Cyrl'
 
+.slider-counter
+    background: red
+
 .owl-theme
     & .owl-nav
         margin-top: 10px
@@ -79,11 +81,24 @@ a, button
         right: 120px
         bottom: 45px
 
+        +respond-to(phone-land)
+            margin-top: 10px
+            position: absolute
+            display: flex
+            justify-content: space-between
+            bottom: 25px
+            width: 100%
+            right: 0
+            padding: 0 15px
+
     & .owl-dots
         position: absolute
         bottom: 45px
         left: 120px
         text-align: center
+
+        +respond-to(phone-land)
+            display: none
 
     & .owl-dots .owl-dot span
         border-radius: 0

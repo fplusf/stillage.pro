@@ -47,7 +47,7 @@ priceLink.addEventListener('click', () => {
 // Change Price Form input view depending on values.
 priceFormInputs.forEach((input) => {
     input.addEventListener('input', (event) => {
-        if ((<HTMLInputElement>event.target).value.length > 0) {
+        if (event.target.value.length > 0) {
             input.classList.add('input-poluted');
         } else {
             input.classList.remove('input-poluted');
@@ -55,15 +55,16 @@ priceFormInputs.forEach((input) => {
     });
 });
 
-
 /**
  * Owl carousel setup.
  */
 $(document).ready(function () {
-    (<any>$('.owl-carousel')).owlCarousel({
+    $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
+        onInitialized: counter,
+        onChanged: counter,
         responsive: {
             0: {
                 items: 1,
@@ -76,4 +77,12 @@ $(document).ready(function () {
             },
         },
     });
+
+    function counter(event) {
+        if (!event.namespace) {
+            return;
+        }
+        var slides = event.relatedTarget;
+        $('.slider-counter').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    }
 });

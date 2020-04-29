@@ -1,21 +1,43 @@
 .actions-slide1,
 .actions-slide2,
-.actions-slide3
-    height: 50vh
+.actions-slide3,
+.actions-slide4,
+.actions-slide5,
+.actions-slide6
+    height: 60vh
     +respond-to(phone-land)
         height: 80vh
 
-
-
 .actions-slide1
+    background-image: url('../img/actions/first-slide.png')
+    +respond-to(phone-land)
+        background-image: url('../img/actions/first-slide-mobile.png')
+
+    &__title
+        width: 50%
+        +respond-to(phone-land)
+            width: 100%
+
+    &__description
+        width: 75%
+        +respond-to(phone-land)
+            width: 100%
+
     &__rectangle
         left: 0
         max-width: 50%
         height: 100%
-        +respond-to(phone-land)
+        +respond-to(phone-land) 
+             background-image: url('../img/actions/first-slide-mobile.png')
              transform: rotate(90deg)
              max-width: 100%
              top: 0
+
+    &__exclamation-point
+        background: rgba(228, 228, 228, 0.39)
+        width: 20px
+        height: 20px
+        border-radius: 50%
 
     &__cart
         right: 0
@@ -24,5 +46,59 @@
              bottom: 0
              max-width: 100%
 
-.polygon-area
-    clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%)
+
+.actions-slide2
+    background-image: url('../img/actions/second-slide.png') 
+    +respond-to(phone-land)
+        background-image: url('../img/actions/second-slide-mobile.png') 
+
+    &__text
+        margin-bottom: 200px
+
+
+.actions-slide3
+    background-image: url('../img/actions/slide3.png')
+    background-position: left
+    +respond-to(phone-land)
+        background-image: url('../img/actions/slide3-mobile.png')
+
+
+    &__text
+        width: 70%
+        +respond-to(laptop)
+            width: 80%
+
+.actions-slide4
+    background-image: url('../img/actions/slide4.png')
+    +respond-to(phone-land)
+        background-image: url('../img/actions/slide4-mobile.png')
+
+    &__text
+        width: 70%
+        +respond-to(laptop)
+            width: 80%
+        +respond-to(phone-land)
+            margin-bottom: 100px
+            width: 100%
+
+.actions-slide5
+    background-color: $gray
+    background-image: url('../img/actions/slide5.png')
+    +respond-to(phone-land)
+        background-image: url('../img/actions/slide5-mobile.png')
+        &__text
+            font-size: 1.5rem
+    
+
+.actions-slide6
+    background-color: $black
+    background-image: url('../img/actions/slide6.png')
+    background-position: left
+    +respond-to(laptop)
+        background-position: bottom
+
+    +respond-to(phone-land)
+        background-image: url('../img/actions/slide6-mobile.png')
+        &__text
+            font-size: 1.5rem
+    

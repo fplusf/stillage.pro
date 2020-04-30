@@ -7,7 +7,12 @@ const searchForm = document.getElementById('searchForm'),
     cartOverlay = document.querySelector('.cart-overlay'),
     priceLink = document.querySelector('.price-link'),
     priceForm = document.querySelector('.price-form'),
-    priceFormInputs = document.querySelectorAll('.price-form__input');
+    priceFormInputs = document.querySelectorAll('.price-form__input'),
+    lowerSlider = document.querySelector('#lower'),
+    upperSlider = document.querySelector('#upper'),
+    lowerVal = parseInt(lowerSlider.value),
+    upperVal = parseInt(upperSlider.value),
+    output = document.getElementById('demo');
 
 /**
  * Manipulate search box.
@@ -86,3 +91,18 @@ $(document).ready(function () {
         $('.slider-counter').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
     }
 });
+
+////// Range Slider //////
+function collision($div1, $div2) {
+    var x1 = $div1.offset().left;
+    var w1 = 40;
+    var r1 = x1 + w1;
+    var x2 = $div2.offset().left;
+    var w2 = 40;
+    var r2 = x2 + w2;
+
+    if (r1 < x2 || x1 > r2) return false;
+    return true;
+}
+
+// // slider call

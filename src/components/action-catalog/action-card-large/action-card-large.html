@@ -33,18 +33,23 @@
 
         <div class="action-card__img-wrapper horizontal-content__img d-flex justify-content-center">
             <a href="@@link" class="text-decoration-none">
-                <img src="@@photo" class="action-card__img" alt="Action card image">
+                <img src="@@photo" class="action-card__img h-100" alt="Action card image">
             </a>
         </div>
     </div>
 
 
     <div class="footer d-flex justify-content-between mb-3">
-        <div class="footer__prices">
-            <span class="old-price dark-gray">@@oldPrice</span>
-            <div class="new-price primary">@@price</div>
+        <div class="prices">
+            <span class="prices__old-price dark-gray">@@oldPrice</span>
+            <div class="prices__new-price primary">@@price</div>
         </div>
-        <button class="add-to-cart align-self-end dark-gray">@@button</button>
+        
+        <button class="add-to-cart align-self-end dark-gray d-none d-lg-block">@@button</button>
+
+        <button class="icon-button content__cart-button align-self-end d-lg-none">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
     </div>
 
     <div class="hover-content position-absolute">

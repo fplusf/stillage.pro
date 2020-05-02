@@ -8,11 +8,50 @@ const searchForm = document.getElementById('searchForm'),
     priceLink = document.querySelector('.price-link'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
-    output = document.getElementById('demo'),
-    tileViewModeBtn = document.querySelector('.tile-view-btn'),
-    listViewModeBtn = document.querySelector('.list-view-btn'),
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode');
+
+const tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
+    listViewModeBtn = document.getElementsByClassName('list-view-btn')[0];
+
+
+/**
+ * Owl carousel setup.
+ */
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        onInitialized: counter,
+        onChanged: counter,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
+    });
+
+    function counter(event) {
+        if ($('.owl-carousel').children().length < 4) {
+            $('.owl-carousel').append('<span class="slide-count white position-absolute"></span>');
+        }
+
+        if (!event.namespace) {
+            return;
+        }
+        let slides = event.relatedTarget;
+
+        $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    }
+});
+
 
 /**
  * Manipulate search box.
@@ -62,7 +101,7 @@ priceFormInputs.forEach((input) => {
 
 ////// Action page toggle view mode /////
 
-tileViewModeBtn.addEventListener('click', () => {
+!(tileViewModeBtn) ? null : tileViewModeBtn.addEventListener('click', () => {
     if (tileViewMode.classList.contains('hidden')) {
         tileViewMode.classList.remove('hidden');
     }
@@ -71,7 +110,7 @@ tileViewModeBtn.addEventListener('click', () => {
     listViewModeBtn.classList.remove('active');
 });
 
-listViewModeBtn.addEventListener('click', () => {
+!(listViewModeBtn) ? null : listViewModeBtn.addEventListener('click', () => {
     if (listViewMode.classList.contains('hidden')) {
         listViewMode.classList.remove('hidden');
     }
@@ -80,36 +119,3 @@ listViewModeBtn.addEventListener('click', () => {
     tileViewModeBtn.classList.remove('active');
 });
 
-
-
-/**
- * Owl carousel setup.
- */
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        onInitialized: counter,
-        onChanged: counter,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            1000: {
-                items: 1,
-            },
-        },
-    });
-
-    function counter(event) {
-        if (!event.namespace) {
-            return;
-        }
-        var slides = event.relatedTarget;
-        $('.slider-counter').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
-    }
-});

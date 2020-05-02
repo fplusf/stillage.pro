@@ -90,8 +90,13 @@ a, button
     height: 100%
     font-family: 'Museo Sans Cyrl'
 
-.slider-counter
-    background: red
+.slide-count
+    left: 120px
+    bottom: 45px
+
+    +respond-to(phone-land)
+        bottom: 30px
+        left: 50%
 
 .owl-theme
     & .owl-nav
@@ -113,7 +118,8 @@ a, button
     & .owl-dots
         position: absolute
         bottom: 45px
-        left: 120px
+        left: 152px
+        display: flex
         text-align: center
 
         +respond-to(phone-land)

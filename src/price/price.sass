@@ -17,12 +17,22 @@
         width: 100%
         transition: $transition
 
+    input:focus
+        border-color: $black
+
     .input-poluted
         border-bottom: 1px solid $black
 
     &__confidentiality
         font-size: 12px
         font-weight: 400
+
+    &__close-btn
+        color: $white
+        right: -40px
+        top: -6px
+        &:hover
+            color: $primary
 
 .price-form__visible
     display: block

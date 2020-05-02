@@ -6,6 +6,7 @@ const searchForm = document.getElementById('searchForm'),
     cartWrapper = document.querySelector('.cart-wrapper'),
     cartOverlay = document.querySelector('.cart-overlay'),
     priceLink = document.querySelector('.price-link'),
+    priceFormClose = document.querySelector('.price-form__close-btn'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     tileViewMode = document.getElementById('actionTileViewMode'),
@@ -13,7 +14,6 @@ const searchForm = document.getElementById('searchForm'),
 
 const tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
     listViewModeBtn = document.getElementsByClassName('list-view-btn')[0];
-
 
 /**
  * Owl carousel setup.
@@ -52,7 +52,6 @@ $(document).ready(function () {
     }
 });
 
-
 /**
  * Manipulate search box.
  */
@@ -83,6 +82,11 @@ cartOverlay.addEventListener('click', () => {
 /**
  * Manipulate price.
  */
+priceFormClose.addEventListener('click', () => {
+    priceForm.classList.remove('price-form__visible');
+    cartOverlay.classList.remove('show-cart-overlay');
+});
+
 priceLink.addEventListener('click', () => {
     priceForm.classList.toggle('price-form__visible');
     cartOverlay.classList.toggle('show-cart-overlay');
@@ -101,21 +105,24 @@ priceFormInputs.forEach((input) => {
 
 ////// Action page toggle view mode /////
 
-!(tileViewModeBtn) ? null : tileViewModeBtn.addEventListener('click', () => {
-    if (tileViewMode.classList.contains('hidden')) {
-        tileViewMode.classList.remove('hidden');
-    }
-    listViewMode.classList.add('hidden');
-    tileViewModeBtn.classList.add('active');
-    listViewModeBtn.classList.remove('active');
-});
+!tileViewModeBtn
+    ? null
+    : tileViewModeBtn.addEventListener('click', () => {
+          if (tileViewMode.classList.contains('hidden')) {
+              tileViewMode.classList.remove('hidden');
+          }
+          listViewMode.classList.add('hidden');
+          tileViewModeBtn.classList.add('active');
+          listViewModeBtn.classList.remove('active');
+      });
 
-!(listViewModeBtn) ? null : listViewModeBtn.addEventListener('click', () => {
-    if (listViewMode.classList.contains('hidden')) {
-        listViewMode.classList.remove('hidden');
-    }
-    tileViewMode.classList.add('hidden');
-    listViewModeBtn.classList.add('active');
-    tileViewModeBtn.classList.remove('active');
-});
-
+!listViewModeBtn
+    ? null
+    : listViewModeBtn.addEventListener('click', () => {
+          if (listViewMode.classList.contains('hidden')) {
+              listViewMode.classList.remove('hidden');
+          }
+          tileViewMode.classList.add('hidden');
+          listViewModeBtn.classList.add('active');
+          tileViewModeBtn.classList.remove('active');
+      });

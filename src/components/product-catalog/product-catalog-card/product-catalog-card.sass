@@ -1,27 +1,29 @@
-.product-card
-    &-simple,
-    &-horizontal
-        box-shadow: $shadow
-        height: 300px
-        color: $black
-        &:hover .info__button
-            color: $primary
+.product-card-simple,
+.product-card-horizontal
+    +respond-to(phone)
+        height: 200px
 
-        .info__button
-            background: none
-            border: none
-            color: $gray
-            transition: $transition
+    box-shadow: $shadow
+    height: 300px
+    color: $black
+    &:hover .info__button
+        color: $primary
 
-    &-horizontal
-        .info
-            flex: 1
-            &__button
-                right: 37px
+    .info__button
+        background: none
+        border: none
+        color: $gray
+        transition: $transition
 
-        &__photo
-            flex: 2
-            img
-                max-height: 100%
-                +respond-to(phone-land)
-                    width: 100%
+.product-card-simple
+    +respond-to(phone)
+        flex-direction: row-reverse
+
+.product-card-horizontal
+    .info
+        flex: 1
+        &__button
+            right: 37px
+
+    &__photo
+        flex: 2

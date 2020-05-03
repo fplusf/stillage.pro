@@ -72,6 +72,7 @@ cartButton.addEventListener('click', () => {
     cartWrapper.classList.toggle('cart-wrapper_visible');
     cartOverlay.classList.toggle('show-cart-overlay');
     searchForm.classList.remove('top-bar__search-box_show');
+    cartOverlay.classList.remove('price-overlay');
 });
 
 cartOverlay.addEventListener('click', () => {
@@ -91,6 +92,7 @@ priceFormClose.addEventListener('click', () => {
 priceLink.addEventListener('click', () => {
     priceForm.classList.toggle('price-form__visible');
     cartOverlay.classList.toggle('show-cart-overlay');
+    cartOverlay.classList.add('price-overlay');
 });
 
 // Change Price Form input view depending on values.

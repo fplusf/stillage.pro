@@ -35,7 +35,7 @@
                             <div class="bar3"></div>
                         </div>
 
-                        <a href="/" class="pl-xl-3 mr-2 mr-lg-3">
+                        <a href="/" class="pl-xl-3 mr-2 mr-lg-3 site-header__nav-link d-flex align-items-center" id="0">
                             <img src="../img/logo/logo-sm.png" alt="Главная – Pro Стеллаж"
                                 class="img-fluid top-bar__logo" title="Главная – Pro Стеллаж" />
                         </a>
@@ -129,67 +129,72 @@
 
             <div class="site-header__nav bg-white w-100">
                 <div class="container  position-relative d-flex">
-                    <ul class="nav align-items-end d-none d-lg-flex">
+                    <ul class="nav align-items-end d-none d-lg-flex" id="mainNav">
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/catalog/catalog.html"
-                                class="site-header__nav-link nav-link caltalog-link pl-0 pr-2">
+                            <a href="/catalog/catalog.html" id="1"
+                                class="site-header__nav-link d-flex align-items-center nav-link caltalog-link pl-0 pr-2">
                                 <i class="fas fa-bars mr-2"></i>
                                 Каталог товаров
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
 
                             <div class="site-header__nav-item__catalog_hover">
                                 @@include('src/components/product-catalog-hover/first-level/catalog.html')
                             </div>
                         </li>
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/actions/actions.html" class="site-header__nav-link nav-link pr-2">
+                            <a href="/actions/actions.html" id="2"
+                                class="site-header__nav-link d-flex align-items-center nav-link pr-2">
                                 Акции
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/news/news.html" class="site-header__nav-link nav-link pr-2">
+                            <a href="/news/news.html" id="3"
+                                class="site-header__nav-link d-flex align-items-center nav-link pr-2">
                                 Новости
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
 
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/buy-out/buy-out.html" class="site-header__nav-link nav-link pr-2">
+                            <a href="/buy-out/buy-out.html" id="4"
+                                class="site-header__nav-link d-flex align-items-center nav-link pr-2">
                                 Выкуп б/у стеллажей
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/information/information.html" class="site-header__nav-link nav-link pr-2">
+                            <a href="/information/information.html" id="5"
+                                class="site-header__nav-link d-flex align-items-center nav-link pr-2">
                                 Информация
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            <a href="/contacts/contacts.html" class="site-header__nav-link nav-link pr-2">
+                            <a href="/contacts/contacts.html" id="6"
+                                class="site-header__nav-link d-flex align-items-center nav-link pr-2">
                                 Контакты
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
-                            
+
                             <div class="cart-overlay price-overlay"></div>
-                            
+
                             @@include('src/price/price.html')
-                            
-                            <a href="#" class="site-header__nav-link nav-link price-link pr-2">
+
+                            <a href="#" id="7"
+                                class="site-header__nav-link d-flex align-items-center nav-link price-link pr-2">
                                 Прайс
+                                <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>
-                            
-                            <i class="fas fa-square-full site-header__nav_square"></i>
                         </li>
                     </ul>
 

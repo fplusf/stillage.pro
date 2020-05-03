@@ -10,10 +10,11 @@ const searchForm = document.getElementById('searchForm'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     tileViewMode = document.getElementById('actionTileViewMode'),
-    listViewMode = document.getElementById('actionListViewMode');
-
-const tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
-    listViewModeBtn = document.getElementsByClassName('list-view-btn')[0];
+    listViewMode = document.getElementById('actionListViewMode'),
+    tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
+    listViewModeBtn = document.getElementsByClassName('list-view-btn')[0],
+    headerLinks = document.querySelectorAll('.site-header__nav-link'),
+    visitedLinks = document.querySelectorAll('.active-link');
 
 /**
  * Owl carousel setup.
@@ -55,7 +56,7 @@ $(document).ready(function () {
 /**
  * Manipulate search box.
  */
-searchBtn.addEventListener('click', function () {
+searchBtn.addEventListener('click', () => {
     searchForm.classList.add('top-bar__search-box_show');
     searchInput.focus();
 });
@@ -126,3 +127,20 @@ priceFormInputs.forEach((input) => {
           listViewModeBtn.classList.add('active');
           tileViewModeBtn.classList.remove('active');
       });
+
+// Set cliced link value to localStorage
+// further to add active class
+headerLinks.forEach((activeLink) => {
+    activeLink.addEventListener('click', () => {
+        localStorage.setItem('activeLink', activeLink.id);
+    });
+});
+
+// Add active class to the current header link
+// after page reload from localStorage
+if (performance.navigation) {
+    let activatedLinkId = document.getElementById(localStorage.getItem('activeLink'));
+    if (activatedLinkId != 0) {
+        activatedLinkId.classList.add('active-link');
+    }
+}

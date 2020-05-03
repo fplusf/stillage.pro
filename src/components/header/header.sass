@@ -196,8 +196,11 @@
         &:hover .site-header__nav_square
             opacity: 1
 
-        &:hover .site-header__nav-link
+        .active-link, &:hover .site-header__nav-link
             color: $primary
+
+        .site-header__nav_square
+            margin-left: 5px
 
         &:hover &__catalog_hover
             visibility: visible
@@ -209,3 +212,6 @@
 
     .caltalog-link
         z-index: 33
+
+.active-link .site-header__nav_square
+    opacity: 1

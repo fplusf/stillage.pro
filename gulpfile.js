@@ -12,6 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
+const terser = require('gulp-terser');
 // const ts = require('gulp-typescript'),
 //     tsProject = ts.createProject('tsconfig.json');
 
@@ -78,17 +79,14 @@ function concatJSLibs() {
         .pipe(dest('dist/js'));
 }
 
-// function transpileTS() {
-//     return tsProject
-//         .src()
-//         .pipe(sourcemaps.init())
-//         .pipe(tsProject())
-//         .js.pipe(uglify())
-//         .pipe(sourcemaps.write('maps'))
-//         .pipe(rename({ suffix: '.min' }))
-//         .pipe(dest('./dist/js'))
-//         .pipe(browserSync.reload({ stream: true }));
-// }
+function transpileTS() {
+    return src(['./src/ts/*.js'])
+        .pipe(terser())
+        .pipe(sourcemaps.write('maps'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('./dist/js'))
+        .pipe(browserSync.reload({ stream: true }));
+}
 
 /**
  * Html processing
@@ -125,6 +123,7 @@ function watchALL() {
     watch('src/**/**/*.html', compileHtml);
     watch('src/**/*.html', compileHtml);
     watch('src/*.html', compileHtml);
+    watch('src/ts/*.js', transpileTS);
 }
 
 function clearDist() {
@@ -141,7 +140,8 @@ const defaultTasks = parallel(
             compileSASS,
             concatJSLibs,
             compileHtml,
-            compressImg
+            compressImg,
+            transpileTS
         ),
         serve
     ),

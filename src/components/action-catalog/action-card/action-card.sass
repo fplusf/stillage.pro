@@ -2,8 +2,8 @@
     background: $white
     padding: 20px
     cursor: pointer
-    // +respond-to(tablet)
     margin-bottom: 100px
+    height: 444px
 
     .visible-content
         box-shadow: $shadow
@@ -27,13 +27,8 @@
     &__img
         max-width: 100%
         margin: 0 auto
-
-    .footer
-        .old-price
-            text-decoration: line-through
-
-        .new-price
-            font-size: 24px
+        height: 210px
+        object-fit: contain
 
         .add-to-cart
             background: none
@@ -68,6 +63,15 @@
 
         &__img
             flex: 2
+
+
+.prices
+    min-width: 75px
+    &__old-price
+        text-decoration: line-through
+
+    &__new-price
+        font-size: 24px
 
 .view-more:hover
     color: $primary

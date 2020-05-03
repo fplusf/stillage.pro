@@ -105,6 +105,7 @@
             </div>
         </div>
     </div>
+
 </section>
 <div class="d-block slider-counter"></div>
 
@@ -114,15 +115,15 @@
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <h3 class="gray">Акции</h3>
 
-                <div class="catalog-sorting d-flex">
+                <div class="catalog-sorting d-none d-md-flex">
                     <span class="gray mr-3">Сортировать:</span>
                     <button class="primary mr-3 border-0 sky-bg p-0">По популярности</button>
                     <button class="p-0 border-0 sky-bg">По цене</button>
                 </div>
 
                 <div class="catalog-view-buttons">
-                    <button class="icon-button"><i class="fas fa-th"></i></button>
-                    <button class="icon-button"><i class="fas fa-bars"></i></button>
+                    <button class="icon-button tile-view-btn active"><i class="fas fa-th"></i></button>
+                    <button class="icon-button list-view-btn"><i class="fas fa-bars"></i></button>
                 </div>
             </div>
         </div>
@@ -243,8 +244,8 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4">
+            <div class="row" id="actionTileViewMode">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 87.png",
                     "badge": "Акция",
@@ -258,7 +259,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 87.png",
                     "badge": "Акция",
@@ -272,7 +273,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 87.png",
                     "badge": "Акция",
@@ -287,7 +288,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 87.png",
                     "badge": "Акция",
@@ -301,9 +302,9 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-8">
-                    @@include('src/components/action-catalog/action-card/action-card.html', {
-                    "photo": "../img/product-card/image 87.png",
+                <div class="col-12 col-sm-12 col-xl-8">
+                    @@include('src/components/action-catalog/action-card-large/action-card-large.html', {
+                    "photo": "../img/product-card/image 88.png",
                     "badge": "Акция",
                     "bagdeBg": "primary-bg",
                     "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -318,7 +319,7 @@
                 <!------------------- New catalog --------------->
 
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -332,7 +333,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -346,7 +347,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -360,7 +361,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -374,7 +375,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -388,7 +389,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -402,7 +403,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -416,7 +417,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -430,7 +431,7 @@
                     })
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {
                     "photo": "../img/product-card/image 88.png",
                     "badge": "Новинка",
@@ -446,9 +447,119 @@
 
             </div>
 
+
+            <div class="row hidden" id="actionListViewMode">
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../img/product-card/image 87.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+            </div>
+
         </div>
 
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <div class="actions-pagination d-flex align-self-end">
+                    <button class="icon-button actions-pagination__turn-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
 
+                    <button class="icon-button actions-pagination__page-number">
+                        1
+                    </button>
+
+                    <button class="icon-button actions-pagination__page-number">
+                        2
+                    </button>
+
+                    <button class="icon-button actions-pagination__page-number">
+                        3
+                    </button>
+
+                    <button class="icon-button actions-pagination__turn-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>
@@ -593,8 +704,6 @@
             </div>
         </div>
     </div>
-
-
 </section>
 
 

@@ -1,0 +1,30 @@
+.action-card
+    .content
+        height: 165px
+
+        +respond-to(tablet)
+            flex-direction: row-reverse
+
+        &__img-wrapper
+            flex: 1 1 0px
+
+        &__text
+            flex: 1 1 0px
+
+        &__buttons
+            flex: 1 1 0px
+            min-width: 240px
+
+        &__counting
+            width: 150px
+            height: 25px
+
+        &__cart-button
+            background: $primary
+            color: $white
+            height: 40px
+            width: 40px
+
+        &__info
+            +respond-to(tablet)
+                font-size: 12px

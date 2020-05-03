@@ -6,13 +6,51 @@ const searchForm = document.getElementById('searchForm'),
     cartWrapper = document.querySelector('.cart-wrapper'),
     cartOverlay = document.querySelector('.cart-overlay'),
     priceLink = document.querySelector('.price-link'),
+    priceFormClose = document.querySelector('.price-form__close-btn'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
-    lowerSlider = document.querySelector('#lower'),
-    upperSlider = document.querySelector('#upper'),
-    lowerVal = parseInt(lowerSlider.value),
-    upperVal = parseInt(upperSlider.value),
-    output = document.getElementById('demo');
+    tileViewMode = document.getElementById('actionTileViewMode'),
+    listViewMode = document.getElementById('actionListViewMode');
+
+const tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
+    listViewModeBtn = document.getElementsByClassName('list-view-btn')[0];
+
+/**
+ * Owl carousel setup.
+ */
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        onInitialized: counter,
+        onChanged: counter,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
+    });
+
+    function counter(event) {
+        if ($('.owl-carousel').children().length < 4) {
+            $('.owl-carousel').append('<span class="slide-count white position-absolute"></span>');
+        }
+
+        if (!event.namespace) {
+            return;
+        }
+        let slides = event.relatedTarget;
+
+        $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    }
+});
 
 /**
  * Manipulate search box.
@@ -44,6 +82,11 @@ cartOverlay.addEventListener('click', () => {
 /**
  * Manipulate price.
  */
+priceFormClose.addEventListener('click', () => {
+    priceForm.classList.remove('price-form__visible');
+    cartOverlay.classList.remove('show-cart-overlay');
+});
+
 priceLink.addEventListener('click', () => {
     priceForm.classList.toggle('price-form__visible');
     cartOverlay.classList.toggle('show-cart-overlay');
@@ -60,49 +103,26 @@ priceFormInputs.forEach((input) => {
     });
 });
 
-/**
- * Owl carousel setup.
- */
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        onInitialized: counter,
-        onChanged: counter,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            1000: {
-                items: 1,
-            },
-        },
-    });
+////// Action page toggle view mode /////
 
-    function counter(event) {
-        if (!event.namespace) {
-            return;
-        }
-        var slides = event.relatedTarget;
-        $('.slider-counter').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
-    }
-});
+!tileViewModeBtn
+    ? null
+    : tileViewModeBtn.addEventListener('click', () => {
+          if (tileViewMode.classList.contains('hidden')) {
+              tileViewMode.classList.remove('hidden');
+          }
+          listViewMode.classList.add('hidden');
+          tileViewModeBtn.classList.add('active');
+          listViewModeBtn.classList.remove('active');
+      });
 
-////// Range Slider //////
-function collision($div1, $div2) {
-    var x1 = $div1.offset().left;
-    var w1 = 40;
-    var r1 = x1 + w1;
-    var x2 = $div2.offset().left;
-    var w2 = 40;
-    var r2 = x2 + w2;
-
-    if (r1 < x2 || x1 > r2) return false;
-    return true;
-}
-
-// // slider call
+!listViewModeBtn
+    ? null
+    : listViewModeBtn.addEventListener('click', () => {
+          if (listViewMode.classList.contains('hidden')) {
+              listViewMode.classList.remove('hidden');
+          }
+          tileViewMode.classList.add('hidden');
+          listViewModeBtn.classList.add('active');
+          tileViewModeBtn.classList.remove('active');
+      });

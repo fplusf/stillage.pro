@@ -28,23 +28,11 @@ function compressImg() {
     return src('src/img/**/*').pipe(imagemin()).pipe(dest('dist/img'));
 }
 
-/**
- * CSS processing
- */
-function compileBootstrap() {
-    return src('./node_modules/bootstrap/scss/bootstrap.scss', { allowEmpty: true })
-        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-        .pipe(autoprefixer({ cascade: false }))
-        .pipe(groupMQ())
-        .pipe(cssNano(cssNanoConfig))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest('./node_modules/bootstrap/dist/css'));
-}
-
 function concatCSSLibs() {
     return src(
         [
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
+            './node_modules/magnific-popup/dist/magnific-popup.css',
             './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
             './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
             './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
@@ -54,6 +42,21 @@ function concatCSSLibs() {
         .pipe(concat('libs.min.css'))
         .pipe(cssNano(cssNanoConfig))
         .pipe(dest('dist/css'));
+}
+
+/*
+ * JS processing
+ */
+function concatJSLibs() {
+    return src([
+        './node_modules/jquery/dist/jquery.js',
+        './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+        './node_modules/owl.carousel/dist/owl.carousel.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    ])
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(dest('dist/js'));
 }
 
 function compileSASS() {
@@ -67,16 +70,6 @@ function compileSASS() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./dist/css'))
         .pipe(browserSync.reload({ stream: true }));
-}
-
-/*
- * JS processing
- */
-function concatJSLibs() {
-    return src(['./node_modules/jquery/dist/jquery.js', './node_modules/owl.carousel/dist/owl.carousel.min.js'])
-        .pipe(concat('libs.min.js'))
-        .pipe(uglify())
-        .pipe(dest('dist/js'));
 }
 
 function transpileTS() {
@@ -134,17 +127,7 @@ function clearDist() {
  * Public tasks
  */
 const defaultTasks = parallel(
-    series(
-        parallel(
-            series(compileBootstrap, concatCSSLibs),
-            compileSASS,
-            concatJSLibs,
-            compileHtml,
-            compressImg,
-            transpileTS
-        ),
-        serve
-    ),
+    series(parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, transpileTS), serve),
     watchALL
 );
 

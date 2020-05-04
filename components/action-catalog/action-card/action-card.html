@@ -1,0 +1,64 @@
+<div class="action-card position-relative">
+
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="header__badge @@bagdeBg text-center">
+            @@badge
+        </div>
+
+        <div class="header__actions d-flex">
+            <a href="sravnenie-tovarov.html"
+                class="d-flex align-items-center mr-3 text-decoration-none top-bar__compare" id="msCompare">
+                <i class="fas fa-list-ul mr-1"></i>
+            </a>
+
+            <a href="favorites.html" class="d-flex align-items-center mr-3 text-decoration-none top-bar__favorite"
+                id="msFavoriter">
+                <i class="far fa-heart"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="action-card__img-wrapper d-flex justify-content-center">
+        <a href="@@link" class="text-decoration-none">
+            <img src="@@photo" class="action-card__img" alt="Action card image">
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-between flex-column mb-3">
+        <h6 class="action-card__title">
+            <a href="@@link" class="text-decoration-none black">
+                @@title
+            </a>
+        </h6>
+        <span class="action-card__info dark-gray">
+            @@info
+        </span>
+    </div>
+
+    <div class="footer d-flex justify-content-between mb-3">
+        <div class="prices">
+            <span class="prices__old-price dark-gray">@@oldPrice</span>
+            <div class="prices__new-price primary">@@price</div>
+        </div>
+        <button class="add-to-cart align-self-end dark-gray d-none d-lg-block">@@button</button>
+
+        <button class="icon-button content__cart-button align-self-end d-lg-none">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+    </div>
+
+    <div class="hover-content position-absolute">
+        <div class="d-flex justify-content-between mb-3">
+            <button class="gray-bg add-remove d-flex align-items-center justify-content-center">—</button>
+
+            <span class="counting-number w-100 mx-2 text-center light-gray-bg">1</span>
+
+            <button class="primary-bg add-remove d-flex align-items-center justify-content-center">+</button>
+
+        </div>
+
+        <button class="dark-gray w-100 button-filled">Быстрый просмотр</button>
+
+    </div>
+</div>

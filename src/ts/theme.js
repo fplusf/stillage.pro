@@ -14,7 +14,18 @@ const searchForm = document.getElementById('searchForm'),
     tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
     listViewModeBtn = document.getElementsByClassName('list-view-btn')[0],
     headerLinks = document.querySelectorAll('.site-header__nav-link'),
-    visitedLinks = document.querySelectorAll('.active-link');
+    visitedLinks = document.querySelectorAll('.active-link'),
+    /// Information sections
+    delivery = document.querySelector('.collapse-one'),
+    instruction = document.querySelector('.instruction'),
+    certificates = document.querySelector('.certificates'),
+    warranty = document.querySelector('.warranty'),
+    //// Information section toggle buttons
+    deliveryBtn = document.querySelector('.delivery-btn'),
+    warrantyBtn = document.querySelector('.warranty-btn'),
+    certificatesBtn = document.querySelector('.certificates-btn'),
+    instructionBtn = document.querySelector('.instruction-btn'),
+    about = document.querySelector('.information-about');
 
 /**
  * Owl carousel setup.
@@ -72,6 +83,7 @@ cartButton.addEventListener('click', () => {
     cartWrapper.classList.toggle('cart-wrapper_visible');
     cartOverlay.classList.toggle('show-cart-overlay');
     searchForm.classList.remove('top-bar__search-box_show');
+    cartOverlay.classList.remove('price-overlay');
 });
 
 cartOverlay.addEventListener('click', () => {
@@ -91,6 +103,7 @@ priceFormClose.addEventListener('click', () => {
 priceLink.addEventListener('click', () => {
     priceForm.classList.toggle('price-form__visible');
     cartOverlay.classList.toggle('show-cart-overlay');
+    cartOverlay.classList.add('price-overlay');
 });
 
 // Change Price Form input view depending on values.
@@ -143,4 +156,70 @@ if (performance.navigation) {
     if (activatedLinkId != 0) {
         activatedLinkId.classList.add('active-link');
     }
+}
+
+//////////  INFORMATION PAGE COLLAPSING ////////////
+!deliveryBtn
+    ? null
+    : deliveryBtn.addEventListener('click', () => {
+          toggleInfoSections(delivery);
+          toggleInfoBtnIcons(deliveryBtn);
+      });
+
+!warrantyBtn
+    ? null
+    : warrantyBtn.addEventListener('click', () => {
+          toggleInfoSections(warranty);
+          toggleInfoBtnIcons(warrantyBtn);
+      });
+
+!certificatesBtn
+    ? null
+    : certificatesBtn.addEventListener('click', () => {
+          toggleInfoSections(certificates);
+          toggleInfoBtnIcons(certificatesBtn);
+      });
+
+!instructionBtn
+    ? null
+    : instructionBtn.addEventListener('click', () => {
+          toggleInfoSections(instruction);
+          toggleInfoBtnIcons(instructionBtn);
+      });
+
+/// Toggle information buttons satate.
+function toggleInfoBtnIcons(sectionBtn) {
+    let allButtons = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
+
+    if (sectionBtn.children[1].className.includes('fa fa-plus 3x')) {
+        sectionBtn.children[1].className = sectionBtn.children[1].className.replace('fa fa-plus 3x', 'fa fa-times 3x');
+
+        sectionBtn.classList.add('information-button-active');
+
+        allButtons.forEach((btn) => {
+            if (btn !== sectionBtn) {
+                btn.children[1].className = btn.children[1].className.replace('fa fa-times 3x', 'fa fa-plus 3x');
+                btn.classList.remove('information-button-active');
+            }
+        });
+    } else {
+        sectionBtn.children[1].className = sectionBtn.children[1].className.replace('fa fa-times 3x', 'fa fa-plus 3x');
+        sectionBtn.classList.remove('information-button-active');
+    }
+}
+
+//// Toggle information section.
+function toggleInfoSections(sectionToShow) {
+    sectionToShow.classList.toggle('d-block');
+
+    let allSections = [delivery, instruction, certificates, warranty, about];
+
+    allSections.forEach((section) => {
+        if (section !== sectionToShow) {
+            section.classList.remove('d-block');
+            if (section === allSections[4]) {
+                // section.classList.add('d-none');
+            }
+        }
+    });
 }

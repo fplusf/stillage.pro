@@ -13,7 +13,8 @@
     <!-- CSS-->
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    
 </head>
 <body>
     <!-- Sections -->
@@ -21,7 +22,6 @@
         <!-- Site header goes here -->
 
         <header id="siteHeader" class="site-header bg-white">
-
 
             <div class="top-bar bg-white position-fixed w-100 p-0 py-md-3 py-lg-4">
                 <div class="container">
@@ -164,9 +164,7 @@
                                         12
                                     </div>
                                 </div>
-
                                 <span class="text-black bold top-bar__cart_total-amount">12 690 ₽</span>
-
                             </div>
 
                         </div>
@@ -179,6 +177,18 @@
                             <input id="search-input" type="text" name="search" placeholder="Поиск товаров на сайте">
                             <button class="p-0 search-box__close" type="button"
                                 onclick="document.getElementById('searchForm').reset()">
+                                <i class="fas fa-times pl-2"></i>
+                            </button>
+                        </form>
+
+                        <form action="/" id="searchFormMobile"
+                            class="position-absolute align-items-center bg-white d-flex align-items-center w-100 h-100 justify-content-between mobile__search-box_hidden">
+                            <button class="p-0 mr-3 gray" type="submit">
+                                <i class="fas fa-chevron-left pr-2"></i>
+                            </button>
+                            <input id="mobile-search-input" class="w-100" type="text" name="search" placeholder="Поиск товаров на сайте">
+                            <button class="p-0 mobile__search-box__close gray" type="button"
+                                onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
                         </form>
@@ -409,8 +419,6 @@
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
 
-                            <!-- <div class="cart-overlay price-overlay"></div> -->
-
                             <div class="price-form">
     <button class="icon-button position-absolute price-form__close-btn">
         <i class="fas fa-times fa-1x"></i>
@@ -542,13 +550,11 @@
                         </ul>
                     </div>
                     <div class="catalog__img-left-bar">
-                        <div class="card-body">
+                        <div class="card-body d-flex align-items-end buyout__img-header__block pb-4">
                             <div class="catalog__img-left-bar__info">
                                 <h4 class="text-white">Гардеробные <br> системы Титан GS</h4>
-                                <p class="text-white">Лучшее решения для <br> современного интерьера</p>
-                                <div class="mt-4">
-                                    <button class="outline-white-button">Подробнее</button>
-                                </div>
+                                <p class="text-white m-0">Лучшее решения для <br> современного интерьера</p>
+                                <button class="outline-white-button">Подробнее</button>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -961,7 +967,7 @@
 
     <!-- Site footer goes here -->
 
-    <section id="siteFooter" class="site-footer bg-footer pt-5 pb-5">
+    <section id="siteFooter" class="site-footer bg-footer pt-5 pb-3">
         <div class="container">
             <div class="d-block d-xl-none d-lg-none">
                     <div class="media d-flex mb-5">
@@ -999,15 +1005,14 @@
                     <div class="mt-4">
                         <button class="outline-white-button">Написать директору</button>
                     </div>
-                    <div class="mt-5 footer-bar__color-white">
+                    <div class="mt-4 footer-bar__color-white">
                         Обращаем ваше внимание на то, что данный сайт носит исключительно информационный характер и ни
                         при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2)
                         Гражданского кодекса РФ
                     </div>
-                    <div class="mt-5 footer-bar__color-gray">
+                    <div class="mt-4 footer-bar__color-gray">
                         Copyright © 2020 Pro stillage
                     </div>
-
             </div>
             <div class="footer-bar d-flex justify-content-between align-items-top mr-0 top-footer">
                 <div class="d-none d-lg-block text-muted pt-1 mr-4">

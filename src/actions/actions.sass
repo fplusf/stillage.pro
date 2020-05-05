@@ -1,5 +1,8 @@
 .half-height
-    height: 60vh
+    height: 550px
+    +respond-to(phone-land)
+        height: 500px
+
     +respond-to(phone-land)
         height: 80vh
 
@@ -9,12 +12,12 @@
         background-image: url('../img/actions/first-slide-mobile.png')
 
     &__title
-        width: 50%
+        width: 70%
         +respond-to(phone-land)
             width: 100%
 
     &__description
-        width: 50%
+        width: 70%
         +respond-to(phone-land)
             width: 100%
 
@@ -66,9 +69,7 @@
         background-image: url('../img/actions/slide4-mobile.png')
 
     &__text
-        width: 50%
-        +respond-to(laptop)
-            width: 80%
+        width: 80%
         +respond-to(phone-land)
             margin-bottom: 100px
             width: 100%

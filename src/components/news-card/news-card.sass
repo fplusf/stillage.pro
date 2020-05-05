@@ -10,14 +10,20 @@
         +respond-to(tablet)
             width: 140px
     &__body
-        padding: 15px
+        padding: 15px 15px 15px 20px
         +respond-to(phone-land)
             align-self: center
             margin-top: 0px
+            padding: 15px 15px 15px 20px
         +respond-to(tablet)
             align-self: center
             margin-top: 0px
+            padding: 15px 15px 15px 20px
         &__button
+            +respond-to(tablet)
+                bottom: 37px
+            +respond-to(phone-land)
+                display: none
             position: absolute
             bottom: 7px
             right: 23px
@@ -31,9 +37,11 @@
     color: #26323f
     width: 100%
     height: 190px
+    margin-bottom: 30px
     +respond-to(phone)
         height: 100%
     &:hover
+        text-decoration: none
         cursor: pointer
         button
             color: $primary

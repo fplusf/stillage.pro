@@ -1,0 +1,19 @@
+.details
+    &__font-header
+        +respond-to(tablet)
+            font-size: 24px
+        +respond-to(phone-land)
+            font-size: 20px
+    &__img
+        +respond-to(phone-land)
+            padding: 0
+
+    &__text-footer
+        bottom: 0
+        position: absolute
+        +respond-to(tablet)
+            bottom: none
+            position: relative
+        +respond-to(phone-land)
+            bottom: none
+            position: relative

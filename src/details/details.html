@@ -1,12 +1,46 @@
 @@include('src/components/header/header.html', {"title": "Главная"})
 <!-- Page content goes here -->
-<section class="lp-section">
-    <div class="container">
-        <h1>
-            31 марта 2020
-        </h1>
-        
+<section class="details">
+    <div class="lp-section">
+        <div class="container">
+            <h1 class="details__font-header dark-gray mb-5">
+                31 марта 2020
+            </h1>
+            <div class="row">
+                <div class="col-12 col-md-6 details__img">
+                    <img src="../img/news/image152.png" class="w-100 mb-5" alt="News picture" />
+                </div>
+                <div class="col-12 col-md-6">
+                    <strong>
+                        PRO Стеллаж продолжает <br> работать для Вас!
+                    </strong>
+                    <p class="mt-4">
+                        Наш интернет-магазин <a class="gray" href="">https://stillage.pro</a> и служба поддержки работают для Вас 
+                        в штатном режиме. Мы принимаем звонки и обрабатываем Ваши заказы в полном объеме.
+                    </p>
+                    <p>
+                        Для Вашей безопасности, мы вводим ограничения по посещаемости нашего магазина.
+                        Теперь не нужно никуда ехать, мы сами доставим до двери* Ваш заказ!
+                        Для Вашего удобства у нас работает бесконтактная** доставка каждый 
+                        день с 12:00 до 18:00.
+                    </p>
+                    <p class="mb-5">
+                        Мы призываем Вас как можно больше времени проводить дома <br>
+                        и выходить на улицу только в случае крайней необходимости.<br>
+                        <span class="primary">Берегите себя и мойте руки с мылом!</span><br>
+                        С Уважением, компания Pro Стеллаж.ние.<br>
+                    </p>
+                    <p class="gray details__text-footer mb-5">
+                        *Укажите, что Вам нужна доставка до двери <br>
+                        **Сообщите менеджеру, что Вы хотите бесконтактную доставку и курьер   
+                            оставит оплаченный заказ у двери и отойдёт на безопасное расстояние
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    @@include('src/components/following-offer/following-offer.html')
 </section>
 
 <!-- Page content goes abover -->

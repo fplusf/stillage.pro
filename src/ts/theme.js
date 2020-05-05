@@ -57,6 +57,7 @@ $(document).ready(function () {
         if (!event.namespace) {
             return;
         }
+
         let slides = event.relatedTarget;
 
         $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);

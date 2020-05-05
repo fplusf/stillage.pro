@@ -35,7 +35,6 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         nav: true,
-        onInitialized: counter,
         onChanged: counter,
         responsive: {
             0: {
@@ -51,7 +50,7 @@ $(document).ready(function () {
     });
 
     function counter(event) {
-        if ($('.owl-carousel').children().length < 4) {
+        if ($('.owl-carousel').children().length !== 3 && $('.owl-carousel').children().length !== 6) {
             $('.owl-carousel').append('<span class="slide-count white position-absolute"></span>');
         }
 

@@ -88,7 +88,7 @@ a, button
 .owl-carousel
     position: relative
     height: 100%
-    font-family: 'Museo Sans Cyrl'
+    // font-family: 'Museo Sans Cyrl'
 
 .slide-count
     left: 120px
@@ -144,7 +144,11 @@ a, button
 .owl-slide1,
 .owl-slide2,
 .owl-slide3
-    height: 70vh
+    height: 700px
+    +respond-to(laptop)
+        height: 600px
+    +respond-to(phone)
+        height: 94vh
 
 .cover
     background-repeat: no-repeat
@@ -152,7 +156,11 @@ a, button
     background-position: center
 
 .owl-slide1
-    background-image: linear-gradient(to left, rgba(26, 32, 39, 0) 7.09%, rgba(32, 41, 51, 0.506293) 47.57%), url('../img/slider/image 93fhd.png')
+    background-image: url('../img/slider/slide1.png')
+    +respond-to(laptop)
+        background-position: right
+    +respond-to(phone-land)
+        background-image: url('../img/slider/slide1-mobile.png')
     
     &__rectangle
         right: 0
@@ -167,6 +175,9 @@ a, button
     background-color: $light-gray
     background-image: url('../img/slider/Mask Group.png')
 
+    +respond-to(phone-land)
+        background-position: left
+
     &__logo
         width: 230px !important
 
@@ -175,7 +186,9 @@ a, button
         width: 90%
 
 .owl-slide3
-    background: $primary
+    background-image: url('../img/slider/slide3.png')
+    +respond-to(phone-land)
+        background-position: left
 
     &__description
         width: 70%

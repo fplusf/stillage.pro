@@ -14,12 +14,29 @@
                 +respond-to(phone-land)
                     font-size: 20px
 
+        &__list-item-one
+            margin-left: -16px
+            +respond-to(laptop)
+                margin-left: -16px
+            +respond-to(tablet)
+                margin-left: -16px
+            +respond-to(phone-land)
+                margin-left: 16px
         &__list-item
+            &__text
+                margin-left: 19px
+            &__icon
+                background-color: $white
+                color: $white
+                width: 6px
+                height: 6px
+                vertical-align: middle
+                margin-top: -2px
             font-size: 16px
             +respond-to(tablet)
-                margin-left: -30px
+                margin-left: -17px
             +respond-to(phone-land)
-                margin-left: -20px
+                margin-left: 0px
 
     &__color-header
         color: $dark-gray

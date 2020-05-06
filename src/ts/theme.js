@@ -260,6 +260,46 @@ mobileMenuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('top-bar__mobile-menu_visible');
 });
 
-mobileCartBtn.addEventListener('click', () => {
-    cartWrapper.classList.toggle('cart-wrapper_visible');
+!mobileCartBtn
+    ? null
+    : mobileCartBtn.addEventListener('click', () => {
+          cartWrapper.classList.toggle('cart-wrapper_visible');
+      });
+
+/////////// Range slider ////////
+$(function () {
+    $('#slider-range').slider({
+        range: true,
+        min: 0,
+        max: 40000,
+        values: [6000, 29000],
+        slide: function (event, ui) {
+            $('.price-range__value-low').text(ui.values[0]) + $('.price-range__value-up').text(ui.values[1]);
+        },
+    });
+    $('#amount').val('$' + $('#amount').slider('values', 0) + $('#amount').slider('values', 1));
+});
+
+//////////////  Actions Filter Accordion ///////////
+$(function () {
+    // Smooth Scroll
+    $('a[href*=#]').bind('click', function (e) {
+        var anchor = $(this);
+        $('html, body')
+            .stop()
+            .animate(
+                {
+                    scrollTop: $(anchor.attr('href')).offset().top,
+                },
+                1000
+            );
+        e.preventDefault();
+    });
+});
+
+$('.d-accordion').on('show.bs.collapse', function (n) {
+    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
+});
+$('.d-accordion').on('hide.bs.collapse', function (n) {
+    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
 });

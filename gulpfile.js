@@ -29,7 +29,7 @@ function compressImg() {
 }
 
 function copyFonts() {
-    return src( './src/fonts/**/*.*').pipe(dest('dist/fonts'))
+    return src('./src/fonts/**/*.*').pipe(dest('dist/fonts'));
 }
 
 function concatCSSLibs() {
@@ -131,7 +131,10 @@ function clearDist() {
  * Public tasks
  */
 const defaultTasks = parallel(
-    series(parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, transpileTS), serve),
+    series(
+        parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, transpileTS),
+        serve
+    ),
     watchALL
 );
 

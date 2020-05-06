@@ -13,8 +13,9 @@
     <!-- CSS-->
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
-    
+
 </head>
+
 <body>
     <!-- Sections -->
     <main id="siteContent" class="site-content">
@@ -26,12 +27,16 @@
                 <div class="container">
                     <div class="row position-relative h-100 justify-content-between m-0">
 
-                        <a href="/menu/menu.html"
+                        <button
                             class="d-xs-flex flex-column align-items-center justify-content-center d-md-none top-bar__hamburger-menu">
                             <div class="bar1"></div>
                             <div class="bar2"></div>
                             <div class="bar3"></div>
-                        </a>
+                        </button>
+
+                        <div id="mobileMenu" class="top-bar__mobile-menu">
+                            @@include('src/components/menu-drawer/menu-drawer.html')
+                        </div>
 
                         <a href="/" class="pl-xl-3 mr-2 mr-lg-3 site-header__nav-link d-flex align-items-center" id="0">
                             <img src="../img/logo/logo-sm.png" alt="Главная – Pro Стеллаж"
@@ -88,7 +93,10 @@
 
                                 <div class="cart-overlay"></div>
 
-                                @@include('src/components/cart/cart.html')
+                                <div class="top-bar__cart">
+                                    @@include('src/components/cart/cart.html')
+                                </div>
+
 
                                 <div class="mr-3 top-bar__cart_button position-relative">
                                     <i class="fas fa-shopping-cart"></i>
@@ -119,7 +127,8 @@
                             <button class="p-0 mr-3 gray" type="submit">
                                 <i class="fas fa-chevron-left pr-2"></i>
                             </button>
-                            <input id="mobile-search-input" class="w-100" type="text" name="search" placeholder="Поиск товаров на сайте">
+                            <input id="mobile-search-input" class="w-100" type="text" name="search"
+                                placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>

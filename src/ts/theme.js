@@ -7,7 +7,7 @@ const searchForm = document.getElementById('searchForm'),
     mobileSearchClose = document.querySelector('.mobile__search-box__close'),
     searchClose = document.querySelector('.search-box__close'),
     cartButton = document.querySelectorAll('.top-bar__cart_button'),
-    cartWrapper = document.querySelector('.cart-wrapper'),
+    cartWrapper = document.querySelector('.top-bar__cart'),
     cartOverlay = document.querySelector('.cart-overlay'),
     priceLink = document.querySelector('.price-link'),
     priceFormClose = document.querySelector('.price-form__close-btn'),
@@ -29,7 +29,13 @@ const searchForm = document.getElementById('searchForm'),
     warrantyBtn = document.querySelector('.warranty-btn'),
     certificatesBtn = document.querySelector('.certificates-btn'),
     instructionBtn = document.querySelector('.instruction-btn'),
-    about = document.querySelector('.information-about');
+    about = document.querySelector('.information-about'),
+    mobileCart = document.querySelector('.mobile-cart'),
+    mobileCartBtn = document.querySelector('.mobile-cart-button'),
+    //////// Mobile menu  /////
+    mobileMenu = document.getElementById('mobileMenu'),
+    mobileMenuBtn = document.querySelector('.top-bar__hamburger-menu'),
+    mobileMenuClose = document.querySelector('.drawer-menu-close');
 
 /**
  * Owl carousel setup.
@@ -100,7 +106,7 @@ searchClose.addEventListener('click', () => {
     ? null
     : cartButton.forEach((btn) => {
           btn.addEventListener('click', () => {
-              cartWrapper.classList.toggle('cart-wrapper_visible');
+              cartWrapper.classList.toggle('d-block');
               cartOverlay.classList.toggle('show-cart-overlay');
               searchForm.classList.remove('top-bar__search-box_show');
               cartOverlay.classList.remove('price-overlay');
@@ -108,7 +114,7 @@ searchClose.addEventListener('click', () => {
       });
 
 cartOverlay.addEventListener('click', () => {
-    cartWrapper.classList.remove('cart-wrapper_visible');
+    cartWrapper.classList.remove('d-block');
     cartOverlay.classList.remove('show-cart-overlay');
     priceForm.classList.remove('price-form__visible');
 });
@@ -244,3 +250,16 @@ function toggleInfoSections(sectionToShow) {
         }
     });
 }
+
+/////// Mobile Hamburger menu manipulation /////
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('top-bar__mobile-menu_visible');
+});
+
+mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('top-bar__mobile-menu_visible');
+});
+
+mobileCartBtn.addEventListener('click', () => {
+    cartWrapper.classList.toggle('cart-wrapper_visible');
+});

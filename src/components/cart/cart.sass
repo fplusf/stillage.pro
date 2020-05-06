@@ -1,12 +1,19 @@
 @import '../../sass/_vars'
 
 .cart-wrapper
-    display: none
+    // display: block
     padding: 60px 40px 40px
     background: $white
     font-size: 14px
     visibility: hidden
     transition: $transition
+    display: flex
+    visibility: visible
+    position: absolute
+    top: -21px
+    right: 37px
+    width: 500px
+    z-index: 37
 
     .cart__item
         height: 100px
@@ -77,11 +84,11 @@
             color: $gray
             border: 1px solid $gray
 
-.cart-wrapper_visible
-    display: flex
-    visibility: visible
-    position: absolute
-    top: -21px
-    right: 37px
-    width: 500px
-    z-index: 37
+// .cart-wrapper_visible
+//     display: flex
+//     visibility: visible
+//     position: absolute
+//     top: -21px
+//     right: 37px
+//     width: 500px
+//     z-index: 37

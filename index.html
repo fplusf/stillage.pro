@@ -14,8 +14,8 @@
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
 
-    
 </head>
+
 <body>
     <!-- Sections -->
     <main id="siteContent" class="site-content">
@@ -89,7 +89,8 @@
 
                                 <div class="cart-overlay"></div>
 
-                                <div class="cart-wrapper flex-column">
+                                <div class="top-bar__cart">
+                                    <div class="cart-wrapper flex-column">
 
     <div class="cart-items d-flex flex-column py-4">
 
@@ -156,6 +157,8 @@
         <button class="outline-white-button">Купить в один клик</button>
     </div>
 </div>
+                                </div>
+
 
                                 <div class="mr-3 top-bar__cart_button position-relative">
                                     <i class="fas fa-shopping-cart"></i>
@@ -186,7 +189,8 @@
                             <button class="p-0 mr-3 gray" type="submit">
                                 <i class="fas fa-chevron-left pr-2"></i>
                             </button>
-                            <input id="mobile-search-input" class="w-100" type="text" name="search" placeholder="Поиск товаров на сайте">
+                            <input id="mobile-search-input" class="w-100" type="text" name="search"
+                                placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>
@@ -1583,14 +1587,86 @@
                     <span>Поиск</span>
                </a>
           </div>
-          <div class="col-3 col-lg-3 ">
-               <a href="#" class="d-flex flex-column align-items-center text-decoration-none gray top-bar__cart_button">
+          <div class="col-3 col-lg-3">
+               <a href="#" class="d-flex flex-column align-items-center text-decoration-none gray mobile-cart-button">
                     <i class="fa fa-shopping-cart mobile-navbar__icon"></i>
                     <span>Корзина</span>
                </a>
           </div>
      </div>
+
+     <div class="mobile-navbar__cart">
+          <div class="cart-wrapper flex-column">
+
+    <div class="cart-items d-flex flex-column py-4">
+
+        <div class="cart__item d-flex justify-content-between mb-2">
+    <div class="mr-3">
+        <img src="../img/cart/image 88.png" alt="Product picture" class="cart__item_image">
+    </div>
+
+    <div class="cart__item_info mr-3">
+        <a class="cart__item_title font-weight-bold">
+            Гардеробная система ТИТАН - GS - 450S
+        </a>
+        <div class="text-muted cart__item_description font-weight-light">ВШГ - 1156x2400x350 мм</div>
+    </div>
+
+    <div class="cart__item_price">
+        <div class="cart__item_price_control-buttons d-flex justify-content-between align-items-center">
+            <div class="cart__item_price_count d-flex align-items-center justify-content-center mr-2">1</div>
+            <button class="cart__item_price_reduce d-flex align-items-center justify-content-center mr-2">—</button>
+            <button class="cart__item_price_add d-flex align-items-center justify-content-center">+</button>
+        </div>
+        <div class="cart__item_price_money text-right">
+            1 690 ₽
+        </div>
+    </div>
 </div>
+        <div class="cart__item d-flex justify-content-between mb-2">
+    <div class="mr-3">
+        <img src="../img/cart/image 88.png" alt="Product picture" class="cart__item_image">
+    </div>
+
+    <div class="cart__item_info mr-3">
+        <a class="cart__item_title font-weight-bold">
+            Гардеробная система ТИТАН - GS - 450S
+        </a>
+        <div class="text-muted cart__item_description font-weight-light">ВШГ - 1156x2400x350 мм</div>
+    </div>
+
+    <div class="cart__item_price">
+        <div class="cart__item_price_control-buttons d-flex justify-content-between align-items-center">
+            <div class="cart__item_price_count d-flex align-items-center justify-content-center mr-2">1</div>
+            <button class="cart__item_price_reduce d-flex align-items-center justify-content-center mr-2">—</button>
+            <button class="cart__item_price_add d-flex align-items-center justify-content-center">+</button>
+        </div>
+        <div class="cart__item_price_money text-right">
+            1 690 ₽
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="cart__total-info d-flex justify-content-between align-items-end">
+        <div class="cart__total-info_product">
+            Всего товаров: <span class="cart__total-info_product_count">2</span>
+        </div>
+        <div class="cart__total-info_price">
+            На сумму: <span class="cart__total-info_product_price pl-2">12 690 ₽</span>
+        </div>
+    </div>
+
+    <div class="cart__buttons d-flex justify-content-between">
+
+        <button class="outline-button">Перейти в корзину</button>
+
+        <button class="outline-white-button">Купить в один клик</button>
+    </div>
+</div>
+     </div>
+</div>
+
+
 
 
 <!-- Site footer goes here -->

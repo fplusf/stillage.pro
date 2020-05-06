@@ -14,8 +14,8 @@
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
 
-    
 </head>
+
 <body>
     <!-- Sections -->
     <main id="siteContent" class="site-content">
@@ -89,7 +89,8 @@
 
                                 <div class="cart-overlay"></div>
 
-                                <div class="cart-wrapper flex-column">
+                                <div class="top-bar__cart">
+                                    <div class="cart-wrapper flex-column">
 
     <div class="cart-items d-flex flex-column py-4">
 
@@ -156,6 +157,8 @@
         <button class="outline-white-button">Купить в один клик</button>
     </div>
 </div>
+                                </div>
+
 
                                 <div class="mr-3 top-bar__cart_button position-relative">
                                     <i class="fas fa-shopping-cart"></i>
@@ -186,7 +189,8 @@
                             <button class="p-0 mr-3 gray" type="submit">
                                 <i class="fas fa-chevron-left pr-2"></i>
                             </button>
-                            <input id="mobile-search-input" class="w-100" type="text" name="search" placeholder="Поиск товаров на сайте">
+                            <input id="mobile-search-input" class="w-100" type="text" name="search"
+                                placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>

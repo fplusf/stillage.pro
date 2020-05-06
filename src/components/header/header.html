@@ -13,6 +13,7 @@
     <!-- CSS-->
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
+    
 </head>
 <body>
     <!-- Sections -->
@@ -109,6 +110,18 @@
                             <input id="search-input" type="text" name="search" placeholder="Поиск товаров на сайте">
                             <button class="p-0 search-box__close" type="button"
                                 onclick="document.getElementById('searchForm').reset()">
+                                <i class="fas fa-times pl-2"></i>
+                            </button>
+                        </form>
+
+                        <form action="/" id="searchFormMobile"
+                            class="position-absolute align-items-center bg-white d-flex align-items-center w-100 h-100 justify-content-between mobile__search-box_hidden">
+                            <button class="p-0 mr-3 gray" type="submit">
+                                <i class="fas fa-chevron-left pr-2"></i>
+                            </button>
+                            <input id="mobile-search-input" class="w-100" type="text" name="search" placeholder="Поиск товаров на сайте">
+                            <button class="p-0 mobile__search-box__close gray" type="button"
+                                onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
                         </form>

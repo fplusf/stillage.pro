@@ -1,8 +1,12 @@
 const searchForm = document.getElementById('searchForm'),
+    searchFormMobile = document.getElementById('searchFormMobile'),
     searchInput = document.getElementById('search-input'),
+    mobileSearchInput = document.getElementById('mobile-search-input'),
     searchBtn = document.querySelector('.top-bar__search-btn'),
+    mobileSearchBtn = document.querySelector('.mobile__search-btn'),
+    mobileSearchClose = document.querySelector('.mobile__search-box__close'),
     searchClose = document.querySelector('.search-box__close'),
-    cartButton = document.querySelector('.top-bar__cart_button'),
+    cartButton = document.querySelectorAll('.top-bar__cart_button'),
     cartWrapper = document.querySelector('.cart-wrapper'),
     cartOverlay = document.querySelector('.cart-overlay'),
     priceLink = document.querySelector('.price-link'),
@@ -67,6 +71,13 @@ $(document).ready(function () {
 /**
  * Manipulate search box.
  */
+!mobileSearchBtn
+    ? null
+    : mobileSearchBtn.addEventListener('click', () => {
+          searchFormMobile.classList.add('mobile__search-box_show');
+          mobileSearchInput.focus();
+      });
+
 searchBtn.addEventListener('click', () => {
     searchForm.classList.add('top-bar__search-box_show');
     searchInput.focus();
@@ -76,15 +87,25 @@ searchClose.addEventListener('click', () => {
     searchForm.classList.remove('top-bar__search-box_show');
 });
 
+!mobileSearchClose
+    ? null
+    : mobileSearchClose.addEventListener('click', () => {
+          searchFormMobile.classList.remove('mobile__search-box_show');
+      });
+
 /**
  * Manipulate cart.
  */
-cartButton.addEventListener('click', () => {
-    cartWrapper.classList.toggle('cart-wrapper_visible');
-    cartOverlay.classList.toggle('show-cart-overlay');
-    searchForm.classList.remove('top-bar__search-box_show');
-    cartOverlay.classList.remove('price-overlay');
-});
+!cartButton
+    ? null
+    : cartButton.forEach((btn) => {
+          btn.addEventListener('click', () => {
+              cartWrapper.classList.toggle('cart-wrapper_visible');
+              cartOverlay.classList.toggle('show-cart-overlay');
+              searchForm.classList.remove('top-bar__search-box_show');
+              cartOverlay.classList.remove('price-overlay');
+          });
+      });
 
 cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('cart-wrapper_visible');

@@ -1,3 +1,18 @@
-@import '_mixins/font-face'
+// Вызов миксина с передачей аргументов. Передаем разные
+// начертания (файлы) для разных `font-weight`.
+@import './_mixins/_font-face'
 
-//+font-face('Montserrat', '../fonts/Montserrat/Montserrat')
++font-face('Museo', '../fonts/Museo/light', $weight: 300)
++font-face('Museo', '../fonts/Museo/Regular')
++font-face('Museo', '../fonts/Museo/Medium', $weight: 600)
++font-face('Museo', '../fonts/Museo/Bold', $weight: 800)
++font-face('Museo', '../fonts/Museo/Black', $weight: 900)
+
+// Назначение главного шрифта
+body
+	font-family: 'Museo', sans-serif
+
+// Все эти куски должны быть в трех разных файлах:
+// – Миксин – в `sass/mixins/fonts`
+// – Вызов – в `sass/_fonts` (куда импортирутеся миксин)
+// – Назначение – в `sass/_base` (куда импортирутеся вызов)

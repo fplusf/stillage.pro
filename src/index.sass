@@ -1,12 +1,18 @@
+
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/v4-shims'
+
 @import 'sass/_vars'
+
 
 body
     font-family: $font-family
     line-height: 1.4
     margin: 0
     font-size: 14px
-    // font-weight: 400
-    // line-height: 1.5
     color: $secondary
     text-align: left
     background-color: $white
@@ -88,15 +94,16 @@ a, button
 .owl-carousel
     position: relative
     height: 100%
-    // font-family: 'Museo Sans Cyrl'
 
 .slide-count
-    left: 120px
-    bottom: 45px
+    left: 115px
+    bottom: 42px
+    background: rgba(0, 0, 0, 0.041)
+    padding: 3px 5px
 
     +respond-to(phone-land)
         bottom: 30px
-        left: 50%
+        left: 48%
 
 .owl-theme
     & .owl-nav

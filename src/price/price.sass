@@ -1,16 +1,13 @@
 .price-form
-    display: none
     padding: 60px 40px
     background: $white
-    font-size: 14px
-    visibility: hidden
-    opacity: 0
     transition: $transition
-    position: absolute
-    top: 50%
-    left: 50%
-    margin-left: -50px
-    transform: translate(-100%, 0)
+    width: 400px
+    height: 500px
+    margin: 0 auto
+
+    +respond-to(phone)
+        width: 100%
 
     input
         border: none
@@ -36,10 +33,21 @@
         &:hover
             color: $primary
 
-.price-form__visible
-    display: block
-    visibility: visible
+
+.mfp-bg
+    background: $dark-gray
+
+.mfp-close-btn-in .mfp-close
+    color: $white
+    right: -43px
+    top: -10px
+    font-size: 45px
     opacity: 1
-    width: 400px
-    height: 500px
-    z-index: 37
+    
+    &:hover
+        color: $primary
+
+    +respond-to(phone)
+        right: 0
+        top: 0
+        color: $gray

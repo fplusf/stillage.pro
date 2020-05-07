@@ -116,19 +116,6 @@ cartOverlay.addEventListener('click', () => {
     priceForm.classList.remove('price-form__visible');
 });
 
-/******************* Manipulate price *****************/
-
-priceFormClose.addEventListener('click', () => {
-    priceForm.classList.remove('price-form__visible');
-    cartOverlay.classList.remove('show-cart-overlay');
-});
-
-priceLink.addEventListener('click', () => {
-    priceForm.classList.toggle('price-form__visible');
-    cartOverlay.classList.toggle('show-cart-overlay');
-    cartOverlay.classList.add('price-overlay');
-});
-
 /******************* Change Price Form input view depending on values. *****************/
 
 priceFormInputs.forEach((input) => {
@@ -165,6 +152,7 @@ priceFormInputs.forEach((input) => {
           tileViewModeBtn.classList.remove('active');
       });
 
+/******************* Price Form *****************/
 // Set cliced link value to localStorage
 // further to add active class
 headerLinks.forEach((activeLink) => {
@@ -284,7 +272,6 @@ $(function () {
     $('#slider-range span')
         .first()
         .prepend('<div class="price-range__value-low mr-3 price-value position-absolute">0</div>');
-        
 
     $('#slider-range span')
         .last()
@@ -297,4 +284,29 @@ $('.d-accordion').on('show.bs.collapse', function (n) {
 });
 $('.d-accordion').on('hide.bs.collapse', function (n) {
     $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
+});
+
+/******************* Magnific Popup setup *****************/
+
+$(document).ready(function () {
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        focus: '#name',
+
+        // When elemened is focused, some mobile browsers in some cases zoom in
+        // It looks not nice, so we disable it:
+        callbacks: {
+            beforeOpen: function () {
+                if ($(window).width() < 700) {
+                    this.st.focus = false;
+                } else {
+                    this.st.focus = '#name';
+                }
+
+                mobileMenu.classList.remove('top-bar__mobile-menu_visible');
+            },
+        },
+        
+    });
 });

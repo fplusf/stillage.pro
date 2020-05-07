@@ -2,11 +2,10 @@
 <!-- Page content goes here -->
 
 <section class="information pt-5">
-
     <div class="container mb-5">
         <div class="row mb-5">
             <div class="container media d-md-flex justify-content-between">
-                <h3 class="media-body text-muted m-0">
+                <h3 class="media-body text-muted m-0 f-w-600">
                     Информация
                 </h3>
                 <div class="align-self-center">
@@ -16,28 +15,28 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
                 @@include('./src/components/button-information/button-information.html',
                 {
                 "title": "Доставка и оплата",
                 "section": "delivery-btn"
                 })
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
                 @@include('./src/components/button-information/button-information.html',
                 {
                 "title": "Возврат и гарантия",
                 "section": "warranty-btn"
                 })
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
                 @@include('./src/components/button-information/button-information.html',
                 {
                 "title": "Сертификаты, лицензии",
                 "section": "certificates-btn"
                 })
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
                 @@include('./src/components/button-information/button-information.html',
                 {
                 "title": "Инструкции по сборке",
@@ -50,14 +49,14 @@
 
     <!-- 1 Shipping and payment -->
     <div class="collapse-one d-none">
-        <h2 class="dark-gray container mb-4">Доставка</h2>
+        <h5 class="dark-gray container mb-4 f-w-600">Доставка</h5>
         <div class="collapse-one__header">
             <div class="container">
                 <div class="d-flex">
                     <div class="collapse-one__header__quad"></div>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2 mt-1">
-                            <strong>Самовывоз Санкт-Петербург (бесплатно)</strong>
+                            <h6 class="f-w-600">Самовывоз Санкт-Петербург (бесплатно)</h6>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-2 mt-1">
                             Санкт-Петербург, ул. Зайцева, 41
@@ -81,7 +80,7 @@
         <div class="collapse-one__header-city">
             <div class="container">
                 <div class="collapse-one__header-city__border-left">
-                    <h5 class="mb-4">Доставка по Санкт-Петербургу</h5>
+                    <div class="collapse-one__header-city__border-left__heading"><h6 class="f-w-600">Доставка по Санкт-Петербургу</h6></div>
                     <div class="collapse-one__header-city__border-left__quad"></div>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 mt-1">
@@ -102,24 +101,24 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2 mt-1">
-                            <strong>Стандартная доставка</strong>
+                            <div class="f-w-600">Стандартная доставка</div>
                             <p class="mt-2 dark-gray">(на следующий день после <br> подтверждения заказа на один
                                 адрес)</p>
-                            <p class="mb-1">Зона 1 — <strong>БЕСПЛАТНО</strong></p>
-                            <p class="mb-1">Зона 2 — <strong>490 ₽</strong></p>
-                            <p class="mb-1">Зона 3 — <strong>890 ₽</strong></p>
-                            <p class="mb-1">Далее рассчитывается <br> Зона 2 <strong> + 35 ₽/км</strong></p>
+                            <p class="mb-1">Зона 1 — <div class="f-w-600">БЕСПЛАТНО</div></p>
+                            <p class="mb-1">Зона 2 — <div class="f-w-600">490 ₽</div></p>
+                            <p class="mb-1">Зона 3 — <div class="f-w-600">890 ₽</div></p>
+                            <p class="mb-1">Далее рассчитывается <br> Зона 2 <div class="f-w-600"> + 35 ₽/км</div></p>
 
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2 mt-1">
-                            <strong>Срочная доставка</strong>
+                            <div class="f-w-600">Срочная доставка</div>
                             <p class="mt-2 dark-gray">
                                 Оплата за приобретенный товар осуществляется при получении товара водителюналичными
                                 или банковской картой по терминалу
                             </p>
                             <p>
                                 Доставка к определенному <br> времени в Зоне 2 <br>
-                                (от 40 минут) — <strong>890 ₽</strong>
+                                (от 40 минут) — <div class="f-w-600">890 ₽</div>
                             </p>
                         </div>
                     </div>
@@ -130,7 +129,9 @@
         <div class="collapse-one__delivery">
             <div class="container">
                 <div class="collapse-one__delivery__border-left">
-                    <h5 class="mb-4">Доставка по Ленинградской области</h5>
+                    <div class="collapse-one__header-city__border-left__heading">
+                        <h6 class="mb-4 f-w-600">Доставка по Ленинградской области</h6>
+                    </div>
                     <div class="collapse-one__delivery__border-left__quad"></div>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-1">
@@ -145,22 +146,22 @@
                             </p>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-2 mt-1">
-                            <h4><strong>1 способ</strong></h4>
+                            <h4><div class="f-w-600">1 способ</div></h4>
                             <p>
                                 Службой доставки Pro стеллаж <br>
-                                и составляет <strong>490 ₽ + 35 /км</strong> <br>
+                                и составляет <div class="f-w-600">490 ₽ + 35 /км</div> <br>
                                 от г. Санкт-Петербург
                             </p>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-2 mt-1">
-                            <h4><strong>2 способ</strong></h4>
+                            <h4><div class="f-w-600">2 способ</div></h4>
                             <p>
                                 Транспортной Компанией Гарант-Логистика
                                 и рассчитывается по тарифам ТК.
                             </p>
                             <p>
                                 Доставка на терминал ТК Гарант-Логистика
-                                в Санкт-Петербурге - <strong>бесплатно</strong>
+                                в Санкт-Петербурге - <div class="f-w-600">бесплатно</div>
                             </p>
                         </div>
                     </div>
@@ -171,7 +172,9 @@
         <div class="collapse-one__header-city">
             <div class="container">
                 <div class="collapse-one__header-city__border-left pb-0 mb-5">
-                    <h5 class="mb-4">Доставка по России</h5>
+                    <div class="collapse-one__header-city__border-left__heading">
+                        <h6 class="mb-4 f-w-600">Доставка по России</h6>
+                    </div>
                     <div class="collapse-one__header-city__border-left__quad"></div>
                     <div class="row">
                         <div class="col-12 col-sm-5 col-md-5 col-lg-5 mb-2 mt-1">
@@ -256,10 +259,10 @@
                 <h4 class="white m-0">Оплата</h4>
                 <div class="row mt-5">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <h6><strong>Безналичная оплата</strong></h6>
+                        <h6 class="f-w-600">Безналичная оплата</h6>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <h6><strong>Оплата наличными</strong></h6>
+                        <h6 class="f-w-600">Оплата наличными</h6>
                     </div>
                 </div>
                 <div class="row mt-5">
@@ -327,11 +330,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                    <h5 class="dark-gray mb-4">
-                        <strong>
-                            Видео-инструкции по сборке <br>
-                            металлической мебели
-                        </strong>
+                    <h5 class="dark-gray mb-4 f-w-600">
+                        Видео-инструкции по сборке <br>
+                        металлической мебели
                     </h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
@@ -384,16 +385,14 @@
             </div>
 
             <div class="lp-section">
-                <h5 class="dark-gray mb-5">
-                    <strong>
-                        Инструкции по сборке металлических стеллажей
-                    </strong>
+                <h5 class="dark-gray mb-5 f-w-600">
+                    Инструкции по сборке металлических стеллажей
                 </h5>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <strong>
+                        <div class="f-w-600">
                             Среднегрузовые стеллажи
-                        </strong>
+                        </div>
                         <ul class="nav flex-column mt-4">
                             <li class="nav-item mb-2">
                                 <a class="assembly-instructions__list-item-red d-flex align-items-center" href="">
@@ -434,9 +433,9 @@
                         </ul>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <strong>
+                        <div class="f-w-600">
                             Архивные стеллажи
-                        </strong>
+                        </div>
                         <ul class="nav flex-column mt-4">
                             <li class="nav-item mb-2">
                                 <a class="assembly-instructions__list-item-red d-flex align-items-center" href="">
@@ -465,9 +464,9 @@
                         </ul>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <strong>
+                        <div class="f-w-600">
                             Инструкция по сборке Гардеробных<br> систем ТИТАН - GS
-                        </strong>
+                        </div>
                         <ul class="nav flex-column mt-4">
                             <li class="nav-item mb-2">
                                 <a class="assembly-instructions__list-item-red d-flex align-items-center" href="">
@@ -487,14 +486,12 @@
             </div>
 
             <div class="lp-section">
-                <h5 class="dark-gray mb-5">
-                    <strong>
-                        Инструкции по сборке металлической мебели
-                    </strong>
+                <h5 class="dark-gray mb-5 f-w-600">
+                    Инструкции по сборке металлической мебели
                 </h5>
-                <strong>
+                <div class="f-w-600">
                     Архивные шкафы
-                </strong>
+                </div>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <ul class="nav flex-column mt-4">
@@ -602,9 +599,9 @@
             </div>
 
             <div class="lp-section">
-                <strong>
+                <div class="f-w-600">
                     Шкафы для одежды и сумок (локеры) и универсальные шкафы
-                </strong>
+                </div>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <ul class="nav flex-column mt-4">
@@ -770,10 +767,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                    <h5 class="dark-gray mb-5">
-                        <strong>
-                            Сертификаты и лицензии
-                        </strong>
+                    <h5 class="dark-gray mb-5 f-w-600">
+                        Сертификаты и лицензии
                     </h5>
                     <p>
                         Продукция компании Pro Stillage проходит обязательную сертификацию <br>
@@ -803,7 +798,7 @@
             </div>
             <div class="row lp-section">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
-                    <strong>СЕРТИФИКАТЫ Pro Stillage</strong>
+                    <div class="f-w-600">СЕРТИФИКАТЫ Pro Stillage</div>
                     <ul class="nav flex-column mt-4  mb-4">
                         <li class="nav-item mb-2">
                             <a class="assembly-instructions__list-item-red d-flex align-items-center" href=""> <i
@@ -852,7 +847,7 @@
                     @@include('src/components/buttons/filled-gray-button.html', {"title": "Скачать все"})
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <strong>Лицензии ПРОМЕТ</strong>
+                    <div class="f-w-600">Лицензии ПРОМЕТ</div>
                     <ul class="nav flex-column mt-4 mb-4">
                         <li class="nav-item mb-2">
                             <a class="assembly-instructions__list-item-red d-flex" href=""> <i
@@ -874,16 +869,14 @@
     <div class="warranty d-none">
 
         <div class="container">
-            <h5 class="dark-gray mb-5">
-                <strong>
-                    Возврат и гарантия на товар
-                </strong>
+            <h5 class="dark-gray mb-5 f-w-600">
+                Возврат и гарантия на товар
             </h5>
             <div class="row mb-5">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                    <strong>
+                    <div class="f-w-600">
                         1. Гарантийные обязательства
-                    </strong>
+                    </div>
                     <p class="mt-3">
                         1.1. Гарантийный срок - период, в течение которого в случае обнаружения в товаре <br>
                         недостатка изготовитель, продавец, обязан удовлетворить требования потребителя, <br>
@@ -909,9 +902,9 @@
 
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                    <strong>
+                    <div class="f-w-600">
                         2. Обмен и возврат товара
-                    </strong>
+                    </div>
                     <p class="mt-3">
                         2.1 Покупатель вправе отказаться от товара в любое время до его передачи, а после
                         передачи
@@ -981,14 +974,14 @@
 
 
     <div class="information-about">
-        <div class="information__about">
+        <div class="information-about__about">
             @@include('src/components/about/about.html')
         </div>
         <div class="container">
             <div class="information__reviews pb-5 pt-5">
                 <div class="media pb-5">
                     <div class="media-body">
-                        <h2>Отзывы</h2>
+                        <h2 class="f-w-600 dark-gray">Отзывы</h2>
                     </div>
                     <div class="ml-2 align-self-center">
                         <ul class="nav align-items-end d-none d-lg-flex">

@@ -172,6 +172,8 @@
 .site-header__nav
     padding: 104px 0 9px
     z-index: 2
+    position: fixed
+    transition: top $transition
 
     +respond-to(tablet)
         padding: 0
@@ -189,13 +191,15 @@
 
         &__catalog_hover
             display: block
-            visibility: hidden
             opacity: 0
             position: absolute
             top: -5px
             left: -25px
             background: $white
             z-index: 20
+            transition: all .25s .1s ease-out
+            transform-origin: center top
+            transform: scaleY(0)
 
         &:hover .site-header__nav_square
             opacity: 1
@@ -207,7 +211,7 @@
             margin-left: 5px
 
         &:hover &__catalog_hover
-            visibility: visible
+            transform: scaleY(1)
             opacity: 1
 
     &-link

@@ -52,12 +52,11 @@ window.onscroll = function () {
 
 /******************* Manipulate search box. *****************/
 
-!mobileSearchBtn
-    ? null
-    : mobileSearchBtn.addEventListener('click', () => {
-          searchFormMobile.classList.add('mobile__search-box_show');
-          mobileSearchInput.focus();
-      });
+mobileSearchBtn &&
+    mobileSearchBtn.addEventListener('click', () => {
+        searchFormMobile.classList.add('mobile__search-box_show');
+        mobileSearchInput.focus();
+    });
 
 searchBtn.addEventListener('click', () => {
     searchForm.classList.add('top-bar__search-box_show');
@@ -68,24 +67,22 @@ searchClose.addEventListener('click', () => {
     searchForm.classList.remove('top-bar__search-box_show');
 });
 
-!mobileSearchClose
-    ? null
-    : mobileSearchClose.addEventListener('click', () => {
-          searchFormMobile.classList.remove('mobile__search-box_show');
-      });
+mobileSearchClose &&
+    mobileSearchClose.addEventListener('click', () => {
+        searchFormMobile.classList.remove('mobile__search-box_show');
+    });
 
 /******************* Manipulate cart *****************/
 
-!cartButton
-    ? null
-    : cartButton.forEach((btn) => {
-          btn.addEventListener('click', () => {
-              cartWrapper.classList.toggle('d-block');
-              cartOverlay.classList.toggle('show-cart-overlay');
-              searchForm.classList.remove('top-bar__search-box_show');
-              cartOverlay.classList.remove('price-overlay');
-          });
-      });
+cartButton &&
+    cartButton.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            cartWrapper.classList.toggle('d-block');
+            cartOverlay.classList.toggle('show-cart-overlay');
+            searchForm.classList.remove('top-bar__search-box_show');
+            cartOverlay.classList.remove('price-overlay');
+        });
+    });
 
 cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('d-block');
@@ -107,27 +104,25 @@ priceFormInputs.forEach((input) => {
 
 /******************* Action page toggle view mode *****************/
 
-!tileViewModeBtn
-    ? null
-    : tileViewModeBtn.addEventListener('click', () => {
-          if (tileViewMode.classList.contains('hidden')) {
-              tileViewMode.classList.remove('hidden');
-          }
-          listViewMode.classList.add('hidden');
-          tileViewModeBtn.classList.add('active');
-          listViewModeBtn.classList.remove('active');
-      });
+tileViewModeBtn &&
+    tileViewModeBtn.addEventListener('click', () => {
+        if (tileViewMode.classList.contains('hidden')) {
+            tileViewMode.classList.remove('hidden');
+        }
+        listViewMode.classList.add('hidden');
+        tileViewModeBtn.classList.add('active');
+        listViewModeBtn.classList.remove('active');
+    });
 
-!listViewModeBtn
-    ? null
-    : listViewModeBtn.addEventListener('click', () => {
-          if (listViewMode.classList.contains('hidden')) {
-              listViewMode.classList.remove('hidden');
-          }
-          tileViewMode.classList.add('hidden');
-          listViewModeBtn.classList.add('active');
-          tileViewModeBtn.classList.remove('active');
-      });
+listViewModeBtn &&
+    listViewModeBtn.addEventListener('click', () => {
+        if (listViewMode.classList.contains('hidden')) {
+            listViewMode.classList.remove('hidden');
+        }
+        tileViewMode.classList.add('hidden');
+        listViewModeBtn.classList.add('active');
+        tileViewModeBtn.classList.remove('active');
+    });
 
 /******************* Price Form *****************/
 // Set cliced link value to localStorage
@@ -149,33 +144,29 @@ if (performance.navigation) {
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
 
-!deliveryBtn
-    ? null
-    : deliveryBtn.addEventListener('click', () => {
-          toggleInfoSections(delivery);
-          toggleInfoBtnIcons(deliveryBtn);
-      });
+deliveryBtn &&
+    deliveryBtn.addEventListener('click', () => {
+        toggleInfoSections(delivery);
+        toggleInfoBtnIcons(deliveryBtn);
+    });
 
-!warrantyBtn
-    ? null
-    : warrantyBtn.addEventListener('click', () => {
-          toggleInfoSections(warranty);
-          toggleInfoBtnIcons(warrantyBtn);
-      });
+warrantyBtn &&
+    warrantyBtn.addEventListener('click', () => {
+        toggleInfoSections(warranty);
+        toggleInfoBtnIcons(warrantyBtn);
+    });
 
-!certificatesBtn
-    ? null
-    : certificatesBtn.addEventListener('click', () => {
-          toggleInfoSections(certificates);
-          toggleInfoBtnIcons(certificatesBtn);
-      });
+certificatesBtn &&
+    certificatesBtn.addEventListener('click', () => {
+        toggleInfoSections(certificates);
+        toggleInfoBtnIcons(certificatesBtn);
+    });
 
-!instructionBtn
-    ? null
-    : instructionBtn.addEventListener('click', () => {
-          toggleInfoSections(instruction);
-          toggleInfoBtnIcons(instructionBtn);
-      });
+instructionBtn &&
+    instructionBtn.addEventListener('click', () => {
+        toggleInfoSections(instruction);
+        toggleInfoBtnIcons(instructionBtn);
+    });
 
 /******************* Toggle information buttons satate. *****************/
 
@@ -226,8 +217,7 @@ mobileMenuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('top-bar__mobile-menu_visible');
 });
 
-!mobileCartBtn
-    ? null
-    : mobileCartBtn.addEventListener('click', () => {
-          cartWrapper.classList.toggle('cart-wrapper_visible');
-      });
+mobileCartBtn &&
+    mobileCartBtn.addEventListener('click', () => {
+        cartWrapper.classList.toggle('cart-wrapper_visible');
+    });

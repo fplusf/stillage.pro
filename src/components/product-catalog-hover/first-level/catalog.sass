@@ -9,8 +9,9 @@
 
     &__item
         &:hover .product-catalog__link_hover
-            visibility: visible
             opacity: 1
+            transform: scaleY(1)
+
 
         &:hover .product-catalog__link
             color: $primary
@@ -31,12 +32,16 @@
 
         &_hover
             position: absolute
-            transform: translate(399px,-73px)
+            right: -400px
+            transition: all .25s .1s ease-out
+            transform-origin: center top
+            transform: scaleY(0)
             background: white
-            visibility: hidden
             opacity: 0
-            top: 69px
-            // transition: $transition
+            top: 0px
+            height: fill-available
+            height: -moz-available
+            height: -webkit-fill-available 
 
             &:hover + .product-catalog__link
                 color: $primary

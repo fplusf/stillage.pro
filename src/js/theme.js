@@ -37,41 +37,18 @@ const searchForm = document.getElementById('searchForm'),
     mobileMenuBtn = document.querySelector('.top-bar__hamburger-menu'),
     mobileMenuClose = document.querySelector('.drawer-menu-close');
 
-/******************* Owl carousel setup. *****************/
+/******************* Hide navbar on scroll down. *****************/
 
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        onChanged: counter,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            1000: {
-                items: 1,
-            },
-        },
-    });
-
-    function counter(event) {
-        if ($('.owl-carousel').children().length !== 3 && $('.owl-carousel').children().length !== 6) {
-            $('.owl-carousel').append('<span class="slide-count white position-absolute"></span>');
-        }
-
-        if (!event.namespace) {
-            return;
-        }
-
-        let slides = event.relatedTarget;
-
-        $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById('navbar').style.top = '0';
+    } else {
+        document.getElementById('navbar').style.top = '-60px';
     }
-});
+    prevScrollpos = currentScrollPos;
+};
 
 /******************* Manipulate search box. *****************/
 
@@ -254,59 +231,3 @@ mobileMenuClose.addEventListener('click', () => {
     : mobileCartBtn.addEventListener('click', () => {
           cartWrapper.classList.toggle('cart-wrapper_visible');
       });
-
-/******************* Range slider *****************/
-
-$(function () {
-    $('#slider-range').slider({
-        range: true,
-        min: 0,
-        max: 40000,
-        values: [6000, 29000],
-        slide: function (event, ui) {
-            $('.price-range__value-low').text(ui.values[0]) + $('.price-range__value-up').text(ui.values[1]);
-        },
-    });
-    $('#amount').val('$' + $('#amount').slider('values', 0) + $('#amount').slider('values', 1));
-
-    $('#slider-range span')
-        .first()
-        .prepend('<div class="price-range__value-low mr-3 price-value position-absolute">0</div>');
-
-    $('#slider-range span')
-        .last()
-        .prepend('<div class="price-range__value-up mr-3 price-value position-absolute">33</div>');
-});
-
-/******************* Actions Filter Accordion *****************/
-$('.d-accordion').on('show.bs.collapse', function (n) {
-    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
-});
-$('.d-accordion').on('hide.bs.collapse', function (n) {
-    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
-});
-
-/******************* Magnific Popup setup *****************/
-
-$(document).ready(function () {
-    $('.popup-with-form').magnificPopup({
-        type: 'inline',
-        preloader: false,
-        focus: '#name',
-
-        // When elemened is focused, some mobile browsers in some cases zoom in
-        // It looks not nice, so we disable it:
-        callbacks: {
-            beforeOpen: function () {
-                if ($(window).width() < 700) {
-                    this.st.focus = false;
-                } else {
-                    this.st.focus = '#name';
-                }
-
-                mobileMenu.classList.remove('top-bar__mobile-menu_visible');
-            },
-        },
-        
-    });
-});

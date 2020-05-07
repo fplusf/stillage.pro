@@ -1,5 +1,6 @@
 .product-card-simple,
 .product-card-horizontal
+    margin-bottom: 30px
     +respond-to(phone)
         height: 200px
 
@@ -28,6 +29,7 @@
     &__photo
         flex: 2
         img
+            max-width: 100%
             object-fit: contain
             +respond-to(phone-land)
                 width: 100%

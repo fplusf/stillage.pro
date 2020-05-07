@@ -76,9 +76,10 @@ function compileSASS() {
         .pipe(browserSync.reload({ stream: true }));
 }
 
-function transpileTS() {
-    return src(['./src/ts/*.js'])
+function concatJs() {
+    return src(['./src/js/*.*'])
         .pipe(terser())
+        .pipe(concat('theme.js'))
         .pipe(sourcemaps.write('maps'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./dist/js'))
@@ -120,7 +121,7 @@ function watchALL() {
     watch('src/**/**/*.html', compileHtml);
     watch('src/**/*.html', compileHtml);
     watch('src/*.html', compileHtml);
-    watch('src/ts/*.js', transpileTS);
+    watch('src/ts/*.js', concatJs);
 }
 
 function clearDist() {
@@ -132,7 +133,7 @@ function clearDist() {
  */
 const defaultTasks = parallel(
     series(
-        parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, transpileTS),
+        parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, concatJs),
         serve
     ),
     watchALL

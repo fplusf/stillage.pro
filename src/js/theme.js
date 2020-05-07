@@ -191,7 +191,7 @@ function toggleInfoBtnIcons(sectionBtn) {
 }
 
 /******************* Toggle information section. *****************/
-
+/// TODO fix showing about page ON different buttons click
 function toggleInfoSections(sectionToShow) {
     sectionToShow.classList.toggle('d-block');
 
@@ -200,12 +200,13 @@ function toggleInfoSections(sectionToShow) {
     allSections.forEach((section) => {
         if (section !== sectionToShow) {
             section.classList.remove('d-block');
-            if (section === allSections[4]) {
-                // section.classList.add('d-none');
-            }
         }
     });
+
+    about.classList.toggle('d-none');
 }
+
+/******************* INFORMATION PAGE COLLAPSING  END *****************/
 
 /******************* Mobile Hamburger menu manipulation *****************/
 

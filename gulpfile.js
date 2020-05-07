@@ -121,7 +121,7 @@ function watchALL() {
     watch('src/**/**/*.html', compileHtml);
     watch('src/**/*.html', compileHtml);
     watch('src/*.html', compileHtml);
-    watch('src/ts/*.js', concatJs);
+    watch('src/js/*.js', concatJs);
 }
 
 function clearDist() {

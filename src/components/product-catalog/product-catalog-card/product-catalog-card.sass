@@ -16,6 +16,10 @@
         transition: $transition
 
 .product-card-simple
+    &__photo
+        img
+            +respond-to(phone-land)
+                width: 100%
     +respond-to(phone)
         flex-direction: row-reverse
 

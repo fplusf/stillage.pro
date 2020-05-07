@@ -10,6 +10,8 @@
     <meta name="keywords" content="" />
     <title>@@title</title>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <!-- CSS-->
     <link href="/css/libs.min.css" rel="stylesheet" />
     <link href="/css/theme.min.css" rel="stylesheet" />
@@ -27,12 +29,97 @@
                 <div class="container">
                     <div class="row position-relative h-100 justify-content-between m-0">
 
-                        <a href="/menu/menu.html"
+                        <button
                             class="d-xs-flex flex-column align-items-center justify-content-center d-md-none top-bar__hamburger-menu">
                             <div class="bar1"></div>
                             <div class="bar2"></div>
                             <div class="bar3"></div>
-                        </a>
+                        </button>
+
+                        <div id="mobileMenu" class="top-bar__mobile-menu">
+                            <div class="drawer-menu">
+    <ul class="nav flex-column mb-5">
+        <li class="nav-item">
+            <a href="/social-networks/social-networks.html">
+                <h4 class="white d-flex">
+                    <span class="mr-auto">
+                        Социальные сети
+                    </span>
+                    <i class="fa fa-angle-right mt-1"></i>
+                </h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/catalog/catalog.html">
+                <h4 class="white d-flex">
+                    <span class="mr-auto">
+                        Каталог товаров
+                    </span>
+                    <i class="fa fa-angle-right mt-1"></i>
+                </h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/actions/actions.html">
+                <h4 class="white">Акции</h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/news/news.html">
+                <h4 class="white">Новости</h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/buy-out/buy-out.html">
+                <h4 class="white">Выкуп б/у стеллажей</h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/information/information.html">
+                <h4 class="white">Информация</h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/contacts/contacts.html">
+                <h4 class="white">Контакты</h4>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#test-form" class="popup-with-form">
+                <h4 class="white">Прайс</h4>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav site-footer__nav flex-column mb-4">
+        <li class="nav-item mb-3">
+            <a href="" class="site-footer__nav-link nav-link">
+                <span class="footer-bar__color-red">8 (812) 565 03 59</span> <br>
+                <span class="footer-bar__color-white-link">info@stillage.pro</span>
+            </a>
+        </li>
+        <li class="nav-item mb-3">
+            <a href="" class="site-footer__nav-link nav-link">
+                Санкт-Петербург,<br>
+                ул. Зайцева, 41
+            </a>
+        </li>
+        <li class="nav-item mb-3">
+            <a href="" class="site-footer__nav-link nav-link">
+                Санкт-Петербург,<br>
+                ул. Зайцева, 41
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="close-btn-wrapper position-relative">
+    <button class="drawer-menu-close black">
+        <i class="fa fa-times"></i>
+    </button>
+</div>
+
+<div class="mobile-menu-overlay"></div>
+                        </div>
 
                         <a href="/" class="pl-xl-3 mr-2 mr-lg-3 site-header__nav-link d-flex align-items-center" id="0">
                             <img src="../img/logo/logo-sm.png" alt="Главная – Pro Стеллаж"
@@ -173,12 +260,13 @@
                         </div>
 
                         <form action="/" id="searchForm"
-                            class="position-absolute align-items-center bg-white justify-content-between top-bar__search-box_hidden">
-                            <button class="p-0 mr-3 search-box__submit" type="submit">
+                            class="position-absolute align-items-center bg-white d-none d-sm-flex justify-content-between top-bar__search-box_hidden">
+                            <button class="p-0 mr-3 primary search-box__submit" type="submit">
                                 <i class="fas fa-search pr-2"></i>
                             </button>
-                            <input id="search-input" type="text" name="search" placeholder="Поиск товаров на сайте">
-                            <button class="p-0 search-box__close" type="button"
+                            <input id="search-input" type="text" name="search" class="border-0 background-none w-100"
+                                placeholder="Поиск товаров на сайте">
+                            <button class="p-0 search-box__close gray" type="button"
                                 onclick="document.getElementById('searchForm').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
@@ -189,8 +277,8 @@
                             <button class="p-0 mr-3 gray" type="submit">
                                 <i class="fas fa-chevron-left pr-2"></i>
                             </button>
-                            <input id="mobile-search-input" class="w-100" type="text" name="search"
-                                placeholder="Поиск товаров на сайте">
+                            <input id="mobile-search-input" class="w-100 border-0 background-none" type="text"
+                                name="search" placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">
                                 <i class="fas fa-times pl-2"></i>
@@ -423,34 +511,39 @@
 
                         <li class="site-header__nav-item nav-item d-flex align-items-center">
 
-                            <div class="price-form">
-    <button class="icon-button position-absolute price-form__close-btn">
-        <i class="fas fa-times fa-1x"></i>
-    </button>
+                            <form id="test-form" class="white-popup-block mfp-hide price-form position-relative">
 
     <h4 class="price-form__title text-center mb-4">
         Заполните форму
         и мы вышлем Вам прайс
     </h4>
 
-    <form>
-        <input type="text" name="Name" placeholder="Имя" class="price-form__input pb-2 mb-4">
-
-        <input type="tel" name="Phone" placeholder="Телефон" class="price-form__input pb-2 mb-4">
-
-        <input type="email" name="Email" placeholder="E-mail" class="price-form__input pb-2 mb-5">
+    <fieldset class="border-0">
+        <ul class="list-unstyled m-0">
+            <li>
+                <input id="name" name="name" type="text" placeholder="Имя" required=""
+                    class="price-form__input pb-2 mb-4">
+            </li>
+            <li>
+                <input id="email" name="email" type="tel" placeholder="Телефон" required=""
+                    class="price-form__input pb-2 mb-4">
+            </li>
+            <li>
+                <input id="phone" name="phone" type="email" placeholder="E-mail" required=""
+                    class="price-form__input pb-2 mb-5">
+            </li>
+        </ul>
 
         <button class="primary w-100 button-filled">Отправить</button>
 
         <span class="price-form__confidentiality gray d-block text-center px-1 mt-3">
             Нажимая «Отправить», Вы соглашаетесь на обработку своих персональных данных
         </span>
-    </form>
+    </fieldset>
+</form>
 
-</div>
-
-                            <a href="#" id="7"
-                                class="site-header__nav-link d-flex align-items-center nav-link price-link pr-2">
+                            <a href="#test-form"
+                                class="popup-with-form site-header__nav-link d-flex align-items-center nav-link price-link pr-2">
                                 Прайс
                                 <i class="fas fa-square-full site-header__nav_square"></i>
                             </a>

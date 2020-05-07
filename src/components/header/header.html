@@ -113,12 +113,12 @@
                         </div>
 
                         <form action="/" id="searchForm"
-                            class="position-absolute align-items-center bg-white justify-content-between top-bar__search-box_hidden">
-                            <button class="p-0 mr-3 search-box__submit" type="submit">
+                            class="position-absolute align-items-center bg-white d-none d-sm-flex justify-content-between top-bar__search-box_hidden">
+                            <button class="p-0 mr-3 primary search-box__submit" type="submit">
                                 <i class="fas fa-search pr-2"></i>
                             </button>
-                            <input id="search-input" type="text" name="search" placeholder="Поиск товаров на сайте">
-                            <button class="p-0 search-box__close" type="button"
+                            <input id="search-input" type="text" name="search" class="border-0 background-none w-100" placeholder="Поиск товаров на сайте">
+                            <button class="p-0 search-box__close gray" type="button"
                                 onclick="document.getElementById('searchForm').reset()">
                                 <i class="fas fa-times pl-2"></i>
                             </button>
@@ -129,7 +129,7 @@
                             <button class="p-0 mr-3 gray" type="submit">
                                 <i class="fas fa-chevron-left pr-2"></i>
                             </button>
-                            <input id="mobile-search-input" class="w-100" type="text" name="search"
+                            <input id="mobile-search-input" class="w-100 border-0 background-none" type="text" name="search"
                                 placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">

@@ -203,7 +203,7 @@ function toggleInfoSections(sectionToShow) {
         }
     });
 
-    about.classList.toggle('d-none');
+    // about.classList.toggle('d-none');
 }
 
 /******************* INFORMATION PAGE COLLAPSING  END *****************/

@@ -37,9 +37,8 @@ const searchForm = document.getElementById('searchForm'),
     mobileMenuBtn = document.querySelector('.top-bar__hamburger-menu'),
     mobileMenuClose = document.querySelector('.drawer-menu-close');
 
-/**
- * Owl carousel setup.
- */
+/******************* Owl carousel setup. *****************/
+
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -74,9 +73,8 @@ $(document).ready(function () {
     }
 });
 
-/**
- * Manipulate search box.
- */
+/******************* Manipulate search box. *****************/
+
 !mobileSearchBtn
     ? null
     : mobileSearchBtn.addEventListener('click', () => {
@@ -99,9 +97,8 @@ searchClose.addEventListener('click', () => {
           searchFormMobile.classList.remove('mobile__search-box_show');
       });
 
-/**
- * Manipulate cart.
- */
+/******************* Manipulate cart *****************/
+
 !cartButton
     ? null
     : cartButton.forEach((btn) => {
@@ -119,9 +116,8 @@ cartOverlay.addEventListener('click', () => {
     priceForm.classList.remove('price-form__visible');
 });
 
-/**
- * Manipulate price.
- */
+/******************* Manipulate price *****************/
+
 priceFormClose.addEventListener('click', () => {
     priceForm.classList.remove('price-form__visible');
     cartOverlay.classList.remove('show-cart-overlay');
@@ -133,7 +129,8 @@ priceLink.addEventListener('click', () => {
     cartOverlay.classList.add('price-overlay');
 });
 
-// Change Price Form input view depending on values.
+/******************* Change Price Form input view depending on values. *****************/
+
 priceFormInputs.forEach((input) => {
     input.addEventListener('input', (event) => {
         if (event.target.value.length > 0) {
@@ -144,7 +141,7 @@ priceFormInputs.forEach((input) => {
     });
 });
 
-////// Action page toggle view mode /////
+/******************* Action page toggle view mode *****************/
 
 !tileViewModeBtn
     ? null
@@ -185,7 +182,8 @@ if (performance.navigation) {
     }
 }
 
-//////////  INFORMATION PAGE COLLAPSING ////////////
+/******************* INFORMATION PAGE COLLAPSING *****************/
+
 !deliveryBtn
     ? null
     : deliveryBtn.addEventListener('click', () => {
@@ -214,7 +212,8 @@ if (performance.navigation) {
           toggleInfoBtnIcons(instructionBtn);
       });
 
-/// Toggle information buttons satate.
+/******************* Toggle information buttons satate. *****************/
+
 function toggleInfoBtnIcons(sectionBtn) {
     let allButtons = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
 
@@ -235,7 +234,8 @@ function toggleInfoBtnIcons(sectionBtn) {
     }
 }
 
-//// Toggle information section.
+/******************* Toggle information section. *****************/
+
 function toggleInfoSections(sectionToShow) {
     sectionToShow.classList.toggle('d-block');
 
@@ -251,7 +251,8 @@ function toggleInfoSections(sectionToShow) {
     });
 }
 
-/////// Mobile Hamburger menu manipulation /////
+/******************* Mobile Hamburger menu manipulation *****************/
+
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('top-bar__mobile-menu_visible');
 });
@@ -266,7 +267,8 @@ mobileMenuClose.addEventListener('click', () => {
           cartWrapper.classList.toggle('cart-wrapper_visible');
       });
 
-/////////// Range slider ////////
+/******************* Range slider *****************/
+
 $(function () {
     $('#slider-range').slider({
         range: true,
@@ -278,25 +280,18 @@ $(function () {
         },
     });
     $('#amount').val('$' + $('#amount').slider('values', 0) + $('#amount').slider('values', 1));
+
+    $('#slider-range span')
+        .first()
+        .prepend('<div class="price-range__value-low mr-3 price-value position-absolute">0</div>');
+        
+
+    $('#slider-range span')
+        .last()
+        .prepend('<div class="price-range__value-up mr-3 price-value position-absolute">33</div>');
 });
 
-//////////////  Actions Filter Accordion ///////////
-$(function () {
-    // Smooth Scroll
-    $('a[href*=#]').bind('click', function (e) {
-        var anchor = $(this);
-        $('html, body')
-            .stop()
-            .animate(
-                {
-                    scrollTop: $(anchor.attr('href')).offset().top,
-                },
-                1000
-            );
-        e.preventDefault();
-    });
-});
-
+/******************* Actions Filter Accordion *****************/
 $('.d-accordion').on('show.bs.collapse', function (n) {
     $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
 });

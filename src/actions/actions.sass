@@ -95,8 +95,7 @@
         font-size: 1.5rem
 
 
-////// End of Action slides  ////////
-
+/***************** End of Action slides  *************/
 
 .catalog-sorting
     margin-left: 225px
@@ -126,7 +125,7 @@
 
 
 
-//////////// Slider Price Range ///////////
+/***************** Slider Price Range *************/
 .ui-widget.ui-widget-content
     border: none
     background: $light-gray
@@ -145,16 +144,31 @@ html .ui-button.ui-state-disabled:active
     outline: none
     transform: translateY(-3px)
 
-///////////////////////  Filter Accordion ////////////////
+/*****************  Filter Accordion *************/
+.panel-title,
+.panel-body
+    margin-bottom: 2rem
 
+.panel-title
+    cursor: pointer
 
-//////////  End of price range /////////
+/***************** End of price range *************/
 
 .filter-price-range
     .price-value
         background: $light-gray
         padding: 8px 10px
 
+
+.price-range__value-low
+    top: -42px
+    left: -16px
+    color: $dark-gray
+
+.price-range__value-up
+    top: -42px
+    right: -37px
+    color: $dark-gray
 
 .product-info
     p
@@ -174,3 +188,62 @@ html .ui-button.ui-state-disabled:active
         width: 25px
         background: $gray
         color: $white
+
+/***************** Filter Price Checkboxes *************/
+/* The container */
+.checkbox-container
+  display: block
+  position: relative
+  padding-left: 35px
+  margin-bottom: 12px
+  cursor: pointer
+//   font-size: 22px
+//   -webkit-user-select: none
+//   -moz-user-select: none
+//   -ms-user-select: none
+//   user-select: none
+
+/* Hide the browser's default checkbox */
+.checkbox-container input
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+
+/* Create a custom checkbox */
+.checkmark
+  position: absolute
+  top: 0
+  left: 0
+  height: 20px
+  width: 20px
+  background-color: $light-gray
+
+/* Highlight container on hover */
+.checkbox-container:hover
+    color: $primary
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark
+  background-color: $primary
+  height: 20px
+  width: 20px
+  border: 4px solid $light-gray
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark
+  background-color: $primary
+  height: 20px
+  width: 20px
+  border: 4px solid $light-gray
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after
+  display: block

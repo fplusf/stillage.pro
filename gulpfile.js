@@ -37,7 +37,6 @@ function concatCSSLibs() {
         [
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
             './node_modules/magnific-popup/dist/magnific-popup.css',
-            './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
             './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
             './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         ],
@@ -55,8 +54,7 @@ function concatJSLibs() {
     return src([
         './node_modules/jquery/dist/jquery.js',
         './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-        './node_modules/owl.carousel/dist/owl.carousel.min.js',
-        './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+        './node_modules/owl.carousel/dist/owl.carousel.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

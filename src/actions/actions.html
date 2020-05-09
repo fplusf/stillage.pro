@@ -171,186 +171,105 @@
                 </div>
 
 
-                <!------ Accordion    -->
-
-
-                <ul class="accordion-list">
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100 view-gray">Оторбражение</h6>
-                        <div class="accordion-item__content">
-                            <label class="checkbox-container">Все
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="checkbox-container">Только акции
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="checkbox-container">Только новинки
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Цена
-                        </h6>
-                        <div class="accordion-item__content">
-                            <div class="mb-4">
-                                <div id="slider-range"></div>
-                            </div>
-
-                            <div class="d-flex justify-content-between mb-5">
-                                <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
-                                <div class="price-range__up w-100 text-center price-value">до 29 000</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Производитель
-                        </h6>
-                        <div class="accordion-item__content">
-                            <label class="checkbox-container">Samsung
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="checkbox-container">Apple
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="checkbox-container">Xiaomi
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-
-
-
-
-                <!------ Accordion    -->
-
-
+                <!------ Accordion  -->
 
                 <div class="filter white-bg shadow-light">
+                    <ul class="accordion-list dark-gray">
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100 view-gray">Оторбражение</h6>
+                            <div class="accordion-item__content">
+                                <label class="checkbox-container">Все
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
 
-                    <div class="panel-group dark-gray d-accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#view">
-                                <h6 class="panel-title w-100 view-gray">Оторбражение
-                                    <i class="fas fa-chevron-right pull-right align-middle float-right"></i>
-                                </h6>
+                                <label class="checkbox-container">Только акции
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="checkbox-container">Только новинки
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
-                            <div id="view" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <label class="checkbox-container">Все
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
+                        </li>
 
-                                    <label class="checkbox-container">Только акции
-                                        <input type="checkbox" checked="checked">
-                                        <span class="checkmark"></span>
-                                    </label>
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Цена
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="mb-4 slider-wrapper">
+                                    <div id="slider-range"></div>
+                                </div>
 
-                                    <label class="checkbox-container">Только новинки
-                                        <input type="checkbox" checked="checked">
-                                        <span class="checkmark"></span>
-                                    </label>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
+                                    <div class="price-range__up w-100 text-center price-value">до 29 000</div>
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="panel panel-default filter-price-range">
-                            <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#price">
-                                <h6 class="panel-title w-100">Цена
-                                    <i class="fas fa-chevron-right pull-right align-middle float-right"></i>
-                                </h6>
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Производитель
+                            </h6>
+                            <div class="accordion-item__content">
+                                <label class="checkbox-container">Samsung
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Apple
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Xiaomi
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
-                            <div id="price" class="panel-collapse collapse">
-                                <div class="panel-body pt-5">
-                                    <div class="mb-4">
-                                        <div id="slider-range"></div>
-                                    </div>
+                        </li>
 
-                                    <div class="d-flex justify-content-between mb-5">
-                                        <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
-                                        <div class="price-range__up w-100 text-center price-value">до 29 000</div>
-                                    </div>
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Высота
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="d-flex">
+                                    <input type="number" class="w-100 mr-4">
+                                    <input type="number" class="w-100">
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion"
-                                href="#producer">
-                                <h6 class="panel-title w-100">Производитель
-                                    <i class="fas fa-chevron-right pull-right align-middle float-right"></i>
-                                </h6>
-                            </div>
-                            <div id="producer" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <label class="checkbox-container">Samsung
-                                        <input type="checkbox" checked="checked">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="checkbox-container">Apple
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="checkbox-container">Xiaomi
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Ширина
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="d-flex">
+                                    <input type="number" class="w-100 mr-4">
+                                    <input type="number" class="w-100">
                                 </div>
                             </div>
-                        </div>
+                        </li>
+                    </ul>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#height">
-                                <h6 class="panel-title w-100">Высота
-                                    <i class="fas fa-chevron-right pull-right align-middle float-right"></i>
-                                </h6>
-                            </div>
-                            <div id="height" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="d-flex">
-                                        <input type="number" class="w-100 mr-4">
-                                        <input type="number" class="w-100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#width">
-                                <h6 class="panel-title w-100 mb-0">Ширина
-                                    <i class="fas fa-chevron-right pull-right align-middle float-right"></i>
-                                </h6>
-                            </div>
-                            <div id="width" class="panel-collapse collapse">
-                                <div class="panel-body mb-2 mt-4">
-                                    <div class="d-flex">
-                                        <input type="number" class="w-100 mr-4">
-                                        <input type="number" class="w-100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="w-100 mt-4 py-4">
+                        <button class="filter-content__reset-btn icon-button float-right">
+                            Сбросить
+                        </button>
                     </div>
 
                 </div>
+
             </div>
 
             <div class="row" id="actionTileViewMode">

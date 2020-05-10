@@ -35,6 +35,7 @@ function copyFonts() {
 function concatCSSLibs() {
     return src(
         [
+            './node_modules/nouislider/distribute//nouislider.min.css',
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
             './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
             './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
@@ -52,6 +53,7 @@ function concatCSSLibs() {
 function concatJSLibs() {
     return src([
         './node_modules/jquery/dist/jquery.js',
+        './node_modules/nouislider/distribute/nouislider.min.js',
         './node_modules/owl.carousel/dist/owl.carousel.min.js'
     ])
         .pipe(concat('libs.min.js'))

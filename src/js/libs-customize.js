@@ -56,11 +56,3 @@ $(function () {
         .last()
         .prepend('<div class="price-range__value-up mr-3 price-value position-absolute">33</div>');
 });
-
-/******************* Actions Filter Accordion *****************/
-$('.d-accordion').on('show.bs.collapse', function (n) {
-    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
-});
-$('.d-accordion').on('hide.bs.collapse', function (n) {
-    $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
-});

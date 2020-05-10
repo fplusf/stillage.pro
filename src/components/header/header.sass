@@ -174,9 +174,11 @@
     z-index: 2
     position: fixed
     transition: top $transition
+    +respond-to(phone-land)
+        display: none
 
-    +respond-to(tablet)
-        padding: 0
+    // +respond-to(tablet)
+    //     padding: 0
 
     &_square
         transition: $transition

@@ -11,7 +11,7 @@ const searchForm = document.getElementById('searchForm'),
     cartOverlay = document.querySelector('.cart-overlay'),
     /// Price Modal view
     priceOverlay = document.querySelector('.form-overlay'),
-    priceLink = document.querySelector('.price-link'),
+    priceLink = document.querySelectorAll('.price-link'),
     priceFormClose = document.querySelector('.close-btn'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
@@ -48,7 +48,7 @@ window.onscroll = function () {
     if (prevScrollpos > currentScrollPos) {
         document.getElementById('navbar').style.top = '0';
     } else {
-        document.getElementById('navbar').style.top = '-120px';
+        document.getElementById('navbar').style.top = '-140px';
     }
     prevScrollpos = currentScrollPos;
 };
@@ -76,10 +76,12 @@ mobileSearchClose &&
     });
 
 /******************* Price Form Modal *****************/
-priceLink.addEventListener('click', () => {
-    priceOverlay.classList.add('active');
-    priceForm.classList.add('active');
-    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+priceLink.forEach((link) => {
+    link.addEventListener('click', () => {
+        priceOverlay.classList.add('active');
+        priceForm.classList.add('active');
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    });
 });
 
 priceFormClose.addEventListener('click', () => {
@@ -97,9 +99,9 @@ priceOverlay.addEventListener('click', () => {
 priceFormInputs.forEach((input) => {
     input.addEventListener('input', (event) => {
         if (event.target.value.length > 0) {
-            input.classList.add('input-poluted');
+            input.classList.add('price-form-input_poluted');
         } else {
-            input.classList.remove('input-poluted');
+            input.classList.remove('price-form-input_poluted');
         }
     });
 });
@@ -241,5 +243,3 @@ mobileCartBtn &&
     mobileCartBtn.addEventListener('click', () => {
         cartWrapper.classList.toggle('cart-wrapper_visible');
     });
-
-/*********************  MOdal Dialog *********************/

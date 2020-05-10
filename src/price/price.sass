@@ -15,7 +15,6 @@
     opacity: .8
     visibility: visible
 
-    
 .price-form
     visibility: hidden
     position: absolute
@@ -36,6 +35,8 @@
         padding: 30px 30px
 
     +respond-to(phone)
+        top: -20px
+        height: 100vh
         width: 100%
 
     input
@@ -52,7 +53,7 @@
         border: 2px solid $primary
         padding: 10px
 
-    .input-poluted
+    .price-form-input_poluted
         border-bottom: 1px solid $black
 
     .close-btn
@@ -61,8 +62,13 @@
         right: -30px
         top: 0
         position: absolute
-        &:hover
-            color: $primary
+        &:hover svg path
+            fill: $primary
+
+        +respond-to(phone)
+            right: 30px
+            svg path
+                fill: $gray
 
 .price-form.active
     opacity: 1

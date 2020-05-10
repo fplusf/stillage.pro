@@ -1,10 +1,39 @@
+.form-overlay
+    display: flex
+    position: fixed
+    background: $gray
+    width: 100%
+    height: 100%
+    top: 150px
+    right: 0
+    justify-content: center
+    opacity: 0
+    visibility: hidden
+    transition: all $transition
+
+.form-overlay.active
+    opacity: .8
+    visibility: visible
+
+    
 .price-form
+    visibility: hidden
+    position: absolute
     padding: 60px 40px
     background: $white
     transition: $transition
     width: 400px
     height: 500px
-    margin: 0 auto
+    opacity: 0
+    visibility: hidden
+    top: 150%
+    left: 50%
+    transform: translate(-50%, 10%)
+
+    +respond-to(laptop)
+        top: 50%
+        height: 430px
+        padding: 30px 30px
 
     +respond-to(phone)
         width: 100%
@@ -18,36 +47,23 @@
     input:focus
         border-color: $black
 
+    button
+        color: $primary
+        border: 2px solid $primary
+        padding: 10px
+
     .input-poluted
         border-bottom: 1px solid $black
 
-    &__confidentiality
-        font-size: 12px
-        font-weight: 400
-
-    &__close-btn
-        zoom: 2
+    .close-btn
         color: $white
-        right: -25px
-        top: -6px
+        cursor: pointer
+        right: -30px
+        top: 0
+        position: absolute
         &:hover
             color: $primary
 
-
-.mfp-bg
-    background: $dark-gray
-
-.mfp-close-btn-in .mfp-close
-    color: $white
-    right: -43px
-    top: -10px
-    font-size: 45px
+.price-form.active
     opacity: 1
-    
-    &:hover
-        color: $primary
-
-    +respond-to(phone)
-        right: 0
-        top: 0
-        color: $gray
+    visibility: visible

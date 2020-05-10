@@ -64,27 +64,3 @@ $('.d-accordion').on('show.bs.collapse', function (n) {
 $('.d-accordion').on('hide.bs.collapse', function (n) {
     $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-right fa-chevron-up');
 });
-
-/******************* Magnific Popup setup *****************/
-
-$(document).ready(function () {
-    $('.popup-with-form').magnificPopup({
-        type: 'inline',
-        preloader: false,
-        focus: '#name',
-
-        // When elemened is focused, some mobile browsers in some cases zoom in
-        // It looks not nice, so we disable it:
-        callbacks: {
-            beforeOpen: function () {
-                if ($(window).width() < 700) {
-                    this.st.focus = false;
-                } else {
-                    this.st.focus = '#name';
-                }
-
-                mobileMenu.classList.remove('top-bar__mobile-menu_visible');
-            },
-        },
-    });
-});

@@ -9,10 +9,13 @@ const searchForm = document.getElementById('searchForm'),
     cartButton = document.querySelectorAll('.top-bar__cart_button'),
     cartWrapper = document.querySelector('.top-bar__cart'),
     cartOverlay = document.querySelector('.cart-overlay'),
-    priceLink = document.querySelector('.price-link'),
-    priceFormClose = document.querySelector('.price-form__close-btn'),
+    /// Price Modal view
+    priceOverlay = document.querySelector('.form-overlay'),
+    priceLink = document.querySelectorAll('.price-link'),
+    priceFormClose = document.querySelector('.close-btn'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
+    /// Card view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
     tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
@@ -45,7 +48,7 @@ window.onscroll = function () {
     if (prevScrollpos > currentScrollPos) {
         document.getElementById('navbar').style.top = '0';
     } else {
-        document.getElementById('navbar').style.top = '-120px';
+        document.getElementById('navbar').style.top = '-140px';
     }
     prevScrollpos = currentScrollPos;
 };
@@ -72,8 +75,38 @@ mobileSearchClose &&
         searchFormMobile.classList.remove('mobile__search-box_show');
     });
 
-/******************* Manipulate cart *****************/
+/******************* Price Form Modal *****************/
+priceLink.forEach((link) => {
+    link.addEventListener('click', () => {
+        priceOverlay.classList.add('active');
+        priceForm.classList.add('active');
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    });
+});
 
+priceFormClose.addEventListener('click', () => {
+    priceOverlay.classList.remove('active');
+    priceForm.classList.remove('active');
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+});
+
+priceOverlay.addEventListener('click', () => {
+    priceOverlay.classList.remove('active');
+    priceForm.classList.remove('active');
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+});
+
+priceFormInputs.forEach((input) => {
+    input.addEventListener('input', (event) => {
+        if (event.target.value.length > 0) {
+            input.classList.add('price-form-input_poluted');
+        } else {
+            input.classList.remove('price-form-input_poluted');
+        }
+    });
+});
+
+/******************* Manipulate cart *****************/
 cartButton &&
     cartButton.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -88,18 +121,6 @@ cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('d-block');
     cartOverlay.classList.remove('show-cart-overlay');
     priceForm.classList.remove('price-form__visible');
-});
-
-/******************* Change Price Form input view depending on values. *****************/
-
-priceFormInputs.forEach((input) => {
-    input.addEventListener('input', (event) => {
-        if (event.target.value.length > 0) {
-            input.classList.add('input-poluted');
-        } else {
-            input.classList.remove('input-poluted');
-        }
-    });
 });
 
 /******************* Action page toggle view mode *****************/
@@ -191,7 +212,7 @@ function toggleInfoBtnIcons(sectionBtn) {
 }
 
 /******************* Toggle information section. *****************/
-/// TODO fix showing about page ON different buttons click
+/// TODO fix showing About page ON different buttons click
 function toggleInfoSections(sectionToShow) {
     sectionToShow.classList.toggle('d-block');
 

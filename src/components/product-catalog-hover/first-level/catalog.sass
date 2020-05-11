@@ -30,6 +30,10 @@
             display: inline-block
             text-align: center
 
+            & svg path
+                transition: $transition
+                fill: $black
+
         &_hover
             position: absolute
             right: -400px
@@ -48,3 +52,6 @@
 
         &:hover
             color: $primary
+
+        &:hover span svg path
+            fill: $primary

@@ -49,12 +49,13 @@
     &__email
         color: $gray
         transition: $transition
-
+        svg
+            fill: #B6C0CB
         &:hover
             color: $gray
 
-        &:hover i
-            color: $primary
+        &:hover svg
+            fill: $primary
 
     &__phone
         color: $black
@@ -75,7 +76,10 @@
         color: $gray 
         border: none
         background: none
-
+        svg
+            fill: #B6C0CB
+            &:hover
+                fill: $primary
         &:hover
             color: $primary
             cursor: pointer
@@ -169,6 +173,14 @@
         font-size: 11px
 
 
+.site-header__nav-link
+    &:hover
+        svg
+            fill: $primary
+    svg
+        fill: #b6c0cb
+        margin-top: 2px
+
 .site-header__nav
     padding: 104px 0 30px
     z-index: 2
@@ -206,6 +218,8 @@
 
         .active-link, &:hover .site-header__nav-link
             color: $primary
+            svg
+                fill: $primary
 
         .site-header__nav_square
             margin-left: 5px
@@ -224,3 +238,4 @@
 
 .active-link .site-header__nav_square
     opacity: 1
+

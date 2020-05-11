@@ -127,12 +127,14 @@
         text-decoration: none
         +respond-to(phone-land)
             margin-left: 5px
+        svg
+            fill: $gray
         &:hover
             text-decoration: none
             color: $gray
-            i
+            svg
                 transition: .3s
-                color: $primary
+                fill: $primary
         &__icon
             font-size: 6px
             color: $dark-gray
@@ -141,12 +143,14 @@
         text-decoration: none
         +respond-to(phone-land)
             margin-left: 0px
+        svg
+            fill: $gray
         &:hover
             text-decoration: none
             color: $primary
-            i
+            svg
                 transition: .3s
-                color: $primary
+                fill: $primary
         &__icon
             font-size: 6px
             color: $dark-gray
@@ -162,3 +166,6 @@
     &__about
         background: $light-gray
         padding-top: 50px
+
+
+

@@ -4,7 +4,8 @@
 .site-header
     height: 150px
     +respond-to(tablet)
-        height: 133px
+        height: 165px
+        padding-bottom: 0
     +respond-to(phone-land)
         height: 50px
     
@@ -186,11 +187,13 @@
     z-index: 2
     position: fixed
     transition: top $transition
-    +respond-to(phone-land)
-        display: none
 
-    // +respond-to(tablet)
-    //     padding: 0
+    +respond-to(tablet)
+        padding: 122px 0 20px
+
+    +respond-to(phone-land)
+        padding: 0
+        visibility: hidden
 
     &_square
         transition: $transition
@@ -202,6 +205,9 @@
         color: $primary
         transition: $transition
         position: relative
+
+        +respond-to(tablet)
+            margin-right: 1px
 
         &__catalog_hover
             display: block
@@ -234,6 +240,12 @@
         color: $dark-gray
         transition: $transition
         font-size: 16px
+
+        +respond-to(laptop)
+            padding: 0
+        
+        +respond-to(tablet)
+            font-size: 14px
 
     .caltalog-link
         z-index: 33

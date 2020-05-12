@@ -36,23 +36,26 @@ $(document).ready(function () {
 
 /******************* Range slider *****************/
 
-$(function () {
-    $('#slider-range').slider({
-        range: true,
-        min: 0,
-        max: 40000,
-        values: [6000, 29000],
-        slide: function (event, ui) {
-            $('.price-range__value-low').text(ui.values[0]) + $('.price-range__value-up').text(ui.values[1]);
+if (window.location.pathname === '/actions/actions.html') {
+    let slider = document.getElementById('slider');
+
+    let nodes = [
+        document.getElementsByClassName('price-range__value-low')[0], // 0
+        document.getElementsByClassName('price-range__value-up')[0], // 1
+    ];
+
+    noUiSlider.create(slider, {
+        start: [60, 800],
+        connect: true,
+        range: {
+            min: 0,
+            max: 1000,
         },
     });
-    $('#amount').val('$' + $('#amount').slider('values', 0) + $('#amount').slider('values', 1));
 
-    $('#slider-range span')
-        .first()
-        .prepend('<div class="price-range__value-low mr-3 price-value position-absolute">0</div>');
+    // Display the slider value
 
-    $('#slider-range span')
-        .last()
-        .prepend('<div class="price-range__value-up mr-3 price-value position-absolute">33</div>');
-});
+    slider.noUiSlider.on('update', function (values, handle) {
+        nodes[handle].innerHTML = Math.round(values[handle]);
+    });
+}

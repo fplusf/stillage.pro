@@ -9,11 +9,17 @@
         border-left: 1px solid $gray
         padding: 70px 0 40px
 
+        +respond-to(tablet)
+            padding: 40px 0 30px
+
     &__link
         color: $dark-gray
         padding-right: 3rem
         padding-left: 3rem
         transition: $transition
+        
+        +respond-to(tablet)
+            font-size: 14px
 
         &:hover
             color: $primary

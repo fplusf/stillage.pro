@@ -48,7 +48,7 @@ window.onscroll = function () {
     if (prevScrollpos > currentScrollPos) {
         document.getElementById('navbar').style.top = '0';
     } else {
-        document.getElementById('navbar').style.top = '-140px';
+        document.getElementById('navbar').style.top = '-150px';
     }
     prevScrollpos = currentScrollPos;
 };
@@ -148,10 +148,12 @@ listViewModeBtn &&
 /******************* Price Form *****************/
 // Set cliced link value to localStorage
 // further to add active class
-headerLinks.forEach((activeLink) => {
-    activeLink.addEventListener('click', () => {
-        localStorage.setItem('activeLink', activeLink.id);
-    });
+headerLinks.forEach((activeLink, index) => {
+    if(index < headerLinks.length - 2) {
+        activeLink.addEventListener('click', () => {
+            localStorage.setItem('activeLink', activeLink.id);
+        });
+    }
 });
 
 // Add active class to the current header link

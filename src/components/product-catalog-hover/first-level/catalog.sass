@@ -7,6 +7,9 @@
         min-width: 400px
         height: 100%
 
+        +respond-to(tablet)
+            padding: 40px 0 30px
+
     &__item
         &:hover .product-catalog__link_hover
             opacity: 1
@@ -24,6 +27,9 @@
         padding-right: 3rem
         padding-left: 2.5rem
         transition: $transition
+
+        +respond-to(tablet)
+            font-size: 14px
 
         &_icon
             width: 30px

@@ -126,26 +126,43 @@
 
 
 /***************** Slider Price Range *************/
-.ui-widget.ui-widget-content
+.noUi-horizontal .noUi-handle
+    width: 20px
+    height: 20px
     border: none
-    background: $light-gray
+    right: -10px
+    left: 12px
+    border-radius: 50%
+    background: #fe3362
+    top: -8px
+    box-shadow: none
+    outline: none
+    cursor: pointer
+
+.noUi-connect
+    height: 3px
+    width: 100%
+    background: #fe3362
+
+.noUi-base, .noUi-connects
+    width: 100%
+    height: 3px
+    position: relative
+
+.noUi-target
+    background: #d5d5d5
+    border: 0
+    box-shadow: none
+
+.noUi-horizontal
     height: 3px
 
-.ui-slider-horizontal .ui-slider-range
-    background: $primary
-
-.ui-state-default, .ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default, .ui-button,
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active
-    border: none
-    border-radius: 50%
-    background: $primary
-    outline: none
-    transform: translateY(-3px)
+.noUi-handle:after, .noUi-handle:before
+    background: none
 
 .slider-wrapper
   margin-top: 60px
+  padding: 0 10px
 
 /*****************  Filter Accordion *************/
   
@@ -243,13 +260,13 @@ html .ui-button.ui-state-disabled:active
 
 
 .price-range__value-low
-    top: -55px
-    left: -16px
+    top: 0
+    left: 0
     color: $dark-gray
 
 .price-range__value-up
-    top: -55px
-    right: -37px
+    top: 0
+    right: 0
     color: $dark-gray
 
 .product-info

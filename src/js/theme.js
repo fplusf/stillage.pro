@@ -15,13 +15,19 @@ const searchForm = document.getElementById('searchForm'),
     priceFormClose = document.querySelector('.close-btn'),
     priceForm = document.querySelector('.price-form'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
-    /// Card view mode
+    /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
     tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
     listViewModeBtn = document.getElementsByClassName('list-view-btn')[0],
+    /// Toggle header Links
     headerLinks = document.querySelectorAll('.site-header__nav-link'),
     visitedLinks = document.querySelectorAll('.active-link'),
+    /// Metal stillage catalog Cards view mode
+    catalogTileViewMode = document.getElementById('catalogTileView'),
+    catalogListViewMode = document.getElementById('catalogListViewMode'),
+    catalogTileViewModeBtn = document.getElementsByClassName('catalog-tile-view-btn')[0],
+    catalogListViewModeBtn = document.getElementsByClassName('catalog-list-view-btn')[0],
     /// Information sections
     delivery = document.querySelector('.collapse-one'),
     instruction = document.querySelector('.instruction'),
@@ -125,24 +131,39 @@ cartOverlay.addEventListener('click', () => {
 
 /******************* Action page toggle view mode *****************/
 
+// Switch product cards view modes.
+function switchViewMode(newView, newViewBtn, activeView, activeViewBtn) {
+    if (newView.classList.contains('hidden')) {
+        newView.classList.remove('hidden');
+    }
+    activeView.classList.add('hidden');
+    activeViewBtn.classList.remove('active');
+    newViewBtn.classList.add('active');
+}
+
+// Switch to Tile View
 tileViewModeBtn &&
     tileViewModeBtn.addEventListener('click', () => {
-        if (tileViewMode.classList.contains('hidden')) {
-            tileViewMode.classList.remove('hidden');
-        }
-        listViewMode.classList.add('hidden');
-        tileViewModeBtn.classList.add('active');
-        listViewModeBtn.classList.remove('active');
+        switchViewMode(tileViewMode, tileViewModeBtn, listViewMode, listViewModeBtn);
     });
 
+// Switch to List View
 listViewModeBtn &&
     listViewModeBtn.addEventListener('click', () => {
-        if (listViewMode.classList.contains('hidden')) {
-            listViewMode.classList.remove('hidden');
-        }
-        tileViewMode.classList.add('hidden');
-        listViewModeBtn.classList.add('active');
-        tileViewModeBtn.classList.remove('active');
+        switchViewMode(listViewMode, listViewModeBtn, tileViewMode, tileViewModeBtn);
+    });
+
+/******************* Metal Stillage catalog toggle view modes *****************/
+// Switch to Tile View
+catalogTileViewModeBtn &&
+    catalogTileViewModeBtn.addEventListener('click', () => {
+        switchViewMode(catalogTileViewMode, catalogTileViewModeBtn, catalogListViewMode, catalogListViewModeBtn);
+    });
+
+// Switch to List View
+catalogListViewModeBtn &&
+    catalogListViewModeBtn.addEventListener('click', () => {
+        switchViewMode(catalogListViewMode, catalogListViewModeBtn, catalogTileViewMode, catalogTileViewModeBtn);
     });
 
 /******************* Price Form *****************/

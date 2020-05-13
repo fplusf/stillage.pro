@@ -15,6 +15,7 @@
 
     .info__button
         svg
+            transition: $transition
             fill: #F4F7FB
             &:hover
                 fill: $primary
@@ -26,8 +27,9 @@
 .product-card-simple
     &__photo
         img
-            +respond-to(phone-land)
-                width: 100%
+            max-width: 100%
+            object-fit: contain
+
     +respond-to(phone)
         flex-direction: row-reverse
 

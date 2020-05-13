@@ -149,7 +149,7 @@ listViewModeBtn &&
 // Set cliced link value to localStorage
 // further to add active class
 headerLinks.forEach((activeLink, index) => {
-    if(index < headerLinks.length - 2) {
+    if (index < headerLinks.length - 2) {
         activeLink.addEventListener('click', () => {
             localStorage.setItem('activeLink', activeLink.id);
         });
@@ -196,19 +196,25 @@ instructionBtn &&
 function toggleInfoBtnIcons(sectionBtn) {
     let allButtons = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
 
-    if (sectionBtn.children[1].className.includes('fa fa-plus 3x')) {
-        sectionBtn.children[1].className = sectionBtn.children[1].className.replace('fa fa-plus 3x', 'fa fa-times 3x');
+    if (sectionBtn.children[1].className.includes('open active')) {
+        sectionBtn.children[1].className = 'open';
+        console.log(sectionBtn.children[1].className);
+
+        sectionBtn.children[2].className = 'close active';
+        console.log(sectionBtn.children[2].className);
 
         sectionBtn.classList.add('information-button-active');
 
         allButtons.forEach((btn) => {
             if (btn !== sectionBtn) {
-                btn.children[1].className = btn.children[1].className.replace('fa fa-times 3x', 'fa fa-plus 3x');
+                btn.children[1].className = 'open active';
+                btn.children[2].className = 'close';
                 btn.classList.remove('information-button-active');
             }
         });
     } else {
-        sectionBtn.children[1].className = sectionBtn.children[1].className.replace('fa fa-times 3x', 'fa fa-plus 3x');
+        sectionBtn.children[1].className = 'open active';
+        sectionBtn.children[2].className = 'close';
         sectionBtn.classList.remove('information-button-active');
     }
 }
@@ -245,3 +251,5 @@ mobileCartBtn &&
     mobileCartBtn.addEventListener('click', () => {
         cartWrapper.classList.toggle('cart-wrapper_visible');
     });
+
+/*********** TEST TABS INFORMATION */

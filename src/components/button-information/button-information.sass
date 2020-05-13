@@ -1,5 +1,5 @@
 .information-button
-    box-shadow: 0 4px 15px -8px #eaeaea
+    box-shadow: $shadow
     height: 64px
     padding: 20px
     cursor: pointer
@@ -12,9 +12,35 @@
         color: $gray
         font-size: 20px
 
+    span
+        padding-right: 20px
+
+    .open
+        transition: all $transition ease
+        visibility: hidden
+        position: absolute
+        right: 32px
+        opacity: 0
+
+    .close
+        transition: all $transition ease
+        visibility: hidden
+        position: absolute
+        right: 32px
+        opacity: 0
+
 .information-button-active
+    @extend .information-button
     background: $gray
     color: $white
 
     i
         color: $white
+
+.open.active
+    visibility: visible
+    opacity: 1
+
+.close.active
+    visibility: visible
+    opacity: 1

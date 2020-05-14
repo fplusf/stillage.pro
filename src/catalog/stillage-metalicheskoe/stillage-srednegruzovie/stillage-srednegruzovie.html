@@ -1,0 +1,536 @@
+@@include('src/components/header/header.html', {"title": "Среднегрузовые стеллажи"})
+
+
+<div class="bread-crumbs white d-flex w-100">
+    <div class="container">
+        <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
+
+        <span class="px-2">
+            <svg width="4" height="4" viewBox="0 0 4 4">
+                <rect width="4" height="4" fill="#848E99" />
+            </svg>
+        </span>
+
+        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="dark-gray">Металлические
+            стеллажи</a>
+
+        <span class="px-2">
+            <svg width="4" height="4" viewBox="0 0 4 4">
+                <rect width="4" height="4" fill="#848E99" />
+            </svg>
+        </span>
+
+        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="primary">Среднегрузовые
+            стеллажи</a>
+
+    </div>
+
+</div>
+
+
+
+<section class="lp-section sky-bg">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <div class="d-none d-md-flex">
+                    <h3 class="gray">
+                        Среднегрузовые стеллажи
+                    </h3>
+
+                    <div class="catalog-sorting d-none d-md-flex align-items-center">
+                        <span class="gray mr-3">Сортировать:</span>
+                        <a href="#" class="primary mr-3 text-decoration-none">По популярности</a>
+                        <a href="#" class="text-decoration-none">По цене</a>
+                    </div>
+                </div>
+
+
+                <div class="catalog-view-buttons d-none d-md-block">
+                    <button class="icon-button tile-view-btn active">
+                        <svg width="15" height="15" viewBox="0 0 15 15">
+                            <path d="M12 0H15V3H12V0Z" />
+                            <path d="M6 0H9V3H6V0Z" />
+                            <path d="M0 0H3V3H0V0Z" />
+                            <path d="M12 6H15V9H12V6Z" />
+                            <path d="M6 6H9V9H6V6Z" />
+                            <path d="M0 6H3V9H0V6Z" />
+                            <path d="M12 12H15V15H12V12Z" />
+                            <path d="M6 12H9V15H6V12Z" />
+                            <path d="M0 12H3V15H0V12Z" />
+                        </svg>
+                    </button>
+
+                    <button class="icon-button list-view-btn">
+                        <svg width="19" height="15" viewBox="0 0 19 15">
+                            <path d="M0 0H19V3H0V0Z" />
+                            <path d="M0 6H19V9H0V6Z" />
+                            <path d="M0 12H19V15H0V12Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex w-100 justify-content-between">
+
+            <div class="actions-sidebar d-none d-md-block h-100">
+                <div class="card-body catalog__bg-white px-1 py-3 shadow-light">
+                    <ul class="nav catalog__list flex-column">
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Стеллажи металлические
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Металлическая мебель
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Верстаки
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Сейфы
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Производственная мебель
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="catalog__list__nav-link nav-link">
+                                Гардеробные системы Титан GS
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <!------ Accordion  -->
+
+                <div class="filter white-bg shadow-light">
+                    <ul class="accordion-list dark-gray">
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100 view-gray">Оторбражение</h6>
+                            <div class="accordion-item__content">
+                                <label class="checkbox-container">Все
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="checkbox-container">Только акции
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="checkbox-container">Только новинки
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Цена
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="mb-4 slider-wrapper">
+                                    <!-- <div id="slider-range"></div> -->
+
+                                    <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
+                                    <div class="price-range__value-up mr-3 price-value position-absolute">33</div>
+
+                                    <div id="slider"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
+                                    <div class="price-range__up w-100 text-center price-value">до 29 000</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Производитель
+                            </h6>
+                            <div class="accordion-item__content">
+                                <label class="checkbox-container">Samsung
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Apple
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Xiaomi
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Высота
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="d-flex">
+                                    <input type="number" class="w-100 mr-4">
+                                    <input type="number" class="w-100">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="accordion-item">
+                            <input type="checkbox" class="accordion-item__input" checked>
+                            <i class="accordion-item__icon"></i>
+                            <h6 class="panel-title w-100">Ширина
+                            </h6>
+                            <div class="accordion-item__content">
+                                <div class="d-flex">
+                                    <input type="number" class="w-100 mr-4">
+                                    <input type="number" class="w-100">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="w-100 mt-4 py-4">
+                        <button class="filter-content__reset-btn icon-button float-right">
+                            Сбросить
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row" id="actionTileViewMode">
+                <div class="col-12">
+                    <div class="stillage-constructor margin-bottom d-flex flex-column justify-content-end">
+                        <h2 class="white mb-3">
+                            Конструктор <br> срендегрузовых стеллажей
+                        </h2>
+
+                        <div class="contructor-footer white d-flex justify-content-between w-100">
+                            <span>Соберите <br> свой стеллаж</span>
+
+                            <button class="info__button">
+                                <svg width="14" height="22" viewBox="0 0 14 22" fill="white">
+                                    <path
+                                        d="M3.16536 1L0.832031 3.33333L8.4987 11L0.832031 18.6667L3.16536 21L13.1654 11L3.16536 1Z"
+                                        stroke="#F4F7FB" stroke-width="0.5" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="gray mt-5 mb-4 d-md-none">
+                        Среднегрузовые стеллажи
+                    </h3>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Полка СТФЛ",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "560₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Полка СТФЛ",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "560₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Полка СТФЛ",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "560₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-4">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Полка СТФЛ",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "560₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+            </div>
+
+
+
+            <div class="row hidden" id="actionListViewMode">
+                <div class="col-12">
+                    <div class="stillage-constructor margin-bottom d-flex flex-column justify-content-end">
+                        <h2 class="white mb-3">
+                            Конструктор <br> срендегрузовых стеллажей
+                        </h2>
+
+                        <div class="contructor-footer white d-flex justify-content-between">
+                            <span>Соберите <br> свой стеллаж</span>
+
+                            <button class="info__button">
+                                <svg width="14" height="22" viewBox="0 0 14 22" fill="white">
+                                    <path
+                                        d="M3.16536 1L0.832031 3.33333L8.4987 11L0.832031 18.6667L3.16536 21L13.1654 11L3.16536 1Z"
+                                        stroke="#F4F7FB" stroke-width="0.5" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "1 690₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "1 690₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12">
+                    @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "1 690₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <div class="actions-pagination d-flex align-self-end">
+                    <button class="icon-button actions-pagination__turn-left">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z"
+                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                        </svg>
+
+                    </button>
+
+                    <button class="icon-button actions-pagination__page-number">
+                        1
+                    </button>
+
+                    <button class="icon-button actions-pagination__page-number">
+                        2
+                    </button>
+
+                    <button class="icon-button actions-pagination__page-number">
+                        3
+                    </button>
+
+                    <button class="icon-button actions-pagination__turn-right">
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
+                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@@include('src/components/following-offer/following-offer.html')
+
+@@include('src/components/mobile-navbar/mobile-navbar.html')
+
+<!-- Page content goes abover -->
+@@include('src/components/footer/footer.html')

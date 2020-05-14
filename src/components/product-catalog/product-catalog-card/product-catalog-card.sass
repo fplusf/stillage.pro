@@ -13,22 +13,29 @@
             fill: $primary
 
 
-    .info__button
-        svg
+    .info
+        &__title
+            word-break: break-word
+            height: 40px
+
+        &__button
+            svg
+                transition: $transition
+                fill: #F4F7FB
+                &:hover
+                    fill: $primary
+            background: none
+            border: none
+            color: $gray
             transition: $transition
-            fill: #F4F7FB
-            &:hover
-                fill: $primary
-        background: none
-        border: none
-        color: $gray
-        transition: $transition
 
 .product-card-simple
     &__photo
+        height: 200px
+
         img
             max-width: 100%
-            object-fit: contain
+            object-fit: cover
 
     +respond-to(phone)
         flex-direction: row-reverse

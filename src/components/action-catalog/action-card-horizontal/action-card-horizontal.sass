@@ -1,16 +1,25 @@
 .action-card
+
+    &__compare,
+    &__favorite
+        &:hover svg path
+            fill: $primary
+
     .horizontal-content
         height: 165px
         margin-bottom: 30px
 
-        +respond-to(tablet)
+        +respond-to(phone)
             flex-direction: row-reverse
 
         &__img-wrapper
             flex: 1 1 0px
 
         &__text
-            flex: 1 1 0px
+            flex: 2 1 0px
+            +respond-to(tablet)
+                flex: 1 1 0px
+          
 
         &__buttons
             flex: 1 1 0px

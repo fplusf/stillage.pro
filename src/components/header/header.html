@@ -138,26 +138,43 @@
                         <form action="/" id="searchForm"
                             class="position-absolute align-items-center bg-white d-none d-sm-flex justify-content-between top-bar__search-box_hidden">
                             <button class="p-0 mr-3 primary search-box__submit" type="submit">
-                                <i class="fas fa-search "></i>
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <path
+                                        d="M14.2857 12.5714H13.3714L13.0286 12.2286C14.1715 10.9714 14.8572 9.25714 14.8572 7.42857C14.8571 3.31429 11.5429 0 7.42857 0C3.31429 0 0 3.31429 0 7.42857C0 11.5429 3.31429 14.8571 7.42857 14.8571C9.25714 14.8571 10.9714 14.1714 12.2286 13.0286L12.5714 13.3714V14.2857L18.2857 20L20 18.2857L14.2857 12.5714ZM7.42857 12.5714C4.57143 12.5714 2.28571 10.2857 2.28571 7.42857C2.28571 4.57143 4.57143 2.28571 7.42857 2.28571C10.2857 2.28571 12.5714 4.57143 12.5714 7.42857C12.5714 10.2857 10.2857 12.5714 7.42857 12.5714Z"
+                                        fill="#FE3362" />
+                                </svg>
+
                             </button>
                             <input id="search-input" type="text" name="search" class="border-0 background-none w-100"
                                 placeholder="Поиск товаров на сайте">
                             <button class="p-0 search-box__close gray" type="button"
                                 onclick="document.getElementById('searchForm').reset()">
-                                <i class="fas fa-times pl-2"></i>
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <path d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z"
+                                        fill="#B6C0CB" />
+                                </svg>
+
                             </button>
                         </form>
 
                         <form action="/" id="searchFormMobile"
                             class="position-absolute align-items-center bg-white d-flex align-items-center w-100 h-100 justify-content-between mobile__search-box_hidden">
                             <button class="p-0 mr-3 gray" type="submit">
-                                <i class="fas fa-chevron-left "></i>
+                                <svg width="12" height="16" viewBox="0 0 12 16">
+                                    <path
+                                        d="M9.06693 0L10.9336 1.86667L4.80026 8L10.9336 14.1333L9.06693 16L1.06693 8L9.06693 0Z"
+                                        fill="#848E99" stroke="#848E99" stroke-width="0.5" />
+                                </svg>
+
                             </button>
                             <input id="mobile-search-input" class="w-100 border-0 background-none" type="text"
                                 name="search" placeholder="Поиск товаров на сайте">
                             <button class="p-0 mobile__search-box__close gray" type="button"
                                 onclick="document.getElementById('searchFormMobile').reset()">
-                                <i class="fas fa-times pl-2"></i>
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <path d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z"
+                                        fill="#B6C0CB" />
+                                </svg>
                             </button>
                         </form>
                     </div>

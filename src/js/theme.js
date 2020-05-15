@@ -219,10 +219,8 @@ function toggleInfoBtnIcons(sectionBtn) {
 
     if (sectionBtn.children[1].className.includes('open active')) {
         sectionBtn.children[1].className = 'open';
-        console.log(sectionBtn.children[1].className);
 
         sectionBtn.children[2].className = 'close active';
-        console.log(sectionBtn.children[2].className);
 
         sectionBtn.classList.add('information-button-active');
 
@@ -232,7 +230,7 @@ function toggleInfoBtnIcons(sectionBtn) {
                 btn.children[2].className = 'close';
                 btn.classList.remove('information-button-active');
             }
-        });
+        }); 
     } else {
         sectionBtn.children[1].className = 'open active';
         sectionBtn.children[2].className = 'close';

@@ -40,8 +40,8 @@ if (window.location.pathname === '/actions/actions.html') {
     let slider = document.getElementById('slider');
 
     let nodes = [
-        document.getElementsByClassName('price-range__value-low')[0], // 0
-        document.getElementsByClassName('price-range__value-up')[0], // 1
+        document.getElementsByClassName('price-range__value-low')[0],
+        document.getElementsByClassName('price-range__value-up')[0],
     ];
 
     noUiSlider.create(slider, {
@@ -55,7 +55,35 @@ if (window.location.pathname === '/actions/actions.html') {
 
     // Display the slider value
 
-    slider.noUiSlider.on('update', function (values, handle) {
+    sliderSrednoGruzovie.noUiSlider.on('update', function (values, handle) {
+        nodes[handle].innerHTML = Math.round(values[handle]);
+    });
+}
+
+/********** Setup Srednigruzovie page slider **********/
+if (
+    window.location.pathname === '/catalog/stillage-metalicheskoe/stillage-srednegruzovie/stillage-srednegruzovie.html'
+) {
+    /// Srednogruzovie setup
+    let sliderSrednoGruzovie = document.getElementById('sliderSrednoGruzovie');
+
+    let nodes = [
+        document.getElementsByClassName('price-range__value-low')[0],
+        document.getElementsByClassName('price-range__value-up')[0],
+    ];
+
+    noUiSlider.create(sliderSrednoGruzovie, {
+        start: [60, 400],
+        connect: true,
+        range: {
+            min: 0,
+            max: 1000,
+        },
+    });
+
+    // Display the slider value
+
+    sliderSrednoGruzovie.noUiSlider.on('update', function (values, handle) {
         nodes[handle].innerHTML = Math.round(values[handle]);
     });
 }

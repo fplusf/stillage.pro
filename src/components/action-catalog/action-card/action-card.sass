@@ -6,6 +6,9 @@
     height: 419px
     min-width: 200px
 
+    +respond-to(phone)
+        height: 430px
+
     .visible-content
         box-shadow: $shadow
 
@@ -42,6 +45,9 @@
         margin: 0 auto
         height: 210px
         object-fit: contain
+        +respond-to(phone)
+            margin-bottom: 5px
+
 
     .hover-content
         opacity: 0

@@ -1,6 +1,6 @@
-@@include('src/components/header/header.html', {"title": "Металлические стеллажи"})
+@@include('src/components/header/header.html', {"title": "Элементы стеллажей"})
 
-<div class="bread-crumbs white d-flex w-100">
+<div class="bread-crumbs white d-none d-md-flex w-100">
     <div class="container">
         <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
 
@@ -10,9 +10,41 @@
             </svg>
         </span>
 
-        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="primary">Металлические стеллажи</a>
+        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="dark-gray">Металлические
+            стеллажи</a>
+
+        <span class="px-2">
+            <svg width="4" height="4" viewBox="0 0 4 4">
+                <rect width="4" height="4" fill="#848E99" />
+            </svg>
+        </span>
+
+
+        <a href="/catalog/stillage-metalicheskoe/stillage-elements/stillage-elements.html" class="primary">Элементы
+            стеллажей</a>
+
     </div>
 
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-md-none">
+            <div class="srednie-stillage__mobile-filters">
+                <button class="gray">По популярности</button>
+
+                <button class="gray">
+                    <svg width="11" height="13" viewBox="0 0 11 13" class="mr-1">
+                        <path
+                            d="M10.568 0H0.431926C0.193363 0 0 0.193363 0 0.431926V2.26047C0 2.36801 0.0401693 2.47167 0.112599 2.55131L3.95944 6.77594V12.3822C3.95944 12.5361 4.04136 12.6785 4.17455 12.7558C4.2415 12.7947 4.31651 12.8141 4.39139 12.8141C4.46525 12.8141 4.53925 12.7952 4.60563 12.7571L6.8229 11.4901C6.95752 11.4132 7.04059 11.2701 7.04059 11.1152V6.77594L10.8874 2.55131C10.96 2.4717 11 2.36804 11 2.26047V0.431926C11 0.193363 10.8066 0 10.568 0Z"
+                            fill="#B6C0CB" />
+                    </svg>
+                    Фильтры
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Page content goes here -->
@@ -20,58 +52,61 @@
 
     <div class="container pt-5 pb-5">
         <h4 class="dark-gray mb-4 catalog-metalicheskoe__header">
-            Металлические стеллажи
+            Элементы стеллажей
         </h4>
         <div class="row">
             <div class="col-12 col-md-4">
-                <div class="card-body white-bg">
+                <div class="card-body white-bg d-none d-md-block">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                Стеллажи металлические
+                                Б/у металлические стеллажи
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                Металлическая мебель
+                                Среднегрузовые стеллажи
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                Верстаки
+                                Архивные стеллажи
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                Сейфы
+                                Мобльные стеллажи
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                Производственная мебель
+                                Элементы для стеллажей
                             </a>
                         </li>
 
                     </ul>
                 </div>
 
-                <div class="catalog-metalicheskoe__ad-img">
-                    <div class="card-body d-flex flex-column justify-content-end h-100">
-                        <div class="catalog-metalicheskoe__ad-info">
-                            <h4 class="text-white">Соберите свой стеллаж</h4>
-                            <p class="text-white m-0">Данная опция временно
-                                доступна только для среднегрузовых стеллажей</p>
-                        </div>
+                <div class="col-12">
+                    <div class="catalog-metalicheskoe__ad-img d-none d-md-block">
+                        <div class="card-body d-flex flex-column justify-content-end h-100">
+                            <div class="catalog-metalicheskoe__ad-info">
+                                <h4 class="text-white">Соберите свой стеллаж</h4>
+                                <p class="text-white m-0">Данная опция временно
+                                    доступна только для среднегрузовых стеллажей</p>
+                            </div>
 
-                        @@include('src/components/buttons/button.html', {
-                        "title": "Приступить",
-                        "width": "w-100",
-                        "color": "white"
-                        })
+                            @@include('src/components/buttons/button.html', {
+                            "title": "Приступить",
+                            "width": "w-100",
+                            "color": "white"
+                            })
+                        </div>
                     </div>
                 </div>
 
             </div>
+
             <div class="col-12 col-md-8">
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-4 mb-0 mb-md-3">
@@ -79,8 +114,8 @@
                             <a href="#" class="text-decoration-none">
                                 @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
                                 {
-                                "photo": "../../img/product-catalog/Rectangle 95.png",
-                                "title": "Стеллажи металлические"
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 143.png",
+                                "title": "Элементы МКФ"
                                 })
                             </a>
                         </div>
@@ -90,8 +125,8 @@
                             <a href="#" class="text-decoration-none">
                                 @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
                                 {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/2.png",
-                                "title": "Среднегрузовые стеллажи"
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 144 (1).png",
+                                "title": "Элементы для СТФЛ"
                                 })
                             </a>
                         </div>
@@ -102,8 +137,8 @@
                             <a href="#" class="text-decoration-none">
                                 @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
                                 {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/3.png",
-                                "title": "Архивные стеллажи"
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 144.png",
+                                "title": "Элементы для SGR"
                                 })
                             </a>
                         </div>
@@ -115,24 +150,54 @@
                             <a href="#" class="text-decoration-none">
                                 @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
                                 {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/4.png",
-                                "title": "Мобильные стеллажи"
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 145.png",
+                                "title": "Элементы для СТФ"
                                 })
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-8 mb-0 mb-md-3">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-0 mb-md-3">
                         <div class="white-bg">
                             <a href="#" class="text-decoration-none">
-                                @@include('src/components/product-catalog/product-catalog-card/product-catalog-horizontal.html',
+                                @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
                                 {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/5-large.png",
-                                "title": "Элементы для стеллажей"
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 146.png",
+                                "title": "Элементы для СТФУ"
                                 })
                             </a>
                         </div>
                     </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 mb-0 mb-md-3">
+                        <div class="white-bg">
+                            <a href="#" class="text-decoration-none">
+                                @@include('src/components/product-catalog/product-catalog-card/product-catalog-card.html',
+                                {
+                                "photo": "../../../../img/catalog/stillage-metalicheskoe/stiilage-elements/image 147.png",
+                                "title": "Элементы для СК/СКУ"
+                                })
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="catalog-metalicheskoe__ad-img d-md-none">
+                            <div class="card-body d-flex flex-column justify-content-end h-100">
+                                <div class="catalog-metalicheskoe__ad-info">
+                                    <h4 class="text-white">Соберите свой стеллаж</h4>
+                                    <p class="text-white m-0">Данная опция временно
+                                        доступна только для среднегрузовых стеллажей</p>
+                                </div>
+    
+                                @@include('src/components/buttons/button.html', {
+                                "title": "Приступить",
+                                "width": "w-100",
+                                "color": "white"
+                                })
+                            </div>
+                        </div>
+                    </div>    
 
                 </div>
             </div>
@@ -145,7 +210,7 @@
         <div class="row mb-5">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="d-flex">
-                    <h3 class="dark-gray mr-2 mr-md-5">Все товары категории</h3>
+                    <h4 class="dark-gray mr-2 mr-md-5 catalog-metalicheskoe__header">Все товары категории</h4>
 
                     <div class="catalog-metalicheskoe__sorting mr-4 d-none d-md-flex align-items-center">
                         <span class="gray mr-3">Сортировать:</span>
@@ -157,7 +222,7 @@
 
                 <div class="catalog-view-buttons">
                     <button class="icon-button catalog-tile-view-btn active">
-                        <svg width="15" height="15" viewBox="0 0 15 15">
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 0H15V3H12V0Z" />
                             <path d="M6 0H9V3H6V0Z" />
                             <path d="M0 0H3V3H0V0Z" />
@@ -170,7 +235,7 @@
                         </svg>
                     </button>
                     <button class="icon-button catalog-list-view-btn">
-                        <svg width="19" height="15" viewBox="0 0 19 15">
+                        <svg width="19" height="15" viewBox="0 0 19 15" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0H19V3H0V0Z" />
                             <path d="M0 6H19V9H0V6Z" />
                             <path d="M0 12H19V15H0V12Z" />
@@ -182,9 +247,10 @@
 
 
         <div class="row" id="catalogTileView">
+
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/6.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -198,7 +264,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/7.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/7.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -212,7 +278,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/6.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -226,7 +292,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/garderob.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/garderob.png",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -239,7 +305,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/5-large.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/5-large.png",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -252,7 +318,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/garderob.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/garderob.png",
                 "title": "Гардеробная система ТИТАН - GS - 450S",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -265,7 +331,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/catalog/stillage-metalicheskoe/garderob.png",
+                "photo": "../../../img/catalog/stillage-metalicheskoe/garderob.png",
                 "badge": "Новинка",
                 "bagdeBg": "black-bg",
                 "title": "Гардеробная система ТИТАН - GS - 450S",
@@ -279,7 +345,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -292,7 +358,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -306,7 +372,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -320,7 +386,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -335,7 +401,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 @@include('src/components/action-catalog/action-card/action-card.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
                 "info": "ВШГ - 1156x2400x450 мм",
                 "oldPrice": " ",
@@ -352,7 +418,7 @@
         <div class="row hidden" id="catalogListViewMode">
             <div class="col-12">
                 @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -365,21 +431,7 @@
             </div>
             <div class="col-12">
                 @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
-                "badge": "Акция",
-                "bagdeBg": "primary-bg",
-                "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                "info": "ВШГ - 1156x2400x450 мм",
-                "oldPrice": "1 957₽",
-                "price": "1 690₽",
-                "button": "В корзину",
-                "link": "#"
-                })
-            </div>
-
-            <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -393,7 +445,7 @@
 
             <div class="col-12">
                 @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -407,7 +459,7 @@
 
             <div class="col-12">
                 @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
@@ -421,7 +473,21 @@
 
             <div class="col-12">
                 @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
+                "photo": "../../../img/product-card/image 87.png",
+                "badge": "Акция",
+                "bagdeBg": "primary-bg",
+                "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                "info": "ВШГ - 1156x2400x450 мм",
+                "oldPrice": "1 957₽",
+                "price": "1 690₽",
+                "button": "В корзину",
+                "link": "#"
+                })
+            </div>
+
+            <div class="col-12">
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                "photo": "../../../img/product-card/image 87.png",
                 "badge": "Акция",
                 "bagdeBg": "primary-bg",
                 "title": "Архивный стеллаж MS STANDART до 100 кг на полку",

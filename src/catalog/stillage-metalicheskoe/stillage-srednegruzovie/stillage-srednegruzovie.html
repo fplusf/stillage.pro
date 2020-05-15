@@ -1,7 +1,7 @@
 @@include('src/components/header/header.html', {"title": "Среднегрузовые стеллажи"})
 
 
-<div class="bread-crumbs white d-flex w-100">
+<div class="bread-crumbs white d-none d-md-flex w-100">
     <div class="container">
         <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
 
@@ -28,17 +28,52 @@
 </div>
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-md-none">
+            <div class="srednie-stillage__mobile-filters">
+                <button class="gray">По популярности</button>
+
+                <button class="gray">
+                    <svg width="11" height="13" viewBox="0 0 11 13" class="mr-1">
+                        <path
+                            d="M10.568 0H0.431926C0.193363 0 0 0.193363 0 0.431926V2.26047C0 2.36801 0.0401693 2.47167 0.112599 2.55131L3.95944 6.77594V12.3822C3.95944 12.5361 4.04136 12.6785 4.17455 12.7558C4.2415 12.7947 4.31651 12.8141 4.39139 12.8141C4.46525 12.8141 4.53925 12.7952 4.60563 12.7571L6.8229 11.4901C6.95752 11.4132 7.04059 11.2701 7.04059 11.1152V6.77594L10.8874 2.55131C10.96 2.4717 11 2.36804 11 2.26047V0.431926C11 0.193363 10.8066 0 10.568 0Z"
+                            fill="#B6C0CB" />
+                    </svg>
+                    Фильтры
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-md-none stillage-constructor d-flex flex-column justify-content-end">
+    <h2 class="white mb-3">
+        Конструктор <br> срендегрузовых стеллажей
+    </h2>
+
+    <div class="contructor-footer white d-flex justify-content-between w-100">
+        <span>Соберите <br> свой стеллаж</span>
+
+        <button class="info__button">
+            <svg width="14" height="22" viewBox="0 0 14 22" fill="white">
+                <path d="M3.16536 1L0.832031 3.33333L8.4987 11L0.832031 18.6667L3.16536 21L13.1654 11L3.16536 1Z"
+                    stroke="#F4F7FB" stroke-width="0.5" />
+            </svg>
+        </button>
+    </div>
+</div>
 
 <section class="lp-section sky-bg">
     <div class="container">
         <div class="row mb-3">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="d-none d-md-flex">
-                    <h3 class="gray">
+                    <h3 class="gray srednie-stillage__title">
                         Среднегрузовые стеллажи
                     </h3>
 
-                    <div class="catalog-sorting d-none d-md-flex align-items-center">
+                    <div class="srednie-stillage__sorting d-none d-md-flex align-items-center">
                         <span class="gray mr-3">Сортировать:</span>
                         <a href="#" class="primary mr-3 text-decoration-none">По популярности</a>
                         <a href="#" class="text-decoration-none">По цене</a>
@@ -46,7 +81,7 @@
                 </div>
 
 
-                <div class="catalog-view-buttons d-none d-md-block">
+                <div class="srednie-stillage__view-buttons d-none d-md-block">
                     <button class="icon-button tile-view-btn active">
                         <svg width="15" height="15" viewBox="0 0 15 15">
                             <path d="M12 0H15V3H12V0Z" />
@@ -79,32 +114,32 @@
                 <div class="card-body catalog__bg-white px-1 py-3 shadow-light">
                     <ul class="nav catalog__list flex-column">
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Стеллажи металлические
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Металлическая мебель
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Верстаки
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Сейфы
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Производственная мебель
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="catalog__list__nav-link nav-link">
+                            <a href="/" class="nav-link">
                                 Гардеробные системы Титан GS
                             </a>
                         </li>
@@ -146,7 +181,6 @@
                             </h6>
                             <div class="accordion-item__content">
                                 <div class="mb-4 slider-wrapper">
-                                    <!-- <div id="slider-range"></div> -->
 
                                     <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
                                     <div class="price-range__value-up mr-3 price-value position-absolute">33</div>
@@ -222,7 +256,8 @@
 
 
             <div class="row" id="actionTileViewMode">
-                <div class="col-12">
+
+                <div class="col-12 d-none d-md-block">
                     <div class="stillage-constructor margin-bottom d-flex flex-column justify-content-end">
                         <h2 class="white mb-3">
                             Конструктор <br> срендегрузовых стеллажей
@@ -240,12 +275,13 @@
                             </button>
                         </div>
                     </div>
-
-                    <h3 class="gray mt-5 mb-4 d-md-none">
-                        Среднегрузовые стеллажи
-                    </h3>
                 </div>
 
+                <div class="col-12">
+                    <h4 class="gray d-md-none">
+                        Среднегрузовые стеллажи
+                    </h4>
+                </div>
 
                 <div class="col-12 col-sm-6 col-xl-4">
                     @@include('src/components/action-catalog/action-card/action-card.html', {

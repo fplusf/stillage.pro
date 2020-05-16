@@ -1,0 +1,153 @@
+@@include('src/components/header/header.html', {"title": "Главная"})
+<!-- Page content goes here -->
+
+<section class="lp-section">
+    <div class="container basket">
+        <div class="d-flex pb-5 col-12 col-md-9 pl-0">
+            <h1 class="title dark-gray">
+                Корзина
+            </h1>
+            <div class="ml-auto align-self-center">
+                <div class="d-none d-sm-none d-md-block">
+                    <div class="d-flex">
+                        <span class="gray mr-3">
+                            Сортировать:
+                        </span>
+                        <a class="mr-3 text-decoration-none" href="">Все</a>
+                        <a class="mr-3 text-decoration-none" href="">В наличии</a>
+                        <a class="text-decoration-none" href="">Под заказ</a>
+                    </div>
+                </div>
+                <div class="d-block d-xl-none d-lg-none d-md-none dark-gray">
+                    Очистить список
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <div class="mb-3">
+                    @@include('src/components/basket-card/basket-card.html')
+                </div>
+                <div class="mb-3">
+                    @@include('src/components/basket-card/basket-card.html')
+                </div>
+                <div>
+                    @@include('src/components/basket-card/basket-card.html')
+                </div>
+                <div class="d-flex pt-5">
+                    <div class="mr-auto">
+                        Всего товаров: 3
+                    </div>
+                    <div class="d-flex">
+                        На сумму: <h6 class="title m-0 ml-2">12 690 ₽</h6>
+                    </div>
+                </div>
+                <div class="d-flex pt-4 mb-4">
+                    <div class="mr-auto">
+                        <p class="dark-gray mb-2">В наличии: 2</p>
+                        <p class="dark-gray m-0">Под заказ: 1</p>
+                    </div>
+                    <div class="d-flex">
+                            @@include('src/components/buttons/filled-gray-button.html', { "title": "Быстрый заказ" })
+                            <button class="outline-button ml-2">Перейти в корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 ">
+                <div class="basket-panel primary-bg">
+                    <h4 class="title white pb-3">Для консультации с менеджером оставьте заявку</h4>
+                    <p class="white pb-3">
+                        И мы свяжемся с вами в течение 10 минут
+                    </p>
+                    <div class="pb-2">
+                        @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })  
+                    </div>
+                    <div class="pb-3">
+                        @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" }) 
+                    </div> 
+                    @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
+                </div>
+                <h6 class="title primary pb-4 pt-4 mb-0 mt-2">Внимание</h6>
+                <p class="pb-4">
+                    В вашей корзине присутствует товар, которого нет в наличии. Онлайн оплата доступна только после подтверждения заказа менеджером.
+                    Для оформления заказа с товаром «под заказ» оставьте заявку и наш менеджер свяжется с вами
+                </p>
+                <p class="dark-gray">
+                    Товары «в наличии» доступны для заказа и онлайн-оплаты
+                </p>
+            </div>
+            <div class="col-12 pt-4">
+                <h2 class="title dark-gray">Сопутствующие товары</h2>
+                <div class="d-flex working-way__row justify-content-sm-between">
+                    <div class="basket__action-card position-relative mr-3">
+                        @@include('src/components/action-catalog/action-card/action-card.html', {
+                        "photo": "../../img/product-card/image 87.png",
+                        "badge": "Акция",
+                        "bagdeBg": "primary-bg",
+                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                        "info": "ВШГ - 1156x2400x450 мм",
+                        "oldPrice": "1 957₽",
+                        "price": "1 690₽",
+                        "button": "В корзину",
+                        "link": "#"
+                        })
+                    </div>
+
+                    <div class="basket__action-card position-relative mr-3">
+                        @@include('src/components/action-catalog/action-card/action-card.html', {
+                        "photo": "../../img/product-card/image 87.png",
+                        "badge": "Акция",
+                        "bagdeBg": "primary-bg",
+                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                        "info": "ВШГ - 1156x2400x450 мм",
+                        "oldPrice": "1 957₽",
+                        "price": "1 690₽",
+                        "button": "В корзину",
+                        "link": "#"
+                        })
+                    </div>
+
+                    <div class="basket__action-card position-relative mr-3">
+                        @@include('src/components/action-catalog/action-card/action-card.html', {
+                        "photo": "../../img/product-card/image 87.png",
+                        "badge": "Акция",
+                        "bagdeBg": "primary-bg",
+                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                        "info": "ВШГ - 1156x2400x450 мм",
+                        "oldPrice": "1 957₽",
+                        "price": "1 690₽",
+                        "button": "В корзину",
+                        "link": "#"
+                        })
+                    </div>
+
+                    <div class="basket__action-card position-relative">
+                        @@include('src/components/action-catalog/action-card/action-card.html', {
+                        "photo": "../../img/product-card/image 87.png",
+                        "badge": "Акция",
+                        "bagdeBg": "primary-bg",
+                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                        "info": "ВШГ - 1156x2400x450 мм",
+                        "oldPrice": "1 957₽",
+                        "price": "1 690₽",
+                        "button": "В корзину",
+                        "link": "#"
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <a href="#" class="view-more dark-gray text-decoration-none">
+                        Посмотреть все
+                    </a>
+                </div>
+            </div>
+    </div>
+            
+            
+    </div>
+</section>
+
+<!-- Page content goes abover -->
+@@include('src/components/footer/footer.html')

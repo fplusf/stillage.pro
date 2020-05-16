@@ -55,7 +55,7 @@ if (window.location.pathname === '/actions/actions.html') {
 
     // Display the slider value
 
-    sliderSrednoGruzovie.noUiSlider.on('update', function (values, handle) {
+    slider.noUiSlider.on('update', function (values, handle) {
         nodes[handle].innerHTML = Math.round(values[handle]);
     });
 }

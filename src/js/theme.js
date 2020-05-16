@@ -166,26 +166,6 @@ catalogListViewModeBtn &&
         switchViewMode(catalogListViewMode, catalogListViewModeBtn, catalogTileViewMode, catalogTileViewModeBtn);
     });
 
-/******************* Price Form *****************/
-// Set cliced link value to localStorage
-// further to add active class
-headerLinks.forEach((activeLink, index) => {
-    if (index < headerLinks.length - 2) {
-        activeLink.addEventListener('click', () => {
-            localStorage.setItem('activeLink', activeLink.id);
-        });
-    }
-});
-
-// Add active class to the current header link
-// after page reload from localStorage
-if (performance.navigation) {
-    let activatedLinkId = document.getElementById(localStorage.getItem('activeLink'));
-    if (activatedLinkId != 0) {
-        activatedLinkId.classList.add('active-link');
-    }
-}
-
 /******************* INFORMATION PAGE COLLAPSING *****************/
 
 deliveryBtn &&

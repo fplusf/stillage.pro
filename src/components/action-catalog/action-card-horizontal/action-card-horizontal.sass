@@ -1,4 +1,5 @@
 .action-card
+    box-shadow: $shadow
 
     &__compare,
     &__favorite
@@ -6,24 +7,32 @@
             fill: $primary
 
     .horizontal-content
-        height: 165px
-        margin-bottom: 30px
-
-        +respond-to(tablet)
-            // flex-direction: row-reverse
+        height: 145px
+        +respond-to(phone-land)
+            height: 130px
+        +respond-to(phone)
+            height: 115px
 
         &__img-wrapper
-            flex: 1 1 0px
+            flex: 1 0 100px
+            +respond-to(phone)
+                flex: 1 0 0
 
         &__text
-            flex: 2 1 0px
+            flex: 2 1 0
             +respond-to(tablet)
-                flex: 1 1 0px
+                flex: 1 1 0
+
+            +respond-to(phone)
+                flex: 1.6 1 0
           
 
         &__buttons
             flex: 1 1 0px
             min-width: 240px
+
+            .add-to-cart:hover
+                color: $primary
 
         &__counting
             width: 150px
@@ -38,3 +47,14 @@
         &__info
             +respond-to(tablet)
                 font-size: 12px
+
+        .footer-buttons
+            margin-bottom: -5px
+            span
+                font-weight: 600
+                line-height: 24px
+                &:hover
+                    color: $primary
+
+.favorite-following-offer
+    margin-top: 96px

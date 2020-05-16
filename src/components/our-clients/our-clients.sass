@@ -6,6 +6,9 @@
     background-position: left
     margin: 10px
 
+    +respond-to(phone)
+        background-position: center
+
 .logo1
     background-image: url('../img/our-clients/okko.png')
     transition: $transition
@@ -18,6 +21,8 @@
 .logo3
     background-image: url('../img/our-clients/уральский банк.png')
     background-size: contain
+    +respond-to(phone-land)
+        background-size: auto
 
 .logo4
     background-image: url('../img/our-clients/holyskin.svg')

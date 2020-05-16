@@ -50,12 +50,10 @@
     &__email
         color: $gray
         transition: $transition
-        svg
-            fill: #B6C0CB
         &:hover
             color: $gray
 
-        &:hover svg
+        &:hover svg path
             fill: $primary
 
     &__phone
@@ -77,8 +75,7 @@
         color: $gray 
         border: none
         background: none
-        svg
-            fill: #B6C0CB
+        svg path
             &:hover
                 fill: $primary
         &:hover
@@ -175,12 +172,8 @@
 
 
 .site-header__nav-link
-    &:hover
-        svg
-            fill: $primary
-    svg
-        fill: #b6c0cb
-        margin-top: 2px
+    &:hover svg path
+        fill: $primary
 
 .site-header__nav
     padding: 104px 0 30px

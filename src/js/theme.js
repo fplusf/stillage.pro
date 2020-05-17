@@ -44,7 +44,51 @@ const searchForm = document.getElementById('searchForm'),
     //////// Mobile menu  /////
     mobileMenu = document.getElementById('mobileMenu'),
     mobileMenuBtn = document.querySelector('.top-bar__hamburger-menu'),
-    mobileMenuClose = document.querySelector('.drawer-menu-close');
+    mobileMenuClose = document.querySelector('.drawer-menu-close'),
+    ////////// Comparasion page //////////
+    infoBtn = document.getElementsByClassName('info-btn')[0],
+    differenceBtn = document.getElementsByClassName('difference-btn')[0],
+    infoContent = document.getElementsByClassName('info-content')[0],
+    differenceContent = document.getElementsByClassName('difference-content')[0];
+
+/************  Gloabal Tab and Button state Switcher Class ********/
+class TabContentSwitch {
+    /// Toggle button states from arguments.
+    toggleButtonIcons(currentBtn, allButtons) {
+        if (currentBtn.children[1].className.includes('open active')) {
+            currentBtn.children[1].className = 'open';
+
+            currentBtn.children[2].className = 'close active';
+
+            currentBtn.classList.add('information-button-active');
+
+            allButtons.forEach((btn) => {
+                if (btn !== currentBtn) {
+                    btn.children[1].className = 'open active';
+                    btn.children[2].className = 'close';
+                    btn.classList.remove('information-button-active');
+                }
+            });
+        } else {
+            currentBtn.children[1].className = 'open active';
+            currentBtn.children[2].className = 'close';
+            currentBtn.classList.remove('information-button-active');
+        }
+    }
+
+    /// Toggle section content from arguments.
+    toggleSections(sectionToShow, allSections) {
+        sectionToShow.classList.toggle('d-block');
+
+        // let allSections = [delivery, instruction, certificates, warranty, about];
+
+        allSections.forEach((section) => {
+            if (section !== sectionToShow) {
+                section.classList.remove('d-block');
+            }
+        });
+    }
+}
 
 /******************* Hide navbar on scroll down. *****************/
 
@@ -167,74 +211,57 @@ catalogListViewModeBtn &&
     });
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
+///// New insctance of Tab swither Class /////
+let informationPageTabs = new TabContentSwitch();
 
+///// List of all Buttons and Sections to switch /////
+let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
+let allInfoPageSections = [delivery, instruction, certificates, warranty, about];
+
+////// Calling switch methods on click event //////
 deliveryBtn &&
     deliveryBtn.addEventListener('click', () => {
-        toggleInfoSections(delivery);
-        toggleInfoBtnIcons(deliveryBtn);
+        informationPageTabs.toggleSections(delivery, allInfoPageSections);
+        informationPageTabs.toggleButtonIcons(deliveryBtn, allInfoPageBtns);
     });
 
 warrantyBtn &&
     warrantyBtn.addEventListener('click', () => {
-        toggleInfoSections(warranty);
-        toggleInfoBtnIcons(warrantyBtn);
+        informationPageTabs.toggleSections(warranty, allInfoPageSections);
+        informationPageTabs.toggleButtonIcons(warrantyBtn, allInfoPageBtns);
     });
 
 certificatesBtn &&
     certificatesBtn.addEventListener('click', () => {
-        toggleInfoSections(certificates);
-        toggleInfoBtnIcons(certificatesBtn);
+        informationPageTabs.toggleSections(certificates, allInfoPageSections);
+        informationPageTabs.toggleButtonIcons(certificatesBtn, allInfoPageBtns);
     });
 
 instructionBtn &&
     instructionBtn.addEventListener('click', () => {
-        toggleInfoSections(instruction);
-        toggleInfoBtnIcons(instructionBtn);
+        informationPageTabs.toggleSections(instruction, allInfoPageSections);
+        informationPageTabs.toggleButtonIcons(instructionBtn, allInfoPageBtns);
     });
 
-/******************* Toggle information buttons satate. *****************/
+/************** Comparision Page Toggle Buttons and Content **********/
+///// New insctance of Tab swither Class /////
+let comparisionPageTabs = new TabContentSwitch();
 
-function toggleInfoBtnIcons(sectionBtn) {
-    let allButtons = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
+///// List of all Buttons and Sections to switch /////
+let allComparisionPageBtns = [infoBtn, differenceBtn];
+let allComparisionPageSections = [infoContent, differenceContent];
 
-    if (sectionBtn.children[1].className.includes('open active')) {
-        sectionBtn.children[1].className = 'open';
-
-        sectionBtn.children[2].className = 'close active';
-
-        sectionBtn.classList.add('information-button-active');
-
-        allButtons.forEach((btn) => {
-            if (btn !== sectionBtn) {
-                btn.children[1].className = 'open active';
-                btn.children[2].className = 'close';
-                btn.classList.remove('information-button-active');
-            }
-        }); 
-    } else {
-        sectionBtn.children[1].className = 'open active';
-        sectionBtn.children[2].className = 'close';
-        sectionBtn.classList.remove('information-button-active');
-    }
-}
-
-/******************* Toggle information section. *****************/
-/// TODO fix showing About page ON different buttons click
-function toggleInfoSections(sectionToShow) {
-    sectionToShow.classList.toggle('d-block');
-
-    let allSections = [delivery, instruction, certificates, warranty, about];
-
-    allSections.forEach((section) => {
-        if (section !== sectionToShow) {
-            section.classList.remove('d-block');
-        }
+infoBtn &&
+    infoBtn.addEventListener('click', () => {
+        comparisionPageTabs.toggleButtonIcons(infoBtn, allComparisionPageBtns);
+        comparisionPageTabs.toggleSections(infoContent, allComparisionPageSections);
     });
 
-    // about.classList.toggle('d-none');
-}
-
-/******************* INFORMATION PAGE COLLAPSING  END *****************/
+differenceBtn &&
+    differenceBtn.addEventListener('click', () => {
+        comparisionPageTabs.toggleButtonIcons(differenceBtn, allComparisionPageBtns);
+        comparisionPageTabs.toggleSections(differenceContent, allComparisionPageSections);
+    });
 
 /******************* Mobile Hamburger menu manipulation *****************/
 
@@ -251,4 +278,4 @@ mobileCartBtn &&
         cartWrapper.classList.toggle('cart-wrapper_visible');
     });
 
-/*********** TEST TABS INFORMATION */
+/*********** Comparasion page Tab-Accordions ****************/

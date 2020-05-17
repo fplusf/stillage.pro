@@ -97,8 +97,10 @@ window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById('navbar').style.top = '0';
+        document.getElementById('mobileNavbar').style.bottom = '-100px';
     } else {
         document.getElementById('navbar').style.top = '-150px';
+        document.getElementById('mobileNavbar').style.bottom = '0';
     }
     prevScrollpos = currentScrollPos;
 };

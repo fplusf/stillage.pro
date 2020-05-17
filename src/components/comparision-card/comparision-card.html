@@ -1,0 +1,57 @@
+<div class="action-card position-relative">
+
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="header__badge @@bagdeBg text-center">
+            @@badge
+        </div>
+
+        <div class="header__actions d-flex">
+            <button class="icon-button">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.1146 16.3125L16 14.4271L9.88543 8.31248L16 2.1979L14.1146 0.3125L8.00002 6.42707L1.88541 0.312499L2.77861e-06 2.1979L6.11458 8.31248L2.24406e-06 14.427L1.88541 16.3125L8.00002 10.1979L14.1146 16.3125Z"
+                        fill="#B6C0CB" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+
+    <div class="action-card__img-wrapper d-flex justify-content-center">
+        <a href="@@link" class="text-decoration-none">
+            <img src="@@photo" class="action-card__img" alt="Action card image">
+        </a>
+    </div>
+
+
+    <div class="d-flex justify-content-between flex-column content mb-3">
+        <h6 class="action-card__title">
+            <a href="@@link" class="text-decoration-none black">
+                @@title
+            </a>
+        </h6>
+        <span class="action-card__info dark-gray">
+            @@info
+        </span>
+    </div>
+
+
+    <div class="footer d-flex justify-content-between mb-2">
+        <div class="prices">
+            <div class="prices__old-price dark-gray">@@oldPrice</div>
+            <div class="prices__new-price primary @@priceColor">@@price</div>
+        </div>
+        <button class="add-to-cart align-self-end dark-gray d-none d-lg-block">@@button</button>
+
+        <button class="footer__cart-button align-self-end d-lg-none">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                    d="M6 16C4.9 16 4 16.9 4 18C4 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.6L4.2 12C4.1 12.3 4 12.7 4 13C4 14.1 4.9 15 6 15H18V13H6.4C6.3 13 6.2 12.9 6.2 12.8V12.7L7.1 11H14.5C15.3 11 15.9 10.6 16.2 9.99996L19.8 3.5C20 3.3 20 3.2 20 3C20 2.4 19.6 2 19 2H4.2L3.3 0H0ZM16 16C14.9 16 14 16.9 14 18C14 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                    fill="#FFFFFF" />
+            </svg>
+
+        </button>
+    </div>
+
+</div>

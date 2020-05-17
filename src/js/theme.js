@@ -6,7 +6,7 @@ const searchForm = document.getElementById('searchForm'),
     mobileSearchBtn = document.querySelector('.mobile__search-btn'),
     mobileSearchClose = document.querySelector('.mobile__search-box__close'),
     searchClose = document.querySelector('.search-box__close'),
-    cartButton = document.querySelectorAll('.top-bar__cart_button'),
+    cartButton = document.querySelectorAll('.top-bar__cart-button'),
     cartWrapper = document.querySelector('.top-bar__cart'),
     cartOverlay = document.querySelector('.cart-overlay'),
     /// Price Modal view

@@ -11,6 +11,9 @@
     padding: 6px 10px
     bottom: -100px
     transition: bottom $transition
+    display: none
+    +respond-to(phone-land)
+        display: block
 
     &__cart
         display: none

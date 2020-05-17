@@ -380,14 +380,17 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-4 col-lg-3">
+                    <div class="col-12 d-md-none">
+                        <h6 class="gray mb-3">Выберите нужный раздел и он раскроется</h6>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
                         @@include('src/components/button-information/button-information.html', {
                         "title": "Характеристики",
                         "section": "info-btn"
                         })
                     </div>
 
-                    <div class="col-4 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                         @@include('src/components/button-information/button-information.html', {
                         "title": "Только отличия",
                         "section": "difference-btn"
@@ -592,8 +595,6 @@
                         "link": "#"
                         })
                     </div>
-
-
                 </div>
 
                 <div class="row mb-5">
@@ -624,8 +625,7 @@
                                 </button>
 
                                 <button class="icon-button actions-pagination__turn-right">
-                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="10" height="14" viewBox="0 0 10 14">
                                         <path
                                             d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
                                             fill="white" stroke="#B6C0CB" stroke-width="0.5" />

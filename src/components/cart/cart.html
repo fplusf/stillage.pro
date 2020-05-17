@@ -16,12 +16,15 @@
 
     <div class="cart__buttons d-flex justify-content-between">
 
-        @@include('src/components/buttons/outline-button.html', {
-            "title": "Перейти в корзину"
-        })
 
+        <a href="/basket/basket.html">
+            @@include('src/components/buttons/outline-button.html', {
+            "title": "Перейти в корзину"
+            })
+        </a>
+        
         @@include('src/components/buttons/outline-white-button.html', {
-            "title": "Купить в один клик"
+        "title": "Купить в один клик"
         })
     </div>
 </div>

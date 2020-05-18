@@ -1,31 +1,47 @@
+.mobile-menu-overlay
+    background: rgba(38, 50, 63, 0.781)
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1040
+    opacity: 0
+    display: none
+    transition: opacity $transition
+
+.mobile-menu-overlay.active
+    display: block
+    opacity: 1
+
+    
+.mobile-menu-modal
+    overflow: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    transform: translateX(-1000px)
+    transition: transform $transition
+
+.mobile-menu-modal.active
+    transform: translateX(0)
+    
 .drawer-menu
-    background: #26323f
+    background: $black
     width: 87%
     top: 0
     left: 0
-    flex: 1 0 auto
     height: 100%
-    z-index: 1200
-    position: fixed
-    overflow-y: auto
+    position: relative
     flex-direction: column
     padding: 40px 20px 10px 20px
 
-.mobile-menu-overlay
-    position: absolute
-    background: rgba(38, 50, 63, 0.781)
-    top: 0
-    bottom: 0
-    width: 100vw
-    height: 100vh
-    z-index: 5
+    &__close
+        position: absolute
+        right: -39px
+        top: 10px
+        z-index: 1060
 
-.close-btn-wrapper
-    width: 100vw
-    height: 100vh
-    z-index: 10
-
-.drawer-menu-close
-    position: absolute
-    right: 10px
-    top: 10px

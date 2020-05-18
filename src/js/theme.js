@@ -42,9 +42,10 @@ const searchForm = document.getElementById('searchForm'),
     mobileCart = document.querySelector('.mobile-cart'),
     mobileCartBtn = document.querySelector('.mobile-cart-button'),
     //////// Mobile menu  /////
-    mobileMenu = document.getElementById('mobileMenu'),
     mobileMenuBtn = document.querySelector('.top-bar__hamburger-menu'),
-    mobileMenuClose = document.querySelector('.drawer-menu-close'),
+    mobileMenu = document.querySelector('.mobile-menu-modal'),
+    mobileMenuOverlay = document.querySelector('.mobile-menu-overlay'),
+    mobileMenuClose = document.querySelector('.drawer-menu__close'),
     ////////// Comparasion page //////////
     infoBtn = document.getElementsByClassName('info-btn')[0],
     differenceBtn = document.getElementsByClassName('difference-btn')[0],
@@ -52,7 +53,7 @@ const searchForm = document.getElementById('searchForm'),
     differenceContent = document.getElementsByClassName('difference-content')[0];
 
 /************  Gloabal Tab and Button state Switcher Class ********/
-class TabContentSwitch {
+class TabContentSwitcher {
     /// Toggle button states from arguments.
     toggleButtonIcons(currentBtn, allButtons) {
         if (currentBtn.children[1].className.includes('open active')) {
@@ -214,7 +215,7 @@ catalogListViewModeBtn &&
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
 ///// New insctance of Tab swither Class /////
-let informationPageTabs = new TabContentSwitch();
+let informationPageTabs = new TabContentSwitcher();
 
 ///// List of all Buttons and Sections to switch /////
 let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
@@ -247,7 +248,7 @@ instructionBtn &&
 
 /************** Comparision Page Toggle Buttons and Content **********/
 ///// New insctance of Tab swither Class /////
-let comparisionPageTabs = new TabContentSwitch();
+let comparisionPageTabs = new TabContentSwitcher();
 
 ///// List of all Buttons and Sections to switch /////
 let allComparisionPageBtns = [infoBtn, differenceBtn];
@@ -268,11 +269,13 @@ differenceBtn &&
 /******************* Mobile Hamburger menu manipulation *****************/
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('top-bar__mobile-menu_visible');
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
 });
 
 mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('top-bar__mobile-menu_visible');
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
 });
 
 mobileCartBtn &&

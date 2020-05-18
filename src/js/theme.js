@@ -280,4 +280,24 @@ mobileCartBtn &&
         cartWrapper.classList.toggle('cart-wrapper_visible');
     });
 
-/*********** Comparasion page Tab-Accordions ****************/
+/*********** Comparasion page Toggle Page State ****************/
+let comparisionResetList = document.querySelector('.comparision__reset-list'),
+    comparisionCompareBtn = document.querySelector('.comparision__compare'),
+    comparisionProcessSection = document.querySelector('.comparision-process'),
+    comparisionDefaultSection = document.querySelector('.comparision-default-state');
+
+comparisionResetList &&
+    comparisionResetList.addEventListener('click', () => {
+        comparisionResetList.classList.add('d-none');
+        comparisionCompareBtn.classList.remove('d-none');
+        comparisionProcessSection.classList.add('d-none');
+        comparisionDefaultSection.classList.remove('d-none');
+    });
+
+comparisionCompareBtn &&
+    comparisionCompareBtn.addEventListener('click', () => {
+        comparisionResetList.classList.remove('d-none');
+        comparisionCompareBtn.classList.add('d-none');
+        comparisionProcessSection.classList.remove('d-none');
+        comparisionDefaultSection.classList.add('d-none');
+    });

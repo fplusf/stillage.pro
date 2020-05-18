@@ -1,0 +1,25 @@
+.comparision-card-simple
+    @extend .product-card-simple
+    +respond-to(phone)
+        height: 160px
+
+    &__photo
+        @extend .product-card-simple__photo
+        +respond-to(phone)
+            height: 110px
+
+    &__number-box
+        position: absolute
+        right: 25px
+        bottom: 25px
+        width: 40px
+        height: 40px
+        background: $gray
+        color: $white
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__number
+        font-size: 1rem
+

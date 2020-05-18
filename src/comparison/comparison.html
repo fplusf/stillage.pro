@@ -287,351 +287,436 @@
         </header>
 
         <!------------------- Header ended ---------------------->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <div class="d-flex justify-content-between pt-4">
+                        <h4 class="title">Сравнение</h4>
+                        <button class="dark-gray comparision__reset-list d-none">Очистить список</button>
 
-
-
-        <section class="lp-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-9">
-                        <div class="d-flex justify-content-between mb-5">
-                            <h4 class="title">Сравнение</h4>
-                            <button class="dark-gray comparision-reset-list">Очистить список</button>
-                        </div>
+                        <button class="icon-button comparision__compare">
+                            <svg width="17" height="17" viewBox="0 0 13 13">
+                                <path d="M0 10.2913V13.0001H2.70871L10.7012 5.00754L7.99248 2.29883L0 10.2913Z"
+                                    fill="#848E99" />
+                                <path
+                                    d="M12.7884 1.89789L11.1018 0.211279C10.8201 -0.0704264 10.3614 -0.0704264 10.0797 0.211279L8.75781 1.53313L11.4665 4.24184L12.7884 2.91999C13.0701 2.63828 13.0701 2.17959 12.7884 1.89789Z"
+                                    fill="#848E99" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="row mb-4">
-                    <div class="col-12 col-lg-9">
+        <div class="comparision-process d-none">
+            <section class="lp-section comparision">
+                <div class="container">
 
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 col-md-4">
-                                @@include('src/components/comparision-card/comparision-card.html', {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/3.png",
-                                "badge": "Акция",
-                                "bagdeBg": "primary-bg",
-                                "title": "Подпятник <br> пластмассовый",
-                                "info": "ВШГ - 1156x2400x450 мм",
-                                "oldPrice": "11₽",
-                                "price": "10₽",
-                                "button": "В корзину",
-                                "link": "#"
-                                })
-                            </div>
-
-
-
-                            <div class="col-12 col-sm-6 col-md-4 col-md-4">
-                                @@include('src/components/comparision-card/comparision-card.html', {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
-                                "badge": "",
-                                "bagdeBg": "",
-                                "title": "Полка <br> СТФЛ",
-                                "info": "ВШГ - 1156x2400x450 мм",
-                                "oldPrice": "",
-                                "price": "350₽",
-                                "priceColor": "black",
-                                "button": "В корзину",
-                                "link": "#"
-                                })
-                            </div>
-
-
-                            <div class="col-12 col-sm-6 col-md-4 col-md-4">
-                                @@include('src/components/comparision-card/comparision-card.html', {
-                                "photo": "../../img/catalog/stillage-metalicheskoe/3.png",
-                                "badge": "Акция",
-                                "bagdeBg": "primary-bg",
-                                "title": "Подпятник <br> пластмассовый",
-                                "info": "ВШГ - 1156x2400x450 мм",
-                                "oldPrice": "11₽",
-                                "price": "10₽",
-                                "button": "В корзину",
-                                "link": "#"
-                                })
-                            </div>
-
+                    <div class="row d-md-none">
+                        <div class="col-12 col-sm-6">
+                            @@include('src/components/comparision-card/comparision-mobile-card/comparision-mobile-card.html',
+                            {
+                            "photo": "../../img/product-card/image 87.png",
+                            "badge": "",
+                            "bagdeBg": "",
+                            "title": "Подпятник <br> пластмассовый",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "number": "1/6",
+                            "link": "#"
+                            })
                         </div>
-
+                        <div class="col-12 col-sm-6">
+                            @@include('src/components/comparision-card/comparision-mobile-card/comparision-mobile-card.html',
+                            {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                            "badge": "",
+                            "bagdeBg": "",
+                            "title": "Подпятник <br> пластмассовый",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "number": "4/6",
+                            "link": "#"
+                            })
+                        </div>
                     </div>
 
-                    <div class="col-lg-3">
-                        <div class="catalog-metalicheskoe__ad-img">
-                            <div class="card-body d-flex flex-column justify-content-end h-100">
-                                <div class="catalog-metalicheskoe__ad-info">
-                                    <h4 class="text-white">Соберите свой стеллаж</h4>
-                                    <p class="text-white m-0">Данная опция временно
-                                        доступна только для среднегрузовых стеллажей</p>
+                    <div class="row mb-4 d-none d-md-flex">
+                        <div class="col-12 col-lg-9">
+
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 col-md-4">
+                                    @@include('src/components/comparision-card/comparision-card.html', {
+                                    "photo": "../../img/catalog/stillage-metalicheskoe/3.png",
+                                    "badge": "Акция",
+                                    "bagdeBg": "primary-bg",
+                                    "title": "Подпятник <br> пластмассовый",
+                                    "info": "ВШГ - 1156x2400x450 мм",
+                                    "oldPrice": "11₽",
+                                    "price": "10₽",
+                                    "button": "В корзину",
+                                    "link": "#"
+                                    })
                                 </div>
 
-                                @@include('src/components/buttons/button.html', {
-                                "title": "Приступить",
-                                "width": "w-100",
-                                "color": "white"
-                                })
+
+
+                                <div class="col-12 col-sm-6 col-md-4 col-md-4">
+                                    @@include('src/components/comparision-card/comparision-card.html', {
+                                    "photo": "../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                                    "badge": "",
+                                    "bagdeBg": "",
+                                    "title": "Полка <br> СТФЛ",
+                                    "info": "ВШГ - 1156x2400x450 мм",
+                                    "oldPrice": "",
+                                    "price": "350₽",
+                                    "priceColor": "black",
+                                    "button": "В корзину",
+                                    "link": "#"
+                                    })
+                                </div>
+
+
+                                <div class="col-12 col-sm-6 col-md-4 col-md-4">
+                                    @@include('src/components/comparision-card/comparision-card.html', {
+                                    "photo": "../../img/catalog/stillage-metalicheskoe/3.png",
+                                    "badge": "Акция",
+                                    "bagdeBg": "primary-bg",
+                                    "title": "Подпятник <br> пластмассовый",
+                                    "info": "ВШГ - 1156x2400x450 мм",
+                                    "oldPrice": "11₽",
+                                    "price": "10₽",
+                                    "button": "В корзину",
+                                    "link": "#"
+                                    })
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="catalog-metalicheskoe__ad-img">
+                                <div class="card-body d-flex flex-column justify-content-end h-100">
+                                    <div class="catalog-metalicheskoe__ad-info">
+                                        <h4 class="text-white">Соберите свой стеллаж</h4>
+                                        <p class="text-white m-0">Данная опция временно
+                                            доступна только для среднегрузовых стеллажей</p>
+                                    </div>
+
+                                    @@include('src/components/buttons/button.html', {
+                                    "title": "Приступить",
+                                    "width": "w-100",
+                                    "color": "white"
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 d-md-none">
+                            <h6 class="gray mb-3">Выберите нужный раздел и он раскроется</h6>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            @@include('src/components/button-information/button-information.html', {
+                            "title": "Характеристики",
+                            "section": "info-btn"
+                            })
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3">
+                            @@include('src/components/button-information/button-information.html', {
+                            "title": "Только отличия",
+                            "section": "difference-btn"
+                            })
+                        </div>
+                    </div>
+
+                    <div class="row info-content d-none">
+                        <div class="col-lg-9 col-12">
+                            <div class="my-5 py-3">
+                                <table class="info-content__table">
+                                    <tr>
+                                        <th>Производитель</th>
+                                        <div class="d-flex d-sm-none">
+                                            <th>Промет (Россия)</th>
+                                            <th>Промет (Россия)</th>
+                                        </div>
+
+                                        <th class="d-none d-sm-table-cell">Промет (Россия)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Вес, кг</td>
+                                        <td>57 кг</td>
+                                        <td>70 кг</td>
+                                        <td class="d-none d-sm-table-cell">70 кг</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Высота, мм</td>
+                                        <td>250</td>
+                                        <td>250</td>
+                                        <td class="d-none d-sm-table-cell">250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ширина, мм</td>
+                                        <td>375</td>
+                                        <td>450</td>
+                                        <td class="d-none d-sm-table-cell">450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Глубина, мм</td>
+                                        <td>360</td>
+                                        <td>360</td>
+                                        <td class="d-none d-sm-table-cell">360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Серия</td>
+                                        <td>Кварцит</td>
+                                        <td>Кварцит</td>
+                                        <td class="d-none d-sm-table-cell">Кварцит</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Бренд</td>
+                                        <td>VALBERG</td>
+                                        <td>VALBERG</td>
+                                        <td class="d-none d-sm-table-cell">VALBERG</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Класс взломостойкости</td>
+                                        <td>1 класс</td>
+                                        <td>2 класс</td>
+                                        <td class="d-none d-sm-table-cell">2 класс</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Тип замка</td>
+                                        <td>Ключевой</td>
+                                        <td>Ключевой</td>
+                                        <td class="d-none d-sm-table-cell">Ключевой</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Объем, л</td>
+                                        <td>12</td>
+                                        <td>18</td>
+                                        <td class="d-none d-sm-table-cell">18</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row difference-content d-none">
+                        <div class="col-lg-9 col-12">
+                            <div class="my-5 py-3">
+                                <table class="difference-content__table">
+                                    <tr>
+                                        <th>Производитель</th>
+                                        <th>Промет (Россия)</th>
+                                        <th>Промет (Россия)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Вес, кг</td>
+                                        <td>57 кг</td>
+                                        <td>70 кг</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Высота, мм</td>
+                                        <td>250</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ширина, мм</td>
+                                        <td>375</td>
+                                        <td>450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Глубина, мм</td>
+                                        <td>360</td>
+                                        <td>360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Серия</td>
+                                        <td>Кварцит</td>
+                                        <td>Кварцит</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Бренд</td>
+                                        <td>VALBERG</td>
+                                        <td>VALBERG</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Класс взломостойкости</td>
+                                        <td>1 класс</td>
+                                        <td>2 класс</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Тип замка</td>
+                                        <td>Ключевой</td>
+                                        <td>Ключевой</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Объем, л</td>
+                                        <td>12</td>
+                                        <td>18</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="row">
-                    <div class="col-12 d-md-none">
-                        <h6 class="gray mb-3">Выберите нужный раздел и он раскроется</h6>
+
+            <section class="lp-section similar-products">
+                <div class="container">
+                    <div class="row mt-5 mt-md-0">
+                        <div class="col-12">
+                            <h4 class="title-middle mb-5">Похожие товары</h4>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Подпятник <br> пластмассовый",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "10₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Подпятник <br> пластмассовый",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "10₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                            "badge": "",
+                            "bagdeBg": "",
+                            "title": "Полка <br> СТФЛ",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "",
+                            "price": "560₽",
+                            "priceColor": "black",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Подпятник <br> пластмассовый",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "10₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        @@include('src/components/button-information/button-information.html', {
-                        "title": "Характеристики",
-                        "section": "info-btn"
-                        })
-                    </div>
 
-                    <div class="col-12 col-md-6 col-lg-3">
-                        @@include('src/components/button-information/button-information.html', {
-                        "title": "Только отличия",
-                        "section": "difference-btn"
-                        })
-                    </div>
-                </div>
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <button class="gray text-button">Посмотреть все</button>
 
-                <div class="row info-content d-none">
-                    <div class="col-lg-9 col-12">
-                        <div class="my-5 py-3">
-                            <table>
-                                <tr>
-                                    <th>Производитель</th>
-                                    <th>Промет (Россия)</th>
-                                    <th>Промет (Россия)</th>
-                                    <th>Промет (Россия)</th>
-                                </tr>
-                                <tr>
-                                    <td>Вес, кг</td>
-                                    <td>57 кг</td>
-                                    <td>70 кг</td>
-                                    <td>70 кг</td>
-                                </tr>
-                                <tr>
-                                    <td>Высота, мм</td>
-                                    <td>250</td>
-                                    <td>250</td>
-                                    <td>250</td>
-                                </tr>
-                                <tr>
-                                    <td>Ширина, мм</td>
-                                    <td>375</td>
-                                    <td>450</td>
-                                    <td>450</td>
-                                </tr>
-                                <tr>
-                                    <td>Глубина, мм</td>
-                                    <td>360</td>
-                                    <td>360</td>
-                                    <td>360</td>
-                                </tr>
-                                <tr>
-                                    <td>Серия</td>
-                                    <td>Кварцит</td>
-                                    <td>Кварцит</td>
-                                    <td>Кварцит</td>
-                                </tr>
-                                <tr>
-                                    <td>Бренд</td>
-                                    <td>VALBERG</td>
-                                    <td>VALBERG</td>
-                                    <td>VALBERG</td>
-                                </tr>
-                                <tr>
-                                    <td>Класс взломостойкости</td>
-                                    <td>1 класс</td>
-                                    <td>2 класс</td>
-                                    <td>2 класс</td>
-                                </tr>
+                                <div class="actions-pagination d-flex">
+                                    <button class="icon-button actions-pagination__turn-left">
+                                        <svg width="9" height="14" viewBox="0 0 9 14">
+                                            <path
+                                                d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z"
+                                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                                        </svg>
 
-                                <tr>
-                                    <td>Тип замка</td>
-                                    <td>Ключевой</td>
-                                    <td>Ключевой</td>
-                                    <td>Ключевой</td>
-                                </tr>
+                                    </button>
 
-                                <tr>
-                                    <td>Объем, л</td>
-                                    <td>12</td>
-                                    <td>18</td>
-                                    <td>18</td>
-                                </tr>
-                            </table>
+                                    <button class="gray">
+                                        1
+                                    </button>
+
+                                    <button class="black">
+                                        2
+                                    </button>
+
+                                    <button class="gray">
+                                        3
+                                    </button>
+
+                                    <button class="icon-button actions-pagination__turn-right">
+                                        <svg width="10" height="14" viewBox="0 0 10 14">
+                                            <path
+                                                d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
+                                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </div>
 
-                <div class="row difference-content d-none">
-                    <div class="col-lg-9 col-12">
-                        <div class="my-5 py-3">
-                            <table>
-                                <tr>
-                                    <th>Производитель</th>
-                                    <th>Промет (Россия)</th>
-                                    <th>Промет (Россия)</th>
-                                </tr>
-                                <tr>
-                                    <td>Вес, кг</td>
-                                    <td>57 кг</td>
-                                    <td>70 кг</td>
-                                </tr>
-                                <tr>
-                                    <td>Высота, мм</td>
-                                    <td>250</td>
-                                    <td>250</td>
-                                </tr>
-                                <tr>
-                                    <td>Ширина, мм</td>
-                                    <td>375</td>
-                                    <td>450</td>
-                                </tr>
-                                <tr>
-                                    <td>Глубина, мм</td>
-                                    <td>360</td>
-                                    <td>360</td>
-                                </tr>
-                                <tr>
-                                    <td>Серия</td>
-                                    <td>Кварцит</td>
-                                    <td>Кварцит</td>
-                                </tr>
-                                <tr>
-                                    <td>Бренд</td>
-                                    <td>VALBERG</td>
-                                    <td>VALBERG</td>
-                                </tr>
-                                <tr>
-                                    <td>Класс взломостойкости</td>
-                                    <td>1 класс</td>
-                                    <td>2 класс</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Тип замка</td>
-                                    <td>Ключевой</td>
-                                    <td>Ключевой</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Объем, л</td>
-                                    <td>12</td>
-                                    <td>18</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="lp-section">
+        <div class="comparision-default-state">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class="title-middle mb-5">Похожие товары</h4>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Подпятник <br> пластмассовый",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "10₽",
-                        "button": "В корзину",
-                        "link": "#"
+                        @@include('src/components/comparision-card/comparision-simple-card/comparision-simple-card.html',
+                        {
+                        "title": "Стеллажи <br> металлические",
+                        "photo": "../../../img/product-catalog/Rectangle 95.png",
+                        "number": "6"
                         })
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Подпятник <br> пластмассовый",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "10₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
-                        "badge": "",
-                        "bagdeBg": "",
-                        "title": "Полка <br> СТФЛ",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "",
-                        "price": "560₽",
-                        "priceColor": "black",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Подпятник <br> пластмассовый",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "10₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
-                </div>
-
-                <div class="row mb-5">
                     <div class="col-12">
-                        <div class="d-flex justify-content-between">
-                            <button class="gray text-button">Посмотреть все</button>
-
-                            <div class="actions-pagination d-flex">
-                                <button class="icon-button actions-pagination__turn-left">
-                                    <svg width="9" height="14" viewBox="0 0 9 14">
-                                        <path
-                                            d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z"
-                                            fill="white" stroke="#B6C0CB" stroke-width="0.5" />
-                                    </svg>
-
-                                </button>
-
-                                <button class="gray">
-                                    1
-                                </button>
-
-                                <button class="black">
-                                    2
-                                </button>
-
-                                <button class="gray">
-                                    3
-                                </button>
-
-                                <button class="icon-button actions-pagination__turn-right">
-                                    <svg width="10" height="14" viewBox="0 0 10 14">
-                                        <path
-                                            d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
-                                            fill="white" stroke="#B6C0CB" stroke-width="0.5" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
+                        @@include('src/components/comparision-card/comparision-simple-card/comparision-simple-card.html',
+                        {
+                        "title": "Сейфы",
+                        "photo": "../../../img/product-catalog/Rectangle 95 (1).png",
+                        "number": "3"
+                        })
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="comparision-default-state__img">
+                <div class="d-flex flex-column justify-content-end h-100 p-4 pb-5">
+                    <div class="comparision-default-state__ad-info">
+                        <h3 class="text-white">Соберите свой стеллаж</h3>
+                        <p class="text-white m-0">Данная опция временно
+                            доступна только для среднегрузовых стеллажей</p>
+                    </div>
+    
+                    @@include('src/components/buttons/button.html', {
+                    "title": "Подробнее",
+                    "width": "w-100",
+                    "color": "white"
+                    })
+                </div>
+            </div>
+        </div>
+
+        
 
         @@include('src/components/following-offer/following-offer.html')
 

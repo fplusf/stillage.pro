@@ -50,7 +50,8 @@ const searchForm = document.getElementById('searchForm'),
     infoBtn = document.getElementsByClassName('info-btn')[0],
     differenceBtn = document.getElementsByClassName('difference-btn')[0],
     infoContent = document.getElementsByClassName('info-content')[0],
-    differenceContent = document.getElementsByClassName('difference-content')[0];
+    differenceContent = document.getElementsByClassName('difference-content')[0],
+    topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -174,6 +175,15 @@ mobileSearchBtn &&
     mobileSearchBtn.addEventListener('click', () => {
         searchFormMobile.classList.add('mobile__search-box_show');
         mobileSearchInput.focus();
+        mobileSearchBtn.classList.add('black');
+        mobileSearchBtn.children[0].children[0].attributes[1].value = '#26323F';
+    });
+
+mobileSearchClose &&
+    mobileSearchClose.addEventListener('click', () => {
+        searchFormMobile.classList.remove('mobile__search-box_show');
+        mobileSearchBtn.classList.remove('black');
+        mobileSearchBtn.children[0].children[0].attributes[1].value = '#B6C0CB';
     });
 
 searchBtn.addEventListener('click', () => {
@@ -184,11 +194,6 @@ searchBtn.addEventListener('click', () => {
 searchClose.addEventListener('click', () => {
     searchForm.classList.remove('top-bar__search-box_show');
 });
-
-mobileSearchClose &&
-    mobileSearchClose.addEventListener('click', () => {
-        searchFormMobile.classList.remove('mobile__search-box_show');
-    });
 
 /******************* Manipulate cart *****************/
 cartButton &&
@@ -336,3 +341,9 @@ comparisionCompareBtn &&
         comparisionProcessSection.classList.remove('d-none');
         comparisionDefaultSection.classList.add('d-none');
     });
+
+/*********  Top Bar Phone number on small size ************/
+topBarPhoneNumber.addEventListener('click', () => {
+    topBarPhoneNumber.textContent = '8 (812) 565 03 59';
+    topBarPhoneNumber.classList.add('black');
+});

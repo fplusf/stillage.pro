@@ -61,6 +61,12 @@
         &:hover
             color: $black
 
+    &__phone-number-mobile
+        position: absolute
+        top: 15px
+        left: 50%
+        transform: translateX(-50%)
+
     &__logo
         width: 100px
 
@@ -96,12 +102,6 @@
     &__cart
         display: none
 
-    // &__mobile-menu
-    //     display: none
-
-    // &__mobile-menu_visible
-    //     display: block
-
         button,
         input
             color: $gray
@@ -114,16 +114,6 @@
             width: 100%
 
             &:focus           
-            
-        .fa-search
-            color: $primary
-
-        .fa-times
-            font-size: 20px
-            color: $gray 
-
-            &:hover
-                color: $primary
 
     &__search-box_show
         visibility: visible
@@ -135,13 +125,13 @@
         cursor: pointer
 
         div
-            height: 3px
-            width: 25px
+            height: 4px
+            width: 38px
             margin-bottom: 4px
             background: $gray
 
         .bar2
-            width: 15px
+            width: 20px
 
     &__cart-button
         z-index: 223

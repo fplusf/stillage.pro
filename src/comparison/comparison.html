@@ -270,7 +270,7 @@
                         </li>
 
                         <li class="nav-bar__item nav-item d-flex align-items-center">
-                            <a href="#test-form"
+                            <a href="#"
                                 class="popup-with-form nav-bar__link d-flex align-items-center nav-link price-link ">
                                 <span class="ml-2">Прайс</span>
                                 <svg class="nav-bar__square" width="6" height="6" viewBox="0 0 6 6" fill="none">
@@ -279,11 +279,11 @@
                             </a>
 
                         </li>
-                        @@include('src/price/price.html')
                     </ul>
 
                 </div>
             </div>
+            @@include('src/price/price.html')
         </header>
 
         <!------------------- Header ended ---------------------->
@@ -293,7 +293,7 @@
                     <div class="d-flex justify-content-between pt-4">
                         <h4 class="title">Сравнение</h4>
                         <button class="dark-gray comparision__reset-list d-none d-md-block">Очистить список</button>
-                        
+
                         <button class="dark-gray comparision__reset-list d-none">Очистить список</button>
 
                         <button class="icon-button comparision__compare">
@@ -708,7 +708,7 @@
                         <p class="text-white m-0">Данная опция временно
                             доступна только для среднегрузовых стеллажей</p>
                     </div>
-    
+
                     @@include('src/components/buttons/button.html', {
                     "title": "Подробнее",
                     "width": "w-100",
@@ -718,7 +718,7 @@
             </div>
         </div>
 
-        
+
 
         @@include('src/components/following-offer/following-offer.html')
 

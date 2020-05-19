@@ -1,26 +1,28 @@
-<div class="form-overlay"></div>
+<div class="price-overlay close-modal"></div>
 
-<form id="test-form" class="price-form">
-    <a class="close-btn">
-        <svg width="21" height="21" viewBox="0 0 21 21">
-            <path
-                d="M21 2.47459L18.5254 0L10.5 8.02538L2.47459 0L0 2.47459L8.02538 10.5L0 18.5254L2.47459 21L10.5 12.9746L18.5254 21L20.9999 18.5254L12.9746 10.5L21 2.47459Z"
-                fill="white" />
-        </svg>
-    </a>
+<div class="price-modal">
+    <form id="test-form" class="price-form">
+        <button class="price-form__close-btn close-modal" type="button">
+            <svg width="21" height="21" viewBox="0 0 21 21">
+                <path
+                    d="M21 2.47459L18.5254 0L10.5 8.02538L2.47459 0L0 2.47459L8.02538 10.5L0 18.5254L2.47459 21L10.5 12.9746L18.5254 21L20.9999 18.5254L12.9746 10.5L21 2.47459Z"
+                    fill="white" />
+            </svg>
+        </button>
 
-    <h4 class="price-form__title black text-center mb-4">
-        Заполните форму
-        и мы вышлем Вам прайс
-    </h4>
+        <h4 class="price-form__title black text-center mb-4">
+            Заполните форму
+            и мы вышлем Вам прайс
+        </h4>
 
-    <input name="name" type="text" placeholder="Имя" required class="price-form__input pb-2 mb-4">
-    <input name="email" type="tel" placeholder="Телефон" required class="price-form__input pb-2 mb-4">
-    <input name="phone" type="email" placeholder="E-mail" required class="price-form__input pb-2 mb-5">
+        <input name="name" type="text" placeholder="Имя" required class="price-form__input pb-2 mb-4">
+        <input name="email" type="tel" placeholder="Телефон" required class="price-form__input pb-2 mb-4">
+        <input name="phone" type="email" placeholder="E-mail" required class="price-form__input pb-2 mb-5">
 
-    <button class="w-100 icon-button primary" type="submit">Отправить</button>
+        <button class="w-100 primary price-form__submit-btn" type="submit">Отправить</button>
 
-    <span class="price-form__confidentiality gray d-block text-center px-1 mt-3">
-        Нажимая «Отправить», Вы соглашаетесь на обработку своих персональных данных
-    </span>
-</form>
+        <span class="price-form__confidentiality gray d-block text-center px-1 mt-3">
+            Нажимая «Отправить», Вы соглашаетесь на обработку своих персональных данных
+        </span>
+    </form>
+</div>

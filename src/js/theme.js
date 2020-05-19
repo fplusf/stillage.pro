@@ -10,10 +10,10 @@ const searchForm = document.getElementById('searchForm'),
     cartWrapper = document.querySelector('.top-bar__cart'),
     cartOverlay = document.querySelector('.cart-overlay'),
     /// Price Modal view
-    priceOverlay = document.querySelector('.form-overlay'),
-    priceLink = document.querySelectorAll('.price-link'),
-    priceFormClose = document.querySelector('.close-btn'),
-    priceForm = document.querySelector('.price-form'),
+    priceOverlay = document.querySelector('.price-overlay'),
+    priceModal = document.querySelector('.price-modal'),
+    priceLinks = document.querySelectorAll('.price-link'),
+    priceModalClose = document.querySelectorAll('.close-modal'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
@@ -53,7 +53,13 @@ const searchForm = document.getElementById('searchForm'),
     differenceContent = document.getElementsByClassName('difference-content')[0];
 
 /************  Gloabal Tab and Button state Switcher Class ********/
-class TabContentSwitcher {
+class TabContentAccordion {
+    // constructor(currentBtn, allButtons, currentSection, allSections) {
+    //     this.currentBtn = currentBtn;
+    //     this.allButtons = allButtons;
+    //     this.currentSection = currentSection;
+    //     this.allSections = allSections;
+    // }
     /// Toggle button states from arguments.
     toggleButtonIcons(currentBtn, allButtons) {
         if (currentBtn.children[1].className.includes('open active')) {
@@ -90,6 +96,64 @@ class TabContentSwitcher {
         });
     }
 }
+
+/******************* Modal Dialogs class *****************/
+class ModalDialog {
+    constructor(overlay, modal, inputs) {
+        this.overlay = overlay;
+        this.modal = modal;
+        this.inputs = inputs;
+    }
+
+    showModal() {
+        this.inputs[0].focus();
+        /// Modal and overlay classes always should come first in classlist.
+        this.overlay.classList.add(`${this.overlay.classList[0]}_active`);
+        this.modal.classList.add(`${this.modal.classList[0]}_active`);
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    }
+
+    closeModal() {
+        /// Modal and overlay classes always should come first in classlist.
+        this.overlay.classList.remove(`${this.overlay.classList[0]}_active`);
+        this.modal.classList.remove(`${this.modal.classList[0]}_active`);
+        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    }
+
+    modalFormInputState() {
+        /// Modal Form Input state classes always should come first in classlist.
+        this.inputs.forEach((input) => {
+            input.addEventListener('input', (event) => {
+                if (event.target.value.length > 0) {
+                    input.classList.add(`${input.classList[0]}_poluted`);
+                } else {
+                    input.classList.remove(`${input.classList[0]}_poluted`);
+                }
+            });
+        });
+    }
+}
+
+/********  Price Modal Dialog Setup ********/
+let priceModalDialog = new ModalDialog(priceOverlay, priceModal, priceFormInputs);
+
+priceLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        priceModalDialog.showModal();
+    });
+});
+
+priceModalClose.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+        priceModalDialog.closeModal();
+    });
+});
+
+priceFormInputs.forEach((input) => {
+    input.addEventListener('click', () => {
+        priceModalDialog.modalFormInputState();
+    });
+});
 
 /******************* Hide navbar on scroll down. *****************/
 
@@ -128,37 +192,6 @@ mobileSearchClose &&
         searchFormMobile.classList.remove('mobile__search-box_show');
     });
 
-/******************* Price Form Modal *****************/
-priceLink.forEach((link) => {
-    link.addEventListener('click', () => {
-        priceOverlay.classList.add('active');
-        priceForm.classList.add('active');
-        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-    });
-});
-
-priceFormClose.addEventListener('click', () => {
-    priceOverlay.classList.remove('active');
-    priceForm.classList.remove('active');
-    document.getElementsByTagName('html')[0].style.overflow = 'auto';
-});
-
-priceOverlay.addEventListener('click', () => {
-    priceOverlay.classList.remove('active');
-    priceForm.classList.remove('active');
-    document.getElementsByTagName('html')[0].style.overflow = 'auto';
-});
-
-priceFormInputs.forEach((input) => {
-    input.addEventListener('input', (event) => {
-        if (event.target.value.length > 0) {
-            input.classList.add('price-form-input_poluted');
-        } else {
-            input.classList.remove('price-form-input_poluted');
-        }
-    });
-});
-
 /******************* Manipulate cart *****************/
 cartButton &&
     cartButton.forEach((btn) => {
@@ -173,7 +206,7 @@ cartButton &&
 cartOverlay.addEventListener('click', () => {
     cartWrapper.classList.remove('d-block');
     cartOverlay.classList.remove('show-cart-overlay');
-    priceForm.classList.remove('price-form__visible');
+    priceModal.classList.remove('price-form__visible');
 });
 
 /******************* Action page toggle view mode *****************/
@@ -215,7 +248,7 @@ catalogListViewModeBtn &&
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
 ///// New insctance of Tab swither Class /////
-let informationPageTabs = new TabContentSwitcher();
+let informationPageTabs = new TabContentAccordion();
 
 ///// List of all Buttons and Sections to switch /////
 let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
@@ -248,7 +281,7 @@ instructionBtn &&
 
 /************** Comparision Page Toggle Buttons and Content **********/
 ///// New insctance of Tab swither Class /////
-let comparisionPageTabs = new TabContentSwitcher();
+let comparisionPageTabs = new TabContentAccordion();
 
 ///// List of all Buttons and Sections to switch /////
 let allComparisionPageBtns = [infoBtn, differenceBtn];

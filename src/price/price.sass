@@ -1,73 +1,76 @@
-.form-overlay
-    display: flex
+.price-overlay
     position: fixed
     background: $gray
-    width: 100%
-    height: 100%
-    top: 155px
+    top: 0
+    bottom: 0
+    left: 0
     right: 0
-    justify-content: center
     opacity: 0
     visibility: hidden
     transition: all $transition
+    z-index: 5 
 
-    +respond-to(tablet)
-        top: 165px
+    &_active
+        opacity: .8
+        visibility: visible
+        cursor: pointer
 
-    +respond-to(phone-land)
-        top: 0
+.price-modal
+    overflow: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    transform: scale(0)
+    transition: transform $transition
+    z-index: 6
 
-.form-overlay.active
-    opacity: .8
-    visibility: visible
+    &_active
+        display: block
+        transform: scale(1)
 
 .price-form
-    display: none
-    visibility: hidden
-    position: absolute
+    position: relative
     padding: 60px 40px
     background: $white
     transition: $transition
     width: 400px
-    height: 500px
-    opacity: 0
-    visibility: hidden
-    top: 150%
-    left: 50%
-    transform: translate(-50%, 10%)
-
-    +respond-to(laptop)
-        top: 50%
-        height: 430px
-        padding: 40px 30px
+    height: auto
+    top: 20%
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
 
     +respond-to(phone)
-        top: -80px
-        padding: 50% 30px
-        height: 100vh
+        top: 0
         width: 100%
+        height: 100%
+        padding-top: 50%
 
-    input
+    &__input
         border: none
         border-bottom: 1px solid $gray
         width: 100%
         transition: $transition
 
-    input:focus
+    &__input:focus
         border-color: $black
 
-    button
+    &__submit-btn
         color: $primary
-        border: 2px solid $primary
+        border: 1px solid $primary
         padding: 10px
 
-    .price-form-input_poluted
+    &__input_poluted
         border-bottom: 1px solid $black
 
-    .close-btn
+    &__close-btn
         color: $white
         cursor: pointer
-        right: -30px
+        right: -40px
         top: 0
         position: absolute
         &:hover svg path
@@ -78,8 +81,3 @@
             top: 100px
             svg path
                 fill: $gray
-
-.price-form.active
-    display: block
-    opacity: 1
-    visibility: visible

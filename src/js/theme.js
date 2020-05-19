@@ -54,14 +54,12 @@ const searchForm = document.getElementById('searchForm'),
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
-    // constructor(currentBtn, allButtons, currentSection, allSections) {
-    //     this.currentBtn = currentBtn;
-    //     this.allButtons = allButtons;
-    //     this.currentSection = currentSection;
-    //     this.allSections = allSections;
-    // }
+    constructor(allButtons, allSections) {
+        this.allButtons = allButtons;
+        this.allSections = allSections;
+    }
     /// Toggle button states from arguments.
-    toggleButtonIcons(currentBtn, allButtons) {
+    toggleButtonIcons(currentBtn) {
         if (currentBtn.children[1].className.includes('open active')) {
             currentBtn.children[1].className = 'open';
 
@@ -69,7 +67,7 @@ class TabContentAccordion {
 
             currentBtn.classList.add('information-button-active');
 
-            allButtons.forEach((btn) => {
+            this.allButtons.forEach((btn) => {
                 if (btn !== currentBtn) {
                     btn.children[1].className = 'open active';
                     btn.children[2].className = 'close';
@@ -84,12 +82,12 @@ class TabContentAccordion {
     }
 
     /// Toggle section content from arguments.
-    toggleSections(sectionToShow, allSections) {
+    toggleSections(sectionToShow) {
         sectionToShow.classList.toggle('d-block');
 
         // let allSections = [delivery, instruction, certificates, warranty, about];
 
-        allSections.forEach((section) => {
+        this.allSections.forEach((section) => {
             if (section !== sectionToShow) {
                 section.classList.remove('d-block');
             }
@@ -247,56 +245,57 @@ catalogListViewModeBtn &&
     });
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
-///// New insctance of Tab swither Class /////
-let informationPageTabs = new TabContentAccordion();
-
 ///// List of all Buttons and Sections to switch /////
 let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
 let allInfoPageSections = [delivery, instruction, certificates, warranty, about];
 
+///// New insctance of Tab swither Class /////
+let informationPageTabs = new TabContentAccordion(allInfoPageBtns, allInfoPageSections);
+
 ////// Calling switch methods on click event //////
 deliveryBtn &&
     deliveryBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(delivery, allInfoPageSections);
-        informationPageTabs.toggleButtonIcons(deliveryBtn, allInfoPageBtns);
+        informationPageTabs.toggleSections(delivery);
+        informationPageTabs.toggleButtonIcons(deliveryBtn);
     });
 
 warrantyBtn &&
     warrantyBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(warranty, allInfoPageSections);
-        informationPageTabs.toggleButtonIcons(warrantyBtn, allInfoPageBtns);
+        informationPageTabs.toggleSections(warranty);
+        informationPageTabs.toggleButtonIcons(warrantyBtn);
     });
 
 certificatesBtn &&
     certificatesBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(certificates, allInfoPageSections);
-        informationPageTabs.toggleButtonIcons(certificatesBtn, allInfoPageBtns);
+        informationPageTabs.toggleSections(certificates);
+        informationPageTabs.toggleButtonIcons(certificatesBtn);
     });
 
 instructionBtn &&
     instructionBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(instruction, allInfoPageSections);
-        informationPageTabs.toggleButtonIcons(instructionBtn, allInfoPageBtns);
+        informationPageTabs.toggleSections(instruction);
+        informationPageTabs.toggleButtonIcons(instructionBtn);
     });
 
 /************** Comparision Page Toggle Buttons and Content **********/
-///// New insctance of Tab swither Class /////
-let comparisionPageTabs = new TabContentAccordion();
 
 ///// List of all Buttons and Sections to switch /////
 let allComparisionPageBtns = [infoBtn, differenceBtn];
 let allComparisionPageSections = [infoContent, differenceContent];
 
+///// New insctance of Tab swither Class /////
+let comparisionPageTabs = new TabContentAccordion(allComparisionPageBtns, allComparisionPageSections);
+
 infoBtn &&
     infoBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonIcons(infoBtn, allComparisionPageBtns);
-        comparisionPageTabs.toggleSections(infoContent, allComparisionPageSections);
+        comparisionPageTabs.toggleButtonIcons(infoBtn);
+        comparisionPageTabs.toggleSections(infoContent);
     });
 
 differenceBtn &&
     differenceBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonIcons(differenceBtn, allComparisionPageBtns);
-        comparisionPageTabs.toggleSections(differenceContent, allComparisionPageSections);
+        comparisionPageTabs.toggleButtonIcons(differenceBtn);
+        comparisionPageTabs.toggleSections(differenceContent);
     });
 
 /******************* Mobile Hamburger menu manipulation *****************/

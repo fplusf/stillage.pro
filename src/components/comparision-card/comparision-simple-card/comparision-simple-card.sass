@@ -1,17 +1,17 @@
 .comparision-card-simple
     @extend .product-card-simple
-    +respond-to(phone)
+    +respond-to(phone-land)
         height: 160px
 
     &__photo
         @extend .product-card-simple__photo
-        +respond-to(phone)
+        +respond-to(phone-land)
             height: 110px
 
     &__number-box
         position: absolute
         right: 25px
-        bottom: 25px
+        bottom: 40px
         width: 40px
         height: 40px
         background: $gray
@@ -19,6 +19,9 @@
         display: flex
         align-items: center
         justify-content: center
+
+        +respond-to(phone)
+            bottom: 25px
 
     &__number
         font-size: 1rem

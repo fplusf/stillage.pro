@@ -3,6 +3,11 @@
         &:hover
             color: $primary
 
+    &__compare
+        display: none
+        +respond-to(phone-land)
+            display: block
+
     .difference-content,
     .info-content
         &__table
@@ -27,13 +32,17 @@
         background: $sky
 
 .comparision-default-state
+    display: none
+    +respond-to(phone-land)
+        display: block
+
     .container
         margin-bottom: 65px
         
     &__img
         @extend .catalog-metalicheskoe__ad-img
         height: 270px
-        +respond-to(phone)
+        +respond-to(phone-land)
             margin-bottom: 0
         // background-image: 
 

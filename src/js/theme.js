@@ -269,13 +269,13 @@ differenceBtn &&
 /******************* Mobile Hamburger menu manipulation *****************/
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    mobileMenuOverlay.classList.toggle('active');
+    mobileMenu.classList.toggle('mobile-menu-modal_active');
+    mobileMenuOverlay.classList.toggle('mobile-menu-overlay_active');
 });
 
 mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    mobileMenuOverlay.classList.remove('active');
+    mobileMenu.classList.remove('mobile-menu-modal_active');
+    mobileMenuOverlay.classList.remove('mobile-menu-overlay_active');
 });
 
 mobileCartBtn &&

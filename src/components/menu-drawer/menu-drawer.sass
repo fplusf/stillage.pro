@@ -10,9 +10,9 @@
     display: none
     transition: opacity $transition
 
-.mobile-menu-overlay.active
-    display: block
-    opacity: 1
+    &_active
+        display: block
+        opacity: 1
 
     
 .mobile-menu-modal
@@ -25,9 +25,12 @@
     z-index: 1050
     transform: translateX(-1000px)
     transition: transform $transition
+    display: none
+    +respond-to(phone-land)
+        display: block
 
-.mobile-menu-modal.active
-    transform: translateX(0)
+    &_active
+        transform: translateX(0)
     
 .drawer-menu
     background: $black

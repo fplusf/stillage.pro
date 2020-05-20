@@ -1,10 +1,45 @@
 @import '../sass/_vars'
 
-.basket
-    &__action-card
-        
 .basket-panel
     padding: 30px 20px
     button
         width: 100%
     
+.basket-list
+    &__form
+        background-color: $sky
+        padding: 35px
+        +respond-to(phone-land)
+            padding: 35px 15px
+            margin: 0 -15px
+        &__border
+            border: 1px solid $gray
+            padding: 30px
+            &__red
+                border: 1px solid $primary
+                padding: 30px
+
+    &__border-left
+        +respond-to(phone-land)
+            border: none
+            padding: none
+        border-left: 1px solid #C1C6CC
+        padding-left: 37px
+        margin-left: -37px
+    &__header
+        background: $light-gray 
+    &__quad
+        +respond-to(phone-land)
+            display: none
+        width: 15px
+        height: 15px
+        background: #C1C6CC
+        margin-top: -57px
+        margin-left: -45px
+        position: absolute
+        +respond-to(laptop)
+            margin-left: -46px
+        +respond-to(tablet)
+            margin-left: -46px
+        +respond-to(phone-land)
+            margin-left: -5px

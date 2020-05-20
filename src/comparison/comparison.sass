@@ -1,20 +1,50 @@
-.comparision-reset-list
-    &:hover
-        color: $primary
+.comparision
+    &__reset-list
+        &:hover
+            color: $primary
 
-table
-    width: 100%
+    &__compare
+        display: none
+        +respond-to(phone-land)
+            display: block
 
-td, th
-    border: none
-    text-align: right
-    padding: 8px
+    .difference-content,
+    .info-content
+        &__table
+            width: 100%
 
-td:first-child, th:first-child
-    text-align: left
+        td, th
+            border: none
+            text-align: right
+            padding: 8px
 
-th:first-child, td:first-child
-    color: $gray
+        td:first-child, th:first-child
+            text-align: left
 
-th
-    font-weight: 500
+        th:first-child, td:first-child
+            color: $gray
+
+        th
+            font-weight: 500
+
+.similar-products
+    +respond-to(phone-land)
+        background: $sky
+
+.comparision-default-state
+    display: none
+    +respond-to(phone-land)
+        display: block
+
+    .container
+        margin-bottom: 65px
+        
+    &__img
+        @extend .catalog-metalicheskoe__ad-img
+        height: 270px
+        +respond-to(phone-land)
+            margin-bottom: 0
+        // background-image: 
+
+    &__ad-info
+        @extend .catalog-metalicheskoe__ad-info

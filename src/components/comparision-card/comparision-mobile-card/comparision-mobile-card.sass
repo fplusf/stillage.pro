@@ -1,0 +1,11 @@
+.comparision-mobile-card
+    @extend .action-card
+    height: auto
+    +respond-to(phone)
+        height: auto
+
+    &__img-wrapper
+        @extend .action-card__img-wrapper
+
+    &__img
+        @extend .action-card__img

@@ -32,6 +32,16 @@ function copyFonts() {
     return src('./src/fonts/**/*.*').pipe(dest('dist/fonts'));
 }
 
+function compileBootstrap() {
+    return src('./node_modules/bootstrap/scss/bootstrap.scss', { allowEmpty: true })
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(autoprefixer({ cascade: false }))
+        .pipe(groupMQ())
+        .pipe(cssNano(cssNanoConfig))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('./node_modules/bootstrap/dist/css'));
+}
+
 function concatCSSLibs() {
     return src(
         [
@@ -52,7 +62,7 @@ function concatCSSLibs() {
  */
 function concatJSLibs() {
     return src([
-        './node_modules/jquery/dist/jquery.js',
+        './node_modules/jquery/dist/jquery.min.js',
         './node_modules/nouislider/distribute/nouislider.min.js',
         './node_modules/owl.carousel/dist/owl.carousel.min.js'
     ])
@@ -131,7 +141,7 @@ function clearDist() {
  */
 const defaultTasks = parallel(
     series(
-        parallel(series(concatCSSLibs), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, concatJs),
+        parallel(series(concatCSSLibs, compileBootstrap), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, concatJs),
         serve
     ),
     watchALL

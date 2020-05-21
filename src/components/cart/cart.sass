@@ -1,92 +1,22 @@
 @import '../../sass/_vars'
 
-.cart-wrapper
-    padding: 60px 40px 40px
+.cart
+    padding: 50px 30px 30px
     background: $white
-    font-size: 14px
-    visibility: hidden
     transition: $transition
     display: flex
-    visibility: visible
     position: absolute
     top: -21px
     right: 37px
-    width: 500px
+    width: 465px
     z-index: 37
 
-    .cart__item
-        height: 100px
-
-        &_image
-            width: 60px
-
-        &_info
-            min-width: 173px
-
-        &_price
-            width: 115px
-
-            &_control-buttons
-
-            &_count
-                height: 24px
-                width: 50px
-                background: $light-gray
-
-            &_add,
-            &_reduce
-                height: 24px
-                width: 24px
-                background: lighten($gray, 14%)
-                color: $white
-                font-size: 14px
-                border: none
-
-            &_add
-                background: $primary
-                font-size: 15px
-
-        &_price_money
-            font-size: 30px
-            text-align: center
-            font-weight: 600
-
-        &__title,
-        &__description
-            font-size: 14px
-            cursor: pointer
-
-    .cart__total-info
+    &__total-info
         font-size: 18px
+        font-weight: 600
         margin-bottom: 40px
 
-        &_product_price
-            font-size: 30px
-            font-weight: 600
-            line-height: 0
-
-    .cart__buttons
-        .outline-white-button
-            color: $gray
-            border-color: $gray
-
-        &_go-to-cart,
-        &_buy-by-click
-            padding: 13px 23px
-
-        &_go-to-cart
-            color: $primary
-            border: 1px solid $primary
-
-        &_buy-by-click
-            color: $gray
-            border: 1px solid $gray
-
-// .cart-wrapper_visible
-//     display: flex
-//     visibility: visible
-//     position: absolute
-//     top: -21px
-//     right: 37px
-//     width: 500px
-//     z-index: 37
+    &__product-price
+        font-size: 26px
+        font-weight: 700
+        line-height: 29px

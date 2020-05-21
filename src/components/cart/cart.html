@@ -1,30 +1,28 @@
-<div class="cart-wrapper flex-column">
+<div class="cart flex-column">
 
-    <div class="cart-items d-flex flex-column py-4">
-
+    <div class="d-flex flex-column py-4">
         @@include('src/components/cart/cart-item/cart-item.html')
         @@include('src/components/cart/cart-item/cart-item.html')
     </div>
+
     <div class="cart__total-info d-flex justify-content-between align-items-end">
-        <div class="cart__total-info_product">
-            Всего товаров: <span class="cart__total-info_product_count">2</span>
+        <div class="cart__product">
+            Всего товаров: <span class="cart__count">2</span>
         </div>
-        <div class="cart__total-info_price">
-            На сумму: <span class="cart__total-info_product_price pl-2">12 690 ₽</span>
+        <div class="cart__price">
+            На сумму: <span class="cart__product-price pl-2">12 690 ₽</span>
         </div>
     </div>
 
     <div class="cart__buttons d-flex justify-content-between">
 
 
-        <a href="/basket/basket.html">
-            @@include('src/components/buttons/outline-button.html', {
-            "title": "Перейти в корзину"
-            })
+        <a href="/basket/basket.html" class="stillage-link-button primary">
+            Перейти в корзину
         </a>
-        
-        @@include('src/components/buttons/outline-white-button.html', {
-        "title": "Купить в один клик"
-        })
+ 
+        <a href="#" class="stillage-link-button dark-gray">
+            Купить в один клик
+        </a>
     </div>
 </div>

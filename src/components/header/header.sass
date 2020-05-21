@@ -69,6 +69,7 @@
 
     &__logo
         width: 100px
+        max-width: 100%
 
         +respond-to(phone-land)
             display: flex
@@ -101,19 +102,6 @@
 
     &__cart
         display: none
-
-        button,
-        input
-            color: $gray
-            border: none
-            outline: none
-            background: none
-
-        input
-            color: $black
-            width: 100%
-
-            &:focus           
 
     &__search-box_show
         visibility: visible
@@ -156,7 +144,7 @@
 /******** Header Navigation bar styles ******/
 .nav-bar
     padding: 104px 0 30px
-    z-index: 2
+    z-index: 33
     position: fixed
     transition: top $transition
 

@@ -8,7 +8,7 @@
     opacity: 0
     visibility: hidden
     transition: all $transition
-    z-index: 5 
+    z-index: 33 
 
     &_active
         opacity: .8
@@ -25,7 +25,7 @@
     z-index: 1050
     transform: scale(0)
     transition: transform $transition
-    z-index: 6
+    z-index: 64
 
     &_active
         display: block
@@ -58,11 +58,6 @@
 
     &__input:focus
         border-color: $black
-
-    &__submit-btn
-        color: $primary
-        border: 1px solid $primary
-        padding: 10px
 
     &__input_poluted
         border-bottom: 1px solid $black

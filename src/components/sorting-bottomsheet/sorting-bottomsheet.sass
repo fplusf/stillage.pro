@@ -1,0 +1,30 @@
+.sorting-bottomsheet
+    background: rgba(7,12,23,.7)
+    height: 250px
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    transform: translateY(2000px)
+    transition: all $transition
+
+    &_active
+        transform: translateY(2px)
+
+    &__list
+        position: relative
+        z-index: 5555
+        overflow: visible
+        margin: 20px auto
+        list-style: none
+        padding: 0
+
+    &__item
+        padding: 10px 20px
+        text-align: center
+
+    &__link
+        color: $white
+
+        
+        

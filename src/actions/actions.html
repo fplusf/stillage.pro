@@ -1,5 +1,23 @@
 @@include('src/components/header/header.html', {"title": "Акция", "activeAction": "black"})
 <!-- Page content goes here -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-md-none">
+            <div class="srednie-stillage__mobile-filters">
+                <button class="gray sorting-button">По популярности</button>
+
+                <button class="gray filter-button">
+                    <svg width="11" height="13" viewBox="0 0 11 13" class="mr-1">
+                        <path
+                            d="M10.568 0H0.431926C0.193363 0 0 0.193363 0 0.431926V2.26047C0 2.36801 0.0401693 2.47167 0.112599 2.55131L3.95944 6.77594V12.3822C3.95944 12.5361 4.04136 12.6785 4.17455 12.7558C4.2415 12.7947 4.31651 12.8141 4.39139 12.8141C4.46525 12.8141 4.53925 12.7952 4.60563 12.7571L6.8229 11.4901C6.95752 11.4132 7.04059 11.2701 7.04059 11.1152V6.77594L10.8874 2.55131C10.96 2.4717 11 2.36804 11 2.26047V0.431926C11 0.193363 10.8066 0 10.568 0Z"
+                            fill="#B6C0CB" />
+                    </svg>
+                    Фильтры
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- OWL Carousel section -->
@@ -123,31 +141,166 @@
                 </div>
 
 
-                <div class="catalog-view-buttons">
+                <div class="catalog-view-buttons d-none d-md-block">
                     <button class="icon-button tile-view-btn active">
                         <svg width="15" height="15" viewBox="0 0 15 15">
-                            <path d="M12 0H15V3H12V0Z"/>
-                            <path d="M6 0H9V3H6V0Z"/>
-                            <path d="M0 0H3V3H0V0Z"/>
-                            <path d="M12 6H15V9H12V6Z"/>
-                            <path d="M6 6H9V9H6V6Z"/>
-                            <path d="M0 6H3V9H0V6Z"/>
-                            <path d="M12 12H15V15H12V12Z"/>
-                            <path d="M6 12H9V15H6V12Z"/>
-                            <path d="M0 12H3V15H0V12Z"/>
+                            <path d="M12 0H15V3H12V0Z" />
+                            <path d="M6 0H9V3H6V0Z" />
+                            <path d="M0 0H3V3H0V0Z" />
+                            <path d="M12 6H15V9H12V6Z" />
+                            <path d="M6 6H9V9H6V6Z" />
+                            <path d="M0 6H3V9H0V6Z" />
+                            <path d="M12 12H15V15H12V12Z" />
+                            <path d="M6 12H9V15H6V12Z" />
+                            <path d="M0 12H3V15H0V12Z" />
                         </svg>
                     </button>
-                    
+
                     <button class="icon-button list-view-btn">
                         <svg width="19" height="15" viewBox="0 0 19 15">
-                            <path d="M0 0H19V3H0V0Z"/>
-                            <path d="M0 6H19V9H0V6Z"/>
-                            <path d="M0 12H19V15H0V12Z"/>
+                            <path d="M0 0H19V3H0V0Z" />
+                            <path d="M0 6H19V9H0V6Z" />
+                            <path d="M0 12H19V15H0V12Z" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
+
+        <!------ Accordion Mobile Filter -->
+
+
+        <div id="mobileProductFilter" class="mobile-filter-wrapper d-md-none">
+            <div class="d-flex justify-content-between mb-5">
+                <h6 class="dark-gray">Отображение карточек</h6>
+
+                <div class="catalog-view-buttons">
+                    <button class="icon-button tile-view-btn active">
+                        <svg width="15" height="15" viewBox="0 0 15 15">
+                            <path d="M12 0H15V3H12V0Z" />
+                            <path d="M6 0H9V3H6V0Z" />
+                            <path d="M0 0H3V3H0V0Z" />
+                            <path d="M12 6H15V9H12V6Z" />
+                            <path d="M6 6H9V9H6V6Z" />
+                            <path d="M0 6H3V9H0V6Z" />
+                            <path d="M12 12H15V15H12V12Z" />
+                            <path d="M6 12H9V15H6V12Z" />
+                            <path d="M0 12H3V15H0V12Z" />
+                        </svg>
+                    </button>
+
+                    <button class="icon-button list-view-btn pr-0">
+                        <svg width="19" height="15" viewBox="0 0 19 15">
+                            <path d="M0 0H19V3H0V0Z" />
+                            <path d="M0 6H19V9H0V6Z" />
+                            <path d="M0 12H19V15H0V12Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter white-bg shadow-light">
+                <ul class="accordion-list dark-gray">
+                    <li class="accordion-item">
+                        <input type="checkbox" class="accordion-item__input" checked>
+                        <i class="accordion-item__icon"></i>
+                        <h6 class="panel-title w-100 view-gray">Оторбражение</h6>
+                        <div class="accordion-item__content">
+                            <label class="checkbox-container">Все
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">Только акции
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">Только новинки
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="accordion-item">
+                        <input type="checkbox" class="accordion-item__input" checked>
+                        <i class="accordion-item__icon"></i>
+                        <h6 class="panel-title w-100">Цена
+                        </h6>
+                        <div class="accordion-item__content">
+                            <div class="mb-4 slider-wrapper">
+
+                                <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
+                                <div class="price-range__value-up mr-3 price-value position-absolute">33</div>
+
+                                <div id="slider"></div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
+                                <div class="price-range__up w-100 text-center price-value">до 29 000</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion-item">
+                        <input type="checkbox" class="accordion-item__input" checked>
+                        <i class="accordion-item__icon"></i>
+                        <h6 class="panel-title w-100">Производитель
+                        </h6>
+                        <div class="accordion-item__content">
+                            <label class="checkbox-container">Samsung
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Apple
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Xiaomi
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="accordion-item">
+                        <input type="checkbox" class="accordion-item__input" checked>
+                        <i class="accordion-item__icon"></i>
+                        <h6 class="panel-title w-100">Высота
+                        </h6>
+                        <div class="accordion-item__content">
+                            <div class="d-flex">
+                                <input type="number" class="w-100 mr-4">
+                                <input type="number" class="w-100">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion-item">
+                        <input type="checkbox" class="accordion-item__input" checked>
+                        <i class="accordion-item__icon"></i>
+                        <h6 class="panel-title w-100">Ширина
+                        </h6>
+                        <div class="accordion-item__content">
+                            <div class="d-flex">
+                                <input type="number" class="w-100 mr-4">
+                                <input type="number" class="w-100">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="w-100 mt-4 py-4">
+                    <button class="filter-content__reset-btn icon-button float-right">
+                        Сбросить
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
 
 
         <div class="d-flex w-100 justify-content-between">
@@ -190,7 +343,7 @@
                 </div>
 
 
-                <!------ Accordion  -->
+                <!------ Accordion Filter -->
 
                 <div class="filter white-bg shadow-light">
                     <ul class="accordion-list dark-gray">
@@ -223,7 +376,6 @@
                             </h6>
                             <div class="accordion-item__content">
                                 <div class="mb-4 slider-wrapper">
-                                    <!-- <div id="slider-range"></div> -->
 
                                     <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
                                     <div class="price-range__value-up mr-3 price-value position-absolute">33</div>
@@ -592,7 +744,9 @@
                 <div class="actions-pagination d-flex align-self-end">
                     <button class="icon-button actions-pagination__turn-left">
                         <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z" fill="white" stroke="#B6C0CB" stroke-width="0.5"/>
+                            <path
+                                d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z"
+                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
                         </svg>
 
                     </button>
@@ -611,7 +765,9 @@
 
                     <button class="icon-button actions-pagination__turn-right">
                         <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z" fill="white" stroke="#B6C0CB" stroke-width="0.5"/>
+                            <path
+                                d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
+                                fill="white" stroke="#B6C0CB" stroke-width="0.5" />
                         </svg>
                     </button>
                 </div>

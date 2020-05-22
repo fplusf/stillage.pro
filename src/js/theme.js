@@ -18,8 +18,8 @@ const searchForm = document.getElementById('searchForm'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
-    tileViewModeBtn = document.getElementsByClassName('tile-view-btn')[0],
-    listViewModeBtn = document.getElementsByClassName('list-view-btn')[0],
+    tileViewModeBtn = document.querySelectorAll('.tile-view-btn'),
+    listViewModeBtn = document.querySelectorAll('.list-view-btn'),
     /// Toggle header Links
     headerLinks = document.querySelectorAll('.site-header__nav-link'),
     visitedLinks = document.querySelectorAll('.active-link'),
@@ -226,14 +226,18 @@ function switchViewMode(newView, newViewBtn, activeView, activeViewBtn) {
 
 // Switch to Tile View
 tileViewModeBtn &&
-    tileViewModeBtn.addEventListener('click', () => {
-        switchViewMode(tileViewMode, tileViewModeBtn, listViewMode, listViewModeBtn);
+    tileViewModeBtn.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            switchViewMode(tileViewMode, btn, listViewMode, listViewModeBtn[index]);
+        });
     });
 
 // Switch to List View
 listViewModeBtn &&
-    listViewModeBtn.addEventListener('click', () => {
-        switchViewMode(listViewMode, listViewModeBtn, tileViewMode, tileViewModeBtn);
+    listViewModeBtn.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            switchViewMode(listViewMode, btn, tileViewMode, tileViewModeBtn[index]);
+        });
     });
 
 /******************* Metal Stillage catalog toggle view modes *****************/
@@ -346,4 +350,30 @@ comparisionCompareBtn &&
 topBarPhoneNumber.addEventListener('click', () => {
     topBarPhoneNumber.textContent = '8 (812) 565 03 59';
     topBarPhoneNumber.classList.add('black');
+});
+
+/*********  Sorting & Filtering mobile version  *************/
+let sortingBtns = document.querySelectorAll('.sorting-button'),
+    filterBtns = document.querySelectorAll('.filter-button'),
+    sortingBottomSheet = document.getElementById('sortingBottomSheet'),
+    productFilter = document.getElementById('mobileProductFilter'),
+    closeMobileFilter = document.getElementById('closeMobileFilter'),
+    topBarFilterState = document.querySelector('.top-bar__mobile-filter');
+
+sortingBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        sortingBottomSheet.classList.toggle('sorting-bottomsheet_active');
+    });
+});
+
+filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        productFilter.classList.add('d-block');
+        topBarFilterState.classList.add('d-block');
+    });
+});
+
+closeMobileFilter.addEventListener('click', () => {
+    productFilter.classList.remove('d-block');
+    topBarFilterState.classList.remove('d-block');
 });

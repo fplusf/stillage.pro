@@ -1,0 +1,37 @@
+.buyer-form-wrapper
+    height: 300px
+    background-color: $sky
+    padding: 40px
+
+.buyer-form
+    display: flex
+    flex-direction: column
+    width: 70%
+    min-width: 372px
+    height: 100%
+
+    +respond-to(phone-land)
+        width: 100%
+
+    &__element:first-child
+        appearance: none
+        background-image: url(../../../img/checkout/Vector.png)
+        background-repeat: no-repeat
+        background-position: 97%
+        cursor: pointer
+        outline: none
+
+    &__element
+        border: none
+        height: 100%
+        background-color: $white
+        margin-bottom: 10px
+        padding-left: 10px
+
+    &__edit-tel
+        left: 62%
+        top: 58%
+        position: absolute
+   
+        +respond-to(tablet)
+            left: 84%

@@ -1,0 +1,24 @@
+.timeline
+    // position: relative
+    // max-width: 100%
+
+/** The actual timeline */
+.timeline::after
+    content: ''
+    position: absolute
+    width: 1px
+    background-color: lighten($gray, 5%)
+    top: 0
+    bottom: 0
+    left: -30px
+
+.timeline::before
+    content: ''
+    position: absolute
+    width: 20px
+    height: 20px
+    left: -40px
+    background-color: lighten($gray, 15%)
+    top: 0
+    z-index: 1
+

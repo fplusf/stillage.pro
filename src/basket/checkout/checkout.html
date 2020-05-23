@@ -1,0 +1,199 @@
+@@include('src/components/header/header.html', {"title": "Оформление заказа"})
+<!-- Page content goes here -->
+
+<section class="lp-section">
+    <h1 class="dark-gray">Оформление заказа</h1>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="basket-list mt-5">
+                    <div class="basket-list__border-left pb-0 mb-5">
+                        <div class="basket-list__border-left__heading">
+                            <h4 class="title-middle dark-gray mb-4 f-w-600">Покупатель</h4>
+                        </div>
+                        <div class="basket-list__quad"></div>
+                        <div class="basket-list__form mb-5">
+                            <div class="col-12 col-md-8 p-0">
+                                <div class="mb-2">
+                                    @@include('src/components/input/input.html', { "title": "Физическое лицо" })
+                                </div>
+                                <div class="mb-2">
+                                    @@include('src/components/input/input.html', { "title": "ФИО" })
+                                </div>
+                                <div class="mb-2">
+                                    @@include('src/components/input/input.html', { "title": "+7 (900) 000 00 00" })
+                                </div>
+                                @@include('src/components/input/input.html', { "title": "E-mail" })
+                            </div>
+                        </div>
+                        <div class="basket-list__border-left__heading">
+                            <h4 class="title-middle dark-gray mb-4 f-w-600">Способ получения
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <circle cx="6" cy="6" r="6" fill="#848E99" />
+                                    <path
+                                        d="M5.792 7.155H6.791L6.881 2.61H5.702L5.792 7.155ZM5.738 9H6.845V7.929H5.738V9Z"
+                                        fill="white" />
+                                </svg>
+                            </h4>
+                        </div>
+                        <div class="basket-list__quad"></div>
+                        <div class="basket-list__form mb-5">
+                            <div class="row m-0">
+                                <div class="col-12 col-lg-5 basket-list__form__border__red mr-4 mb-2 mt-2">
+                                    <h5>
+                                        Самовывоз Санкт- <br> Петербург (бесплатно)
+                                    </h5>
+                                    <div class="d-flex dark-gray">
+                                        <p class="mr-auto">
+                                            Санкт-Петербург, <br> ул. Зайцева, 41
+                                        </p>
+                                        <p>
+                                            Пн-Пт 10.00–19.00 <br>
+                                            Сб-Вс 11.00-18.00
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-5 basket-list__form__border mb-2 mt-2">
+                                    <div class="d-flex">
+                                        <h5 class="mr-auto">
+                                            Доставка <br /> (опционально)
+                                        </h5>
+                                        <svg class="mt-2" width="12" height="12" viewBox="0 0 12 12">
+                                            <circle cx="6" cy="6" r="6" fill="#848E99" />
+                                            <path
+                                                d="M5.792 7.155H6.791L6.881 2.61H5.702L5.792 7.155ZM5.738 9H6.845V7.929H5.738V9Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="dark-gray">
+                                        <p>
+                                            Доставка по Санкт-Петербургу и Ленинградской области
+                                        </p>
+                                        <p>
+                                            Доставка по России
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket-list__border-left__heading">
+                            <h4 class="title-middle dark-gray mb-4 f-w-600">Оплата <svg width="12" height="12"
+                                    viewBox="0 0 12 12">
+                                    <circle cx="6" cy="6" r="6" fill="#848E99" />
+                                    <path
+                                        d="M5.792 7.155H6.791L6.881 2.61H5.702L5.792 7.155ZM5.738 9H6.845V7.929H5.738V9Z"
+                                        fill="white" />
+                                </svg>
+                            </h4>
+                        </div>
+                        <div class="basket-list__quad"></div>
+                        <div class="basket-list__form mb-5">
+                            <div class="row m-0">
+                                <div class="col-7 col-md-4">
+                                    <div class="d-flex">
+                                        <svg width="16" height="16" viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="7.5" stroke="#8B959F" />
+                                        </svg>
+                                        <div class="ml-2">
+                                            <h6>Оплата <br>
+                                                при получении</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5 col-md-4">
+                                    <div class="d-flex">
+                                        <svg width="16" height="16" viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="7.5" stroke="#8B959F" />
+                                        </svg>
+                                        <div class="ml-2">
+                                            <h6> Онлайн <br> оплата</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex">
+                                        <svg width="16" height="16" viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="7.5" stroke="#8B959F" />
+                                        </svg>
+                                        <div class="ml-2">
+                                            <h6>
+                                                Оплата наличными <br>
+                                                или картой (самовывоз)
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4 m-0">
+                                <div class="col-12 col-lg-8 mt-2 mb-2">
+                                    @@include('src/components/input/input.html', { "title": "Введите купон на промокод"})
+                                </div>
+                                <div class="col-12 col-lg-4 mt-2 mb-2">
+                                    @@include('src/components/buttons/filled-gray-button.html', { "title": "Применить промокод" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket-list__border-left__heading">
+                            <h4 class="title-middle dark-gray mb-4 f-w-600">Дополнительный комментарий</h4>
+                        </div>
+                        <div class="basket-list__quad"></div>
+                        <div class="pt-3">
+                            @@include('src/components/input/textarea.html', { "title": "Комментарий к заказу" })
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-none d-md-block">
+                        <div class="d-flex">
+                            <span>Всего товаров: 3</span>
+                            <span class="ml-auto">
+                                <h6 class="m-0">12 690 ₽</h6>
+                            </span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <span>Доставка и подъем</span>
+                            <span class="ml-auto">
+                                <h6 class="m-0">300 ₽</h6>
+                            </span>
+                        </div>
+                        <div class="d-flex">
+                            <h4>Итого</h4>
+                            <span class="ml-auto">
+                                <h4 class="m-0">12 690 ₽</h4>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-block d-xl-none d-lg-none d-md-none">
+                        <div class="d-flex mb-1">
+                            <span>Всего товаров: </span>
+                            <span class="ml-auto">3</span>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <span class="dark-gray">В наличии: </span>
+                            <span class="ml-auto dark-gray">2</span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <span class="dark-gray">Под заказ: </span>
+                            <span class="ml-auto dark-gray">1</span>
+                        </div>
+                        <div class="d-flex">
+                            <h4>Итого</h4>
+                            <span class="ml-auto">
+                                <h4 class="m-0">12 690 ₽</h4>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+@@include('src/components/mobile-navbar/mobile-navbar.html')
+
+<!-- Page content goes abover -->
+@@include('src/components/footer/footer.html')

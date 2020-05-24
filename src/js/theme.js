@@ -51,7 +51,8 @@ const searchForm = document.getElementById('searchForm'),
     differenceBtn = document.getElementsByClassName('difference-btn')[0],
     infoContent = document.getElementsByClassName('info-content')[0],
     differenceContent = document.getElementsByClassName('difference-content')[0],
-    topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile');
+    topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile'),
+    recieveMethodCard = document.querySelectorAll('.recieve-method__card');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -376,4 +377,15 @@ filterBtns.forEach((btn) => {
 closeMobileFilter.addEventListener('click', () => {
     productFilter.classList.remove('d-block');
     topBarFilterState.classList.remove('d-block');
+});
+
+/************  Recieve method card ***/
+recieveMethodCard.forEach((card) => {
+    card.addEventListener('click', () => {
+        recieveMethodCard.forEach((innerCard) => {
+            if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
+        });
+
+        card.classList.add('recieve-method__card_active');
+    });
 });

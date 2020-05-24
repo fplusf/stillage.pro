@@ -1,0 +1,33 @@
+.recieve-method
+    @extend .buyer-form-wrapper
+    display: flex
+    height: 245px
+    
+    +respond-to(phone)
+        flex-direction: column
+
+    &__card
+        padding: 25px 20px
+        border: 1px solid $gray
+        height: 100%
+        width: 280px
+        margin-right: 25px
+        cursor: pointer
+
+        +respond-to(phone-land)
+            width: 100%
+
+        &_active
+            border-color: $primary
+
+
+.sign
+    height: 15px
+    width: 15px
+    font-size: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $dark-gray
+    border-radius: 50%
+    color: $white

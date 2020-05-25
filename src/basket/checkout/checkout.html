@@ -15,7 +15,6 @@
 </div>
 
 <section class="lp-section pt-0">
-
     <div class="container">
         <div class="row">
             <div class="col-12 mb-5">
@@ -26,16 +25,20 @@
                 @@include('src/components/bucket-page/buyer-form/buyer-form.html')
             </div>
 
-            <div class="col-12 col-md-8 timeline">
+            <div class="col-12 col-md-8 timeline pb-5">
                 <div class="d-flex mb-3">
                     <h5 class="dark-gray mr-2">Способ получения</h5>
                     <div class="sign my-2">!</div>
                 </div>
                 @@include('src/components/bucket-page/recieve-method/recieve-method.html')
             </div>
+
+            <div class="col-12 col-md-8 timeline">
+                <h5 class="dark-gray mb-3">Оплата</h5>
+                @@include('src/components/bucket-page/payment-form/payment-form.html')
+            </div>
         </div>
     </div>
-
 </section>
 
 

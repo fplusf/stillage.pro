@@ -1,0 +1,30 @@
+<form class="payment-form">
+    <div class="payment-form__choose-method">
+        <fieldset>
+            <input type="radio" name="payment-method" id="paymentOnReceive">
+            <label for="paymentOnReceive">
+                Оплата <br> при получении
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <input type="radio" name="payment-method" id="onlinePayment">
+            <label for="onlinePayment">
+                Онлайн <br> оплата
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <input type="radio" name="payment-method" id="cashPayment">
+            <label for="cashPayment">
+                Оплата наличными <br> или картой (самовывоз)
+            </label>
+        </fieldset>
+    </div>
+
+    <div class="payment-form__promocode">
+        <input type="text" name="promoCode" placeholder="Введите купон на промокод" id="promoCode">
+
+        <button class="stillage-button gray">Применить промокод</button>
+    </div>
+</form>

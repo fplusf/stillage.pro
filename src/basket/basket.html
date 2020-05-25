@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="basket-panel primary-bg">
+                <div class="d-none d-lg-block basket-panel primary-bg">
                     <h5 class="title-middle white pb-3 d-none d-sm-none d-md-block">Для консультации <br> с менеджером
                         <br> оставьте заявку</h5>
                     <h5 class="title-middle white pb-3 d-block d-xl-none d-lg-none d-md-none">Для консультации <br> с
@@ -88,85 +88,196 @@
                     </div>
                     @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
                 </div>
-                <h6 class="h6 primary pb-4 pt-4 mb-0 mt-2">Внимание</h6>
-                <p class="pb-4">
-                    В вашей корзине присутствует товар, которого нет в наличии. Онлайн оплата доступна только после
-                    подтверждения заказа менеджером.
-                    Для оформления заказа с товаром «под заказ» оставьте заявку и наш менеджер свяжется с вами
-                </p>
-                <p class="dark-gray">
-                    Товары «в наличии» доступны для заказа и онлайн-оплаты
-                </p>
+                <div class="d-none d-lg-block">
+                    <h6 class="h6 primary pb-4 pt-4 mb-0 mt-2">Внимание</h6>
+                    <p class="pb-4">
+                        В вашей корзине присутствует товар, которого нет в наличии. Онлайн оплата доступна только после
+                        подтверждения заказа менеджером.
+                        Для оформления заказа с товаром «под заказ» оставьте заявку и наш менеджер свяжется с вами
+                    </p>
+                    <p class="dark-gray">
+                        Товары «в наличии» доступны для заказа и онлайн-оплаты
+                    </p>
+                </div>
             </div>
             <div class="col-12 pt-4">
-                <h2 class="h2 dark-gray title-middle">Сопутствующие товары</h2>
-                <div class="d-flex working-way__row justify-content-sm-between">
-                    <div class="basket__action-card position-relative mr-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "1 690₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
+                <div class="d-none d-lg-block">
+                    <h2 class="h2 dark-gray title-middle">Сопутствующие товары</h2>
+                    <div class="d-flex working-way__row justify-content-sm-between">
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
 
-                    <div class="basket__action-card position-relative mr-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../img/catalog/stillage-metalicheskoe/7.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "1 690₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/7.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
 
-                    <div class="basket__action-card position-relative mr-3">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "1 690₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
-                    </div>
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
 
-                    <div class="basket__action-card position-relative">
-                        @@include('src/components/action-catalog/action-card/action-card.html', {
-                        "photo": "../../img/catalog/stillage-metalicheskoe/5-large.png",
-                        "badge": "Акция",
-                        "bagdeBg": "primary-bg",
-                        "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                        "info": "ВШГ - 1156x2400x450 мм",
-                        "oldPrice": "1 957₽",
-                        "price": "1 690₽",
-                        "button": "В корзину",
-                        "link": "#"
-                        })
+                        <div class="basket__action-card position-relative">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/5-large.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
                     </div>
-                </div>
-                <div class="row pt-3">
-                    <div class="col-12 d-flex justify-content-start">
-                        <a href="#" class="view-more dark-gray text-decoration-none">
-                            Посмотреть все
-                        </a>
+                    <div class="row pt-3">
+                        <div class="col-12 d-flex justify-content-start">
+                            <a href="#" class="view-more dark-gray text-decoration-none">
+                                Посмотреть все
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Responsive -->
+    <div class="d-lg-none basket-panel primary-bg mt-5">
+        <div class="container">
+            <h5 class="title-middle white pb-3 d-none d-sm-none d-md-block">Для консультации <br> с менеджером
+            <br> оставьте заявку</h5>
+            <h5 class="title-middle white pb-3 d-block d-xl-none d-lg-none d-md-none">Для консультации <br> с
+                менеджером оставьте <br> заявку</h5>
+            <p class="white pb-3">
+                И мы свяжемся с вами в течение 10 минут
+            </p>
+            <div class="pb-2">
+                @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
+            </div>
+            <div class="pb-3">
+                @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
+            </div>
+            @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="d-lg-none">
+                    <h6 class="h6 primary pb-4 pt-4 mb-0 mt-2">Внимание</h6>
+                    <p class="pb-4">
+                        В вашей корзине присутствует товар, которого нет в наличии. Онлайн оплата доступна только после
+                        подтверждения заказа менеджером.
+                        Для оформления заказа с товаром «под заказ» оставьте заявку и наш менеджер свяжется с вами
+                    </p>
+                    <p class="dark-gray">
+                        Товары «в наличии» доступны для заказа и онлайн-оплаты
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 pt-4">
+                <div class="d-lg-none">
+                    <h2 class="h2 dark-gray title-middle">Сопутствующие товары</h2>
+                    <div class="d-flex working-way__row justify-content-sm-between">
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
 
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/7.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+
+                        <div class="basket__action-card position-relative mr-3">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/6.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+
+                        <div class="basket__action-card position-relative">
+                            @@include('src/components/action-catalog/action-card/action-card.html', {
+                            "photo": "../../img/catalog/stillage-metalicheskoe/5-large.png",
+                            "badge": "Акция",
+                            "bagdeBg": "primary-bg",
+                            "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                            "info": "ВШГ - 1156x2400x450 мм",
+                            "oldPrice": "1 957₽",
+                            "price": "1 690₽",
+                            "button": "В корзину",
+                            "link": "#"
+                            })
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-12 d-flex justify-content-start">
+                            <a href="#" class="view-more dark-gray text-decoration-none">
+                                Посмотреть все
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Responsive -->
 </section>
 
 @@include('src/components/mobile-navbar/mobile-navbar.html')

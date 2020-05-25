@@ -1,0 +1,52 @@
+.payment-form
+    width: 100%
+    padding: 40px
+    background: $sky
+
+    &__choose-method
+        width: 90%
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-bottom: 40px
+
+    &__promocode
+        width: 90%
+        display: flex
+        justify-content: space-between
+        
+        +respond-to(phone-land)
+            flex-wrap: wrap
+            width: 100%
+
+    input[type="radio"]
+        vertical-align: top
+        margin: 5px 10px 0
+        height: 15px
+        width: 15px
+
+        +respond-to(phone-land)
+            height: 25px
+            width: 25px
+
+    input[type="text"]
+        padding: 13px 10px
+        width: 60%
+        margin-right: 20px
+        border: none
+
+        +respond-to(phone-land)
+            width: 100%
+            margin-right: 0
+            margin-bottom: 15px
+
+    label
+        font-weight: 600
+
+    fieldset
+        +respond-to(phone-land)
+            margin-bottom: 20px
+
+    .stillage-button
+        +respond-to(phone-land)
+            width: 100%

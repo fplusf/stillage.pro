@@ -64,7 +64,7 @@ function concatJSLibs() {
     return src([
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/nouislider/distribute/nouislider.min.js',
-        './node_modules/owl.carousel/dist/owl.carousel.min.js'
+        './node_modules/owl.carousel/dist/owl.carousel.min.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -81,7 +81,7 @@ function compileSASS() {
         .pipe(sourcemaps.write('maps'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./dist/css'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.stream({ once: true }));
 }
 
 function concatJs() {
@@ -91,7 +91,7 @@ function concatJs() {
         .pipe(sourcemaps.write('maps'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./dist/js'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.stream({ once: true }));
 }
 
 /**
@@ -106,7 +106,7 @@ function compileHtml() {
             })
         )
         .pipe(dest('./dist/'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.stream({ once: true }));
 }
 
 function serve() {
@@ -141,7 +141,15 @@ function clearDist() {
  */
 const defaultTasks = parallel(
     series(
-        parallel(series(concatCSSLibs, compileBootstrap), compileSASS, concatJSLibs, compileHtml, compressImg, copyFonts, concatJs),
+        parallel(
+            series(concatCSSLibs, compileBootstrap),
+            compileSASS,
+            concatJSLibs,
+            compileHtml,
+            compressImg,
+            copyFonts,
+            concatJs
+        ),
         serve
     ),
     watchALL

@@ -3,6 +3,9 @@
     background-color: $sky
     padding: 40px
 
+    +respond-to(phone-land)
+        padding: 35px 15px
+
 .buyer-form
     display: flex
     flex-direction: column
@@ -12,6 +15,7 @@
 
     +respond-to(phone-land)
         width: 100%
+        min-width: 100%
 
     &__element:first-child
         appearance: none

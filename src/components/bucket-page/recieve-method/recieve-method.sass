@@ -4,6 +4,7 @@
     height: 245px
     
     +respond-to(phone)
+        height: 100%
         flex-direction: column
 
     &__card
@@ -17,6 +18,9 @@
 
         +respond-to(phone-land)
             width: 100%
+
+        +respond-to(phone)
+            margin-right: 0        
 
         &_active
             border-color: $primary

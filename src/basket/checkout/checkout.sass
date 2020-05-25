@@ -22,3 +22,51 @@
     +respond-to(phone-land)
         display: none
 
+
+.checkout
+    &__total-product
+        font-weight: 600
+
+    &__total-money
+        font-weight: 600
+
+        h5
+            font-weight: 700
+            font-size: 24px
+            line-height: 24px
+
+    &__warnin-message
+        width: 320px
+        position: absolute
+
+        h6
+            color: $primary
+
+    .col-12:not(.last)
+        +respond-to(phone-land)
+            padding-right: 0
+            padding-left: 0
+
+    &__price
+        font-weight: 600
+        font-size: 16px
+
+    &__total
+        font-size: 16px
+
+    &__total-price
+        font-size: 25px
+        font-weight: 700
+
+    &__buy-btn
+        width: 75% !important
+        +respond-to(phone-land)
+            width: 100% !important
+
+    &__submit-btn
+        width: 100% !important
+
+    &__order-btn
+        width: 50% !important
+        +respond-to(phone-land)
+            width: 100% !important

@@ -52,7 +52,10 @@ const searchForm = document.getElementById('searchForm'),
     infoContent = document.getElementsByClassName('info-content')[0],
     differenceContent = document.getElementsByClassName('difference-content')[0],
     topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile'),
-    recieveMethodCard = document.querySelectorAll('.recieve-method__card');
+    recieveMethodCard = document.querySelectorAll('.recieve-method__card'),
+    ////////// Checkout additional comment //////////
+    additionalCommentText = document.querySelector('.addition-comment-box'),
+    additionalCommentClean = document.querySelector('.addition-comment-close');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -388,4 +391,9 @@ recieveMethodCard.forEach((card) => {
 
         card.classList.add('recieve-method__card_active');
     });
+});
+
+/***********  Checkout additional comment component ****/
+additionalCommentClean.addEventListener('click', () => {
+    additionalCommentText.value = '';
 });

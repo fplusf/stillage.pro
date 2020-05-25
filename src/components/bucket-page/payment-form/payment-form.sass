@@ -3,12 +3,18 @@
     padding: 40px
     background: $sky
 
+    +respond-to(phone)
+        padding: 35px 15px
+
     &__choose-method
         width: 90%
         display: flex
         justify-content: space-between
         flex-wrap: wrap
         margin-bottom: 40px
+
+        +respond-to(phone-land)
+            width: 100%
 
     &__promocode
         width: 90%

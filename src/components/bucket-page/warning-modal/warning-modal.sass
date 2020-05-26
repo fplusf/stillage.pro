@@ -1,0 +1,32 @@
+/*To activate warning/alert modal 
+ just add active class on needed events*/
+.warning-overlay
+    @extend .price-overlay
+
+    &_active
+        @extend .price-overlay_active
+
+.warning-modal
+    @extend .price-modal
+    top: 50px
+    
+    &_active
+        @extend .price-modal_active
+
+.warning
+    @extend .price-form
+    padding: 40px 20px
+
+    +respond-to(phone)
+        top: 20%
+        width: 90%
+        height: auto
+        padding: 40px 20px
+
+    &__close-btn
+        position: absolute
+        right: -6px
+        top: -33px
+        &:hover svg path
+            fill: $primary
+

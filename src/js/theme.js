@@ -383,17 +383,19 @@ closeMobileFilter.addEventListener('click', () => {
 });
 
 /************  Recieve method card ***/
-recieveMethodCard.forEach((card) => {
-    card.addEventListener('click', () => {
-        recieveMethodCard.forEach((innerCard) => {
-            if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
-        });
+recieveMethodCard &&
+    recieveMethodCard.forEach((card) => {
+        card.addEventListener('click', () => {
+            recieveMethodCard.forEach((innerCard) => {
+                if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
+            });
 
-        card.classList.add('recieve-method__card_active');
+            card.classList.add('recieve-method__card_active');
+        });
     });
-});
 
 /***********  Checkout additional comment component ****/
-additionalCommentClean.addEventListener('click', () => {
-    additionalCommentText.value = '';
-});
+additionalCommentClean &&
+    additionalCommentClean.addEventListener('click', () => {
+        additionalCommentText.value = '';
+    });

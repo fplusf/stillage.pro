@@ -1,0 +1,25 @@
+.delivery-date
+    display: flex
+    flex-direction: column
+    @extend .buyer-form-wrapper
+
+    &__element
+        @extend .optional-receive__element
+
+    &__btn,
+    &__free-service
+        width: 250px !important
+        font-weight: 500
+
+    .first-element 
+        width: 220px
+    
+    .second-element 
+        width: 120px
+
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator
+        opacity: 0
+        cursor: pointer
+        width: 30px
+        color: $black

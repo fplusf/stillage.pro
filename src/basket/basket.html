@@ -36,11 +36,11 @@
                 </div>
                 <div class="d-none d-sm-none d-md-block">
                     <div class="d-flex pt-5">
-                        <div class="mr-auto">
+                        <div class="mr-auto align-self-end basket__font-size align-self-end">
                             Всего товаров: 3
                         </div>
                         <div class="d-flex">
-                            На сумму: <h6 class="h6 m-0 ml-2">12 690 ₽</h6>
+                            <span class="basket__font-size align-self-end">На сумму:</span>  <h5 class="h5 m-0 ml-2">12 690 ₽</h5>
                         </div>
                     </div>
                     <div class="d-flex pt-4 mb-4">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="d-flex">
                             @@include('src/components/buttons/filled-gray-button.html', { "title": "Быстрый заказ" })
-                            <button class="outline-button ml-2">Перейти в корзину</button>
+                            <button class="outline-button ml-4">Оформить заказ</button>
                         </div>
                     </div>
                 </div>
@@ -65,8 +65,8 @@
                         <div class="d-flex mb-3">
                             На сумму:<h6 class="h6 m-0 ml-auto">12 690 ₽</h6>
                         </div> 
+                        <button class="outline-button mb-3">Оформить заказ</button>
                         @@include('src/components/buttons/filled-gray-button.html', { "title": "Быстрый заказ" })
-                        <button class="outline-button mt-2">Перейти в корзину</button>
                         
                     </div>
                 </div>
@@ -80,10 +80,10 @@
                     <p class="white pb-3">
                         И мы свяжемся с вами в течение 10 минут
                     </p>
-                    <div class="pb-2">
+                    <div class="pb-2 basket__input">
                         @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
                     </div>
-                    <div class="pb-3">
+                    <div class="pb-3 basket__input">
                         @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
                     </div>
                     @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
@@ -162,7 +162,7 @@
                     </div>
                     <div class="row pt-3">
                         <div class="col-12 d-flex justify-content-start">
-                            <a href="#" class="view-more dark-gray text-decoration-none">
+                            <a href="#" class="basket-panel__view-more view-more dark-gray text-decoration-none">
                                 Посмотреть все
                             </a>
                         </div>
@@ -181,10 +181,10 @@
             <p class="white pb-3">
                 И мы свяжемся с вами в течение 10 минут
             </p>
-            <div class="pb-2">
+            <div class="pb-2 basket__input">
                 @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
             </div>
-            <div class="pb-3">
+            <div class="pb-3 basket__input">
                 @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
             </div>
             @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
@@ -192,19 +192,6 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                <div class="d-lg-none">
-                    <h6 class="h6 primary pb-4 pt-4 mb-0 mt-2">Внимание</h6>
-                    <p class="pb-4">
-                        В вашей корзине присутствует товар, которого нет в наличии. Онлайн оплата доступна только после
-                        подтверждения заказа менеджером.
-                        Для оформления заказа с товаром «под заказ» оставьте заявку и наш менеджер свяжется с вами
-                    </p>
-                    <p class="dark-gray">
-                        Товары «в наличии» доступны для заказа и онлайн-оплаты
-                    </p>
-                </div>
-            </div>
             <div class="col-12 pt-4">
                 <div class="d-lg-none">
                     <h2 class="h2 dark-gray title-middle">Сопутствующие товары</h2>
@@ -267,7 +254,7 @@
                     </div>
                     <div class="row pt-3">
                         <div class="col-12 d-flex justify-content-start">
-                            <a href="#" class="view-more dark-gray text-decoration-none">
+                            <a href="#" class="basket-panel__view-more view-more dark-gray text-decoration-none">
                                 Посмотреть все
                             </a>
                         </div>

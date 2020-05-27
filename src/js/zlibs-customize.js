@@ -87,3 +87,10 @@ if (
         nodes[handle].innerHTML = Math.round(values[handle]);
     });
 }
+
+/********** Date picker **********/
+$('#datetimepicker').flatpickr({
+    dateFormat: 'l, j F',
+    time: 'false',
+    locale: 'ru',
+});

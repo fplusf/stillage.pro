@@ -1,38 +1,83 @@
-<div class="recieve-method">
-    <div class="recieve-method__card mb-4 mb-md-0">
-        <h6 class="recieve-method__title">
-            Самовывоз Санкт- <br>
-            Петербург (бесплатно)
-        </h6>
-        <div class="recieve-method__text d-flex gray">
-            <small class="mr-3">
-                Санкт-Петербург, <br>
-                ул. Зайцева, 41
-            </small>
+<div class="receive-wrapper">
 
-            <small>
-                Пн-Пт 10.00–19.00 <br>
-                Сб-Вс 11.00-18.00
-            </small>
-        </div>
-    </div>
-
-    <div class="recieve-method__card">
-        <div class="d-flex justify-content-between">
+    <div class="recieve-method">
+        <div class="recieve-method__card mb-4 mb-md-0">
             <h6 class="recieve-method__title">
-                Доставка <br> (опционально)
+                Самовывоз Санкт- <br>
+                Петербург (бесплатно)
             </h6>
-            <div class="sign">!</div>
+            <div class="recieve-method__text d-flex gray">
+                <small class="mr-3">
+                    Санкт-Петербург, <br>
+                    ул. Зайцева, 41
+                </small>
+
+                <small>
+                    Пн-Пт 10.00–19.00 <br>
+                    Сб-Вс 11.00-18.00
+                </small>
+            </div>
         </div>
 
-        <div class="recieve-method__text d-flex flex-column gray">
-            <small class="mb-2">
-                Доставка по Санкт-Петербургу и Ленинградской области
-            </small>
+        <div class="recieve-method__card">
+            <div class="d-flex justify-content-between">
+                <h6 class="recieve-method__title">
+                    Доставка <br> (опционально)
+                </h6>
+                <div class="sign">!</div>
+            </div>
 
-            <small>
-                Доставка по России
-            </small>
+            <div class="recieve-method__text d-flex flex-column gray">
+                <small class="mb-2">
+                    Доставка по Санкт-Петербургу и Ленинградской области
+                </small>
+
+                <small>
+                    Доставка по России
+                </small>
+            </div>
         </div>
     </div>
+
+    <div class="optional-receive">
+        <div class="optional-receive__sections mr-4">
+            <select name="recieve-type" id="recieve" class="optional-receive__element select">
+                <option>Стандартная доставка</option>
+                <option>Не стандартная доставка</option>
+            </select>
+
+            <select name="recieve-type" id="recieve" class="optional-receive__element select">
+                <option value="" hidden selected disabled>Зона доставки</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+
+            <input type="text" name="fullName" placeholder="Дом" class="optional-receive__element">
+
+            <div class="popup-info">
+                <div class="sign my-1 my-md-2">!</div>
+                <div class="white">
+                    Зона 1 — БЕСПЛАТНО <br>
+                    Зона 2 — 490₽ <br>
+                    Зона 3 — 890₽ <br>
+                    Далее рассчитывается Зона 2 + 35₽/км <br>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="optional-receive__sections">
+            <select name="recieve-type" id="recieve" class="optional-receive__element select">
+                <option>по Санкт-Петербургу</option>
+                <option>Области</option>
+            </select>
+
+            <input type="text" name="fullName" placeholder="Улица" class="optional-receive__element">
+
+            <input type="text" name="fullName" placeholder="Квартира" class="optional-receive__element">
+
+            <span class="optional-receive__price">+490 ₽</span>
+        </div>
+    </div>
+
 </div>

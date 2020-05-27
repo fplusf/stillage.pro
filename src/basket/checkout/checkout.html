@@ -77,6 +77,13 @@
 
         <div class="row">
             <div class="col-12 col-lg-8 timeline pb-5">
+                <h5 class="dark-gray mb-3 pl-3 pt-5 pl-md-0 pt-md-0">Дата и время доставки</h5>
+                @@include('src/components/bucket-page/delivery-date/delivery-date.html')
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-8 timeline pb-5">
                 <div class="d-flex mb-3 pl-3 pt-5 pl-md-0 pt-md-0">
                     <h5 class="dark-gray mr-2">Оплата</h5>
                     <div class="sign my-1 my-md-2">!</div>
@@ -123,10 +130,12 @@
             </div>
         </div>
 
+        <!-- Warning Modal -->
+        @@include('src/components/bucket-page/warning-modal/warning-modal.html')
 </section>
 
 
 @@include('src/components/mobile-navbar/mobile-navbar.html')
 
-<!-- Page content goes abover -->
+<!-- Page content goes above -->
 @@include('src/components/footer/footer.html')

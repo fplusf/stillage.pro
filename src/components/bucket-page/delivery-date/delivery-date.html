@@ -1,0 +1,39 @@
+<div class="delivery-date">
+    <form class="d-flex mb-5">
+        <input type="datetime-local" id="deliveryDate" placeholder="Дата"
+            class="select first-element delivery-date__element mr-4">
+
+        <input type="text" placeholder="Время" onfocus="(this.type = 'time')" onblur="(this.type = 'text')" id="time"
+            class="select second-element delivery-date__element mr-4">
+
+        <button class="stillage-button gray delivery-date__btn">В рамках рабочего времени</button>
+    </form>
+
+    <form class="d-flex mb-4">
+        <select name="lift" id="lift" class="select first-element  delivery-date__element mr-4">
+            <option value="placeholder">Наличие грузового лифта</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+
+        <select name="lift" id="floor" class="select second-element  delivery-date__element mr-4">
+            <option value="placeholder">Этаж</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <span class="delivery-date__free-service">Подъем на этаж для пенсионеров и инвалидов — БЕСПЛАТНО</span>
+    </form>
+
+    <div class="d-flex align-items-end">
+        <span>+390 ₽</span>
+    </div>
+</div>

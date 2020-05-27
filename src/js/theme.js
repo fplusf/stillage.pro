@@ -53,6 +53,7 @@ const searchForm = document.getElementById('searchForm'),
     differenceContent = document.getElementsByClassName('difference-content')[0],
     topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile'),
     recieveMethodCard = document.querySelectorAll('.recieve-method__card'),
+    reciveMethodWrapper = document.querySelector('.receive-wrapper'),
     ////////// Checkout additional comment //////////
     additionalCommentText = document.querySelector('.addition-comment-box'),
     additionalCommentClean = document.querySelector('.addition-comment-close');
@@ -383,17 +384,44 @@ closeMobileFilter.addEventListener('click', () => {
 });
 
 /************  Recieve method card ***/
-recieveMethodCard.forEach((card) => {
-    card.addEventListener('click', () => {
-        recieveMethodCard.forEach((innerCard) => {
-            if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
-        });
+recieveMethodCard &&
+    recieveMethodCard.forEach((card) => {
+        card.addEventListener('click', () => {
+            recieveMethodCard.forEach((innerCard) => {
+                if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
+            });
 
-        card.classList.add('recieve-method__card_active');
+            if (card === recieveMethodCard[1]) {
+                reciveMethodWrapper.classList.add('receive-wrapper__optional_active');
+            } else {
+                reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
+            }
+
+            card.classList.add('recieve-method__card_active');
+        });
     });
-});
 
 /***********  Checkout additional comment component ****/
-additionalCommentClean.addEventListener('click', () => {
-    additionalCommentText.value = '';
+additionalCommentClean &&
+    additionalCommentClean.addEventListener('click', () => {
+        additionalCommentText.value = '';
+    });
+
+/***** Delivery date picker ***/
+let deliveryDate = document.getElementById('deliveryDate');
+
+deliveryDate.addEventListener('focus', function () {
+    this.type = 'date';
+});
+
+deliveryDate.addEventListener('blur', function (e) {
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+
+    let inputDate = new Date(e.target.value);
+    let formated = inputDate.toLocaleDateString('ru-RU', options);
+    e.target.value = formated;
+
+    console.log(formated);
+
+    // this.type = 'text';
 });

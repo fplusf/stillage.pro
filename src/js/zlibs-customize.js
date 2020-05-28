@@ -93,4 +93,5 @@ $('#datetimepicker').flatpickr({
     dateFormat: 'l, j F',
     time: 'false',
     locale: 'ru',
+    disableMobile: "true"
 });

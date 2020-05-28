@@ -1,52 +1,67 @@
 <div class="delivery-date">
-    <form class="d-flex mb-5">
-        <input id="datetimepicker" autocomplete="off" type="text" placeholder="Дата"
-            class="select first-element delivery-date__element mr-4">
+    <form class="mb-5">
+        <div class="d-flex">
+            <input id="datetimepicker" autocomplete="off" type="text" placeholder="Дата"
+                class="select first-element delivery-date__element mr-4">
 
-        <div class="custom-select select second-element  delivery-date__element mr-4">
-            <select>
-                <option value="0">Время</option>
-                <option value="1">08:00</option>
-                <option value="2">10:00</option>
-                <option value="3">12:00</option>
-                <option value="4">14:00</option>
-                <option value="5">16:00</option>
-                <option value="6">18:00</option>
-            </select>
+            <div class="custom-select select second-element  delivery-date__element mr-md-4">
+                <select>
+                    <option value="0">Время</option>
+                    <option value="1">08:00</option>
+                    <option value="2">10:00</option>
+                    <option value="3">12:00</option>
+                    <option value="4">14:00</option>
+                    <option value="5">16:00</option>
+                    <option value="6">18:00</option>
+                </select>
+            </div>
+            <button type="button" class="stillage-button gray delivery-date__btn d-none d-md-block">В рамках рабочего
+                времени</button>
         </div>
 
-        <button class="stillage-button gray delivery-date__btn">В рамках рабочего времени</button>
+        <button type="button" class="stillage-button gray delivery-date__btn d-md-none">В рамках рабочего
+            времени</button>
     </form>
 
-    <form class="d-flex mb-4">
-        <div class="custom-select select first-element delivery-date__element mr-4">
-            <select>
-                <option value="placeholder">Наличие грузового лифта</option>
-                <option value="yes">Да</option>
-                <option value="no">Нет</option>
-            </select>
-        </div>
-
-        <div class="custom-select select second-element  delivery-date__element mr-4">
-            <select>
-                <option value="0">Этаж</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-        </div>
-
-        <span class="delivery-date__free-service">Подъем на этаж для пенсионеров и инвалидов — БЕСПЛАТНО</span>
-    </form>
-
-    <div class="d-flex align-items-end">
-        <span>+390 ₽</span>
+    <div class="d-flex mb-3 pl-md-3 pl-md-0 pt-md-0">
+        <h6 class="mr-2">Подъем на этаж</h6>
+        <div class="sign my-1">!</div>
     </div>
+
+    <form class="mb-4">
+        <div class="d-flex">
+            <div class="custom-select select first-element delivery-date__element mr-4">
+                <select>
+                    <option value="placeholder">Наличие грузового лифта</option>
+                    <option value="yes">Да</option>
+                    <option value="no">Нет</option>
+                </select>
+            </div>
+
+            <div class="custom-select select second-element  delivery-date__element mr-md-4">
+                <select>
+                    <option value="0">Этаж</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <span class="delivery-date__free-service d-none d-md-block">Подъем на этаж для пенсионеров и инвалидов —
+                БЕСПЛАТНО
+            </span>
+        </div>
+        <span class="delivery-date__free-service d-md-none">
+            Подъем на этаж для пенсионеров <br> и инвалидов — БЕСПЛАТНО
+        </span>
+    </form>
+
+    <div class="w-100 text-right delivery-date__price">+390 ₽</div>
 </div>

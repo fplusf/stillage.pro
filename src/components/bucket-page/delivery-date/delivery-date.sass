@@ -4,6 +4,11 @@
 
     @extend .buyer-form-wrapper
 
+    height: 344px
+
+    +respond-to(phone-land)
+        height: 440px
+
     &__element
         @extend .optional-receive__element
 
@@ -12,11 +17,25 @@
         width: 250px !important
         font-weight: 500
 
+        +respond-to(phone-land)
+            width: 100% !important
+
+    &__price
+        font-size: 24px
+        font-weight: 700
+        color: $dark-gray
+
     .first-element
         width: 220px
 
     .second-element
         width: 120px
+
+    .first-element,
+    .second-element
+        +respond-to(phone-land)
+            width: 50%
+            margin-bottom: 20px
 
     .hiddenDate
         opacity: 0
@@ -43,7 +62,7 @@
 
 .select-selected
     // background-color: $white
-    color: $black 
+    color: $black
     border: none !important
     height: 50px
     padding: 14px 0px !important

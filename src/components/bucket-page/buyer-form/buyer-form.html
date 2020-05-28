@@ -1,9 +1,12 @@
 <div class="buyer-form-wrapper">
     <form class="buyer-form">
-        <select name="buyer-type" id="buyer" class="buyer-form__element select">
-            <option value="induvidual">Физ. лицо</option>
-            <option value="organizational">Юр. лицо</option>
-        </select>
+        <div class="custom-select select buyer-form__element">
+            <select>
+                <option value="0">Физ. лицо</option>
+                <option value="1">Физ. лицо</option>
+                <option value="2">Юр. лицо</option>
+            </select>
+        </div>
 
         <input type="text" name="fullName" placeholder="ФИО" class="buyer-form__element">
 

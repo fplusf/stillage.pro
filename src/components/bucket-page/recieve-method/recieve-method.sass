@@ -3,20 +3,32 @@
     background: $sky
     transition: height $transition
 
+    +respond-to(phone)
+        height: 120px
+
     &__optional_active
-        height: 460px
+        height: 500px
+        +respond-to(phone)
+            height: 610px
     
     &__optional_active .optional-receive
         visibility: visible
 
+    
 .recieve-method
     @extend .buyer-form-wrapper
     display: flex
     height: 245px
     
     +respond-to(phone)
-        height: 100%
-        flex-direction: column
+        justify-content: space-between
+        height: 120px
+
+
+    &__title
+        +respond-to(phone)
+            &:hover
+                color: $primary
 
     &__card
         padding: 25px 20px
@@ -27,15 +39,21 @@
         cursor: pointer
         transition: border-color $transition
 
-        +respond-to(phone-land)
-            width: 100%
+        +respond-to(phone)
+            padding: 0
+            width: auto
+            border: none
 
         +respond-to(phone)
             margin-right: 0        
 
         &_active
             border-color: $primary
-
+            +respond-to(phone)
+                .recieve-method__title
+                    color: $primary
+                    &:hover
+                        color: $primary
 
 .optional-receive
     visibility: hidden
@@ -45,6 +63,9 @@
 
     +respond-to(phone-land)
         padding: 0 15px 35px 15px
+
+    +respond-to(phone)
+        flex-direction: column
 
     &__sections
         @extend .recieve-method__card
@@ -56,26 +77,33 @@
         height: 50px
         width: 100%
 
+        +respond-to(phone-land)
+            margin-bottom: 20px
+
     &__price
         position: absolute
         font-size: 1.5rem
         font-weight: 700
         color: $dark-gray
-        right: 20px
-        bottom: 95px
+        right: 40px
+        bottom: 60px
         +respond-to(tablet)
             font-size: 1.3rem
-            bottom: 55px
+
+    &__zone:hover .popup-info
+        visibility: visible
+
 
 .popup-info
-    position: relative
-    left: -20px
-    top: -80px
-    width: 100%
+    visibility: hidden
+    position: absolute
+    left: 0
+    top: 55px
     height: 80px
     padding: 10px
     font-size: 11px
     background-color: rgba(38,50,63, .8)
+    transition: visibility $transition
 
     .sign
         position: absolute
@@ -92,3 +120,4 @@
     background: $dark-gray
     border-radius: 50%
     color: $white
+

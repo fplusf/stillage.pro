@@ -6,20 +6,22 @@
     +respond-to(phone)
         height: 120px
 
+
     &__optional_active
         height: 500px
+
         +respond-to(phone)
             height: 610px
-    
+
     &__optional_active .optional-receive
         visibility: visible
 
-    
 .recieve-method
     @extend .buyer-form-wrapper
+
     display: flex
     height: 245px
-    
+
     +respond-to(phone)
         justify-content: space-between
         height: 120px
@@ -44,14 +46,18 @@
             width: auto
             border: none
 
+
         +respond-to(phone)
-            margin-right: 0        
+            margin-right: 0
+
 
         &_active
             border-color: $primary
+
             +respond-to(phone)
                 .recieve-method__title
                     color: $primary
+
                     &:hover
                         color: $primary
 
@@ -64,16 +70,20 @@
     +respond-to(phone-land)
         padding: 0 15px 35px 15px
 
+
     +respond-to(phone)
         flex-direction: column
 
+
     &__sections
         @extend .recieve-method__card
+
         padding: 0
         border: 0
 
     &__element
         @extend .buyer-form__element
+
         height: 50px
         width: 100%
 
@@ -82,27 +92,28 @@
 
     &__price
         position: absolute
-        font-size: 1.5rem
+        font-size: 24px
         font-weight: 700
         color: $dark-gray
         right: 40px
-        bottom: 60px
-        +respond-to(tablet)
-            font-size: 1.3rem
+        bottom: 70px
+            
+        +respond-to(phone-land)
+            bottom: 55px
 
     &__zone:hover .popup-info
         visibility: visible
-
 
 .popup-info
     visibility: hidden
     position: absolute
     left: 0
     top: 55px
-    height: 80px
+    max-width: 250px
+    width: 200px
     padding: 10px
     font-size: 11px
-    background-color: rgba(38,50,63, .8)
+    background-color: rgba(38, 50, 63, 0.8)
     transition: visibility $transition
 
     .sign
@@ -113,6 +124,7 @@
 .sign
     height: 15px
     width: 15px
+    margin: 9px 0
     font-size: 10px
     display: flex
     align-items: center
@@ -121,3 +133,9 @@
     border-radius: 50%
     color: $white
 
+    +respond-to(tablet)
+        margin: 6px 0
+
+
+    +respond-to(phone-land)
+        margin: 4px 0

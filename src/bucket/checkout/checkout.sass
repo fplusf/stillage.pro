@@ -36,7 +36,7 @@
             line-height: 24px
 
     &__warnin-message
-        width: 320px
+        max-width: 300px
         position: absolute
 
         h6
@@ -70,3 +70,42 @@
         width: 50% !important
         +respond-to(phone-land)
             width: 100% !important
+
+    .checkmark
+        background-color: $white
+
+
+    .checkbox-container input~.checkmark
+        +respond-to(phone)
+            border: 1px solid $dark-gray
+
+    .checkbox-container input:checked~.checkmark
+        border: 4px solid $white
+
+    .payment-form-wrapper
+        display: none
+        &_active
+            display: block
+
+    .optional-payment-form-wrapper
+        display: none
+        &_active
+            display: block
+
+    .sign-assembly-notice
+        max-width: max-content
+
+    .sign-assembly-notice:hover > .popup-info
+        visibility: visible
+            
+    .popup-info
+        left: 105px
+        top: 18px
+
+    .optional-assembly
+        display: none
+
+        &_active
+            display: flex
+
+    

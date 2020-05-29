@@ -1,0 +1,21 @@
+.assembly-form
+    @extend .payment-form
+
+    &__choose-method
+        @extend .payment-form__choose-method
+
+        width: 50%
+        margin-bottom: 5px
+
+        +respond-to(phone-land)
+            width: 80%
+
+    &__promocode
+        @extend .payment-form__promocode
+
+    &__notice
+        padding-left: 37px
+        margin-bottom: 30px
+
+    input[type='radio']
+        margin: 2px 10px 0

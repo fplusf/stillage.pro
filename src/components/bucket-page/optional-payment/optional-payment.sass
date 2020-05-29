@@ -1,0 +1,17 @@
+.optional-payment-form
+    @extend .payment-form
+
+    &__choose-method
+        @extend .payment-form__choose-method
+        width: 50%
+        margin-bottom: 20px
+
+        +respond-to(phone-land)
+            width: 90%
+
+
+    &__promocode
+        @extend .payment-form__promocode
+
+    fieldset
+        width: fit-content

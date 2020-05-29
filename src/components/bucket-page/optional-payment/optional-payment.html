@@ -1,0 +1,34 @@
+<form class="optional-payment-form">
+    <div class="optional-payment-form__choose-method">
+        <fieldset>
+            <input type="radio" name="optional-payment-method" id="optionalPaymentOnReceive">
+            <label for="optionalPaymentOnReceive">
+                Оплата <br> при получении
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <input type="radio" name="optional-payment-method" id="onlineOptionalPayment">
+            <label for="onlineOptionalPayment">
+                Онлайн <br> оплата
+            </label>
+        </fieldset>
+    </div>
+
+    <fieldset class="mb-3">
+        <label class="checkbox-container">Оплата картой
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">Оплата наличными
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </fieldset>
+
+    <div class="optional-payment-form__promocode">
+        <input type="text" name="promoCode" placeholder="Введите купон на промокод" id="promoCodeOptional">
+
+        <button class="stillage-button gray">Применить промокод</button>
+    </div>
+</form>

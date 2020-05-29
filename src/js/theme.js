@@ -64,7 +64,7 @@ class TabContentAccordion {
         this.allButtons = allButtons;
         this.allSections = allSections;
     }
-    /// Toggle button states from arguments.
+    /* Toggle button states from arguments.*/
     toggleButtonIcons(currentBtn) {
         if (currentBtn.children[1].className.includes('open active')) {
             currentBtn.children[1].className = 'open';
@@ -87,11 +87,9 @@ class TabContentAccordion {
         }
     }
 
-    /// Toggle section content from arguments.
+    /* Toggle section content from arguments. */
     toggleSections(sectionToShow) {
         sectionToShow.classList.toggle('d-block');
-
-        // let allSections = [delivery, instruction, certificates, warranty, about];
 
         this.allSections.forEach((section) => {
             if (section !== sectionToShow) {
@@ -111,21 +109,21 @@ class ModalDialog {
 
     showModal() {
         this.inputs[0].focus();
-        /// Modal and overlay classes always should come first in classlist.
+        /* Modal and overlay classes always should come first in classlist. */
         this.overlay.classList.add(`${this.overlay.classList[0]}_active`);
         this.modal.classList.add(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }
 
     closeModal() {
-        /// Modal and overlay classes always should come first in classlist.
+        /* Modal and overlay classes always should come first in classlist. */
         this.overlay.classList.remove(`${this.overlay.classList[0]}_active`);
         this.modal.classList.remove(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'auto';
     }
 
     modalFormInputState() {
-        /// Modal Form Input state classes always should come first in classlist.
+        /* Modal Form Input state classes always should come first in classlist. */
         this.inputs.forEach((input) => {
             input.addEventListener('input', (event) => {
                 if (event.target.value.length > 0) {
@@ -219,7 +217,7 @@ cartOverlay.addEventListener('click', () => {
 
 /******************* Action page toggle view mode *****************/
 
-// Switch product cards view modes.
+/* Switch product cards view modes. */
 function switchViewMode(newView, newViewBtn, activeView, activeViewBtn) {
     if (newView.classList.contains('hidden')) {
         newView.classList.remove('hidden');
@@ -229,7 +227,7 @@ function switchViewMode(newView, newViewBtn, activeView, activeViewBtn) {
     newViewBtn.classList.add('active');
 }
 
-// Switch to Tile View
+/* Switch to Tile View */
 tileViewModeBtn &&
     tileViewModeBtn.forEach((btn, index) => {
         btn.addEventListener('click', () => {
@@ -237,7 +235,7 @@ tileViewModeBtn &&
         });
     });
 
-// Switch to List View
+/* Switch to List View */
 listViewModeBtn &&
     listViewModeBtn.forEach((btn, index) => {
         btn.addEventListener('click', () => {
@@ -246,27 +244,27 @@ listViewModeBtn &&
     });
 
 /******************* Metal Stillage catalog toggle view modes *****************/
-// Switch to Tile View
+/*Switch to Tile View */
 catalogTileViewModeBtn &&
     catalogTileViewModeBtn.addEventListener('click', () => {
         switchViewMode(catalogTileViewMode, catalogTileViewModeBtn, catalogListViewMode, catalogListViewModeBtn);
     });
 
-// Switch to List View
+/* Switch to List View */
 catalogListViewModeBtn &&
     catalogListViewModeBtn.addEventListener('click', () => {
         switchViewMode(catalogListViewMode, catalogListViewModeBtn, catalogTileViewMode, catalogTileViewModeBtn);
     });
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
-///// List of all Buttons and Sections to switch /////
+/*List of all Buttons and Sections to switch */
 let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
 let allInfoPageSections = [delivery, instruction, certificates, warranty, about];
 
-///// New insctance of Tab swither Class /////
+/* New insctance of Tab swither Class */
 let informationPageTabs = new TabContentAccordion(allInfoPageBtns, allInfoPageSections);
 
-////// Calling switch methods on click event //////
+/* Calling switch methods on click event */
 deliveryBtn &&
     deliveryBtn.addEventListener('click', () => {
         informationPageTabs.toggleSections(delivery);
@@ -293,11 +291,11 @@ instructionBtn &&
 
 /************** Comparision Page Toggle Buttons and Content **********/
 
-///// List of all Buttons and Sections to switch /////
+/* List of all Buttons and Sections to switch */
 let allComparisionPageBtns = [infoBtn, differenceBtn];
 let allComparisionPageSections = [infoContent, differenceContent];
 
-///// New insctance of Tab swither Class /////
+/* New insctance of Tab swither Class */
 let comparisionPageTabs = new TabContentAccordion(allComparisionPageBtns, allComparisionPageSections);
 
 infoBtn &&
@@ -394,8 +392,20 @@ recieveMethodCard &&
 
             if (card === recieveMethodCard[1]) {
                 reciveMethodWrapper.classList.add('receive-wrapper__optional_active');
+
+                document.querySelector('.optional-payment-form-wrapper').classList =
+                    'optional-payment-form-wrapper_active';
+                document.querySelector('.payment-form-wrapper_active').classList = 'payment-form-wrapper';
+
+                document.querySelector('.optional-assembly').classList = 'row optional-assembly_active';
             } else {
                 reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
+
+                document.querySelector('.optional-payment-form-wrapper_active').classList =
+                    'optional-payment-form-wrapper';
+                document.querySelector('.payment-form-wrapper').classList = 'payment-form-wrapper_active';
+
+                document.querySelector('.optional-assembly_active').classList = 'row optional-assembly';
             }
 
             card.classList.add('recieve-method__card_active');
@@ -408,7 +418,7 @@ additionalCommentClean &&
         additionalCommentText.value = '';
     });
 
-/***** Customized Select ***************** ***/
+/**************** Customized Select *******************/
 
 let select, selElmnt, selectedEl, hiddenEl, c;
 /*look for any elements with the class "custom-select":*/

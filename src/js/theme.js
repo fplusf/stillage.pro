@@ -459,7 +459,7 @@ for (let i = 0; i < select.length; i++) {
         e.stopPropagation();
         closeAllSelect(this);
         this.nextSibling.classList.toggle('select-hide');
-        this.classList.toggle('select-arrow-active');
+        select[i].classList.toggle('select-arrow-active');
     });
 }
 function closeAllSelect(elmnt) {

@@ -1,4 +1,4 @@
-//CUztomized Select box
+/***************** CUztomized Select box ***********/
 
 .custom-select
 	appearance: none
@@ -74,3 +74,60 @@
 
 .same-as-selected
 	background-color: lighten($gray, 13%)
+
+
+/************  Custom Radion Button *********************/
+	
+/* The radio container  of custom radion buttons*/
+.radio-container
+    display: block
+    position: relative
+    padding-left: 35px
+    margin-bottom: 12px
+    cursor: pointer
+    font-weight: 600
+    user-select: none
+
+/* Hide the browser's default radio button */
+.radio-container input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+
+/* Create a custom radio button */
+.radio-checkmark
+    position: absolute
+    top: 0px
+    left: 0
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    border: 1px solid $dark-gray
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark
+    background-color: lighten($gray, 10%)
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark
+    background-color: transparent
+    border: 1px solid $primary
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after
+    content: ""
+    position: absolute
+    display: none
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after
+    display: block
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after
+    top: 4px
+    left: 4px
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background: $primary

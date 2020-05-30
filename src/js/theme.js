@@ -438,7 +438,7 @@ for (let i = 0; i < select.length; i++) {
     create a new DIV that will act as an option item:*/
         c = document.createElement('DIV');
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener('click', function (e) {
+        c.addEventListener('click', function () {
             /*when an item is clicked, update the original select box,
         and the selected item:*/
             let y, i, k, s, h, sl, yl;
@@ -472,6 +472,7 @@ for (let i = 0; i < select.length; i++) {
         select[i].classList.toggle('select-arrow-active');
     });
 }
+
 function closeAllSelect(elmnt) {
     /*a function that will close all select boxes in the document,
   except the current select box:*/
@@ -482,7 +483,7 @@ function closeAllSelect(elmnt) {
         yl,
         arrNo = [];
     x = document.getElementsByClassName('select-items');
-    y = document.getElementsByClassName('select-selected');
+    y = document.getElementsByClassName('custom-select');
     xl = x.length;
     yl = y.length;
     for (i = 0; i < yl; i++) {

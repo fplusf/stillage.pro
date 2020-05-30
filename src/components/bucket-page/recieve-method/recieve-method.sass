@@ -103,6 +103,63 @@
 
     &__zone:hover .popup-info
         visibility: visible
+        transition: all $transition
+    
+    &__zone.select-arrow-active .popup-info
+        left: -50px
+        visibility: hidden
+        
+
+    &__zone
+        .select-items
+            max-height: 250px
+            background: lighten($black, 8%)
+
+        .select-items div, .same-as-selected
+            border: none
+            color: $white
+            text-align: center
+            padding: 4px 16px
+
+        .select-items div:hover
+            background: lighten($black, 6%)
+            border: none
+            color: $primary
+
+        .select-items div:nth-child(2)
+            padding-top: 13px
+
+        .select-items div:last-child
+            padding-bottom: 13px
+
+        div.same-as-selected
+            background: none
+            color: $primary
+            font-weight: 700
+
+        .select-items > div:first-child
+            background: url(../../img/checkout/zone-map.png) no-repeat center
+            background-size: cover
+            height: 125px
+            border: none
+            pointer-events: none
+
+        .select-items div:nth-child(n+2)::before
+            content: ''
+            height: 10px
+            width: 10px
+            position: absolute
+            left: 100px
+            margin-top: 5px
+
+        .select-items div:nth-child(2)::before
+            background-color: $primary
+
+        .select-items div:nth-child(3)::before
+            background-color: $gray
+
+        .select-items div:last-child::before
+            background-color: darken($black, 5%)
 
 .popup-info
     visibility: hidden

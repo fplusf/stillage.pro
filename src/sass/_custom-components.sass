@@ -34,7 +34,7 @@
 	display: none
 
 .select-selected
-	color: $black
+	color: $black !important
 	border: none !important
 	height: 50px
 	padding: 14px 0px !important
@@ -44,9 +44,8 @@
 //style the items (options), including the selected item
 
 .select-items div, .select-selected
-	color: $black
+	color: $white
 	padding: 8px 16px
-	border: 1px solid $white
 	cursor: pointer
 	user-select: none
 
@@ -54,14 +53,15 @@
 
 .select-items
 	position: absolute
-	background-color: $white
+	background-color: rgba(38, 50, 63, 0.9)
 	box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6, 0 -1px 0 #e6e6e6, 0 3px 13px rgba(0, 0, 0, 0.08)
 	top: 100%
 	left: 0
 	right: 0
-	z-index: 99
+	z-index: 22
 	max-height: 200px
 	overflow-y: auto
+	text-align: center
 
 //hide the items when the select box is closed
 
@@ -69,11 +69,11 @@
 	display: none
 
 .select-items div:hover, .same-as-selected
-	background-color: lighten($gray, 20%)
-	border: 1px solid $gray
+	background-color: $black
 
 .same-as-selected
-	background-color: lighten($gray, 13%)
+	background-color: transparent
+	color: $primary !important
 
 
 /************  Custom Radion Button *********************/

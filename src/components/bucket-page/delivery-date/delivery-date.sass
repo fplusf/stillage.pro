@@ -43,8 +43,54 @@
 //Datetimepicker library customization
 
 .flatpickr-day.selected
-    background-color: $primary !important
+    border-color: $primary !important
     background: $primary !important
 
 .flatpickr-calendar
     border-radius: 0
+    background: rgba(38, 50, 63, 0.96)
+
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover
+    background: darken($black, 5%)
+
+.flatpickr-months,
+.flatpickr-weekdays
+    background: $black
+
+.flatpickr-months .flatpickr-next-month,
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-month,
+span.flatpickr-weekday,
+.flatpickr-day
+    color: $white
+    fill: $white
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-day.nextMonthDay,
+.flatpickr-day.notAllowed,
+.flatpickr-day.notAllowed.nextMonthDay,
+.flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-day.prevMonthDay
+    color: rgba(255, 255, 255, 0.6)
+
+.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month
+    background: rgba(38, 50, 63, 0.9)
+
+    &:hover
+        background: $primary
+
+.flatpickr-day.inRange,
+.flatpickr-day.nextMonthDay.inRange,
+.flatpickr-day.nextMonthDay.today.inRange,
+.flatpickr-day.nextMonthDay:focus,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day.prevMonthDay.inRange,
+.flatpickr-day.prevMonthDay.today.inRange,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.today.inRange,
+.flatpickr-day:focus,
+.flatpickr-day:hover
+    background: $black
+    border-color: $gray

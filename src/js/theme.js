@@ -502,3 +502,23 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener('click', closeAllSelect);
+
+/************ Buyer form expender *********/
+let formWrapper = document.querySelector('.buyer-form-wrapper'),
+    formIndividual = document.querySelector('.buyer-form__individual'),
+    formEntity = document.querySelector('.buyer-form__legal-entity'),
+    buyerTypeSelect = document.querySelector('.buyer-form__type-select'),
+    selectedType = buyerTypeSelect.querySelector('.select-selected'),
+    selectList = buyerTypeSelect.querySelector('.select-items');
+
+buyerTypeSelect.addEventListener('click', () => {
+    if (selectedType.textContent !== selectList.firstChild.textContent) {
+        formIndividual.classList.add('d-none');
+        formEntity.classList = 'buyer-form__legal-entity_active';
+        formWrapper.classList.add('buyer-form-wrapper__entity_active');
+    } else {
+        formEntity.classList = 'buyer-form__legal-entity';
+        formIndividual.classList.remove('d-none');
+        formWrapper.classList.remove('buyer-form-wrapper__entity_active');
+    }
+});

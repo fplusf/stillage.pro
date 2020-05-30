@@ -1,10 +1,16 @@
 .buyer-form-wrapper
-    height: 300px
+    height: 313px
     background-color: $sky
     padding: 40px
+    transition: all $transition
 
     +respond-to(phone-land)
         padding: 35px 20px
+
+    &__entity_active
+        height: 494px
+        +respond-to(phone-land)
+            height: 487px
 
 .buyer-form
     display: flex
@@ -20,7 +26,15 @@
     &__element
         border: none
         outline: none
-        height: 100%
+        height: 50px
+        width: 100%
         background-color: $white
         margin-bottom: 10px
         padding-left: 10px
+
+    &__legal-entity
+        width: 100%
+        display: none
+
+        &_active
+            display: block

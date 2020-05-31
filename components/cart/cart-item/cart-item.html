@@ -1,23 +1,36 @@
-<div class="cart__item d-flex justify-content-between mb-2">
+<div class="cart-item @@thirdPlace d-flex justify-content-between">
     <div class="mr-3">
-        <img src="../img/cart/image 88.png" alt="Product picture" class="cart__item_image">
+        <img src="../../../img/cart/image 88.png" alt="Product picture" class="cart-item__image">
     </div>
 
-    <div class="cart__item_info mr-3">
-        <a class="cart__item_title font-weight-bold">
+    <div class="cart-item__info d-flex flex-column justify-content-between mr-3">
+        <h6 class="cart-item__title">
             Гардеробная система ТИТАН - GS - 450S
-        </a>
-        <div class="text-muted cart__item_description font-weight-light">ВШГ - 1156x2400x350 мм</div>
+        </h6>
+        <small class="dark-gray">ВШГ - 1156x2400x350 мм</small>
     </div>
 
-    <div class="cart__item_price">
-        <div class="cart__item_price_control-buttons d-flex justify-content-between align-items-center">
-            <div class="cart__item_price_count d-flex align-items-center justify-content-center mr-2">1</div>
-            <button class="cart__item_price_reduce d-flex align-items-center justify-content-center mr-2">—</button>
-            <button class="cart__item_price_add d-flex align-items-center justify-content-center">+</button>
+    <div class="cart-item__price d-flex flex-column justify-content-between">
+        <div class="cart-item__control-buttons d-flex justify-content-between align-items-center">
+            <span class="cart-item__count d-flex align-items-center justify-content-center">1</span>
+
+            <button class="pr-0 pt-0">
+                <svg width="20" height="20" viewBox="0 0 18 18">
+                    <rect width="18" height="18" transform="matrix(-1 0 0 1 18 0)" fill="#848E99" />
+                    <path d="M4.952 10.696H12.694V9.31H4.952V10.696Z" fill="white" />
+                </svg>
+            </button>
+
+            <button class="pr-0 pt-0">
+                <svg width="20" height="20" viewBox="0 0 18 18">
+                    <rect width="18" height="18" fill="#26323F" />
+                    <path d="M5.35 10.696H8.388V14H9.83V10.696H12.854V9.31H9.83V5.992H8.388V9.31H5.35V10.696Z"
+                        fill="white" />
+                </svg>
+            </button>
         </div>
-        <div class="cart__item_price_money text-right">
+        <span class="cart-item__money text-right">
             1 690 ₽
-        </div>
+        </span>
     </div>
 </div>

@@ -1,15 +1,21 @@
 <div class="product-card-simple d-flex flex-sm-column justify-content-between p-4">
     <div class="product-card-simple__photo">
-        <img src="@@photo" class="h-100 w-100" alt="Cart photo">
+        <a href="@@cardLink">
+            <img src="@@photo" alt="Cart photo">
+        </a>
     </div>
 
-     <div class="info d-flex justify-content-between align-items-center mr-3 mr-sm-0">
-         <span class="h6 info__title">
-            @@title
-         </span>
-
-         <button class="info__button d-none d-sm-block">
-             <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
-         </button>
-     </div>
+    <div class="info d-flex justify-content-between align-items-center mr-3 mr-sm-0">
+        <a href="@@cardLink">
+            <span class="h6 info__title mb-0 mr-2">
+                @@title
+            </span>
+        </a>
+        <button class="info__button d-none d-sm-block @@quickViewBtn">
+            <svg width="14" height="22" viewBox="0 0 14 22">
+                <path d="M3.16536 1L0.832031 3.33333L8.4987 11L0.832031 18.6667L3.16536 21L13.1654 11L3.16536 1Z"
+                    stroke="#F4F7FB" stroke-width="0.5" />
+            </svg>
+        </button>
+    </div>
 </div>

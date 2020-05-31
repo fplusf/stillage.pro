@@ -1,0 +1,93 @@
+<div class="action-card h-auto position-relative">
+
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="header__badge @@bagdeBg text-center">
+            @@badge
+        </div>
+
+        <div class="header__actions d-flex">
+            <button class="icon-button favorite-card-close">
+                <svg width="17" height="17" viewBox="0 0 17 17"  >
+                    <path
+                        d="M14.8412 16.3125L16.7266 14.4271L10.612 8.31248L16.7266 2.1979L14.8412 0.3125L8.72658 6.42707L2.61197 0.312499L0.726565 2.1979L6.84114 8.31248L0.726565 14.427L2.61197 16.3125L8.72658 10.1979L14.8412 16.3125Z"
+                        fill="#B6C0CB" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex horizontal-content">
+        <div class="horizontal-content__img-wrapper d-flex justify-content-center h-100 mr-2">
+            <a href="@@link" class="text-decoration-none">
+                <img src="@@photo" class="action-card__img h-100" alt="Action card image">
+            </a>
+        </div>
+
+        <div
+            class="horizontal-content__text d-flex justify-content-lg-between justify-content-center flex-column mr-lg-4">
+            <div>
+                <h6 class="horizontal-content__title">
+                    <a href="@@link" class="text-decoration-none black">
+                        @@title
+                    </a>
+                </h6>
+                <span class="horizontal-content__info dark-gray">
+                    @@info
+                </span>
+            </div>
+            <small class="d-none d-lg-block green">В наличии</small>
+        </div>
+
+
+
+        <div class="horizontal-content__buttons d-none d-lg-flex flex-column justify-content-end">
+            <div class="d-flex justify-content-end mb-4">
+
+                <div class="prices">
+                    <span class="prices__old-price dark-gray">@@oldPrice</span>
+                    <div class="prices__new-price primary @@priceColor">@@price</div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between footer-buttons">
+                <span class="dark-gray">Нужна консультация</span>
+                <button class="add-to-cart align-self-end dark-gray border-0">@@button</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-lg-none d-flex mt-1 justify-content-between align-items-end">
+        <div class="prices">
+            <div class="prices__old-price dark-gray mr-3">@@oldPrice</div>
+            <div class="prices__new-price primary @@priceColor">@@price</div>
+        </div>
+
+        <small class="green">В наличии</small>
+
+        <div>
+            <button class="footer__headphone-button align-self-end d-lg-none mr-2">
+                <svg width="22" height="22" viewBox="0 0 22 22">
+                    <path
+                        d="M10.9977 0C6.35963 0 2.58594 3.7737 2.58594 8.4118V16.1764C2.58594 17.2469 3.45673 18.1177 4.52708 18.1177C5.59761 18.1177 6.4684 17.2469 6.4684 16.1764V9.7059C6.4684 8.63554 5.59761 7.76476 4.52708 7.76476C4.30922 7.76476 4.1031 7.8089 3.90723 7.87537C4.18333 4.20103 7.25459 1.2941 10.9977 1.2941C14.7389 1.2941 17.8093 4.19835 18.0879 7.87016C17.8932 7.80353 17.6859 7.76476 17.4684 7.76476C16.3979 7.76476 15.5271 8.63554 15.5271 9.7059V16.1764C15.5271 17.2469 16.3979 18.1177 17.4684 18.1177C17.6963 18.1177 17.912 18.071 18.1154 17.9985V18.7648C18.1154 19.1218 17.8247 19.4118 17.4684 19.4118H12.8197C12.5517 18.6602 11.8402 18.1177 10.9977 18.1177C9.92738 18.1177 9.05659 18.9885 9.05659 20.0589C9.05659 21.1292 9.92738 22 10.9977 22C11.8402 22 12.5517 21.4574 12.8197 20.7059H17.4684C18.5388 20.7059 19.4095 19.8351 19.4095 18.7648C19.4095 14.8727 19.4095 12.308 19.4095 8.4118C19.4095 3.7737 15.6358 0 10.9977 0V0Z"
+                        fill="white" />
+                    <path d="M19 9V17C20.742 16.7153 22 15.959 22 15.0633V10.9367C22 10.0412 20.742 9.28492 19 9Z"
+                        fill="white" />
+                    <path d="M0 10.9367V15.0633C0 15.959 1.25798 16.7153 3 17V9C1.25798 9.28492 0 10.0412 0 10.9367Z"
+                        fill="white" />
+                </svg>
+            </button>
+
+            <button class="footer__cart-button align-self-end d-lg-none">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                        d="M6 16C4.9 16 4 16.9 4 18C4 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.6L4.2 12C4.1 12.3 4 12.7 4 13C4 14.1 4.9 15 6 15H18V13H6.4C6.3 13 6.2 12.9 6.2 12.8V12.7L7.1 11H14.5C15.3 11 15.9 10.6 16.2 9.99996L19.8 3.5C20 3.3 20 3.2 20 3C20 2.4 19.6 2 19 2H4.2L3.3 0H0ZM16 16C14.9 16 14 16.9 14 18C14 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                        fill="#FFFFFF" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+
+</div>

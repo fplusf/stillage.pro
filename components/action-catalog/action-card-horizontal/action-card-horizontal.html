@@ -1,4 +1,4 @@
-<div class="action-card mb-3 h-auto position-relative">
+<div class="action-card h-auto position-relative">
 
     <div class="header d-flex justify-content-between align-items-center">
         <div class="header__badge @@bagdeBg text-center">
@@ -7,27 +7,46 @@
 
         <div class="header__actions d-flex">
             <a href="sravnenie-tovarov.html"
-                class="d-flex align-items-center mr-3 text-decoration-none top-bar__compare" id="msCompare">
-                <i class="fas fa-list-ul mr-1"></i>
+                class="d-flex align-items-center mr-3 text-decoration-none action-card__compare" id="msCompare">
+                <svg width="20" height="18" viewBox="0 0 20 18">
+                    <path
+                        d="M1.62162 0.891602C0.724307 0.891602 0 1.61591 0 2.51322C0 3.41054 0.724307 4.13485 1.62162 4.13485C2.51893 4.13485 3.24324 3.41054 3.24324 2.51322C3.24324 1.61591 2.51893 0.891602 1.62162 0.891602Z"
+                        fill="#B6C0CB" />
+                    <path
+                        d="M1.62162 7.37793C0.724307 7.37793 0 8.10224 0 8.99955C0 9.89686 0.724307 10.6212 1.62162 10.6212C2.51893 10.6212 3.24324 9.89686 3.24324 8.99955C3.24324 8.10224 2.51893 7.37793 1.62162 7.37793Z"
+                        fill="#B6C0CB" />
+                    <path
+                        d="M1.62162 13.8643C0.718935 13.8643 0 14.594 0 15.4859C0 16.3778 0.729729 17.1075 1.62162 17.1075C2.51351 17.1075 3.24324 16.3778 3.24324 15.4859C3.24324 14.594 2.52431 13.8643 1.62162 13.8643Z"
+                        fill="#B6C0CB" />
+                    <path d="M20.0001 14.4053H4.86499V16.5674H20.0001V14.4053Z" fill="#B6C0CB" />
+                    <path d="M20.0001 1.43262H4.86499V3.59479H20.0001V1.43262Z" fill="#B6C0CB" />
+                    <path d="M20.0001 7.91895H4.86499V10.0811H20.0001V7.91895Z" fill="#B6C0CB" />
+                </svg>
             </a>
 
-            <a href="favorites.html" class="d-flex align-items-center mr-3 text-decoration-none top-bar__favorite"
+            <a href="favorites.html" class="d-flex align-items-center mr-3 text-decoration-none action-card__favorite"
                 id="msFavoriter">
-                <i class="far fa-heart"></i>
+                <svg width="20" height="19" viewBox="0 0 20 19">
+                    <path
+                        d="M14.5 0C12.8 0 11.1 0.79746 10 2.09333C8.9 0.79746 7.2 0 5.5 0C2.4 0 0 2.39238 0 5.48254C0 9.27047 3.4 12.3606 8.6 16.946L10 18.2419L11.4 16.946C16.5 12.2609 20 9.17079 20 5.48254C20 2.39238 17.6 0 14.5 0ZM10.1 15.5505H10L9.9 15.4508C5.1 11.1644 2 8.37333 2 5.48254C2 3.48889 3.5 1.99365 5.5 1.99365C7 1.99365 8.5 2.99047 9.1 4.38603H11C11.5 2.99047 13 1.99365 14.5 1.99365C16.5 1.99365 18 3.48889 18 5.48254C18 8.37333 14.9 11.1644 10.1 15.5505Z"
+                        fill="#B6C0CB" />
+                </svg>
+
             </a>
 
         </div>
     </div>
 
     <div class="d-flex horizontal-content">
-        <div class="content__img-wrapper d-flex justify-content-center h-100 mr-2">
+        <div class="horizontal-content__img-wrapper d-flex justify-content-center h-100 mr-2">
             <a href="@@link" class="text-decoration-none">
                 <img src="@@photo" class="action-card__img h-100" alt="Action card image">
             </a>
         </div>
 
-        <div class="content__text d-flex justify-content-lg-between justify-content-center flex-column mr-lg-4">
-            <div class="mt-0 mt-lg-5">
+        <div
+            class="horizontal-content__text d-flex justify-content-lg-between justify-content-center flex-column mr-lg-4">
+            <div class="mt-0 mt-xl-5">
                 <h6 class="horizontal-content__title">
                     <a href="@@link" class="text-decoration-none black">
                         @@title
@@ -40,7 +59,7 @@
             <small class="gray d-none d-lg-block">В наличии</small>
         </div>
 
-       
+
 
         <div class="horizontal-content__buttons d-none d-lg-flex flex-column justify-content-end">
             <div class="d-flex justify-content-between mb-4">
@@ -57,7 +76,7 @@
 
                 <div class="prices">
                     <span class="prices__old-price dark-gray">@@oldPrice</span>
-                    <div class="prices__new-price primary">@@price</div>
+                    <div class="prices__new-price primary @@priceColor">@@price</div>
                 </div>
             </div>
 
@@ -70,13 +89,18 @@
     </div>
 
     <div class="d-lg-none d-flex mt-1 justify-content-between">
-        <div class="prices d-flex align-items-center">
-            <span class="prices__old-price dark-gray mr-3">@@oldPrice</span>
-            <div class="prices__new-price primary">@@price</div>
+        <div class="prices">
+            <div class="prices__old-price dark-gray mr-3">@@oldPrice</div>
+            <div class="prices__new-price primary @@priceColor">@@price</div>
         </div>
 
-        <button class="icon-button content__cart-button">
-            <i class="fas fa-shopping-cart"></i>
+        <button class="footer__cart-button align-self-end d-lg-none">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                    d="M6 16C4.9 16 4 16.9 4 18C4 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.6L4.2 12C4.1 12.3 4 12.7 4 13C4 14.1 4.9 15 6 15H18V13H6.4C6.3 13 6.2 12.9 6.2 12.8V12.7L7.1 11H14.5C15.3 11 15.9 10.6 16.2 9.99996L19.8 3.5C20 3.3 20 3.2 20 3C20 2.4 19.6 2 19 2H4.2L3.3 0H0ZM16 16C14.9 16 14 16.9 14 18C14 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                    fill="#FFFFFF" />
+            </svg>
+
         </button>
     </div>
 

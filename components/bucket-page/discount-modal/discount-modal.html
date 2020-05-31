@@ -1,0 +1,28 @@
+<div class="discount-overlay close-modal"></div>
+
+<div class="discount-modal">
+    <form id="discountForm" class="discount-form">
+        <button class="discount-form__close-btn close-modal" type="button">
+            <svg width="21" height="21" viewBox="0 0 21 21">
+                <path
+                    d="M21 2.47459L18.5254 0L10.5 8.02538L2.47459 0L0 2.47459L8.02538 10.5L0 18.5254L2.47459 21L10.5 12.9746L18.5254 21L20.9999 18.5254L12.9746 10.5L21 2.47459Z"
+                    fill="white" />
+            </svg>
+        </button>
+
+        <h4 class="discount-form__title black text-center mb-4">
+            Нашли дешевле? Сделаем скидку!
+        </h4>
+
+        <input name="name" type="text" placeholder="Имя" required class="discount-form__input pb-2 mb-4">
+        <input name="email" type="tel" placeholder="Телефон" required class="discount-form__input pb-2 mb-4">
+        <input name="phone" type="email" placeholder="E-mail" required class="discount-form__input pb-2 mb-4">
+        <input name="link" type="text" placeholder="Ссылка на товар с более низкой ценой" required class="discount-form__input pb-2 mb-5">
+
+        <button class="w-100 primary stillage-button" type="submit">Отправить</button>
+
+        <span class="discount-form__confidentiality gray d-block text-center px-1 mt-3">
+            Нажимая «Отправить», Вы соглашаетесь на обработку своих персональных данных
+        </span>
+    </form>
+</div>

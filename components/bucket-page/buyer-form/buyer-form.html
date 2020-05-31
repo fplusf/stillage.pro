@@ -1,0 +1,40 @@
+<div class="buyer-form-wrapper">
+    <form class="buyer-form">
+        <div class="custom-select buyer-form__element buyer-form__type-select">
+            <i class="custom-select__icon"></i>
+            <select>
+                <option value="0">Физическое лицо</option>
+                <option value="1">Физическое лицо</option>
+                <option value="2">Юридическое лицо</option>
+            </select>
+        </div>
+
+        <fieldset class="buyer-form__individual">
+            <input type="text" name="fullName" placeholder="ФИО" class="buyer-form__element">
+
+            <input type="tel" name="phoneNumber" id="tel" placeholder="+7 (_ _ _) _ _ _ _ _"
+                class="buyer-form__element">
+
+            <input type="email" name="email" id="email" placeholder="E-mail" class="buyer-form__element">
+        </fieldset>
+
+        <fieldset class="buyer-form__legal-entity">
+            <input type="text" placeholder="Название компании" class="buyer-form__element">
+
+            <input type="text" placeholder="Юридический адрес" class="buyer-form__element">
+
+            <input type="text" placeholder="ИНН" class="buyer-form__element">
+
+            <input type="text" placeholder="КПП" class="buyer-form__element">
+
+            <input type="text" placeholder="Контактное лицо" class="buyer-form__element">
+
+            <div class="d-flex">
+                <input type="tel" id="entityTel" placeholder="+7 (_ _ _) _ _ _ _ _" class="buyer-form__element mr-4">
+
+                <input type="email" id="entityEmail" placeholder="E-mail" class="buyer-form__element">
+            </div>
+
+        </fieldset>
+    </form>
+</div>

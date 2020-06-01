@@ -179,15 +179,21 @@
             <h5 class="title-middle white pb-3 d-block d-xl-none d-lg-none d-md-none">Для консультации <br> с
                 менеджером оставьте <br> заявку</h5>
             <p class="white pb-3">
-                И мы свяжемся с вами в течение 10 минут
+                И мы свяжемся с вами в течение 10 минут 
             </p>
-            <div class="pb-2 basket__input">
-                @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
-            </div>
-            <div class="pb-3 basket__input">
-                @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
-            </div>
-            @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
+            <div class="row">
+                        <div class="col-12 col-sm-6">
+                                <div class="pb-2 basket__input">
+                                @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
+                            </div>
+                            <div class="pb-2 basket__input">
+                                @@include('src/components/input/input.html', { "title": "+7 (000) 000 00 00" })
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            @@include('src/components/buttons/outline-white-button.html', { "title": "Отправить" })
+                        </div>
+                </div>
         </div>
     </div>
     <div class="container">

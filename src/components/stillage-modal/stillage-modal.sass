@@ -1,0 +1,101 @@
+.stillage-modal
+    @extend .safe-modal
+
+    &__close-btn
+        @extend .safe-modal__close-btn
+
+    &__header
+        @extend .safe-modal__header
+
+    &__title
+        @extend .safe-modal__title
+
+    &__content
+        @extend .safe-modal__content
+
+    &__product-img
+        width: 50%
+
+    &__product-img-box
+        max-width: 100%
+        margin-bottom: 10px
+        img
+            max-width: 100%
+            width: auto !important
+            max-height: 100%
+            margin: auto
+
+
+    &__consultaion
+        @extend .safe-modal__consultaion
+
+    &__product-info,
+    &__bottom-left,
+    &__bottom-right
+        width: 50%
+
+    &__buttons
+        width: 160px
+
+    &__bottom
+        width: 100%
+
+    td:nth-child(even)
+        text-align: right
+
+    td
+        width: 50%
+
+    td.product-id
+        font-size: 12px
+
+    &__element
+        height: 30px
+        width: 125px
+        background: $light-gray
+
+    .select-selected
+        padding: 7px 3px !important
+        height: 30px
+        text-align: center
+        color: $gray
+
+    .custom-select__icon
+        top: 9px
+        right: 6px
+
+    .select-arrow-active .custom-select__icon
+        top: 18px
+
+
+    .custom-select__icon:after,
+    .custom-select__icon:before
+        height: 6px
+
+    .custom-select__icon:before
+        transform: translate(-1px,5px) rotate(45deg)
+
+    .custom-select__icon:after
+        transform: translate(-1px, 2px) rotate(-45deg)
+
+
+
+    .owl-nav,
+    .slide-count
+        display: none
+
+    .owl-dots 
+        width: 100%
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 0
+
+    .owl-carousel
+        height: 240px
+
+    .price
+        font-size: 1.2rem
+        font-weight: 700
+
+    

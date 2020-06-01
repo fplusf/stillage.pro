@@ -15,11 +15,15 @@ const searchForm = document.getElementById('searchForm'),
     priceModalClose = document.querySelectorAll('.close-modal'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     /// Safe Quick view Modal
-    safeLinks = document.querySelectorAll('.safe-link'),
-    safeOverlay = document.getElementById('safeOverlay'),
+    safeLinks = document.querySelectorAll('.safe-view-btn'),
     safeModal = document.getElementById('safeModal'),
     safeModalClose = document.querySelectorAll('.close-modal'),
     safeFormInputs = document.querySelectorAll('.safe-form__input'),
+    /// Stillage Quick view Modal
+    stillageLinks = document.querySelectorAll('.stillage-view-btn'),
+    stillageModal = document.getElementById('stillageModal'),
+    stillageModalClose = document.querySelectorAll('.close-modal'),
+    stillageFormInputs = document.querySelectorAll('.stillage-form__input'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
@@ -182,6 +186,27 @@ safeModalClose.forEach((closeBtn) => {
 window.addEventListener('click', (e) => {
     if (e.target == safeModal) safeModalDialog.closeModal();
 });
+
+/********  Stillage quick view Modal Dialog Setup ********/
+
+let stillageModalDialog = new ModalDialog(stillageModal);
+
+stillageLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        stillageModalDialog.showModal();
+    });
+});
+
+stillageModalClose.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+        stillageModalDialog.closeModal();
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target == stillageModal) stillageModalDialog.closeModal();
+});
+
 
 /******************* Hide navbar on scroll down. *****************/
 

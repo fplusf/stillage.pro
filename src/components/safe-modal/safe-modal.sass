@@ -59,28 +59,20 @@
         display: flex
         justify-content: space-between
 
-    &__options-key,
-    &__options-value
-        list-style: none
-        margin: 0
-        padding: 0
-
-        li
-            padding-bottom: 6px
-
-    &__options-key
-        margin-right: 10px
-
-    &__options-value
-        li:first-child
-            font-size: 12px
-
     &__buttons
         width: 160px
 
     &__bottom
         width: 100%
 
+    td:nth-child(even)
+        text-align: right
+
+    td
+        width: 50%
+
+    td.product-id
+        font-size: 12px
 
     .owl-nav,
     .slide-count

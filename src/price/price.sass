@@ -1,4 +1,4 @@
-.price-overlay
+.overlay
     position: fixed
     background: $gray
     top: 0
@@ -15,34 +15,33 @@
         visibility: visible
         cursor: pointer
 
-.price-modal
+.modal
     overflow: hidden
     position: fixed
+    background: rgba(182, 192, 203, 0.8)
     top: 0
-    right: 0
     bottom: 0
     left: 0
-    z-index: 1050
-    transform: scale(0)
-    transition: transform $transition
-    z-index: 64
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 33
+    opacity: 0
+    visibility: hidden
+    transition: all $transition
 
     &_active
-        display: block
-        transform: scale(1)
+        visibility: visible
+        opacity: 1
 
 .price-form
-    position: relative
     padding: 60px 40px
     background: $white
-    transition: $transition
+    transition: all $transition
     width: 400px
-    height: auto
-    top: 20%
-    bottom: 0
-    right: 0
-    left: 0
-    margin: auto
+    position: relative
+    top: 40px
 
     +respond-to(phone)
         top: 0

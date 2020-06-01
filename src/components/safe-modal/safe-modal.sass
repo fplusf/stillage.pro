@@ -1,0 +1,101 @@
+.safe-modal
+    @extend .price-form
+    width: 600px
+    padding: 40px 30px
+    top: 50px
+
+    &__close-btn
+        color: $white
+        cursor: pointer
+        right: -40px
+        top: 0
+        position: absolute
+        &:hover svg path
+            fill: $primary
+
+        +respond-to(phone)
+            right: 30px
+            top: 100px
+            svg path
+                fill: $gray
+
+    &__header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+
+    &__title
+        font-weight: 700
+
+    &__content
+        display: flex
+        margin-bottom: 20px
+
+    &__product-img
+        width: 50%
+
+    &__product-img-box
+        max-width: 100%
+        margin-bottom: 10px
+        img
+            max-width: 100%
+            width: auto !important
+            max-height: 100%
+            margin: auto
+
+
+    &__consultaion
+        font-size: 1rem
+        font-weight: 600
+        display: inline-block
+        margin-bottom: 1.5rem
+
+    &__product-info,
+    &__bottom-left,
+    &__bottom-right
+        width: 50%
+
+    &__options
+        display: flex
+        justify-content: space-between
+
+    &__options-key,
+    &__options-value
+        list-style: none
+        margin: 0
+        padding: 0
+
+        li
+            padding-bottom: 6px
+
+    &__options-key
+        margin-right: 10px
+
+    &__options-value
+        li:first-child
+            font-size: 12px
+
+    &__buttons
+        width: 160px
+
+    &__bottom
+        width: 100%
+
+
+    .owl-nav,
+    .slide-count
+        display: none
+
+    .owl-dots 
+        width: 100%
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 0
+
+    .owl-carousel
+        height: 240px
+
+    .price
+        font-size: 1.2rem
+        font-weight: 700

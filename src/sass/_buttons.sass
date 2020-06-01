@@ -9,7 +9,9 @@
     align-items: center
     justify-content: center
 
-.stillage-button
+.stillage-button,
+.stillage-button-gray,
+.stillage-button-primary,
     font-size: 14px
     outline: none
     text-decoration: none
@@ -19,3 +21,35 @@
     border: 2px solid
     +respond-to(phone)
         width: 100%
+
+.stillage-button-gray
+    border-color: $gray
+    transition: $transition
+    color: $gray
+    &:hover
+        background: $gray
+        color: $white
+
+.stillage-button-primary
+    border-color: $primary
+    transition: $transition
+    color: $primary
+    &:hover
+        background: $primary
+        color: $white
+
+
+.add-button,
+.remove-button
+    width: 33px
+    height: 23px
+    font-size: 16px
+    border: none
+
+.remove-button
+    background: lighten($gray, 6%)
+
+.counter
+    height: 23px
+    background: $light-gray
+    text-align: center

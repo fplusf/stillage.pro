@@ -1,17 +1,12 @@
 /*To activate warning/alert modal 
  just add active class on needed events*/
-.warning-overlay
-    @extend .price-overlay
-
-    &_active
-        @extend .price-overlay_active
 
 .warning-modal
-    @extend .price-modal
+    @extend .modal
     top: 50px
     
     &_active
-        @extend .price-modal_active
+        @extend .modal_active
 
 .warning
     @extend .price-form

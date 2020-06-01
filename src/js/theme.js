@@ -10,11 +10,16 @@ const searchForm = document.getElementById('searchForm'),
     cartWrapper = document.querySelector('.top-bar__cart'),
     cartOverlay = document.querySelector('.cart-overlay'),
     /// Price Modal view
-    priceOverlay = document.querySelector('.price-overlay'),
-    priceModal = document.querySelector('.price-modal'),
+    priceModal = document.getElementById('priceModal'),
     priceLinks = document.querySelectorAll('.price-link'),
     priceModalClose = document.querySelectorAll('.close-modal'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
+    /// Safe Quick view Modal
+    safeLinks = document.querySelectorAll('.safe-link'),
+    safeOverlay = document.getElementById('safeOverlay'),
+    safeModal = document.getElementById('safeModal'),
+    safeModalClose = document.querySelectorAll('.close-modal'),
+    safeFormInputs = document.querySelectorAll('.safe-form__input'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
@@ -101,23 +106,20 @@ class TabContentAccordion {
 
 /******************* Modal Dialogs Manipulation *****************/
 class ModalDialog {
-    constructor(overlay, modal, inputs) {
-        this.overlay = overlay;
+    constructor(modal, inputs) {
         this.modal = modal;
         this.inputs = inputs;
     }
 
     showModal() {
-        this.inputs[0].focus();
+        this.inputs ? this.inputs[0].focus() : null;
         /* Modal and overlay classes always should come first in classlist. */
-        this.overlay.classList.add(`${this.overlay.classList[0]}_active`);
         this.modal.classList.add(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }
 
     closeModal() {
         /* Modal and overlay classes always should come first in classlist. */
-        this.overlay.classList.remove(`${this.overlay.classList[0]}_active`);
         this.modal.classList.remove(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'auto';
     }
@@ -137,7 +139,7 @@ class ModalDialog {
 }
 
 /********  Price Modal Dialog Setup ********/
-let priceModalDialog = new ModalDialog(priceOverlay, priceModal, priceFormInputs);
+let priceModalDialog = new ModalDialog(priceModal, priceFormInputs);
 
 priceLinks.forEach((link) => {
     link.addEventListener('click', () => {
@@ -151,10 +153,34 @@ priceModalClose.forEach((closeBtn) => {
     });
 });
 
+window.addEventListener('click', (e) => {
+    if (e.target == priceModal) priceModalDialog.closeModal();
+});
+
 priceFormInputs.forEach((input) => {
     input.addEventListener('click', () => {
         priceModalDialog.modalFormInputState();
     });
+});
+
+/********  Safe quick view Modal Dialog Setup ********/
+
+let safeModalDialog = new ModalDialog(safeModal);
+
+safeLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        safeModalDialog.showModal();
+    });
+});
+
+safeModalClose.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+        safeModalDialog.closeModal();
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target == safeModal) safeModalDialog.closeModal();
 });
 
 /******************* Hide navbar on scroll down. *****************/
@@ -205,7 +231,7 @@ cartButton &&
             cartWrapper.classList.toggle('d-block');
             cartOverlay.classList.toggle('show-cart-overlay');
             searchForm.classList.remove('top-bar__search-box_show');
-            cartOverlay.classList.remove('price-overlay');
+            cartOverlay.classList.remove('overlay');
         });
     });
 

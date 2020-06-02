@@ -1,10 +1,21 @@
 /******************* Owl carousel setup. *****************/
 
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
+    function counter(event) {
+        if (!event.namespace) {
+            return;
+        }
+
+        let slides = event.relatedTarget;
+
+        $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
+    }
+
+    $('.owl-index').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
+        onInitialized: counter,
         onChanged: counter,
         responsive: {
             0: {
@@ -19,19 +30,64 @@ $(document).ready(function () {
         },
     });
 
-    function counter(event) {
-        if ($('.owl-carousel').children().length !== 3 && $('.owl-carousel').children().length !== 6) {
-            $('.owl-carousel').append('<span class="slide-count white position-absolute"></span>');
-        }
+    /////////////////////////////////////////////////////////
 
-        if (!event.namespace) {
-            return;
-        }
+    $('.owl-action').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        onInitialized: counter,
+        onChanged: counter,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
+    });
 
-        let slides = event.relatedTarget;
+    ///////////
 
-        $('.slide-count').text(slides.relative(slides.current()) + 1 + '/' + slides.items().length);
-    }
+    $('.owl-stillage-modal').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
+    });
+
+    ///////////
+
+    $('.owl-safe-modal').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
+    });
 });
 
 /******************* Range slider *****************/
@@ -93,5 +149,5 @@ $('#datetimepicker').flatpickr({
     dateFormat: 'l, j F',
     time: 'false',
     locale: 'ru',
-    disableMobile: "true"
+    disableMobile: 'true',
 });

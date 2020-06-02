@@ -50,7 +50,7 @@
             <div class="stillage-modal__product-img mr-3">
                 <span class="gray">ВШГ - 173x300x230 мм</span>
 
-                <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-stillage-modal owl-theme">
                     <div class="stillage-modal__product-img-box mt-3">
                         <img src="../img/safes/safe_modal.png" alt="stillage">
                     </div>
@@ -110,9 +110,9 @@
             </div>
         </div>
 
-        <div class="d-flex stillage-modal__setting-options">
+        <div class="d-flex stillage-modal__setting-options setting-options">
             <div class="stillage-modal__product-height">
-                <span>Высота</span>
+                <div class="mb-3 dark-gray setting-options__title">Высота</div>
                 <div class="custom-select stillage-modal__element">
                     <i class="custom-select__icon"></i>
                     <select>
@@ -123,8 +123,48 @@
                     </select>
                 </div>
             </div>
+
+            <div class="stillage-modal__product-width">
+                <div class="mb-3 dark-gray setting-options__title">Ширина</div>
+                <div class="custom-select stillage-modal__element">
+                    <i class="custom-select__icon"></i>
+                    <select>
+                        <option value="0">700</option>
+                        <option value="1">800</option>
+                        <option value="2">1400</option>
+                        <option value="3">1560</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stillage-modal__product-deep">
+                <div class="mb-3 dark-gray setting-options__title">Глубина</div>
+                <div class="custom-select stillage-modal__element">
+                    <i class="custom-select__icon"></i>
+                    <select>
+                        <option value="0">200</option>
+                        <option value="1">700</option>
+                        <option value="2">300</option>
+                        <option value="3">1560</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stillage-modal__product-count">
+                <div class="mb-3 dark-gray setting-options__title">Кол-во полок</div>
+                <div class="custom-select stillage-modal__element">
+                    <i class="custom-select__icon"></i>
+                    <select>
+                        <option value="0">4</option>
+                        <option value="1">23</option>
+                        <option value="2">14</option>
+                        <option value="3">15</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
+        <div class="price text-right">1 690 ₽</div>
         <div class="stillage-modal__bottom d-flex">
             <div class="stillage-modal__bottom-left mr-4">
                 <a href="#" class="stillage-modal__consultaion">
@@ -135,16 +175,11 @@
 
 
             <div class="stillage-modal__bottom-right align-self-end">
-                <div class="d-flex justify-content-between">
-                    <div class="stillage-modal__buttons d-flex justify-content-between mb-3">
-                        <span class="counter w-100 mx-2">1</span>
+                
 
-                        <button class="remove-button white mr-2">–</button>
-
-                        <button class="add-button white black-bg">+</button>
-                    </div>
-                    <span class="price">1 690 ₽</span>
-                </div>
+                <small class="dark-gray mb-2 text-right">от 253 ₽ / месяц. Рассрочка онлайн
+                    <div class="sign float-right mt-1">!</div>
+                </small>
 
                 <button class="w-100 stillage-button-gray" type="submit">Купить в один клик</button>
             </div>

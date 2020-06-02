@@ -1,8 +1,28 @@
 .stillage-modal
     @extend .safe-modal
 
+    +respond-to(small-height)
+        height: 500px
+        overflow-y: auto
+        overflow-x: inherit
+
+    +respond-to(phone-land)
+        display: none
+    
+
     &__close-btn
-        @extend .safe-modal__close-btn
+        cursor: pointer
+        right: -40px
+        top: 0
+        position: absolute
+        &:hover svg path
+            fill: $primary
+
+        +respond-to(phone)
+            right: 30px
+            top: 100px
+            svg path
+                fill: $gray
 
     &__header
         @extend .safe-modal__header
@@ -12,6 +32,7 @@
 
     &__content
         @extend .safe-modal__content
+        margin-bottom: 40px
 
     &__product-img
         width: 50%
@@ -54,11 +75,19 @@
         width: 125px
         background: $light-gray
 
+    &__setting-options
+        margin-bottom: 50px
+        justify-content: space-between
+
+    .setting-options
+        &__title
+            font-weight: 600
+
     .select-selected
         padding: 7px 3px !important
         height: 30px
         text-align: center
-        color: $gray
+        color: $dark-gray !important
 
     .custom-select__icon
         top: 9px
@@ -71,12 +100,13 @@
     .custom-select__icon:after,
     .custom-select__icon:before
         height: 6px
+        background: $dark-gray
 
     .custom-select__icon:before
-        transform: translate(-1px,5px) rotate(45deg)
+        transform: translate(-3px,5px) rotate(45deg)
 
     .custom-select__icon:after
-        transform: translate(-1px, 2px) rotate(-45deg)
+        transform: translate(-3px, 2px) rotate(-45deg)
 
 
 
@@ -97,5 +127,3 @@
     .price
         font-size: 1.2rem
         font-weight: 700
-
-    

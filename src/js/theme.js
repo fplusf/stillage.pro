@@ -23,7 +23,6 @@ const searchForm = document.getElementById('searchForm'),
     stillageLinks = document.querySelectorAll('.stillage-view-btn'),
     stillageModal = document.getElementById('stillageModal'),
     stillageModalClose = document.querySelectorAll('.close-modal'),
-    stillageFormInputs = document.querySelectorAll('.stillage-form__input'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),

@@ -1,0 +1,65 @@
+.not-found-top,
+.not-found-header
+    height: 100px
+
+    &__logo
+        width: 100px
+
+        +respond-to(phone-land)
+            position: absolute
+            right: 5px
+            top: 14px
+            width: 70px
+
+.not-found
+    padding: 100px 0 100px 0
+
+    +respond-to(phone-land)
+        padding: 50px 0 50px 0
+
+    &__img-wrapper
+        width: 50%
+        margin: auto
+        margin-bottom: 70px
+
+        +respond-to(phone-land)
+            width: 80%
+
+        img
+            width: 100%
+
+    &__content
+        width: 32%
+        margin: auto
+        text-align: center
+
+        +respond-to(phone-land)
+            width: 80%
+
+.not-found-footer
+    height: 140px
+    background: $black
+    display: flex
+    align-items: center
+
+    +respond-to(phone-land)
+        height: auto
+        padding: 30px 0
+
+    &__logo
+        +respond-to(phone-land)
+            margin-bottom: 20px
+
+    &__copyright,
+    &__warning
+        color: $white
+        opacity: .2
+        font-size: 11px
+
+    &__warning
+        width: 40%
+
+        +respond-to(phone-land)
+            width: 100%
+            text-align: center
+            margin-bottom: 20px

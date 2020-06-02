@@ -206,18 +206,19 @@ window.addEventListener('click', (e) => {
     if (e.target == stillageModal) stillageModalDialog.closeModal();
 });
 
-
 /******************* Hide navbar on scroll down. *****************/
+let navbar = document.getElementById('navbar'),
+    mobileNavbar = document.getElementById('mobileNavbar');
 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById('navbar').style.top = '0';
-        document.getElementById('mobileNavbar').style.bottom = '-100px';
+        navbar.style.top = '0';
+        mobileNavbar.style.bottom = '-100px';
     } else {
-        document.getElementById('navbar').style.top = '-150px';
-        document.getElementById('mobileNavbar').style.bottom = '0';
+        navbar.style.top = '-150px';
+        mobileNavbar.style.bottom = '0';
     }
     prevScrollpos = currentScrollPos;
 };
@@ -239,14 +240,16 @@ mobileSearchClose &&
         mobileSearchBtn.children[0].children[0].attributes[1].value = '#B6C0CB';
     });
 
-searchBtn.addEventListener('click', () => {
-    searchForm.classList.add('top-bar__search-box_show');
-    searchInput.focus();
-});
+searchBtn &&
+    searchBtn.addEventListener('click', () => {
+        searchForm.classList.add('top-bar__search-box_show');
+        searchInput.focus();
+    });
 
-searchClose.addEventListener('click', () => {
-    searchForm.classList.remove('top-bar__search-box_show');
-});
+searchClose &&
+    searchClose.addEventListener('click', () => {
+        searchForm.classList.remove('top-bar__search-box_show');
+    });
 
 /******************* Manipulate cart *****************/
 cartButton &&
@@ -259,11 +262,12 @@ cartButton &&
         });
     });
 
-cartOverlay.addEventListener('click', () => {
-    cartWrapper.classList.remove('d-block');
-    cartOverlay.classList.remove('show-cart-overlay');
-    priceModal.classList.remove('price-form__visible');
-});
+cartOverlay &&
+    cartOverlay.addEventListener('click', () => {
+        cartWrapper.classList.remove('d-block');
+        cartOverlay.classList.remove('show-cart-overlay');
+        priceModal.classList.remove('price-form__visible');
+    });
 
 /******************* Action page toggle view mode *****************/
 

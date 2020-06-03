@@ -1,0 +1,161 @@
+.product-detail
+
+    &__header
+        @extend .safe-modal__header
+
+    &__product-img
+        width: 50%
+
+    &__product-img-box
+        max-width: 100%
+        margin-bottom: 10px
+        height: 280px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-width: 100%
+            width: auto !important
+            max-height: 100%
+
+    &__contructor
+        height: 150px
+        width: 85%
+        background: url(../../../../../../img/product-detail/constructor.png) no-repeat
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    .sign
+        z-index: 4
+        position: relative
+        &:hover
+            cursor: default
+
+        &:hover + .installment-payment__info
+            visibility: visible
+            
+    .installment-payment
+        position: relative
+        width: fit-content
+
+        &__title
+            font-weight: 600
+
+        &__info
+            position: absolute
+            color: $white
+            top: 13px
+            right: 9px
+            width: 200px
+            font-size: 14px
+            padding: 15px 10px
+            z-index: 3
+            background: rgba(38, 50, 63, .9)
+            visibility: hidden
+
+            ul
+                font-size: 12px
+
+            li
+                padding: 3px 0
+
+        &__btn
+            color: $white
+            background: none
+            border: 2px solid $white
+            width: 100%
+            padding: 10px 15px
+            transition: none
+
+            &:hover
+                color: $primary
+                border-color: $primary
+
+    .constructor-button
+        padding-right: 0
+        &:hover svg path
+            fill: $primary
+
+    table
+        width: 100%
+
+    tr:first-child
+        margin-bottom: 20px
+
+    td:nth-child(even)
+        text-align: right
+
+    td
+        width: 50%
+
+    td.product-id
+        font-size: 12px
+
+
+    &__setting-options
+        margin-bottom: 50px
+        justify-content: space-between
+
+    &__setting-options>div
+        min-width: 100px
+
+    .setting-options
+        &__title
+            font-weight: 600
+
+    .select-selected
+        padding: 7px 3px !important
+        height: 30px
+        text-align: center
+        color: $dark-gray !important
+        background: $light-gray
+
+    .custom-select__icon
+        top: 9px
+        right: 6px
+
+    .select-arrow-active .custom-select__icon
+        top: 18px
+
+
+    .custom-select__icon:after,
+    .custom-select__icon:before
+        height: 6px
+        background: $dark-gray
+
+    .custom-select__icon:before
+        transform: translate(-3px,5px) rotate(45deg)
+
+    .custom-select__icon:after
+        transform: translate(-3px, 2px) rotate(-45deg)
+
+    .owl-nav,
+    .slide-count
+        display: none
+
+    .owl-dots 
+        width: 100%
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 0
+
+    .owl-carousel
+        height: 100%
+
+    .price
+        font-size: 1.2rem
+        font-weight: 700
+
+
+
+
+    &__discount
+        height: 150px
+
+    .discount__btn
+        @extend .installment-payment__btn
+        width: 200px
+        transition: $transition
+        

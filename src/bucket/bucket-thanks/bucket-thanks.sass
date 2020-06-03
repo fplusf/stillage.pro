@@ -2,6 +2,9 @@
     
 .font-weight
     font-weight: 600
+.action-card,
+.comparision-card,
+.comparision-mobile-card
 
 .bucket-thanks
     &__thanks-header
@@ -9,6 +12,17 @@
         font-weight: 600
         font-size: 60px
         line-height: 40px
+    &__send-photo
+        padding: 0
+        span
+            text-align: left;
+    &__action-card-left
+        +respond-to(phone-land)
+            padding-right: 8px
+    &__action-card-right
+        +respond-to(phone-land)
+            padding-left: 8px
+
     &__text-thanks
         +respond-to(phone-land)
             max-width: 345px
@@ -17,15 +31,18 @@
         padding: 30px
         &__font-text
             font-size: 13px
-    &__button-width
-        button  
+    &__button
+        button
             svg
-                fill: $gray
-            width: 100%
+                fill: $dark-gray
             &:hover
-                color: $primary
                 svg
-                    fill: $primary !important
+                    fill: $white
+
+    &__button-width
+        button 
+            border: 2px solid
+            width: 100%
     &__footer
         &__font-size
             font-size: 16px

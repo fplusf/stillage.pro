@@ -18,13 +18,20 @@
             width: auto !important
             max-height: 100%
 
+        +respond-to(phone)
+            height: 200px
+
     &__contructor
         height: 150px
         width: 85%
         background: url(../../../../../../img/product-detail/constructor.png) no-repeat
+        background-size: cover
         display: flex
         flex-direction: column
         justify-content: space-between
+        +respond-to(tablet)
+            width: 100%
+            margin-bottom: 30px
 
     .sign
         z-index: 4
@@ -97,12 +104,31 @@
         margin-bottom: 50px
         justify-content: space-between
 
+        +respond-to(phone)
+            flex-wrap: wrap
+            margin-bottom: 0
+
     &__setting-options>div
-        min-width: 100px
+        width: 100px
+        +respond-to(tablet)
+            font-size: 12px
+            width: 80px
+
+        +respond-to(phone-land)
+            width: 100px
+
+        +respond-to(phone)
+            margin-bottom: 20px
+            width: 45%
+            max-width: 45%
+
 
     .setting-options
         &__title
             font-weight: 600
+            margin-bottom: 15px
+            +respond-to(phone)
+                margin-bottom: 5px
 
     .select-selected
         padding: 7px 3px !important
@@ -144,6 +170,14 @@
     .owl-carousel
         height: 100%
 
+    .owl-theme .owl-nav
+        +respond-to(phone-land)
+            display: none
+
+    .owl-theme .owl-dots
+        +respond-to(phone-land)
+            display: flex
+
     .price
         font-size: 1.2rem
         font-weight: 700
@@ -158,4 +192,59 @@
         @extend .installment-payment__btn
         width: 200px
         transition: $transition
+        +respond-to(phone)
+            &:hover
+                color: $white
+                border-color: $white
+
+    &__description-title
+        width: 80%
+        margin-bottom: 1.3rem
+        +respond-to(phone-land)
+            margin-bottom: .8rem
+            width: 100%
+
+    &__description
+        list-style: none
+        padding-left: .6em
+        width: 95%
+
+    &__description li:before
+        content: '\25AA'
+        color: $primary
+        font-size: 1rem
+        font-weight: bolder
+        vertical-align: middle
+        margin-left: -0.6em
         
+
+.accordion-tab
+    display: flex
+    padding: 20px 10px
+    box-shadow: $shadow
+    height: 60px
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+
+    &:hover &__btn svg path
+        fill: $primary
+
+    &_active
+        @extend .accordion-tab
+        background: $gray
+        color: $white
+        
+        button svg path
+            fill: $white
+
+        button
+            transform: rotate(45deg)
+
+    &__title
+        font-size: 1rem
+        font-weight: 600
+
+    +respond-to(tablet)
+        font-size: 14px
+        margin-bottom: 20px

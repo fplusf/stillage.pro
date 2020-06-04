@@ -73,7 +73,22 @@ class TabContentAccordion {
         this.allSections = allSections;
     }
     /* Toggle button states from arguments.*/
-    toggleButtonIcons(currentBtn) {
+    toggleButtonState(currentBtn) {
+        //////////////
+     
+        allButtons.forEach((innerTab) => {
+            if (innerTab.id != tab.id) {
+                innerTab.classList = 'accordion-tab';
+            }
+        });
+
+        if (currentBtn.classList.contains('accordion-tab')) {
+            currentBtn.classList = 'accordion-tab_active';
+        } else {
+            currentBtn.classList = 'accordion-tab';
+        }
+        ///////////////
+
         if (currentBtn.children[1].className.includes('open active')) {
             currentBtn.children[1].className = 'open';
 
@@ -106,6 +121,24 @@ class TabContentAccordion {
         });
     }
 }
+
+///////////////////////////////  NEW TABS ///////////////////////
+let DetailTFabButton = document.querySelectorAll('.accordion-tab'),
+    DetailTabSection = document.querySelectorAll('.accordion-section');
+
+let allDetailPageSections = [delivery, instruction, certificates, warranty];
+
+let productDetailAccordion = new TabContentAccordion(DetailTFabButton, allDetailPageSections);
+
+DetailTFabButton.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+           
+        console.log(DetailTFabButton);
+        
+        productDetailAccordion.toggleButtonState(tab);
+        productDetailAccordion.toggleSections(DetailTabSection[index]);
+    });
+});
 
 /******************* Modal Dialogs Manipulation *****************/
 class ModalDialog {
@@ -322,25 +355,25 @@ let informationPageTabs = new TabContentAccordion(allInfoPageBtns, allInfoPageSe
 deliveryBtn &&
     deliveryBtn.addEventListener('click', () => {
         informationPageTabs.toggleSections(delivery);
-        informationPageTabs.toggleButtonIcons(deliveryBtn);
+        informationPageTabs.toggleButtonState(deliveryBtn);
     });
 
 warrantyBtn &&
     warrantyBtn.addEventListener('click', () => {
         informationPageTabs.toggleSections(warranty);
-        informationPageTabs.toggleButtonIcons(warrantyBtn);
+        informationPageTabs.toggleButtonState(warrantyBtn);
     });
 
 certificatesBtn &&
     certificatesBtn.addEventListener('click', () => {
         informationPageTabs.toggleSections(certificates);
-        informationPageTabs.toggleButtonIcons(certificatesBtn);
+        informationPageTabs.toggleButtonState(certificatesBtn);
     });
 
 instructionBtn &&
     instructionBtn.addEventListener('click', () => {
         informationPageTabs.toggleSections(instruction);
-        informationPageTabs.toggleButtonIcons(instructionBtn);
+        informationPageTabs.toggleButtonState(instructionBtn);
     });
 
 /************** Comparision Page Toggle Buttons and Content **********/
@@ -354,13 +387,13 @@ let comparisionPageTabs = new TabContentAccordion(allComparisionPageBtns, allCom
 
 infoBtn &&
     infoBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonIcons(infoBtn);
+        comparisionPageTabs.toggleButtonState(infoBtn);
         comparisionPageTabs.toggleSections(infoContent);
     });
 
 differenceBtn &&
     differenceBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonIcons(differenceBtn);
+        comparisionPageTabs.toggleButtonState(differenceBtn);
         comparisionPageTabs.toggleSections(differenceContent);
     });
 

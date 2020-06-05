@@ -1,0 +1,72 @@
+@@include('src/components/header/header.html', {"title": "Корзина"})
+<!-- Page content goes here -->
+
+<section class="pdf">
+    <div class="lp-section">
+        <div class="container">
+            <div class="d-none d-lg-block">
+                <div class="d-flex mb-5">
+                    <h4 class="h4 dark-gray mr-auto align-self-center mt-2">Номер Вашего заказа: 65658-7846</h4>
+                    <a href="/" class="top-bar__link d-flex align-items-center" id="0">
+                        <img src="../../../img/logo/logo-sm.png" width="80" alt="Главная – Pro Стеллаж" title="Главная – Pro Стеллаж" />
+                    </a>
+                </div>
+            </div>
+            <!-- responsive -->
+            <div class="d-lg-none">
+                <div class="d-flex">
+                    <h4 class="h4 dark-gray mr-auto align-self-center">Номер Вашего заказа:
+                        <br>
+                        65658-7846
+                    </h4>
+                    <a href="/" class="top-bar__link d-flex align-items-center" id="0">
+                        <img src="../../../img/logo/logo-sm.png" width="60" alt="Главная – Pro Стеллаж" title="Главная – Pro Стеллаж" />
+                    </a>
+                </div>
+            </div>
+            @@include('src/components/pdf-card/pdf-card.html')
+            @@include('src/components/pdf-card/pdf-card.html')
+            @@include('src/components/pdf-card/pdf-card.html')
+            <div class="mt-5 mb-3">
+                <div class="d-flex mb-1">
+                    <span>Всего товаров: 3</span>
+                    <span class="font-weight ml-auto">12 690 ₽</span>
+                </div>
+                <div class="d-flex mb-3">
+                    <span>Доставка и подъем</span>
+                    <span class="font-weight ml-auto">300 ₽</span>
+                </div>
+                <div class="d-flex">
+                    <h5 class="h5">Итого:</h5>
+                    <h5 class="h5 font-weight ml-auto">12 690 ₽</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pdf__footer black-bg pt-5 pb-4">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-3">
+                    <a href="" class="site-footer__nav-link nav-link mb-3">
+                        Санкт-Петербург,<br>
+                        ул. Зайцева, 41
+                    </a>
+                    <a href="" class="site-footer__nav-link nav-link mb-3">
+                        Санкт-Петербург,<br>
+                        ул. Зайцева, 41
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb-3">
+                    <a href="" class="site-footer__nav-link nav-link mb-3">
+                        <span class="footer-bar__color-red">8 (812) 565 03 59</span> <br>
+                        <span class="footer-bar__color-white-link">info@stillage.pro</span>
+                    </a>
+                    <a href="" class="white nav-link mb-3 p-0">
+                        Металлическая мебель  —<br>
+                        то, что надежно!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>

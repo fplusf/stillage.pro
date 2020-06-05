@@ -41,11 +41,6 @@ const searchForm = document.getElementById('searchForm'),
     instruction = document.querySelector('.instruction'),
     certificates = document.querySelector('.certificates'),
     warranty = document.querySelector('.warranty'),
-    //// Information section toggle buttons
-    // deliveryBtn = document.querySelector('.delivery-btn'),
-    // warrantyBtn = document.querySelector('.warranty-btn'),
-    // certificatesBtn = document.querySelector('.certificates-btn'),
-    // instructionBtn = document.querySelector('.instruction-btn'),
     about = document.querySelector('.information-about'),
     mobileCart = document.querySelector('.mobile-cart'),
     mobileCartBtn = document.querySelector('.mobile-cart-button'),
@@ -104,6 +99,9 @@ class ModalDialog {
     constructor(modal, inputs) {
         this.modal = modal;
         this.inputs = inputs;
+
+        console.log(this.modal, this.inputs);
+        
     }
 
     showModal() {

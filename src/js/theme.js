@@ -42,10 +42,10 @@ const searchForm = document.getElementById('searchForm'),
     certificates = document.querySelector('.certificates'),
     warranty = document.querySelector('.warranty'),
     //// Information section toggle buttons
-    deliveryBtn = document.querySelector('.delivery-btn'),
-    warrantyBtn = document.querySelector('.warranty-btn'),
-    certificatesBtn = document.querySelector('.certificates-btn'),
-    instructionBtn = document.querySelector('.instruction-btn'),
+    // deliveryBtn = document.querySelector('.delivery-btn'),
+    // warrantyBtn = document.querySelector('.warranty-btn'),
+    // certificatesBtn = document.querySelector('.certificates-btn'),
+    // instructionBtn = document.querySelector('.instruction-btn'),
     about = document.querySelector('.information-about'),
     mobileCart = document.querySelector('.mobile-cart'),
     mobileCartBtn = document.querySelector('.mobile-cart-button'),
@@ -55,10 +55,8 @@ const searchForm = document.getElementById('searchForm'),
     mobileMenuOverlay = document.querySelector('.mobile-menu-overlay'),
     mobileMenuClose = document.querySelector('.drawer-menu__close'),
     ////////// Comparasion page //////////
-    infoBtn = document.getElementsByClassName('info-btn')[0],
-    differenceBtn = document.getElementsByClassName('difference-btn')[0],
-    infoContent = document.getElementsByClassName('info-content')[0],
-    differenceContent = document.getElementsByClassName('difference-content')[0],
+    infoContent = document.querySelector('.info-content'),
+    differenceContent = document.querySelector('.difference-content'),
     topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile'),
     recieveMethodCard = document.querySelectorAll('.recieve-method__card'),
     reciveMethodWrapper = document.querySelector('.receive-wrapper'),
@@ -74,39 +72,18 @@ class TabContentAccordion {
     }
     /* Toggle button states from arguments.*/
     toggleButtonState(currentBtn) {
-        //////////////
-     
-        allButtons.forEach((innerTab) => {
-            if (innerTab.id != tab.id) {
-                innerTab.classList = 'accordion-tab';
+        this.allButtons.forEach((innerTab) => {
+            if (innerTab.id != currentBtn.id) {
+                if (innerTab.classList.contains('accordion-tab_active')) {
+                    innerTab.classList.replace('accordion-tab_active', 'accordion-tab');
+                }
             }
         });
 
         if (currentBtn.classList.contains('accordion-tab')) {
-            currentBtn.classList = 'accordion-tab_active';
+            currentBtn.classList.replace('accordion-tab', 'accordion-tab_active');
         } else {
-            currentBtn.classList = 'accordion-tab';
-        }
-        ///////////////
-
-        if (currentBtn.children[1].className.includes('open active')) {
-            currentBtn.children[1].className = 'open';
-
-            currentBtn.children[2].className = 'close active';
-
-            currentBtn.classList.add('information-button-active');
-
-            this.allButtons.forEach((btn) => {
-                if (btn !== currentBtn) {
-                    btn.children[1].className = 'open active';
-                    btn.children[2].className = 'close';
-                    btn.classList.remove('information-button-active');
-                }
-            });
-        } else {
-            currentBtn.children[1].className = 'open active';
-            currentBtn.children[2].className = 'close';
-            currentBtn.classList.remove('information-button-active');
+            currentBtn.classList.replace('accordion-tab_active', 'accordion-tab');
         }
     }
 
@@ -121,24 +98,6 @@ class TabContentAccordion {
         });
     }
 }
-
-///////////////////////////////  NEW TABS ///////////////////////
-let DetailTFabButton = document.querySelectorAll('.accordion-tab'),
-    DetailTabSection = document.querySelectorAll('.accordion-section');
-
-let allDetailPageSections = [delivery, instruction, certificates, warranty];
-
-let productDetailAccordion = new TabContentAccordion(DetailTFabButton, allDetailPageSections);
-
-DetailTFabButton.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-           
-        console.log(DetailTFabButton);
-        
-        productDetailAccordion.toggleButtonState(tab);
-        productDetailAccordion.toggleSections(DetailTabSection[index]);
-    });
-});
 
 /******************* Modal Dialogs Manipulation *****************/
 class ModalDialog {
@@ -345,57 +304,35 @@ catalogListViewModeBtn &&
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
 /*List of all Buttons and Sections to switch */
-let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
+let allInfoPageBtns = document.querySelectorAll('.information-tab');
 let allInfoPageSections = [delivery, instruction, certificates, warranty, about];
 
 /* New insctance of Tab swither Class */
 let informationPageTabs = new TabContentAccordion(allInfoPageBtns, allInfoPageSections);
 
 /* Calling switch methods on click event */
-deliveryBtn &&
-    deliveryBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(delivery);
-        informationPageTabs.toggleButtonState(deliveryBtn);
+allInfoPageBtns.forEach((currentBtn, index) => {
+    currentBtn.addEventListener('click', () => {
+        informationPageTabs.toggleButtonState(currentBtn);
+        informationPageTabs.toggleSections(allInfoPageSections[index]);
     });
-
-warrantyBtn &&
-    warrantyBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(warranty);
-        informationPageTabs.toggleButtonState(warrantyBtn);
-    });
-
-certificatesBtn &&
-    certificatesBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(certificates);
-        informationPageTabs.toggleButtonState(certificatesBtn);
-    });
-
-instructionBtn &&
-    instructionBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(instruction);
-        informationPageTabs.toggleButtonState(instructionBtn);
-    });
+});
 
 /************** Comparision Page Toggle Buttons and Content **********/
 
 /* List of all Buttons and Sections to switch */
-let allComparisionPageBtns = [infoBtn, differenceBtn];
-let allComparisionPageSections = [infoContent, differenceContent];
+let allComparisionPageBtns = document.querySelectorAll('.comparision-tab'),
+    allComparisionPageSections = [infoContent, differenceContent];
 
-/* New insctance of Tab swither Class */
+///New insctance of Tab swither Class
 let comparisionPageTabs = new TabContentAccordion(allComparisionPageBtns, allComparisionPageSections);
 
-infoBtn &&
-    infoBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonState(infoBtn);
-        comparisionPageTabs.toggleSections(infoContent);
+allComparisionPageBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        comparisionPageTabs.toggleButtonState(btn);
+        comparisionPageTabs.toggleSections(allComparisionPageSections[index]);
     });
-
-differenceBtn &&
-    differenceBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonState(differenceBtn);
-        comparisionPageTabs.toggleSections(differenceContent);
-    });
+});
 
 /******************* Mobile Hamburger menu manipulation *****************/
 
@@ -612,3 +549,15 @@ if (window.location.pathname === '/bucket/checkout/checkout.html') {
         }
     });
 }
+
+/******************* Product Detail Card Accordtion Setup *****************/
+let detailTFabButton = document.querySelectorAll('.detail-tab'),
+    allDetailPageSections = [delivery, instruction, certificates, warranty],
+    productDetailAccordion = new TabContentAccordion(detailTFabButton, allDetailPageSections);
+
+detailTFabButton.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        productDetailAccordion.toggleButtonState(tab);
+        productDetailAccordion.toggleSections(allDetailPageSections[index]);
+    });
+});

@@ -417,9 +417,9 @@
 
     <section class="lp-section">
         <div class="container">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div id="tab1" class="accordion-tab">
+                    <div id="tab1" class="accordion-tab detail-tab">
                         <div class="accordion-tab__title">Доставка и оплата</div>
                         <button class="accordion-tab__btn">
                             <svg width="24" height="23" viewBox="0 0 24 23">
@@ -432,7 +432,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div id="tab2" class="accordion-tab">
+                    <div id="tab2" class="accordion-tab detail-tab">
                         <div class="accordion-tab__title">Возврат и гарантия</div>
                         <button class="accordion-tab__btn">
                             <svg width="24" height="23" viewBox="0 0 24 23">
@@ -445,7 +445,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div id="tab3" class="accordion-tab">
+                    <div id="tab3" class="accordion-tab detail-tab">
                         <div class="accordion-tab__title">Сертификаты, лицензии</div>
                         <button class="accordion-tab__btn">
                             <svg width="24" height="23" viewBox="0 0 24 23">
@@ -458,7 +458,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div id="tab4" class="accordion-tab">
+                    <div id="tab4" class="accordion-tab detail-tab">
                         <div class="accordion-tab__title">Инструкции по сборке</div>
                         <button class="accordion-tab__btn">
                             <svg width="24" height="23" viewBox="0 0 24 23">
@@ -2328,5 +2328,112 @@
         </div>
 
         <!-------------------------------------------------------------------------------->
+    </section>
+
+
+    <section class="lp-section">
+        <div class="container">
+            <div class="row mt-5 mt-md-0">
+                <div class="col-12">
+                    <h4 class="title-middle mb-5">Похожие товары</h4>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник <br> пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник <br> пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-none d-md-flex">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/stillage-srednegruzovie/3.png",
+                    "badge": "",
+                    "bagdeBg": "",
+                    "title": "Полка <br> СТФЛ",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "",
+                    "price": "560₽",
+                    "priceColor": "black",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-none d-lg-flex">
+                    @@include('src/components/action-catalog/action-card/action-card.html', {
+                    "photo": "../../../img/catalog/stillage-metalicheskoe/3.png",
+                    "badge": "Акция",
+                    "bagdeBg": "primary-bg",
+                    "title": "Подпятник <br> пластмассовый",
+                    "info": "ВШГ - 1156x2400x450 мм",
+                    "oldPrice": "1 957₽",
+                    "price": "10₽",
+                    "button": "В корзину",
+                    "link": "#"
+                    })
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between">
+                        <button class="gray text-button">Посмотреть все</button>
+
+                        <div class="actions-pagination d-flex">
+                            <button class="icon-button actions-pagination__turn-left">
+                                <svg width="9" height="14" viewBox="0 0 9 14">
+                                    <path
+                                        d="M7.05853 0.93335L8.5752 2.45002L3.59186 7.43335L8.5752 12.4167L7.05853 13.9333L0.558528 7.43335L7.05853 0.93335Z"
+                                        fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                                </svg>
+
+                            </button>
+
+                            <button class="gray">
+                                1
+                            </button>
+
+                            <button class="black">
+                                2
+                            </button>
+
+                            <button class="gray">
+                                3
+                            </button>
+
+                            <button class="icon-button actions-pagination__turn-right">
+                                <svg width="10" height="14" viewBox="0 0 10 14">
+                                    <path
+                                        d="M2.51569 1L0.999023 2.51667L5.98236 7.5L0.999023 12.4833L2.51569 14L9.01569 7.5L2.51569 1Z"
+                                        fill="white" stroke="#B6C0CB" stroke-width="0.5" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>

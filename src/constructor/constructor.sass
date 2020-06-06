@@ -1,0 +1,97 @@
+.constructor
+
+    &__model
+        max-width: 100%
+
+    &__order-kit
+        width: 100%
+        box-shadow: $shadow
+        margin-bottom: 20px
+
+        th, td
+            padding: 14px 7px
+
+        th:first-child, td:first-child
+            min-width: 120px
+            max-width: 120px
+
+        th:nth-child(2), td:nth-child(2)
+            min-width: 120px
+            max-width: 120px
+
+        th:nth-child(n+3), td:nth-child(n+3)
+            min-width: 70px
+            max-width: 70px
+
+        td
+            color: $dark-gray
+            border-bottom: 1px solid $light-gray
+
+    &__kit-price
+        font-size: 24px
+        font-weight: 600
+        color: $dark-gray
+        line-height: 24px
+        min-width: 100px
+    
+    &__report-results
+        padding: 40px
+
+        span
+            font-weight: 600
+            padding: 7px 0
+
+
+    
+    &__discount
+        height: 150px
+
+    .discount__btn
+        @extend .installment-payment__btn
+        width: 200px
+        transition: $transition
+        color: $white
+        height: 40px
+        border: 2px solid $white
+        &:hover
+            color: $primary
+            border-color: $primary
+
+    .stillage-button-gray
+        width: 260px
+
+        &:hover svg path
+            fill: $white
+
+    .setting-options-title
+        font-weight: 600
+        margin-bottom: 5px
+    
+    .select-selected
+        padding: 7px 3px !important
+        height: 30px
+        text-align: center
+        color: $dark-gray !important
+        background: $light-gray
+
+    .custom-select
+        min-width: 100px
+
+    .custom-select__icon
+        top: 9px
+        right: 6px
+
+    .select-arrow-active .custom-select__icon
+        top: 18px
+
+
+    .custom-select__icon:after,
+    .custom-select__icon:before
+        height: 6px
+        background: $dark-gray
+
+    .custom-select__icon:before
+        transform: translate(-3px,5px) rotate(45deg)
+
+    .custom-select__icon:after
+        transform: translate(-3px, 2px) rotate(-45deg)

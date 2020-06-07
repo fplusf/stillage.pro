@@ -89,10 +89,9 @@ $(document).ready(function () {
         },
     });
 
+    /////////// Product Detail
 
-     /////////// Product Detail
-
-     $('.owl-product-detail').owlCarousel({
+    $('.owl-product-detail').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
@@ -110,60 +109,6 @@ $(document).ready(function () {
     });
 });
 
-/******************* Range slider *****************/
-
-if (window.location.pathname === '/actions/actions.html') {
-    let slider = document.getElementById('slider');
-
-    let nodes = [
-        document.getElementsByClassName('price-range__value-low')[0],
-        document.getElementsByClassName('price-range__value-up')[0],
-    ];
-
-    noUiSlider.create(slider, {
-        start: [60, 800],
-        connect: true,
-        range: {
-            min: 0,
-            max: 1000,
-        },
-    });
-
-    // Display the slider value
-
-    slider.noUiSlider.on('update', function (values, handle) {
-        nodes[handle].innerHTML = Math.round(values[handle]);
-    });
-}
-
-/********** Setup Srednigruzovie page slider **********/
-if (
-    window.location.pathname === '/catalog/stillage-metalicheskoe/stillage-srednegruzovie/stillage-srednegruzovie.html'
-) {
-    /// Srednogruzovie setup
-    let sliderSrednoGruzovie = document.getElementById('sliderSrednoGruzovie');
-
-    let nodes = [
-        document.getElementsByClassName('price-range__value-low')[0],
-        document.getElementsByClassName('price-range__value-up')[0],
-    ];
-
-    noUiSlider.create(sliderSrednoGruzovie, {
-        start: [60, 400],
-        connect: true,
-        range: {
-            min: 0,
-            max: 1000,
-        },
-    });
-
-    // Display the slider value
-
-    sliderSrednoGruzovie.noUiSlider.on('update', function (values, handle) {
-        nodes[handle].innerHTML = Math.round(values[handle]);
-    });
-}
-
 /********** Date picker **********/
 $('#datetimepicker').flatpickr({
     dateFormat: 'l, j F',
@@ -171,3 +116,35 @@ $('#datetimepicker').flatpickr({
     locale: 'ru',
     disableMobile: 'true',
 });
+
+
+
+/********** Setting up all Price range sliders **********/
+let sliders = document.querySelectorAll('.slider');
+
+for (let i = 0; i < sliders.length; i++) {
+    noUiSlider.create(sliders[i], {
+        start: [60, 800],
+        connect: true,
+        range: {
+            min: 0,
+            max: 1000,
+        },
+        orientation: 'horizontal',
+    });
+
+    sliders[i].noUiSlider.on('slide', addValues);
+}
+
+function addValues() {
+    let allValues = [];
+
+    for (let i = 0; i < sliders.length; i++) {
+        allValues.push(sliders[i].noUiSlider.get());
+    }
+
+    for (let j = 0; j < allValues.length; j++) {
+        document.getElementsByClassName('price-range__value-low')[j].textContent = Math.round(allValues[j][0]);
+        document.getElementsByClassName('price-range__value-up')[j].textContent = Math.round(allValues[j][1]);
+    }
+}

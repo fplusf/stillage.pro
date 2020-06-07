@@ -98,10 +98,7 @@ class TabContentAccordion {
 class ModalDialog {
     constructor(modal, inputs) {
         this.modal = modal;
-        this.inputs = inputs;
-
-        console.log(this.modal, this.inputs);
-        
+        this.inputs = inputs;        
     }
 
     showModal() {

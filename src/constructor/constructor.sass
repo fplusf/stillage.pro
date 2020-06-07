@@ -16,7 +16,7 @@
             max-width: 120px
 
         th:nth-child(2), td:nth-child(2)
-            min-width: 120px
+            min-width: 120px    
             max-width: 120px
 
         th:nth-child(n+3), td:nth-child(n+3)
@@ -41,10 +41,16 @@
             font-weight: 600
             padding: 7px 0
 
+    &__title
+        +respond-to(phone-land)
+            width: 100%
 
-    
     &__discount
         height: 150px
+
+    .col-12.report-results
+        +respond-to(phone)
+            padding: 0
 
     .discount__btn
         @extend .installment-payment__btn

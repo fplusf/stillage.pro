@@ -12,17 +12,17 @@ const searchForm = document.getElementById('searchForm'),
     /// Price Modal view
     priceModal = document.getElementById('priceModal'),
     priceLinks = document.querySelectorAll('.price-link'),
-    priceModalClose = document.querySelectorAll('.close-modal'),
+    priceModalClose = document.querySelector('.price-form__close-btn'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     /// Safe Quick view Modal
     safeLinks = document.querySelectorAll('.safe-view-btn'),
     safeModal = document.getElementById('safeModal'),
-    safeModalClose = document.querySelectorAll('.close-modal'),
+    safeModalClose = document.querySelector('.safe-modal__close-btn'),
     safeFormInputs = document.querySelectorAll('.safe-form__input'),
     /// Stillage Quick view Modal
     stillageLinks = document.querySelectorAll('.stillage-view-btn'),
     stillageModal = document.getElementById('stillageModal'),
-    stillageModalClose = document.querySelectorAll('.close-modal'),
+    stillageModalClose = document.querySelector('.stillage-modal__close-btn'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
@@ -57,7 +57,8 @@ const searchForm = document.getElementById('searchForm'),
     reciveMethodWrapper = document.querySelector('.receive-wrapper'),
     ////////// Checkout additional comment //////////
     additionalCommentText = document.querySelector('.addition-comment-box'),
-    additionalCommentClean = document.querySelector('.addition-comment-close');
+    additionalCommentClean = document.querySelector('.addition-comment-close'),
+    discountModalBtn = document.querySelectorAll('.discount__btn');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -98,11 +99,11 @@ class TabContentAccordion {
 class ModalDialog {
     constructor(modal, inputs) {
         this.modal = modal;
-        this.inputs = inputs;        
+        this.inputs = inputs;
     }
 
     showModal() {
-        this.inputs ? this.inputs[0].focus() : null;
+        this.inputs && this.inputs[0].focus();
         /* Modal and overlay classes always should come first in classlist. */
         this.modal.classList.add(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
@@ -137,10 +138,8 @@ priceLinks.forEach((link) => {
     });
 });
 
-priceModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
-        priceModalDialog.closeModal();
-    });
+priceModalClose.addEventListener('click', () => {
+    priceModalDialog.closeModal();
 });
 
 window.addEventListener('click', (e) => {
@@ -163,11 +162,10 @@ safeLinks.forEach((link) => {
     });
 });
 
-safeModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
+safeModalClose &&
+    safeModalClose.addEventListener('click', () => {
         safeModalDialog.closeModal();
     });
-});
 
 window.addEventListener('click', (e) => {
     if (e.target == safeModal) safeModalDialog.closeModal();
@@ -183,11 +181,10 @@ stillageLinks.forEach((link) => {
     });
 });
 
-stillageModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
+stillageModalClose &&
+    stillageModalClose.addEventListener('click', () => {
         stillageModalDialog.closeModal();
     });
-});
 
 window.addEventListener('click', (e) => {
     if (e.target == stillageModal) stillageModalDialog.closeModal();
@@ -556,3 +553,31 @@ detailTFabButton.forEach((tab, index) => {
         productDetailAccordion.toggleSections(allDetailPageSections[index]);
     });
 });
+
+/***  Discount modal calls */
+// let discoutnPopup = document.querySelector('.discount-modal'),
+//     discountCloseBtn = document.querySelector('.discount-form__close-btn'),
+//     discountInputs = document.querySelectorAll('.discount-form__input'),
+//     discountLink = document.querySelectorAll('.discount__btn');
+
+// let discountModal = new ModalDialog(discoutnPopup);
+
+// discountLink.forEach((link) => {
+//     link.addEventListener('click', () => {
+//         discountModal.showModal();
+//     });
+// });
+
+// window.addEventListener('click', (e) => {
+//     if (e.target == discoutnPopup) discountModal.closeModal();
+// });
+
+// discountInputs.forEach((input) => {
+//     input.addEventListener('click', () => {
+//         discountModal.modalFormInputState();
+//     });
+// });
+
+// discountCloseBtn.addEventListener('click', () => {
+//     discountModal.closeModal();
+// });

@@ -48,6 +48,48 @@
     &__discount
         height: 150px
 
+    &__installment-payment
+        position: relative
+        width: fit-content
+
+        &:hover > .installment-payment__info
+            visibility: visible
+            
+    .installment-payment
+        &__title
+                font-weight: 600
+
+        &__info
+            position: absolute
+            color: $white
+            top: 13px
+            right: 9px
+            width: 200px
+            font-size: 14px
+            padding: 15px 10px
+            z-index: 3
+            background: rgba(38, 50, 63, .9)
+            visibility: hidden
+            transition: visibility $transition
+
+            ul
+                font-size: 12px
+
+            li
+                padding: 3px 0
+
+        &__btn
+            color: $white
+            background: none
+            border: 2px solid $white
+            width: 100%
+            padding: 10px 15px
+            transition: none
+
+            &:hover
+                color: $primary
+                border-color: $primary
+
     .col-12.report-results
         +respond-to(phone)
             padding: 0

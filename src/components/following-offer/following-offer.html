@@ -18,7 +18,12 @@
                     </div>
                 </div>
                 <div class="custom-control custom-checkbox mr-sm-2 mt-2 d-none d-xl-block d-lg-block">
-                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing" />
+
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
                     <label class="text-white custom-control-label cursor-pointer" for="customControlAutosizing">Я
                         согласен на обработку персональных <br />
                         данных, а также с условиями подписки</label>
@@ -28,7 +33,11 @@
         <div class="d-block d-xl-none d-lg-none mt-4">
             @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
             <div class="custom-control custom-checkbox mt-3 mb-5">
-                <input type="checkbox" class="custom-control-input" id="customControlAutosizing" />
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
                 <label class="text-white custom-control-label" for="customControlAutosizing">Я согласен на обработку
                     персональных <br />
                     данных, а также с условиями подписки</label>

@@ -101,10 +101,23 @@
         +respond-to(phone-land)
             bottom: 55px
 
-    &__zone:hover .popup-info
-        visibility: visible
-        transition: all $transition
-    
+    &__warning
+        width: fit-content
+
+        .popup-info
+            left: -14px
+            top: 26px
+
+        .sign
+            position: absolute
+            left: -25px
+            top: 8px
+            z-index: 3
+
+        &:hover .popup-info
+            visibility: visible
+            transition: all $transition
+
     &__zone.select-arrow-active .popup-info
         left: -50px
         visibility: hidden
@@ -164,8 +177,8 @@
 .popup-info
     visibility: hidden
     position: absolute
-    left: 0
-    top: 55px
+    left: -15px
+    top: 20px
     max-width: 250px
     width: 200px
     padding: 10px

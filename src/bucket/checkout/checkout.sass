@@ -95,21 +95,29 @@
     .sign-assembly-notice
         max-width: max-content  
 
-        .popup-info
-            left: 100px
-            top: 15px
+    .popup-info
+        left: 12px
+        top: 14px
 
     .sign-assembly-notice:hover > .popup-info
         visibility: visible
-            
-    .popup-info
-        left: -15px
-        top: 18px
 
     .optional-assembly
         display: none
 
         &_active
             display: flex
+
+        &__warning
+            position: relative
+            width: fit-content
+
+            .sign
+                position: absolute
+                z-index: 3
+
+            &:hover .popup-info
+                visibility: visible
+                transition: all $transition
 
     

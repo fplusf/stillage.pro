@@ -69,7 +69,15 @@
             <div class="col-12 col-lg-8 timeline pb-5 mb-md-0">
                 <div class="d-flex mb-3 pl-3 pt-3 pt-md-5 pl-md-0 pt-md-0">
                     <h5 class="dark-gray mr-2">Способ получения</h5>
-                    <div class="sign">!</div>
+                    
+                    <div class="optional-assembly__warning">
+                        <div class="sign">!</div>
+                        <div class="popup-info">
+                            <div class="white">
+                                Сборка — рассчитывается индивидуально, от 80₽/полка, минимальный заказ от 1200
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 @@include('src/components/bucket-page/recieve-method/recieve-method.html')
             </div>
@@ -86,7 +94,15 @@
             <div class="col-12 col-lg-8 timeline pb-5">
                 <div class="d-flex mb-3 pl-3 pt-3 pt-md-5 pl-md-0 pt-md-0">
                     <h5 class="dark-gray mr-2">Оплата</h5>
-                    <div class="sign">!</div>
+
+                    <div class="optional-assembly__warning">
+                        <div class="sign">!</div>
+                        <div class="popup-info">
+                            <div class="white">
+                                Сборка — рассчитывается индивидуально, от 80₽/полка, минимальный заказ от 1200
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="payment-form-wrapper_active">
                     @@include('src/components/bucket-page/payment-form/payment-form.html')
@@ -101,15 +117,17 @@
             <div class="col-12 col-lg-8 timeline pb-5">
                 <div class="d-flex mb-3 pl-3 pt-3 pt-md-5 pl-md-0 pt-md-0 sign-assembly-notice">
                     <h5 class="dark-gray mr-2">Сборка</h5>
-                    <div class="sign">!</div>
 
-                    <div class="popup-info">
-                        <div class="white">
-                            Сборка — рассчитывается индивидуально, от 80₽/полка, минимальный заказ от 1200
+                    <div class="optional-assembly__warning">
+                        <div class="sign">!</div>
+                        <div class="popup-info">
+                            <div class="white">
+                                Сборка — рассчитывается индивидуально, от 80₽/полка, минимальный заказ от 1200
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 @@include('src/components/bucket-page/assembly/assembly.html')
             </div>
         </div>

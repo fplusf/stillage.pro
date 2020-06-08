@@ -12,17 +12,17 @@ const searchForm = document.getElementById('searchForm'),
     /// Price Modal view
     priceModal = document.getElementById('priceModal'),
     priceLinks = document.querySelectorAll('.price-link'),
-    priceModalClose = document.querySelectorAll('.close-modal'),
+    priceModalClose = document.querySelector('.price-form__close-btn'),
     priceFormInputs = document.querySelectorAll('.price-form__input'),
     /// Safe Quick view Modal
     safeLinks = document.querySelectorAll('.safe-view-btn'),
     safeModal = document.getElementById('safeModal'),
-    safeModalClose = document.querySelectorAll('.close-modal'),
+    safeModalClose = document.querySelector('.safe-modal__close-btn'),
     safeFormInputs = document.querySelectorAll('.safe-form__input'),
     /// Stillage Quick view Modal
     stillageLinks = document.querySelectorAll('.stillage-view-btn'),
     stillageModal = document.getElementById('stillageModal'),
-    stillageModalClose = document.querySelectorAll('.close-modal'),
+    stillageModalClose = document.querySelector('.stillage-modal__close-btn'),
     /// Action Cards view mode
     tileViewMode = document.getElementById('actionTileViewMode'),
     listViewMode = document.getElementById('actionListViewMode'),
@@ -41,11 +41,6 @@ const searchForm = document.getElementById('searchForm'),
     instruction = document.querySelector('.instruction'),
     certificates = document.querySelector('.certificates'),
     warranty = document.querySelector('.warranty'),
-    //// Information section toggle buttons
-    deliveryBtn = document.querySelector('.delivery-btn'),
-    warrantyBtn = document.querySelector('.warranty-btn'),
-    certificatesBtn = document.querySelector('.certificates-btn'),
-    instructionBtn = document.querySelector('.instruction-btn'),
     about = document.querySelector('.information-about'),
     mobileCart = document.querySelector('.mobile-cart'),
     mobileCartBtn = document.querySelector('.mobile-cart-button'),
@@ -55,16 +50,15 @@ const searchForm = document.getElementById('searchForm'),
     mobileMenuOverlay = document.querySelector('.mobile-menu-overlay'),
     mobileMenuClose = document.querySelector('.drawer-menu__close'),
     ////////// Comparasion page //////////
-    infoBtn = document.getElementsByClassName('info-btn')[0],
-    differenceBtn = document.getElementsByClassName('difference-btn')[0],
-    infoContent = document.getElementsByClassName('info-content')[0],
-    differenceContent = document.getElementsByClassName('difference-content')[0],
+    infoContent = document.querySelector('.info-content'),
+    differenceContent = document.querySelector('.difference-content'),
     topBarPhoneNumber = document.querySelector('.top-bar__phone-number-mobile'),
     recieveMethodCard = document.querySelectorAll('.recieve-method__card'),
     reciveMethodWrapper = document.querySelector('.receive-wrapper'),
     ////////// Checkout additional comment //////////
     additionalCommentText = document.querySelector('.addition-comment-box'),
-    additionalCommentClean = document.querySelector('.addition-comment-close');
+    additionalCommentClean = document.querySelector('.addition-comment-close'),
+    discountModalBtn = document.querySelectorAll('.discount__btn');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -74,39 +68,18 @@ class TabContentAccordion {
     }
     /* Toggle button states from arguments.*/
     toggleButtonState(currentBtn) {
-        //////////////
-
-        allButtons.forEach((innerTab) => {
-            if (innerTab.id != tab.id) {
-                innerTab.classList = 'accordion-tab';
+        this.allButtons.forEach((innerTab) => {
+            if (innerTab.id != currentBtn.id) {
+                if (innerTab.classList.contains('accordion-tab_active')) {
+                    innerTab.classList.replace('accordion-tab_active', 'accordion-tab');
+                }
             }
         });
 
         if (currentBtn.classList.contains('accordion-tab')) {
-            currentBtn.classList = 'accordion-tab_active';
+            currentBtn.classList.replace('accordion-tab', 'accordion-tab_active');
         } else {
-            currentBtn.classList = 'accordion-tab';
-        }
-        ///////////////
-
-        if (currentBtn.children[1].className.includes('open active')) {
-            currentBtn.children[1].className = 'open';
-
-            currentBtn.children[2].className = 'close active';
-
-            currentBtn.classList.add('information-button-active');
-
-            this.allButtons.forEach((btn) => {
-                if (btn !== currentBtn) {
-                    btn.children[1].className = 'open active';
-                    btn.children[2].className = 'close';
-                    btn.classList.remove('information-button-active');
-                }
-            });
-        } else {
-            currentBtn.children[1].className = 'open active';
-            currentBtn.children[2].className = 'close';
-            currentBtn.classList.remove('information-button-active');
+            currentBtn.classList.replace('accordion-tab_active', 'accordion-tab');
         }
     }
 
@@ -122,23 +95,6 @@ class TabContentAccordion {
     }
 }
 
-///////////////////////////////  NEW TABS ///////////////////////
-let DetailTFabButton = document.querySelectorAll('.accordion-tab'),
-    DetailTabSection = document.querySelectorAll('.accordion-section');
-
-let allDetailPageSections = [delivery, instruction, certificates, warranty];
-
-let productDetailAccordion = new TabContentAccordion(DetailTFabButton, allDetailPageSections);
-
-DetailTFabButton.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        console.log(DetailTFabButton);
-
-        productDetailAccordion.toggleButtonState(tab);
-        productDetailAccordion.toggleSections(DetailTabSection[index]);
-    });
-});
-
 /******************* Modal Dialogs Manipulation *****************/
 class ModalDialog {
     constructor(modal, inputs) {
@@ -147,7 +103,7 @@ class ModalDialog {
     }
 
     showModal() {
-        this.inputs ? this.inputs[0].focus() : null;
+        this.inputs && this.inputs[0].focus();
         /* Modal and overlay classes always should come first in classlist. */
         this.modal.classList.add(`${this.modal.classList[0]}_active`);
         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
@@ -182,10 +138,8 @@ priceLinks.forEach((link) => {
     });
 });
 
-priceModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
-        priceModalDialog.closeModal();
-    });
+priceModalClose.addEventListener('click', () => {
+    priceModalDialog.closeModal();
 });
 
 window.addEventListener('click', (e) => {
@@ -208,11 +162,10 @@ safeLinks.forEach((link) => {
     });
 });
 
-safeModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
+safeModalClose &&
+    safeModalClose.addEventListener('click', () => {
         safeModalDialog.closeModal();
     });
-});
 
 window.addEventListener('click', (e) => {
     if (e.target == safeModal) safeModalDialog.closeModal();
@@ -228,15 +181,43 @@ stillageLinks.forEach((link) => {
     });
 });
 
-stillageModalClose.forEach((closeBtn) => {
-    closeBtn.addEventListener('click', () => {
+stillageModalClose &&
+    stillageModalClose.addEventListener('click', () => {
         stillageModalDialog.closeModal();
     });
-});
 
 window.addEventListener('click', (e) => {
     if (e.target == stillageModal) stillageModalDialog.closeModal();
 });
+
+/*******   Discount modal calls *****/
+let discountModal = document.getElementById('discountModal'),
+    discountCloseBtn = document.querySelector('.discount-form__close-btn'),
+    discountInputs = document.querySelectorAll('.discount-form__input'),
+    discountLink = document.querySelectorAll('.discount__btn');
+
+let discountModalDialog = new ModalDialog(discountModal, discountInputs);
+
+discountLink.forEach((link) => {
+    link.addEventListener('click', () => {
+        discountModalDialog.showModal();
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target == discountModal) discountModalDialog.closeModal();
+});
+
+discountInputs.forEach((input) => {
+    input.addEventListener('click', () => {
+        discountModalDialog.modalFormInputState();
+    });
+});
+
+discountCloseBtn &&
+    discountCloseBtn.addEventListener('click', () => {
+        discountModalDialog.closeModal();
+    });
 
 /******************* Hide navbar on scroll down. *****************/
 let navbar = document.getElementById('navbar'),
@@ -344,57 +325,35 @@ catalogListViewModeBtn &&
 
 /******************* INFORMATION PAGE COLLAPSING *****************/
 /*List of all Buttons and Sections to switch */
-let allInfoPageBtns = [deliveryBtn, instructionBtn, certificatesBtn, warrantyBtn];
+let allInfoPageBtns = document.querySelectorAll('.information-tab');
 let allInfoPageSections = [delivery, instruction, certificates, warranty, about];
 
 /* New insctance of Tab swither Class */
 let informationPageTabs = new TabContentAccordion(allInfoPageBtns, allInfoPageSections);
 
 /* Calling switch methods on click event */
-deliveryBtn &&
-    deliveryBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(delivery);
-        informationPageTabs.toggleButtonState(deliveryBtn);
+allInfoPageBtns.forEach((currentBtn, index) => {
+    currentBtn.addEventListener('click', () => {
+        informationPageTabs.toggleButtonState(currentBtn);
+        informationPageTabs.toggleSections(allInfoPageSections[index]);
     });
-
-warrantyBtn &&
-    warrantyBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(warranty);
-        informationPageTabs.toggleButtonState(warrantyBtn);
-    });
-
-certificatesBtn &&
-    certificatesBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(certificates);
-        informationPageTabs.toggleButtonState(certificatesBtn);
-    });
-
-instructionBtn &&
-    instructionBtn.addEventListener('click', () => {
-        informationPageTabs.toggleSections(instruction);
-        informationPageTabs.toggleButtonState(instructionBtn);
-    });
+});
 
 /************** Comparision Page Toggle Buttons and Content **********/
 
 /* List of all Buttons and Sections to switch */
-let allComparisionPageBtns = [infoBtn, differenceBtn];
-let allComparisionPageSections = [infoContent, differenceContent];
+let allComparisionPageBtns = document.querySelectorAll('.comparision-tab'),
+    allComparisionPageSections = [infoContent, differenceContent];
 
-/* New insctance of Tab swither Class */
+///New insctance of Tab swither Class
 let comparisionPageTabs = new TabContentAccordion(allComparisionPageBtns, allComparisionPageSections);
 
-infoBtn &&
-    infoBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonState(infoBtn);
-        comparisionPageTabs.toggleSections(infoContent);
+allComparisionPageBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        comparisionPageTabs.toggleButtonState(btn);
+        comparisionPageTabs.toggleSections(allComparisionPageSections[index]);
     });
-
-differenceBtn &&
-    differenceBtn.addEventListener('click', () => {
-        comparisionPageTabs.toggleButtonState(differenceBtn);
-        comparisionPageTabs.toggleSections(differenceContent);
-    });
+});
 
 /******************* Mobile Hamburger menu manipulation *****************/
 
@@ -611,3 +570,15 @@ if (window.location.pathname === '/bucket/checkout/checkout.html') {
         }
     });
 }
+
+/******************* Product Detail Card Accordtion Setup *****************/
+let detailTFabButton = document.querySelectorAll('.detail-tab'),
+    allDetailPageSections = [delivery, instruction, certificates, warranty],
+    productDetailAccordion = new TabContentAccordion(detailTFabButton, allDetailPageSections);
+
+detailTFabButton.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        productDetailAccordion.toggleButtonState(tab);
+        productDetailAccordion.toggleSections(allDetailPageSections[index]);
+    });
+});

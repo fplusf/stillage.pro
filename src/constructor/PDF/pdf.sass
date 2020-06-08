@@ -1,0 +1,109 @@
+   
+.constructor
+    position: relative
+
+    &__model
+        max-width: 100%
+
+    &__order-kit
+        width: 100%
+        box-shadow: $shadow
+        margin-bottom: 20px
+
+        th, td
+            padding: 14px 7px
+
+        th:first-child, td:first-child
+            min-width: 120px
+            max-width: 120px
+
+        th:nth-child(2), td:nth-child(2)
+            min-width: 120px    
+            max-width: 120px
+
+        th:nth-child(n+3), td:nth-child(n+3)
+            min-width: 70px
+            max-width: 70px
+
+        td
+            color: $dark-gray
+            border-bottom: 1px solid $light-gray
+
+    &__kit-price
+        font-size: 24px
+        font-weight: 600
+        color: $black
+        line-height: 24px
+        min-width: 100px
+    
+    &__report-results
+        padding: 40px
+
+        span
+            font-weight: 600
+            padding: 7px 0
+
+    &__title
+        +respond-to(phone-land)
+            width: 100%
+
+    &__discount
+        height: 150px
+
+    .col-12.report-results
+        +respond-to(phone)
+            padding: 0
+
+    .discount__btn
+        @extend .installment-payment__btn
+        width: 200px
+        transition: $transition
+        color: $white
+        height: 40px
+        border: 2px solid $white
+        &:hover
+            color: $primary
+            border-color: $primary
+
+    .stillage-button-gray
+        width: 260px
+
+        &:hover svg path
+            fill: $white
+
+    .setting-options-title
+        font-weight: 600
+        margin-bottom: 5px
+
+  
+.pdf-selected
+    background: $light-gray
+    height: 40px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $dark-gray
+
+.pdf-logo
+    height: 30px
+
+.romd
+    background: url(../../img/constructor/constructor-pdf.png) no-repeat 140%
+    width: 100%
+    height: 130%
+    position: absolute
+    right: 0
+    top: 0
+
+footer
+    div
+        font-weight: 600
+        
+    .phone
+        color: $primary !important
+        text-decoration: underline !important
+
+    .email
+        color: $white !important
+        text-decoration: underline !important

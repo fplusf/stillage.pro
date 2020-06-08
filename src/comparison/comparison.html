@@ -420,18 +420,32 @@
                         <div class="col-12 d-md-none">
                             <h6 class="gray mb-3">Выберите нужный раздел и он раскроется</h6>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            @@include('src/components/button-information/button-information.html', {
-                            "title": "Характеристики",
-                            "section": "info-btn"
-                            })
-                        </div>
+                        
 
                         <div class="col-12 col-md-6 col-lg-3">
-                            @@include('src/components/button-information/button-information.html', {
-                            "title": "Только отличия",
-                            "section": "difference-btn"
-                            })
+                            <div id="tab1" class="accordion-tab comparision-tab">
+                                <div class="accordion-tab__title">Характеристики</div>
+                                <button class="accordion-tab__btn">
+                                    <svg width="24" height="23" viewBox="0 0 24 23">
+                                        <path
+                                            d="M21.7071 12.6469L21.7071 9.98052L13.0597 9.98049L13.0597 1.33318H10.3934L10.3934 9.98049L1.74604 9.98052L1.74604 12.6469L10.3934 12.6469V21.2942L13.0597 21.2942L13.0598 12.6469L21.7071 12.6469Z"
+                                            fill="#B6C0CB" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div id="tab2" class="accordion-tab comparision-tab">
+                                <div class="accordion-tab__title">Только отличия</div>
+                                <button class="accordion-tab__btn">
+                                    <svg width="24" height="23" viewBox="0 0 24 23">
+                                        <path
+                                            d="M21.7071 12.6469L21.7071 9.98052L13.0597 9.98049L13.0597 1.33318H10.3934L10.3934 9.98049L1.74604 9.98052L1.74604 12.6469L10.3934 12.6469V21.2942L13.0597 21.2942L13.0598 12.6469L21.7071 12.6469Z"
+                                            fill="#B6C0CB" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
 

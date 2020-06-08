@@ -1,0 +1,159 @@
+
+.collapse-one
+    display: none
+
+    &__header
+        background: $light-gray 
+        &__quad
+            width: 15px
+            height: 15px
+            background: $dark-gray
+            margin-top: 46px
+            margin-left: -45px
+            position: absolute
+            +respond-to(laptop)
+                margin-left: -45px
+            +respond-to(tablet)
+                margin-left: -35px
+            +respond-to(phone-land)
+                margin-left: -5px
+
+        .row
+            padding: 40px 0px 40px 20px
+            border-left: 1px solid $dark-gray
+            margin-left: -38px
+            +respond-to(tablet)
+                margin-left: -28px
+            +respond-to(phone-land)
+                margin-left: 1px
+    &__header-city
+        .dark-gray
+            font-size: 12px
+        &__border-left
+            padding: 60px 0px 60px 40px
+            border-left: 1px solid $dark-gray
+            margin-left: -38px
+            +respond-to(tablet)
+                margin-left: -28px
+            +respond-to(phone-land)
+                margin-left: 1px
+            &__heading
+                margin-bottom: 29px
+            &__quad
+                width: 15px
+                height: 15px
+                background: $dark-gray
+                margin-top: -48px
+                margin-left: -48px
+                position: absolute
+                +respond-to(laptop)
+                    margin-left: -48px
+                +respond-to(tablet)
+                    margin-left: -48px
+                +respond-to(phone-land)
+                    margin-left: -48px
+            &__red
+                div 
+                    width: 15px
+                    height: 15px
+                    background: $primary
+                    margin-top: 2px
+            &__gray
+                div 
+                    width: 15px
+                    height: 15px
+                    background: $gray
+                    margin-top: 2px
+            &__black
+                div 
+                    width: 15px
+                    height: 15px
+                    background: $black
+                    margin-top: 2px
+    &__delivery
+        background: $light-gray
+        .dark-gray
+            font-size: 12px
+        &__border-left
+            padding: 60px 0px 60px 40px
+            border-left: 1px solid $dark-gray
+            margin-left: -38px
+            +respond-to(tablet)
+                margin-left: -28px
+            +respond-to(phone-land)
+                margin-left: 1px
+            &__quad
+                width: 15px
+                height: 15px
+                background: $dark-gray
+                margin-top: -48px
+                margin-left: -48px
+                position: absolute
+                +respond-to(laptop)
+                    margin-left: -48px
+                +respond-to(tablet)
+                    margin-left: -48px
+                +respond-to(phone-land)
+                    margin-left: -48px
+    &__payment
+        background: $black
+        padding: 60px 0px
+
+.svg-hover
+    svg
+        opacity: 0
+    &:hover
+        svg
+            opacity: 1
+            transition: 300ms
+
+.assembly-instructions
+    &__header
+        background-image: linear-gradient(250deg,transparent -18.91%,rgba(0, 0, 0, 0.82) 57.57%),url(../img/review/arjay.png)
+        background-repeat: round
+        height: 510px
+    &__list-item
+        margin-left: -12px;
+        text-decoration: none
+        +respond-to(phone-land)
+            margin-left: 5px
+        svg
+            fill: $gray
+        &:hover
+            text-decoration: none
+            color: $gray
+            svg
+                transition: .3s
+                fill: $primary
+        &__icon
+            font-size: 6px
+            color: $dark-gray
+    &__list-item-red
+        margin-left: -12px;
+        text-decoration: none
+        +respond-to(phone-land)
+            margin-left: 0px
+        svg
+            fill: $gray
+        &:hover
+            text-decoration: none
+            color: $primary
+            svg
+                transition: .3s
+                fill: $primary
+        &__icon
+            font-size: 6px
+            color: $dark-gray
+        &__icon-pdf
+            font-size: 14px
+            color: $dark-gray
+
+
+.information-about
+    +respond-to(phone-land)
+        img
+            width: 100%
+    &__about
+        background: $light-gray
+        padding-top: 50px
+

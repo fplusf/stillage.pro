@@ -49,7 +49,7 @@ function concatCSSLibs() {
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
             './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
             './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
-            './node_modules/flatpickr/dist/flatpickr.min.css'
+            './node_modules/flatpickr/dist/flatpickr.min.css',
         ],
         { allowEmpty: true }
     )
@@ -63,8 +63,8 @@ function concatCSSLibs() {
  */
 function concatJSLibs() {
     return src([
-        './node_modules/jquery/dist/jquery.min.js',
         './node_modules/nouislider/distribute/nouislider.min.js',
+        './node_modules/jquery/dist/jquery.min.js',
         './node_modules/owl.carousel/dist/owl.carousel.min.js',
         './node_modules/flatpickr/dist/flatpickr.min.js',
         './node_modules/flatpickr/dist/l10n/ru.js',

@@ -1,0 +1,145 @@
+.constructor
+
+    &__model
+        max-width: 100%
+
+    &__order-kit
+        width: 100%
+        box-shadow: $shadow
+        margin-bottom: 20px
+
+        th, td
+            padding: 14px 7px
+
+        th:first-child, td:first-child
+            min-width: 120px
+            max-width: 120px
+
+        th:nth-child(2), td:nth-child(2)
+            min-width: 120px    
+            max-width: 120px
+
+        th:nth-child(n+3), td:nth-child(n+3)
+            min-width: 70px
+            max-width: 70px
+
+        td
+            color: $dark-gray
+            border-bottom: 1px solid $light-gray
+
+    &__kit-price
+        font-size: 24px
+        font-weight: 600
+        color: $dark-gray
+        line-height: 24px
+        min-width: 100px
+    
+    &__report-results
+        padding: 40px
+
+        span
+            font-weight: 600
+            padding: 7px 0
+
+    &__title
+        +respond-to(phone-land)
+            width: 100%
+
+    &__discount
+        height: 150px
+
+    &__installment-payment
+        position: relative
+        width: fit-content
+
+        &:hover > .installment-payment__info
+            visibility: visible
+            
+    .installment-payment
+        &__title
+                font-weight: 600
+
+        &__info
+            position: absolute
+            color: $white
+            top: 13px
+            right: 9px
+            width: 200px
+            font-size: 14px
+            padding: 15px 10px
+            z-index: 3
+            background: rgba(38, 50, 63, .9)
+            visibility: hidden
+            transition: visibility $transition
+
+            ul
+                font-size: 12px
+
+            li
+                padding: 3px 0
+
+        &__btn
+            color: $white
+            background: none
+            border: 2px solid $white
+            width: 100%
+            padding: 10px 15px
+            transition: none
+
+            &:hover
+                color: $primary
+                border-color: $primary
+
+    .col-12.report-results
+        +respond-to(phone)
+            padding: 0
+
+    .discount__btn
+        @extend .installment-payment__btn
+        width: 200px
+        transition: $transition
+        color: $white
+        height: 40px
+        border: 2px solid $white
+        &:hover
+            color: $primary
+            border-color: $primary
+
+    .stillage-button-gray
+        width: 260px
+
+        &:hover svg path
+            fill: $white
+
+    .setting-options-title
+        font-weight: 600
+        margin-bottom: 5px
+    
+    .select-selected
+        padding: 7px 3px !important
+        height: 30px
+        text-align: center
+        color: $dark-gray !important
+        background: $light-gray
+
+    .custom-select
+        min-width: 100px
+
+    .custom-select__icon
+        top: 9px
+        right: 6px
+
+    .select-arrow-active .custom-select__icon
+        top: 18px
+
+
+    .custom-select__icon:after,
+    .custom-select__icon:before
+        height: 6px
+        background: $dark-gray
+
+    .custom-select__icon:before
+        transform: translate(-3px,5px) rotate(45deg)
+
+    .custom-select__icon:after
+        transform: translate(-3px, 2px) rotate(-45deg)

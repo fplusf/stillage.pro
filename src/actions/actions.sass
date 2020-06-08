@@ -116,10 +116,16 @@
     .filter-content li:first-child
         color: $primary
 
+.filter-reset-btn
+    font-weight: 600
+    &:hover
+      color: $primary
+
+
 .mobile-filter-wrapper
   display: none
   height: 100%
-  overflow: scroll
+  overflow-y: auto
   position: fixed
   top: 0
   right: 0
@@ -156,7 +162,7 @@
     position: relative
 
 .noUi-target
-    background: $gray
+    background: $light-gray
     border: 0
     box-shadow: none
 

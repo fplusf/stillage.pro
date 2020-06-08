@@ -39,12 +39,13 @@
         &:hover
             cursor: default
 
-        &:hover + .installment-payment__info
-            visibility: visible
-            
     .installment-payment
         position: relative
         width: fit-content
+
+        &:hover > .installment-payment__info
+            visibility: visible
+            
 
         &__title
             font-weight: 600
@@ -60,6 +61,7 @@
             z-index: 3
             background: rgba(38, 50, 63, .9)
             visibility: hidden
+            transition: visibility $transition
 
             ul
                 font-size: 12px
@@ -78,6 +80,7 @@
             &:hover
                 color: $primary
                 border-color: $primary
+                
 
     .constructor-button
         padding-right: 0
@@ -183,8 +186,6 @@
         font-weight: 700
 
 
-
-
     &__discount
         height: 150px
 
@@ -217,34 +218,3 @@
         vertical-align: middle
         margin-left: -0.6em
         
-
-.accordion-tab
-    display: flex
-    padding: 20px 10px
-    box-shadow: $shadow
-    height: 60px
-    align-items: center
-    justify-content: space-between
-    cursor: pointer
-
-    &:hover &__btn svg path
-        fill: $primary
-
-    &_active
-        @extend .accordion-tab
-        background: $gray
-        color: $white
-        
-        button svg path
-            fill: $white
-
-        button
-            transform: rotate(45deg)
-
-    &__title
-        font-size: 1rem
-        font-weight: 600
-
-    +respond-to(tablet)
-        font-size: 14px
-        margin-bottom: 20px

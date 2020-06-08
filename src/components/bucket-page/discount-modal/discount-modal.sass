@@ -1,10 +1,15 @@
-.dicount-modal
+.discount-modal
     @extend .modal
+
+    +respond-to(small-height)
+        height: 500px
+        overflow-y: auto
+        overflow-x: inherit
 
     &_active
        @extend .modal_active
 
-.dicount-form
+.discount-form
     @extend .price-form
     
     +respond-to(phone)

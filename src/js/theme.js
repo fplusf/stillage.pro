@@ -190,6 +190,35 @@ window.addEventListener('click', (e) => {
     if (e.target == stillageModal) stillageModalDialog.closeModal();
 });
 
+/*******   Discount modal calls *****/
+let discountModal = document.getElementById('discountModal'),
+    discountCloseBtn = document.querySelector('.discount-form__close-btn'),
+    discountInputs = document.querySelectorAll('.discount-form__input'),
+    discountLink = document.querySelectorAll('.discount__btn');
+
+let discountModalDialog = new ModalDialog(discountModal, discountInputs);
+
+discountLink.forEach((link) => {
+    link.addEventListener('click', () => {
+        discountModalDialog.showModal();
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target == discountModal) discountModalDialog.closeModal();
+});
+
+discountInputs.forEach((input) => {
+    input.addEventListener('click', () => {
+        discountModalDialog.modalFormInputState();
+    });
+});
+
+discountCloseBtn &&
+    discountCloseBtn.addEventListener('click', () => {
+        discountModalDialog.closeModal();
+    });
+
 /******************* Hide navbar on scroll down. *****************/
 let navbar = document.getElementById('navbar'),
     mobileNavbar = document.getElementById('mobileNavbar');
@@ -553,31 +582,3 @@ detailTFabButton.forEach((tab, index) => {
         productDetailAccordion.toggleSections(allDetailPageSections[index]);
     });
 });
-
-/***  Discount modal calls */
-// let discoutnPopup = document.querySelector('.discount-modal'),
-//     discountCloseBtn = document.querySelector('.discount-form__close-btn'),
-//     discountInputs = document.querySelectorAll('.discount-form__input'),
-//     discountLink = document.querySelectorAll('.discount__btn');
-
-// let discountModal = new ModalDialog(discoutnPopup);
-
-// discountLink.forEach((link) => {
-//     link.addEventListener('click', () => {
-//         discountModal.showModal();
-//     });
-// });
-
-// window.addEventListener('click', (e) => {
-//     if (e.target == discoutnPopup) discountModal.closeModal();
-// });
-
-// discountInputs.forEach((input) => {
-//     input.addEventListener('click', () => {
-//         discountModal.modalFormInputState();
-//     });
-// });
-
-// discountCloseBtn.addEventListener('click', () => {
-//     discountModal.closeModal();
-// });

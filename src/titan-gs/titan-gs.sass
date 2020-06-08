@@ -63,7 +63,48 @@
         margin-bottom: 1px
 
 .titan-review-img
+    max-width: 100%
     +respond-to(phone-land)
         width: 100%
 
+.owl-titan
+
+    .owl-slide1,
+    .owl-slide2
+        background-size: cover !important
+        height: 550px
     
+    .owl-slide1
+        background: url(../../img/titan/banner1.png) no-repeat center
+        +respond-to(phone-land)
+            background: url(../../img/titan/slide1mobile.png) no-repeat center
+            background-color: $black
+
+        .col-12
+            +respond-to(phone-land)
+                max-height: 50%
+    
+    .owl-slide2
+        background: url(../../img/titan/banner2.png) no-repeat center
+
+
+    &__description
+        list-style: none
+        padding-left: .6em
+        width: 95%
+        color: $white
+
+        li
+            padding: 7px 0
+            +respond-to(phone-land)
+                padding: 3px 0
+
+    &__description li:before
+        content: '\25AA'
+        color: $white
+        font-size: 1rem
+        font-weight: bolder
+        vertical-align: middle
+        margin-left: -.5em
+        margin-right: 10px
+        

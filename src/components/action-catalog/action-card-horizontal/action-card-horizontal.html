@@ -64,20 +64,10 @@
         <div class="horizontal-content__buttons d-none d-lg-flex flex-column justify-content-end">
             <div class="d-flex justify-content-between mb-4">
                 <div class="horizontal-content__counting d-flex align-self-end justify-content-between">
-                    <span class="w-100 mr-2 text-center light-gray-bg">1</span>
+                    <span class="w-100 mr-2 d-flex align-items-center justify-content-center light-gray-bg">1</span>
 
-
-                    @@include('./src/components/buttons/add-remove.html', {
-                    "action": "—",
-                    "background": "gray-bg mr-2"
-                    })
-
-
-                    @@include('./src/components/buttons/add-remove.html', {
-                    "action": "+",
-                    "background": "primary-bg"
-                    })
-
+                    <button class="remove-button mr-2">—</button>
+                    <button class="add-button">+</button>
                 </div>
 
                 <div class="prices">

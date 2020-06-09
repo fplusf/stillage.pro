@@ -109,7 +109,6 @@
         transform: translate(-3px, 2px) rotate(-45deg)
 
 
-
     .owl-nav,
     .slide-count
         display: none
@@ -117,8 +116,8 @@
     .owl-dots 
         width: 100%
         justify-content: center
-        left: 0
-        right: 0
+        left: 0 !important
+        right: 0 !important
         bottom: 0
 
     .owl-carousel
@@ -127,3 +126,48 @@
     .price
         font-size: 1.2rem
         font-weight: 700
+
+    &__warning
+        .sign
+            position: relative
+            z-index: 3
+
+        position: relative
+        &:hover > .installment-payment__info
+            visibility: visible
+            transition: none
+
+        .installment-payment
+            &__title
+                font-weight: 600
+
+            &__info
+                position: absolute
+                color: $white
+                left: 10px
+                top: -220px
+                width: 200px
+                font-size: 14px
+                padding: 15px 10px
+                z-index: 2
+                background: rgba(38, 50, 63, .9)
+                visibility: hidden
+                transition: visibility $transition
+
+                ul
+                    font-size: 12px
+
+                li
+                    padding: 3px 0
+
+            &__btn
+                color: $white
+                background: none
+                border: 2px solid $white
+                width: 100%
+                padding: 10px 15px
+                transition: none
+
+                &:hover
+                    color: $primary
+                    border-color: $primary

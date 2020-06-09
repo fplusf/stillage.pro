@@ -1,5 +1,6 @@
 .stillage-link-button,
 .stillage-link-button-gray,
+.stillage-link-button-white,
 .stillage-link-button-primary
     @extend .stillage-button
     text-decoration: none !important
@@ -16,6 +17,15 @@
 
 .stillage-link-button-primary
     @extend .stillage-button-primary
+
+.stillage-link-button-white
+    border-color: $white
+    transition: $transition
+    color: $white
+    &:hover
+        background: $white
+        border-color: $white
+        color: $primary
 
 .stillage-button,
 .stillage-button-gray,
@@ -52,23 +62,26 @@
 .remove-button
     width: 25px
     height: 25px
-    font-size: 16px
     border: none
     color: $white
-    display: flex
-    align-items: center
-    justify-content: center
+    line-height: 23px
 
 .remove-button
     background: lighten($gray, 6%)
+    font-size: 16px
+    font-weight: 700
 
 .add-button
     background: $primary
+    font-size: 23px
 
 .add-button-black
     background: $black
+    font-size: 23px
 
 .counter
     height: 25px
     background: $light-gray
-    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center

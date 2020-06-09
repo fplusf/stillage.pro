@@ -124,11 +124,14 @@ a
     height: 100%
 
 .slide-count
-    left: 115px
+    left: 20%
     bottom: 42px
     background: rgba(0, 0, 0, 0.041)
     padding: 3px 5px
     z-index: 4
+
+    +respond-to(laptop)
+        left: 115px
 
     +respond-to(phone-land)
         bottom: 30px
@@ -138,9 +141,12 @@ a
     & .owl-nav
         margin-top: 10px
         position: absolute
-        right: 120px
+        right: 20%
         bottom: 45px
 
+        +respond-to(laptop)
+            right: 240px
+            
         +respond-to(phone-land)
             margin-top: 10px
             position: absolute
@@ -154,9 +160,12 @@ a
     & .owl-dots
         position: absolute
         bottom: 45px
-        left: 152px
+        left: 22%
         display: flex
         text-align: center
+
+        +respond-to(laptop)
+            left: 152px
 
         +respond-to(phone-land)
             display: none

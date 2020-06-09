@@ -11,8 +11,8 @@ const groupMQ = require('gulp-group-css-media-queries');
 const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const del = require('del');
-const imagemin = require('gulp-imagemin');
 const terser = require('gulp-terser');
+const imagemin = require('gulp-imagemin');
 // const ts = require('gulp-typescript'),
 //     tsProject = ts.createProject('tsconfig.json');
 
@@ -21,11 +21,20 @@ const cssNanoConfig = {
     autoprefixer: false,
 };
 
-/*
- * Public tasks
- */
-function compressImg() {
-    return src('src/img/**/*').pipe(imagemin()).pipe(dest('dist/img'));
+/*** Minifiying Images */  
+function minifyImages() {
+    return src('src/img/**/*')
+        .pipe(
+            imagemin([
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.mozjpeg({ quality: 75, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 5 }),
+                imagemin.svgo({
+                    plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+                }),
+            ])
+        )
+        .pipe(dest('dist/img'));
 }
 
 function copyFonts() {
@@ -149,9 +158,9 @@ const defaultTasks = parallel(
             compileSASS,
             concatJSLibs,
             compileHtml,
-            compressImg,
             copyFonts,
-            concatJs
+            concatJs,
+            minifyImages
         ),
         serve
     ),

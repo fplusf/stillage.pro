@@ -1,25 +1,5 @@
-@import '../sass/_vars'
-
-.call__us
-    background: $primary
-    
-    &__color-header
-        color: $dark-gray
-    &__light-gray
-        background-color: $light-gray
-        &__responsive
-            &__square
-                width: 15px
-                height: 15px
-                background: $black
-                position: relative
-                margin-left: -8px
-            &__block
-                +respond-to(phone-land)
-                    border-left: 1px solid;
-                    margin-left: 8px
-            &__block-none
-                +respond-to(phone-land)
-                    margin-left: 8px
-            &__media-body
-                margin-top: -2px
+.call-offer
+    &__input
+        width: 50%
+        +respond-to(phone)
+            width: 100%

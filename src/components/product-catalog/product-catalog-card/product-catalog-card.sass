@@ -1,5 +1,6 @@
 .product-card-simple,
 .product-card-horizontal
+    position: relative
     margin-bottom: 30px
     +respond-to(phone)
         height: 180px
@@ -30,6 +31,8 @@
             border: none
             color: $gray
             transition: $transition
+            height: 70px
+            width: 70px
 
 .product-card-simple
     &__photo
@@ -51,6 +54,8 @@
         flex: 1
         &__button
             right: 37px
+            position: relative
+            z-index: 34
 
     &__photo
         flex: 2

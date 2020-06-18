@@ -5,59 +5,59 @@
         background-image: linear-gradient(180deg,rgba(0, 0, 0, 0) -18.91%,rgba(0, 0, 0, 0.59) 57.57%),url(../img/buy-out/photo1.png)
         background-repeat: round
         height: 510px
-        &__block
-            height: 100%
-            &__title
-                font-size: 2rem
-                +respond-to(tablet)
-                    font-size: 2rem
-                +respond-to(phone-land)
-                    font-size: 20px
+    &__block
+        height: 100%
+    &__title
+        font-size: 2rem
+        +respond-to(tablet)
+            font-size: 2rem
+        +respond-to(phone-land)
+            font-size: 20px
 
-        &__list-item-one
+    &__list-item-one
+        margin-left: -16px
+        +respond-to(laptop)
             margin-left: -16px
-            +respond-to(laptop)
-                margin-left: -16px
-            +respond-to(tablet)
-                margin-left: -16px
-            +respond-to(phone-land)
-                margin-left: 16px
-        &__list-item
-            &__text
-                margin-left: 19px
-            &__icon
-                background-color: $white
-                color: $white
-                width: 6px
-                height: 6px
-                vertical-align: middle
-                margin-top: -2px
-            font-size: 16px
-            +respond-to(tablet)
-                margin-left: -17px
-            +respond-to(phone-land)
-                margin-left: 0px
+        +respond-to(tablet)
+            margin-left: -16px
+        +respond-to(phone-land)
+            margin-left: 16px
+    &__list-item-text
+        margin-left: 19px
+    &__list-item
+        &__icon
+            background-color: $white
+            color: $white
+            width: 6px
+            height: 6px
+            vertical-align: middle
+            margin-top: -2px
+        font-size: 16px
+        +respond-to(tablet)
+            margin-left: -17px
+        +respond-to(phone-land)
+            margin-left: 0px
 
     &__color-header
         color: $dark-gray
     &__light-gray
         background-color: $light-gray
-        &__responsive
-            &__square
-                width: 15px
-                height: 15px
-                background: $black
-                position: relative
-                margin-left: -8px
-            &__block
-                +respond-to(phone-land)
-                    border-left: 1px solid;
-                    margin-left: 8px
-            &__block-none
-                +respond-to(phone-land)
-                    margin-left: 8px
-            &__media-body
-                margin-top: -2px
+    &__responsive-square
+        width: 15px
+        height: 15px
+        background: $black
+        position: relative
+        margin-left: -8px
+    &__responsive-block
+        +respond-to(phone-land)
+            border-left: 1px solid;
+            margin-left: 8px
+    &__responsive-block-none
+        +respond-to(phone-land)
+            margin-left: 8px
+    &__responsive-media-body
+            margin-top: -2px
+        
     &__red
         background: $primary
         &__color-white
@@ -70,9 +70,9 @@
     &__square
         position: relative
         margin-top: -8px
-        &__commons
-            width: 15px
-            height: 15px
-            background: $black
+    &__square-commons
+        width: 15px
+        height: 15px
+        background: $black
     &__border-bottom
         border-bottom: 1px solid $black

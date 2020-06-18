@@ -359,11 +359,13 @@ allComparisionPageBtns.forEach((btn, index) => {
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('mobile-menu-modal_active');
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     mobileMenuOverlay.classList.toggle('mobile-menu-overlay_active');
 });
 
 mobileMenuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('mobile-menu-modal_active');
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
     mobileMenuOverlay.classList.remove('mobile-menu-overlay_active');
 });
 

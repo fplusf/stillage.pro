@@ -13,8 +13,6 @@ const fileinclude = require('gulp-file-include');
 const del = require('del');
 const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
-// const ts = require('gulp-typescript'),
-//     tsProject = ts.createProject('tsconfig.json');
 
 const cssNanoConfig = {
     discardComments: { removeAll: true },

@@ -1,12 +1,10 @@
-<div class="product-card-horizontal d-flex justify-content-between p-4">
+<a href="@@cardLink" class="product-card-horizontal d-flex justify-content-between p-4">
     <div class="info d-flex justify-content-between align-items-end mr-3 mr-sm-0">
-        <a href="@@cardLink" class="text-decoration-none">
-            <div class="h6 info__title">
-                @@title
-            </div>
-        </a>
+        <div class="h6 info__title">
+            @@title
+        </div>
 
-        <button class="info__button position-absolute  d-none d-sm-block">
+        <button class="info__button position-absolute  d-none d-sm-block" onclick="event.preventDefault()">
             <svg width="14" height="22" viewBox="0 0 14 22">
                 <path d="M3.16536 1L0.832031 3.33333L8.4987 11L0.832031 18.6667L3.16536 21L13.1654 11L3.16536 1Z"
                     stroke="#F4F7FB" stroke-width="0.5" />
@@ -15,8 +13,6 @@
     </div>
 
     <div class="product-card-horizontal__photo">
-        <a href="@@cardLink" class="text-decoration-none">
-            <img src="@@photo" class="h-100 w-100" alt="Cart photo">
-        </a>
+        <img src="@@photo" class="h-100 w-100" alt="Cart photo">
     </div>
-</div>
+</a>

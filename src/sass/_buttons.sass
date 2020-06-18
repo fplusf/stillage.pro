@@ -21,6 +21,12 @@
 .stillage-link-button-white
     @extend .stillage-button-white
 
+.stillage-link-button-black
+    @extend .stillage-button-black
+
+
+
+
 .stillage-button,
 .stillage-button-gray,
 .stillage-button-primary,
@@ -57,6 +63,14 @@
     color: $primary
     &:hover
         background: $primary
+        color: $white
+
+.stillage-button-black
+    border-color: $black
+    transition: $transition
+    color: $black
+    &:hover
+        background: $black
         color: $white
 
 

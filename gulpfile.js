@@ -158,7 +158,7 @@ const defaultTasks = parallel(
             compileHtml,
             copyFonts,
             concatJs,
-            minifyImages
+            // minifyImages
         ),
         serve
     ),

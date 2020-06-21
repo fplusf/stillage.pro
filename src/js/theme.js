@@ -356,6 +356,37 @@ allComparisionPageBtns.forEach((btn, index) => {
 });
 
 /******************* Mobile Hamburger menu manipulation *****************/
+let socialMediaOpenBtn = document.querySelector('.drawer-menu__social-media'),
+    burgerCatalogBtn = document.querySelector('.drawer-menu__product-catalog'),
+    burgerCatalogPage = document.querySelector('.burger-catalog'),
+    socialMediaPage = document.querySelector('.burger__social-networks'),
+    burgerBackBtn = document.querySelectorAll('.burger-top-bar__back-btn'),
+    burgerCloseBtn = document.querySelectorAll('.burger-top-bar__close-btn');
+
+socialMediaOpenBtn.addEventListener('click', () => {
+    socialMediaPage.classList.add('burger__social-networks_active');
+});
+
+burgerBackBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        socialMediaPage.classList.remove('burger__social-networks_active');
+        burgerCatalogPage.classList.remove('burger-catalog_active');
+    });
+});
+
+burgerCloseBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        socialMediaPage.classList.remove('burger__social-networks_active');
+        burgerCatalogPage.classList.remove('burger-catalog_active');
+        mobileMenu.classList.remove('mobile-menu-modal_active');
+        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+        mobileMenuOverlay.classList.remove('mobile-menu-overlay_active');
+    });
+});
+
+burgerCatalogBtn.addEventListener('click', () => {
+    burgerCatalogPage.classList.add('burger-catalog_active');
+});
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('mobile-menu-modal_active');

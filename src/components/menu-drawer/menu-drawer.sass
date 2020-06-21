@@ -9,11 +9,26 @@
     opacity: 0
     display: none
     transition: opacity $transition
+    animation: burger-overlay .5s
 
     &_active
         display: block
         opacity: 1
 
+@keyframes burger-overlay
+
+    0% 
+        opacity: 0
+
+    40% 
+        opacity: .5
+
+    70% 
+        opacity: .9
+        
+    100% 
+        opacity: 1
+        
     
 .mobile-menu-modal
     overflow: hidden
@@ -24,7 +39,7 @@
     left: 0
     z-index: 1050
     transform: translateX(-1000px)
-    transition: transform $transition
+    transition: transform $transition linear
     display: none
     +respond-to(phone-land)
         display: block
@@ -42,6 +57,13 @@
     flex-direction: column
     padding: 40px 20px 10px 20px
 
+    a
+        font-size: 20px
+        font-weight: 600
+        color: $white
+        padding: 5px
+        display: inline-block
+
     &__close
         position: absolute
         right: -39px
@@ -52,17 +74,3 @@
         color: $white
         opacity: 0.5
 
-.menu-drawer-second-level
-    // transform: translateX(-1000px)
-    background: $white
-    width: 100%
-    height: 100%
-    position: fixed
-    left: 0
-    right: 0
-    top: 45px
-    bottom: 0
-    overflow-y: auto
-
-    &_active
-        transform: translateX(0)

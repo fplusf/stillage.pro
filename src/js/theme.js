@@ -499,8 +499,8 @@ additionalCommentClean &&
 /**************** Customized Select *******************/
 
 let select, selElmnt, selectedEl, hiddenEl, c;
-/*look for any elements with the class "custom-select":*/
-select = document.getElementsByClassName('custom-select');
+/*look for any elements with the class "stillage-custom-select":*/
+select = document.getElementsByClassName('stillage-custom-select');
 for (let i = 0; i < select.length; i++) {
     selElmnt = select[i].getElementsByTagName('select')[0];
     /*for each element, create a new DIV that will act as the selected item:*/
@@ -561,7 +561,7 @@ function closeAllSelect(elmnt) {
         yl,
         arrNo = [];
     x = document.getElementsByClassName('select-items');
-    y = document.getElementsByClassName('custom-select');
+    y = document.getElementsByClassName('stillage-custom-select');
     xl = x.length;
     yl = y.length;
     for (i = 0; i < yl; i++) {

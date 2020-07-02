@@ -113,6 +113,7 @@ function compileHtml() {
             fileinclude({
                 prefix: '@@',
                 basepath: '@root',
+                context: ['test1', 'test2', 'test3']
             })
         )
         .pipe(dest('./dist/'))

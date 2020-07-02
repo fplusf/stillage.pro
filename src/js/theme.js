@@ -468,22 +468,12 @@ recieveMethodCard &&
                 if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
             });
 
+            if (card === recieveMethodCard[0]) {
+                reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
+            }
+
             if (card === recieveMethodCard[1]) {
                 reciveMethodWrapper.classList.add('receive-wrapper__optional_active');
-
-                document.querySelector('.optional-payment-form-wrapper').classList =
-                    'optional-payment-form-wrapper_active';
-                document.querySelector('.payment-form-wrapper_active').classList = 'payment-form-wrapper';
-
-                document.querySelector('.optional-assembly').classList = 'row optional-assembly_active';
-            } else {
-                reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
-
-                document.querySelector('.optional-payment-form-wrapper_active').classList =
-                    'optional-payment-form-wrapper';
-                document.querySelector('.payment-form-wrapper').classList = 'payment-form-wrapper_active';
-
-                document.querySelector('.optional-assembly_active').classList = 'row optional-assembly';
             }
 
             card.classList.add('recieve-method__card_active');

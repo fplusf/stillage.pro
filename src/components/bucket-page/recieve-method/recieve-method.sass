@@ -112,6 +112,7 @@
             +respond-to(tablet)
                 left: -216px
                 right: -36px
+                width: 200px
             
             +respond-to(phone-land)
                 top: 13px
@@ -209,14 +210,18 @@
 .popup-info
     visibility: hidden
     position: absolute
-    left: -15px
+    left: 5%
     top: 20px
     max-width: 250px
+    min-width: 100px
     width: 200px
     padding: 10px
     font-size: 11px
     background-color: rgba(38, 50, 63, 0.8)
     transition: visibility $transition
+
+    +respond-to(phone-land)
+        width: 25vw
 
     .sign
         position: absolute

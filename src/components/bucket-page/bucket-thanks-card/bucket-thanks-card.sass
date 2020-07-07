@@ -1,18 +1,46 @@
-.backet-thanks-card
-    background: #FFFFFF
-    box-shadow: 0px 6px 16px rgba(169, 186, 205, 0.11)
-    padding: 15px 15px 15px 0
-    +respond-to(phone-land)
-        padding: 15px 0
-    &__svg-icon
-        margin-top: -4px
-    &__online-key
-        min-width: 120px
-    &__font-weight
-        font-weight: 600
-    &__document
-        color: $dark-gray
+.bucket-thanks-card
+    display: flex
+    padding: 15px 30px
+    box-shadow: $shadow
+    height: 150px
+
+    &__img-wrapper
+        width: 30%
+        max-height: 100%
+        padding-right: 1rem
+
+    &__description
+        width: 40%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-right: 1rem
+
+    &__prices
+        display: flex
+
+    &__actions
+        width: 30%
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+    &__selected-services
+        list-style: none
+        padding: 0
+        margin-bottom: 0
+        display: flex
+        align-self: flex-end
+        flex-direction: column
+        li
+            display: inline-block
+            padding-bottom: 4px
+            color: $dark-gray
+            svg
+                margin-right: 6px
+
+    &__btn
         font-weight: 600
         &:hover
+            font-weight: 600
             color: $primary
-    

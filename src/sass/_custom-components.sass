@@ -1,6 +1,6 @@
 /***************** CUztomized Select box ***********/
 
-.custom-select
+.stillage-custom-select
 	appearance: none
 	position: relative
     height: 50px
@@ -28,11 +28,11 @@
 
 
 .select-arrow-active
-	.custom-select__icon
+	.stillage-custom-select__icon
 		top: 26px
 		transform: rotate(90deg)
 
-.custom-select select
+.stillage-custom-select select
 	display: none
 
 .select-selected
@@ -96,7 +96,7 @@
     cursor: pointer
 
 /* Create a custom radio button */
-.radio-checkmark
+.radio-stillage-checkmark
     position: absolute
     top: 0px
     left: 0
@@ -106,26 +106,26 @@
     border: 1px solid $dark-gray
 
 /* On mouse-over, add a grey background color */
-.radio-container:hover input ~ .radio-checkmark
+.radio-container:hover input ~ .radio-stillage-checkmark
     background-color: lighten($gray, 10%)
 
 /* When the radio button is checked, add a blue background */
-.radio-container input:checked ~ .radio-checkmark
+.radio-container input:checked ~ .radio-stillage-checkmark
     background-color: transparent
     border: 1px solid $primary
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.radio-checkmark:after
+.radio-stillage-checkmark:after
     content: ""
     position: absolute
     display: none
 
 /* Show the indicator (dot/circle) when checked */
-.radio-container input:checked ~ .radio-checkmark:after
+.radio-container input:checked ~ .radio-stillage-checkmark:after
     display: block
 
 /* Style the indicator (dot/circle) */
-.radio-container .radio-checkmark:after
+.radio-container .radio-stillage-checkmark:after
     top: 4px
     left: 4px
     width: 10px
@@ -166,7 +166,7 @@
 
 /***************** Filter Price Checkboxes *************/
 /* The container */
-.checkbox-container
+.stillage-checkbox-container
   display: block
   position: relative
   padding-left: 35px
@@ -174,7 +174,7 @@
   cursor: pointer
 
 /* Hide the browser's default checkbox */
-.checkbox-container input
+.stillage-checkbox-container input
   position: absolute
   opacity: 0
   cursor: pointer
@@ -182,7 +182,7 @@
   width: 0
 
 /* Create a custom checkbox */
-.checkmark
+.stillage-checkmark
   position: absolute
   top: 0
   left: 0
@@ -191,11 +191,11 @@
   background-color: $light-gray
 
 /* Highlight container on hover */
-.checkbox-container:hover
+.stillage-checkbox-container:hover
     color: $primary
 
 /* On mouse-over, add a grey background color */
-.checkbox-container:hover input ~ .checkmark
+.stillage-checkbox-container:hover input ~ .stillage-checkmark
   background-color: $light-gray
   height: 20px
   width: 20px
@@ -203,7 +203,7 @@
   transition: $transition
 
 /* When the checkbox is checked, add a blue background */
-.checkbox-container input:checked ~ .checkmark
+.stillage-checkbox-container input:checked ~ .stillage-checkmark
   background-color: $primary
   height: 20px
   width: 20px
@@ -211,12 +211,12 @@
   transition: $transition
 
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after
+/* Create the stillage-checkmark/indicator (hidden when not checked) */
+.stillage-checkmark:after
   content: ""
   position: absolute
   display: none
 
-/* Show the checkmark when checked */
-.checkbox-container input:checked ~ .checkmark:after
+/* Show the stillage-checkmark when checked */
+.stillage-checkbox-container input:checked ~ .stillage-checkmark:after
   display: block

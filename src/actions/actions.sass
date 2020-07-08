@@ -4,7 +4,7 @@
         height: 500px
 
     +respond-to(phone)
-        height: 94vh
+        height: 500px
 
 .actions-slide1
     background-image: url('../img/actions/first-slide.png')
@@ -195,8 +195,11 @@
     &__icon
       position: absolute
       transform: translate( -6px , 0 )
-      margin-top: 0
+      margin-top: 14px
       right: 0
+      transform: rotate(90deg)
+      transform-origin: center center
+      transition: all $transition
       
       &:before , &:after
         content: ""
@@ -205,12 +208,11 @@
         background-color: $dark-gray
         width: 2px
         height: 10px
-        
       &:before
-        transform: translate( 2px, 0 ) rotate( 45deg )
+            transform: translate( -2px, 6px ) rotate( 45deg )
           
       &:after
-        transform: translate(-4px, 0px) rotate( -45deg )
+            transform: translate( -2px , 0 ) rotate( -45deg )
 
     &__content
       color: $black
@@ -241,6 +243,11 @@
           transform: translate( 0 , 50% )
             
         &~i
+          margin-top: 4px
+          transform: rotate(0deg)
+          transform: translate( -6px , 0 )
+          transform-origin: center center
+          
           &:before
             transform: translate( -2px, 6px ) rotate( 45deg )
           
@@ -250,7 +257,7 @@
 @keyframes flipdown
   0%
     opacity: 0
-    transform-origin: top center
+    transform-origin: center center
     transform: rotateX(-90deg)
   5%
     opacity: 1
@@ -261,7 +268,7 @@
   92%
     transform: rotateX(-3deg)
   100%
-    transform-origin: top center
+    transform-origin: center center
     transform: rotateX(0deg) 
 
 /***************** End of price range *************/

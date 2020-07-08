@@ -109,15 +109,47 @@
             left: -14px
             top: 26px
 
+            +respond-to(tablet)
+                left: -216px
+                right: -36px
+                width: 200px
+            
+            +respond-to(phone-land)
+                top: 13px
+
         .sign
             position: absolute
             left: -25px
             top: 8px
             z-index: 3
 
+            +respond-to(phone-land)
+                top: -3px
+
         &:hover .popup-info
             visibility: visible
             transition: all $transition
+
+    &__warning-zone
+        width: fit-content
+        position: relative
+        +respond-to(phone-land)
+            display: none
+
+        .popup-info
+            left: -22px
+            top: 26px
+
+        .sign
+            position: absolute
+            left: -33px
+            top: 8px
+            z-index: 3
+
+        &:hover .popup-info
+            visibility: visible
+            transition: all $transition
+
 
     &__zone.select-arrow-active .popup-info
         left: -50px
@@ -178,14 +210,18 @@
 .popup-info
     visibility: hidden
     position: absolute
-    left: -15px
+    left: 5%
     top: 20px
     max-width: 250px
+    min-width: 100px
     width: 200px
     padding: 10px
     font-size: 11px
     background-color: rgba(38, 50, 63, 0.8)
     transition: visibility $transition
+
+    +respond-to(phone-land)
+        width: 25vw
 
     .sign
         position: absolute

@@ -30,7 +30,8 @@
 .stillage-button,
 .stillage-button-gray,
 .stillage-button-primary,
-.stillage-button-white
+.stillage-button-white,
+.stillage-button-black
     font-size: 14px
     outline: none
     text-decoration: none
@@ -47,7 +48,7 @@
     color: $white
     &:hover
         background: $white
-        color: $primary
+        color: $black
 
 .stillage-button-gray
     border-color: $gray
@@ -82,6 +83,9 @@
     border: none
     color: $white
     line-height: 23px
+    display: flex
+    align-items: center
+    justify-content: center
 
 .remove-button
     background: lighten($gray, 6%)

@@ -1,14 +1,19 @@
 <!-- Site footer goes here -->
 </main>
 
+<!-- Burger social media-->
+@@include('src/components/burger-social-media/burger-social-media.html')
+
+<!-- Burger catalog -->
+@@include('src/components/burger-catalog/buger-catalog.html')
 
 <!-- Site footer goes here -->
 
 <footer id="siteFooter" class="site-footer bg-footer pt-5 pb-3">
     <div class="container">
         <div class="d-block d-xl-none d-lg-none">
-            <div class="media d-flex mb-5 justify-content-between">
-                <div class="media-body">
+            <div class="media d-flex mb-5">
+                <div class="media-body mr-4">
                     <a href="/">
                         <img src="../../../img/logo/logo.png" alt="Главная – Pro Стеллаж" title="Главная – Pro Стеллаж" />
                     </a>
@@ -36,9 +41,9 @@
                 </div>
             </div>
             <div class="mt-4">
-                @@include('src/components/buttons/outline-white-button.html', {
-                "title": "Написать директору"
-                })
+                <button class="stillage-button-white">
+                    Написать директору
+                </button>
             </div>
             <div class="mt-4 footer-bar__color-white">
                 Обращаем ваше внимание на то, что данный сайт носит исключительно информационный характер и ни
@@ -87,9 +92,9 @@
                 </ul>
                 <div class="clearfix"></div>
                 <div class="mt-5">
-                    @@include('src/components/buttons/outline-white-button.html', {
-                    "title": "Написать директору"
-                    })
+                    <button class="stillage-button-white">
+                        Написать директору
+                    </button>
                 </div>
             </div>
             <div class="d-none d-lg-block text-muted pt-1 mr-4">

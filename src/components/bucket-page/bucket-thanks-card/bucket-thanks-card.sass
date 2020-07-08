@@ -1,18 +1,82 @@
-.backet-thanks-card
-    background: #FFFFFF
-    box-shadow: 0px 6px 16px rgba(169, 186, 205, 0.11)
-    padding: 15px 15px 15px 0
-    +respond-to(phone-land)
-        padding: 15px 0
-    &__svg-icon
-        margin-top: -4px
-    &__online-key
-        min-width: 120px
-    &__font-weight
+.bucket-thanks-card
+    // display: flex
+    padding: 15px 30px
+    box-shadow: $shadow
+    height: 150px
+    +respond-to(phone)
+        height: 250px
+
+    &__content-wrapper
+        height: 100%
+        +respond-to(phone)
+            height: 83%
+
+    &__img-wrapper
+        width: 30%
+        max-height: 100%
+        padding-right: 1rem
+
+        +respond-to(phone)
+            width: 48%
+            img
+                height: 50% !important
+
+    &__description
+        width: 40%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-right: 1rem
+        +respond-to(phone)
+            justify-content: flex-start
+            padding-right: 0
+            width: 60%
+
+    &__prices
+        display: flex
+        align-items: baseline
+
+    &__actions
+        width: 30%
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+    &__selected-services
+        list-style: none
+        padding: 0
+        margin-bottom: 0
+        display: flex
+        align-self: flex-end
+        flex-direction: column
+
+        li::before
+            content: ''
+            height: 7px
+            width: 7px
+            background: $gray
+            display: inline-block
+            margin-right: 4px
+
+        li
+            padding-bottom: 4px
+            color: $dark-gray
+            svg
+                margin-right: 6px
+
+    &__btn
         font-weight: 600
-    &__document
-        color: $dark-gray
-        font-weight: 600
+        align-self: flex-end
+        padding-right: 0
         &:hover
+            font-weight: 600
             color: $primary
-    
+
+    &__count
+        font-weight: 600
+        margin-right: 2rem
+
+    &__price
+        font-size: 1.3rem
+        font-weight: 600
+

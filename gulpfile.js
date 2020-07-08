@@ -22,16 +22,16 @@ const cssNanoConfig = {
 /*** Minifiying Images */  
 function minifyImages() {
     return src('src/img/**/*')
-        .pipe(
-            imagemin([
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.mozjpeg({ quality: 75, progressive: true }),
-                imagemin.optipng({ optimizationLevel: 5 }),
-                imagemin.svgo({
-                    plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-                }),
-            ])
-        )
+        // .pipe(
+        //     imagemin([
+        //         imagemin.gifsicle({ interlaced: true }),
+        //         imagemin.mozjpeg({ quality: 75, progressive: true }),
+        //         imagemin.optipng({ optimizationLevel: 5 }),
+        //         imagemin.svgo({
+        //             plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        //         }),
+        //     ])
+        // )
         .pipe(dest('dist/img'));
 }
 
@@ -113,6 +113,7 @@ function compileHtml() {
             fileinclude({
                 prefix: '@@',
                 basepath: '@root',
+                context: ['test1', 'test2', 'test3']
             })
         )
         .pipe(dest('./dist/'))

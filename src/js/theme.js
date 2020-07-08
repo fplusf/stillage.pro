@@ -356,6 +356,37 @@ allComparisionPageBtns.forEach((btn, index) => {
 });
 
 /******************* Mobile Hamburger menu manipulation *****************/
+let socialMediaOpenBtn = document.querySelector('.drawer-menu__social-media'),
+    burgerCatalogBtn = document.querySelector('.drawer-menu__product-catalog'),
+    burgerCatalogPage = document.querySelector('.burger-catalog'),
+    socialMediaPage = document.querySelector('.burger__social-networks'),
+    burgerBackBtn = document.querySelectorAll('.burger-top-bar__back-btn'),
+    burgerCloseBtn = document.querySelectorAll('.burger-top-bar__close-btn');
+
+socialMediaOpenBtn.addEventListener('click', () => {
+    socialMediaPage.classList.add('burger__social-networks_active');
+});
+
+burgerBackBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        socialMediaPage.classList.remove('burger__social-networks_active');
+        burgerCatalogPage.classList.remove('burger-catalog_active');
+    });
+});
+
+burgerCloseBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        socialMediaPage.classList.remove('burger__social-networks_active');
+        burgerCatalogPage.classList.remove('burger-catalog_active');
+        mobileMenu.classList.remove('mobile-menu-modal_active');
+        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+        mobileMenuOverlay.classList.remove('mobile-menu-overlay_active');
+    });
+});
+
+burgerCatalogBtn.addEventListener('click', () => {
+    burgerCatalogPage.classList.add('burger-catalog_active');
+});
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('mobile-menu-modal_active');
@@ -437,22 +468,12 @@ recieveMethodCard &&
                 if (innerCard !== card) innerCard.classList.remove('recieve-method__card_active');
             });
 
+            if (card === recieveMethodCard[0]) {
+                reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
+            }
+
             if (card === recieveMethodCard[1]) {
                 reciveMethodWrapper.classList.add('receive-wrapper__optional_active');
-
-                document.querySelector('.optional-payment-form-wrapper').classList =
-                    'optional-payment-form-wrapper_active';
-                document.querySelector('.payment-form-wrapper_active').classList = 'payment-form-wrapper';
-
-                document.querySelector('.optional-assembly').classList = 'row optional-assembly_active';
-            } else {
-                reciveMethodWrapper.classList.remove('receive-wrapper__optional_active');
-
-                document.querySelector('.optional-payment-form-wrapper_active').classList =
-                    'optional-payment-form-wrapper';
-                document.querySelector('.payment-form-wrapper').classList = 'payment-form-wrapper_active';
-
-                document.querySelector('.optional-assembly_active').classList = 'row optional-assembly';
             }
 
             card.classList.add('recieve-method__card_active');
@@ -468,8 +489,8 @@ additionalCommentClean &&
 /**************** Customized Select *******************/
 
 let select, selElmnt, selectedEl, hiddenEl, c;
-/*look for any elements with the class "custom-select":*/
-select = document.getElementsByClassName('custom-select');
+/*look for any elements with the class "stillage-custom-select":*/
+select = document.getElementsByClassName('stillage-custom-select');
 for (let i = 0; i < select.length; i++) {
     selElmnt = select[i].getElementsByTagName('select')[0];
     /*for each element, create a new DIV that will act as the selected item:*/
@@ -530,7 +551,7 @@ function closeAllSelect(elmnt) {
         yl,
         arrNo = [];
     x = document.getElementsByClassName('select-items');
-    y = document.getElementsByClassName('custom-select');
+    y = document.getElementsByClassName('stillage-custom-select');
     xl = x.length;
     yl = y.length;
     for (i = 0; i < yl; i++) {

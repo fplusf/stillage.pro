@@ -71,15 +71,15 @@
         +respond-to(phone-land)
             width: 100% !important
 
-    .checkmark
+    .stillage-checkmark
         background-color: $white
 
 
-    .checkbox-container input~.checkmark
+    .stillage-checkbox-container input~.stillage-checkmark
         +respond-to(phone)
             border: 1px solid $dark-gray
 
-    .checkbox-container input:checked~.checkmark
+    .stillage-checkbox-container input:checked~.stillage-checkmark
         border: 5px solid $white
 
     .payment-form-wrapper
@@ -98,6 +98,8 @@
     .popup-info
         left: 12px
         top: 14px
+        max-width: max-content
+        overflow: hidden
 
     .sign-assembly-notice:hover > .popup-info
         visibility: visible

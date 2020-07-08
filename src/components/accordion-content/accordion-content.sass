@@ -2,30 +2,32 @@
 .collapse-one
     display: none
 
+    &__delivery-info
+        padding: 40px 0px 40px 25px
+        border-left: 1px solid $dark-gray
+        margin-left: -38px
+        +respond-to(tablet)
+            margin-left: -28px
+        +respond-to(phone-land)
+            border-left: none
+
     &__header
         background: $light-gray 
+
     &__quad
         width: 15px
         height: 15px
         background: $dark-gray
-        margin-top: 46px
+        margin-top: 25px
         margin-left: -45px
         position: absolute
         +respond-to(laptop)
-            margin-left: -45px
+            margin-left: -33px
         +respond-to(tablet)
             margin-left: -35px
         +respond-to(phone-land)
-            margin-left: -5px
-
-        .row
-            padding: 40px 0px 40px 20px
-            border-left: 1px solid $dark-gray
-            margin-left: -38px
-            +respond-to(tablet)
-                margin-left: -28px
-            +respond-to(phone-land)
-                margin-left: 1px
+            display: none
+        
     &__header-city
         .dark-gray
             font-size: 12px
@@ -36,7 +38,7 @@
             +respond-to(tablet)
                 margin-left: -28px
             +respond-to(phone-land)
-                margin-left: 1px
+                border-left: none
             &__heading
                 margin-bottom: 29px
             &__quad
@@ -51,7 +53,7 @@
                 +respond-to(tablet)
                     margin-left: -48px
                 +respond-to(phone-land)
-                    margin-left: -48px
+                    display: none
             &__red
                 div 
                     width: 15px
@@ -81,7 +83,7 @@
             +respond-to(tablet)
                 margin-left: -28px
             +respond-to(phone-land)
-                margin-left: 1px
+                border-left: none
             &__quad
                 width: 15px
                 height: 15px
@@ -94,7 +96,7 @@
                 +respond-to(tablet)
                     margin-left: -48px
                 +respond-to(phone-land)
-                    margin-left: -48px
+                    display: none
     &__payment
         background: $black
         padding: 60px 0px

@@ -40,9 +40,21 @@
                     fill: $white
 
     &__button-width
-        button 
-            border: 2px solid
-            width: 100%
+            margin-top: 26px
+        +respond-to(phone-land)
+            margin-top: 16px
+        +respond-to(tablet)
+            margin-top: 26px
+        +respond-to(laptop)
+            margin-top: 26px
+        
+
+    &__button-download
+        +respond-to(laptop)
+             min-width: 142px
+        +respond-to(small-height)
+            min-width: 142px
+       
     &__footer
         &__font-size
             font-size: 16px

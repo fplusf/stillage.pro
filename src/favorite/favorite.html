@@ -29,9 +29,9 @@
 
                         <button
                             class="d-xs-flex flex-column align-items-center justify-content-center d-md-none top-bar__hamburger-menu">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
+                            <span class="bar1"></span>
+                            <span class="bar2"></span>
+                            <span class="bar3"></span>
                         </button>
 
                         @@include('src/components/menu-drawer/menu-drawer.html')
@@ -72,7 +72,7 @@
                             class="top-bar__action d-none ml-lx-4 ml-3 d-md-flex text-decoration-none align-items-center justify-content-between">
                             <a href="/favorite/favorite.html"
                                 class="d-flex align-items-center mr-4 text-decoration-none top-bar__favorite"
-                                id="msFavoriter">
+                                >
                                 <svg width="20" height="19" viewBox="0 0 20 19">
                                     <path
                                         d="M10 18.4L8.6 17C3.4 12.4 0 9.3 0 5.5C0 2.4 2.4 0 5.5 0C7.2 0 8.9 0.8 10 2.1C11.1 0.8 12.8 0 14.5 0C17.6 0 20 2.4 20 5.5C20 9.3 16.6 12.4 11.4 17L10 18.4Z"
@@ -84,7 +84,7 @@
 
                             <a href="/comparison/comparison.html"
                                 class="d-flex align-items-center mr-3 text-decoration-none top-bar__compare"
-                                id="msCompare">
+                                >
                                 <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
                                     <path
                                         d="M1.62162 0.892578C0.724307 0.892578 0 1.61689 0 2.5142C0 3.41152 0.724307 4.13582 1.62162 4.13582C2.51893 4.13582 3.24324 3.41152 3.24324 2.5142C3.24324 1.61689 2.51893 0.892578 1.62162 0.892578Z"
@@ -354,14 +354,13 @@
                             <p class="white mb-5">Подпишитесь на рассылку и узнавайте <br />
                                 о новинках и акциях первыми</p>
                             @@include('src/components/input/input.html', { "title": "Адрес электронной почты" })
-                            <div class="custom-control custom-checkbox mt-3 mb-4">
-                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing" />
-                                <label class="text-white custom-control-label" for="customControlAutosizing">
-                                    Я согласен на
-                                    обработку персональных <br />
-                                    данных, а также с условиями подписки
-                                </label>
-                            </div>
+                            <label class="stillage-checkbox-container text-white mt-3">
+                                Я согласен на обработку
+                                персональных
+                                данных, а также с условиями подписки
+                                <input type="checkbox">
+                                <span class="stillage-checkmark"></span>
+                            </label>
                             <button class="stillage-button-white w-100">
                                 Подписаться
                             </button>

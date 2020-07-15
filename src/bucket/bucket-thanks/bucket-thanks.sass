@@ -23,10 +23,6 @@
         +respond-to(phone-land)
             padding-left: 8px
 
-    &__text-thanks
-        +respond-to(phone-land)
-            max-width: 345px
-            margin: inherit
     &__right-panel
         padding: 30px
         &__font-text
@@ -38,6 +34,9 @@
             &:hover
                 svg
                     fill: $white
+
+    &__button-download-file
+        min-width: 260px
 
     &__button-width
         margin-top: 26px
@@ -65,3 +64,11 @@
         svg
             margin-top: -4px
 
+.custom-file-upload
+    display: inline-block
+    cursor: pointer
+    margin: 0
+    min-width: 190px
+
+input[type="file"]
+    display: none

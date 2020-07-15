@@ -293,30 +293,39 @@
 
     <!-- Конструктор гардеробных систем -->
     <div class="titan-gs__event">
-        <div class="d-flex align-items-end buyout__img-header__block">
+        <div class="d-flex align-items-center buyout__block">
             <div class="container">
-                <div class="row white">
-                    <div class="col-12 col-md-6 pb-5">
-                        <h2 class="title white mb-4 d-none d-sm-none d-md-block">
-                            Конструктор гардеробных <br>
-                            систем
-                        </h2>
+                <div class="d-flex align-items-center buyout__block">
+                    <div class="d-flex justify-content-between white w-100">
+                        <div>
+                            <h2 class="title white mb-4 d-none d-sm-none d-md-block">
+                                Конструктор гардеробных <br>
+                                систем
+                            </h2>
 
-                        <!-- title mobile -->
-                        <h2 class="title white mb-4 d-block d-xl-none d-lg-none d-md-none">
-                            Конструктор <br>
-                            гардеробных систем
-                        </h2>
-                        <p class="m-0">
-                            Соберите свою <br>
-                            гардеробную систему
-                        </p>
+                            <!-- title mobile -->
+                            <h2 class="title white mb-4 d-block d-xl-none d-lg-none d-md-none">
+                                Конструктор <br>
+                                гардеробных систем
+                            </h2>
+                            <p class="m-0">
+                                Соберите свою <br>
+                                гардеробную систему
+                            </p>
+                        </div>
+                        <div class="d-none d-sm-none d-md-block align-self-end">
+                            <div class="bucket-thanks__button-width">
+                                <button class="stillage-button-white w-100" style="min-width: 370px">
+                                    Собрать свою гардеробную на конструкторе
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 align-self-end bucket-thanks__button-width pb-5">
-                        @@include('src/components/buttons/outline-white-button.html', {
-                        "title": "Собрать свою гардеробную на конструкторе"
-                        })
-                    </div>
+                </div>
+                <div class="d-block d-xl-none d-lg-none d-md-none mt-4 pt-1">
+                    <button class="stillage-button-white w-100">
+                        Собрать свою гардеробную на конструкторе
+                    </button>
                 </div>
             </div>
         </div>
@@ -336,17 +345,17 @@
                         Сделать гардеробную больше и удобнее в любой момент? Легко!
                     </div>
                 </div>
-                <div class="bucket-thanks__button-width col-12 col-md-4  ml-auto d-none d-sm-none d-md-block">
-                    @@include('src/components/buttons/outline-white-button.html', {
-                    "title": "Рассчитать бесплатно"
-                    })
+                <div class="col-12 col-md-4 ml-auto d-none d-sm-none d-md-block">
+                    <button class="stillage-button-white w-100" style="max-width: 250px;float: right;">
+                        Рассчитать бесплатно
+                    </button>
                 </div>
             </div>
 
             <div class="bucket-thanks__button-width ml-auto d-block d-xl-none d-lg-none d-md-none mt-3">
-                @@include('src/components/buttons/outline-white-button.html', {
-                "title": "Рассчитать бесплатно"
-                })
+                <button class="stillage-button-white w-100">
+                    Рассчитать бесплатно
+                </button>
             </div>
         </div>
     </div>

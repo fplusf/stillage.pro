@@ -1,11 +1,33 @@
 @import '../../sass/_vars'
-.bg-footer
-    background-color: $black
+
+.site-footer
+    padding: 3rem 0
+    +respond-to(phone-land)
+        padding: 3rem 0 5rem 0
+
+    &__logo
+        display: flex
+        align-items: baseline
+        flex-direction: column
+
+        img
+            width: 200px
+            +respond-to(phone)  
+                width: 120px
+
+        +respond-to(phone)
+            flex-direction: row
+            justify-content: space-between
 
 .footer-bar
     &__text
         font-size: 12px
         max-width: 230px
+        +respond-to(phone)
+            max-width: 100%
+            color: $gray
+            order: 2
+
     &__color-white
         color: $white
         font-size: 12px
@@ -19,8 +41,10 @@
         color: $white
     &__color-gray
         color: #ffffff
-        opacity: 0.2
-    
+        opacity: 0.2  
+
+    +respond-to(phone)
+        flex-direction: column-reverse
 
 .site-footer__nav
     padding: 0

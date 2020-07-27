@@ -3,17 +3,30 @@
 
 <div class="bread-crumbs white d-none d-md-flex w-100">
     <div class="container">
-        <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
-
-        <span class="px-2">
-            <svg width="4" height="4" viewBox="0 0 4 4">
-                <rect width="4" height="4" fill="#FE3362" />
-            </svg>
-        </span>
-
-        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="primary">
-            Гардеробные системы
-        </a>
+        <ol itemscope itemtype="http://stillage.pro" class="d-flex">
+            <li itemprop="itemListElement" itemscope itemtype="http://stillage.pro/bucket/bucket.html">
+                <a itemprop="item" href="/catalog/catalog.html" class="dark-gray">
+                    <span itemprop="name">Каталог товаров</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+        
+            <span class="mx-2">
+                <svg width="4" height="4" viewBox="0 0 4 4">
+                    <rect width="4" height="4" fill="#848E99" />
+                </svg>
+            </span>
+        
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://stillage.pro/bucket/checkout/checkout.html">
+                <a itemprop="item"
+                    href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html"
+                    class="primary">
+                    <span itemprop="name">Гардеробные системы</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
     </div>
 
 </div>

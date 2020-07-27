@@ -1,16 +1,33 @@
-@@include('src/components/header/header.html', {"title": "Металлические стеллажи", "activeCatalog": "black"})
+@@include('src/components/header/header.html', {"title": "Металлические стеллажи", "activeCatalog":
+"black"})
 
 <div class="bread-crumbs white d-flex w-100">
     <div class="container">
-        <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
+        <ol itemscope itemtype="http://stillage.pro" class="d-flex">
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://stillage.pro/bucket/bucket.html">
+                <a itemprop="item" href="/catalog/catalog.html" class="dark-gray">
+                    <span itemprop="name">Каталог товаров</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
 
-        <span class="px-2">
-            <svg width="4" height="4" viewBox="0 0 4 4">
-                <rect width="4" height="4" fill="#848E99" />
-            </svg>
-        </span>
+            <span class="mx-2">
+                <svg width="4" height="4" viewBox="0 0 4 4">
+                    <rect width="4" height="4" fill="#848E99" />
+                </svg>
+            </span>
 
-        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="primary">Металлические стеллажи</a>
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://stillage.pro/bucket/checkout/checkout.html">
+                <a itemprop="item"
+                    href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html"
+                    class="primary">
+                    <span itemprop="name">Металлические стеллажи</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
     </div>
 
 </div>
@@ -147,7 +164,8 @@
                 <div class="d-flex">
                     <h4 class="dark-gray mr-2 mr-md-5 catalog__title">Все товары категории</h4>
 
-                    <div class="catalog-metalicheskoe__sorting mr-4 d-none d-md-flex align-items-center">
+                    <div
+                        class="catalog-metalicheskoe__sorting mr-4 d-none d-md-flex align-items-center">
                         <span class="gray mr-3">Сортировать:</span>
                         <a href="#" class="primary mr-3 text-decoration-none">По популярности</a>
                         <a href="#" class="text-decoration-none">По цене</a>
@@ -361,7 +379,8 @@
 
         <div class="row hidden" id="catalogListViewMode">
             <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
                 "photo": "../../img/product-card/image 87.png",
                 "badge1": "Акция",
                 "badge2":"",
@@ -376,23 +395,8 @@
                 })
             </div>
             <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
-                "photo": "../../img/product-card/image 87.png",
-                "badge1": "Акция",
-                "badge2":"",
-                "badge3":"",
-                "bagdeBg1": "primary-bg",
-                "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
-                "info": "ВШГ - 1156x2400x450 мм",
-                "oldPrice": "1 957₽",
-                "price": "1 690₽",
-                "button": "В корзину",
-                "link": "#"
-                })
-            </div>
-
-            <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
                 "photo": "../../img/product-card/image 87.png",
                 "badge1": "Акция",
                 "badge2":"",
@@ -408,7 +412,8 @@
             </div>
 
             <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
                 "photo": "../../img/product-card/image 87.png",
                 "badge1": "Акция",
                 "badge2":"",
@@ -424,7 +429,8 @@
             </div>
 
             <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
                 "photo": "../../img/product-card/image 87.png",
                 "badge1": "Акция",
                 "badge2":"",
@@ -440,7 +446,25 @@
             </div>
 
             <div class="col-12">
-                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
+                "photo": "../../img/product-card/image 87.png",
+                "badge1": "Акция",
+                "badge2":"",
+                "badge3":"",
+                "bagdeBg1": "primary-bg",
+                "title": "Архивный стеллаж MS STANDART до 100 кг на полку",
+                "info": "ВШГ - 1156x2400x450 мм",
+                "oldPrice": "1 957₽",
+                "price": "1 690₽",
+                "button": "В корзину",
+                "link": "#"
+                })
+            </div>
+
+            <div class="col-12">
+                @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html',
+                {
                 "photo": "../../img/product-card/image 87.png",
                 "badge1": "Акция",
                 "badge2":"",

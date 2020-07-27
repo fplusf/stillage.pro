@@ -3,30 +3,48 @@
 
 <div class="bread-crumbs white d-none d-md-flex w-100">
     <div class="container">
-        <a href="/catalog/catalog.html" class="dark-gray">Каталог товаров</a>
-
-        <span class="px-2">
-            <svg width="4" height="4" viewBox="0 0 4 4">
-                <rect width="4" height="4" fill="#848E99" />
-            </svg>
-        </span>
-
-        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="dark-gray">Металлические
-            стеллажи</a>
-
-        <span class="px-2">
-            <svg width="4" height="4" viewBox="0 0 4 4">
-                <rect width="4" height="4" fill="#848E99" />
-            </svg>
-        </span>
-
-        <a href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html" class="primary">Среднегрузовые
-            стеллажи</a>
-
+        <ol itemscope itemtype="http://stillage.pro" class="d-flex">
+            <li itemprop="itemListElement" itemscope itemtype="http://stillage.pro/bucket/bucket.html">
+                <a itemprop="item" href="/catalog/catalog.html" class="dark-gray">
+                    <span itemprop="name">Каталог товаров</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+        
+            <span class="mx-2">
+                <svg width="4" height="4" viewBox="0 0 4 4">
+                    <rect width="4" height="4" fill="#848E99" />
+                </svg>
+            </span>
+        
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://stillage.pro/bucket/checkout/checkout.html">
+                <a itemprop="item" href="/catalog/stillage-metalicheskoe/stillage-metalicheskoe.html"
+                    class="dark-gray">
+                    <span itemprop="name">Металлические стеллажи</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        
+            <span class="mx-2">
+                <svg width="4" height="4" viewBox="0 0 4 4">
+                    <rect width="4" height="4" fill="#848E99" />
+                </svg>
+            </span>
+        
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://stillage.pro/bucket/checkout/checkout.html">
+                <a itemprop="item"
+                    href="/catalog/stillage-metalicheskoe/stillage-elements/stillage-elements.html"
+                    class="primary">
+                    <span itemprop="name">Среднегрузовые
+                    стеллажи</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
     </div>
-
 </div>
-
 
 <div class="container">
     <div class="row">

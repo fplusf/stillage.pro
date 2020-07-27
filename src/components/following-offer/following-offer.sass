@@ -1,11 +1,35 @@
-@import '../sass/_vars'
-@import '../../sass/_custom-components'
+.subscribe
+    padding: 3rem 0
+    background: $primary
+    color: $white
 
-.course
-    &__red
-        background: $primary
-        &__color-white
+    &__text
+        +respond-to(phone)
+            margin-bottom: 2rem
+
+    &__form
+        display: flex
+        +respond-to(phone)
+            flex-direction: column
+
+    &__input
+        height: 45px
+        width: 90%
+        border: none
+        color: $dark-gray
+        padding: 0 15px
+        margin-bottom: 1rem
+        +respond-to(phone)
+            width: 100%
+
+    label
+        +respond-to(phone)
+            margin-bottom: 2rem
+
+    &__submit
+        width: 90% !important
+
+    .stillage-checkbox-container
+        color: $white
+        &:hover
             color: $white
-
-.custom-control-label
-    padding-left: 40px

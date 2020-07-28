@@ -111,142 +111,49 @@
             </div>
         </div>
 
-        <!------ Accordion Mobile Filter -->
-
-
         <div id="mobileProductFilter" class="mobile-filter-wrapper d-md-none">
-            <div class="d-flex justify-content-between mb-5">
-                <h6 class="dark-gray">Отображение карточек</h6>
-
-                <div class="catalog-view-buttons">
-                    <button class="icon-button tile-view-btn active">
-                        <svg width="15" height="15" viewBox="0 0 15 15">
-                            <path d="M12 0H15V3H12V0Z" />
-                            <path d="M6 0H9V3H6V0Z" />
-                            <path d="M0 0H3V3H0V0Z" />
-                            <path d="M12 6H15V9H12V6Z" />
-                            <path d="M6 6H9V9H6V6Z" />
-                            <path d="M0 6H3V9H0V6Z" />
-                            <path d="M12 12H15V15H12V12Z" />
-                            <path d="M6 12H9V15H6V12Z" />
-                            <path d="M0 12H3V15H0V12Z" />
-                        </svg>
-                    </button>
-
-                    <button class="icon-button list-view-btn pr-0">
-                        <svg width="19" height="15" viewBox="0 0 19 15">
-                            <path d="M0 0H19V3H0V0Z" />
-                            <path d="M0 6H19V9H0V6Z" />
-                            <path d="M0 12H19V15H0V12Z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="filter white-bg shadow-light">
-                <ul class="accordion-list dark-gray">
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Цена
-                        </h6>
-                        <div class="accordion-item__content">
-                            <div class="mb-4 slider-wrapper">
-
-                                <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
-                                <div class="price-range__value-up price-value position-absolute">33</div>
-
-                                <div class="slider"></div>
-                            </div>
-
-                            <div class="d-flex justify-content-between mb-3">
-                                <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
-                                <div class="price-range__up w-100 text-center price-value">до 29 000</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100 view-gray">Серия</h6>
-                        <div class="accordion-item__content">
-                            <label class="stillage-checkbox-container">Все
-                                <input type="checkbox">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-
-                            <label class="stillage-checkbox-container">Только акции
-                                <input type="checkbox" checked="checked">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-
-                            <label class="stillage-checkbox-container">Только новинки
-                                <input type="checkbox" checked="checked">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Нагрузка на полку
-                        </h6>
-                        <div class="accordion-item__content">
-                            <label class="stillage-checkbox-container">Samsung
-                                <input type="checkbox" checked="checked">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-                            <label class="stillage-checkbox-container">Apple
-                                <input type="checkbox">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-                            <label class="stillage-checkbox-container">Xiaomi
-                                <input type="checkbox">
-                                <span class="stillage-checkmark"></span>
-                            </label>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Общая нагрузка
-                        </h6>
-                        <div class="accordion-item__content">
-                            <div class="d-flex">
-                                <input type="number" class="w-100 mr-4">
-                                <input type="number" class="w-100">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="accordion-item">
-                        <input type="checkbox" class="accordion-item__input" checked>
-                        <i class="accordion-item__icon"></i>
-                        <h6 class="panel-title w-100">Наличие на складе
-                        </h6>
-                        <div class="accordion-item__content">
-                            <div class="d-flex">
-                                <input type="number" class="w-100 mr-4">
-                                <input type="number" class="w-100">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="w-100 mt-4 py-4">
+            <div class="filter white-bg shadow-light pb-3 p-3">
+                @@include('src/components/wardrobe-accordion-filters/wardrobe-accordion-filters.html')
+               <div class="w-100 mt-4 py-4">
                     <button class="filter-reset-btn icon-button float-right">
                         Сбросить
                     </button>
                 </div>
-
             </div>
         </div>
 
-
         <div class="d-flex w-100 justify-content-between">
+
+            <div id="mobileProductFilter" class="mobile-filter-wrapper d-md-none">
+                <div class="d-flex justify-content-between mb-5">
+                    <h6 class="dark-gray">Отображение карточек</h6>
+            
+                    <div class="catalog-view-buttons">
+                        <button class="icon-button tile-view-btn active">
+                            <svg width="15" height="15" viewBox="0 0 15 15">
+                                <path d="M12 0H15V3H12V0Z" />
+                                <path d="M6 0H9V3H6V0Z" />
+                                <path d="M0 0H3V3H0V0Z" />
+                                <path d="M12 6H15V9H12V6Z" />
+                                <path d="M6 6H9V9H6V6Z" />
+                                <path d="M0 6H3V9H0V6Z" />
+                                <path d="M12 12H15V15H12V12Z" />
+                                <path d="M6 12H9V15H6V12Z" />
+                                <path d="M0 12H3V15H0V12Z" />
+                            </svg>
+                        </button>
+            
+                        <button class="icon-button list-view-btn pr-0">
+                            <svg width="19" height="15" viewBox="0 0 19 15">
+                                <path d="M0 0H19V3H0V0Z" />
+                                <path d="M0 6H19V9H0V6Z" />
+                                <path d="M0 12H19V15H0V12Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
 
             <div class="actions-sidebar d-none d-md-block h-100">
                 <div class="p-3 catalog__bg-white px-1 py-3 shadow-light margin-bottom">
@@ -304,123 +211,16 @@
                     </ul>
                 </div>
 
-
-                <!------ Accordion  -->
-
                 <div class="filter white-bg shadow-light">
-                    <ul class="accordion-list dark-gray">
-                        <li class="accordion-item">
-                            <input type="checkbox" class="accordion-item__input" checked>
-                            <i class="accordion-item__icon"></i>
-                            <h6 class="panel-title w-100">Цена
-                            </h6>
-                            <div class="accordion-item__content">
-                                <div class="mb-4 slider-wrapper">
-
-                                    <div class="price-range__value-low mr-3 price-value position-absolute">0</div>
-                                    <div class="price-range__value-up price-value position-absolute">33</div>
-
-                                    <div class="slider"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <div class="price-range__low w-100 mr-3 text-center price-value">от 6 000</div>
-                                    <div class="price-range__up w-100 text-center price-value">до 29 000</div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <input type="checkbox" class="accordion-item__input" checked>
-                            <i class="accordion-item__icon"></i>
-                            <h6 class="panel-title w-100 view-gray">Серия</h6>
-                            <div class="accordion-item__content">
-                                <label class="stillage-checkbox-container">Все
-                                    <input type="checkbox">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-
-                                <label class="stillage-checkbox-container">Только акции
-                                    <input type="checkbox" checked="checked">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-
-                                <label class="stillage-checkbox-container">Только новинки
-                                    <input type="checkbox" checked="checked">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <input type="checkbox" class="accordion-item__input" checked>
-                            <i class="accordion-item__icon"></i>
-                            <h6 class="panel-title w-100">Нагрузка на полку
-                            </h6>
-                            <div class="accordion-item__content">
-                                <label class="stillage-checkbox-container">Samsung
-                                    <input type="checkbox" checked="checked">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-                                <label class="stillage-checkbox-container">Apple
-                                    <input type="checkbox">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-                                <label class="stillage-checkbox-container">Xiaomi
-                                    <input type="checkbox">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <input type="checkbox" class="accordion-item__input" checked>
-                            <i class="accordion-item__icon"></i>
-                            <h6 class="panel-title w-100">Общая нагрузка
-                            </h6>
-                            <div class="accordion-item__content">
-                                <div class="d-flex">
-                                    <input type="number" class="w-100 mr-4">
-                                    <input type="number" class="w-100">
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <input type="checkbox" class="accordion-item__input" checked>
-                            <i class="accordion-item__icon"></i>
-                            <h6 class="panel-title w-100">Наличие на складе
-                            </h6>
-                            <div class="accordion-item__content">
-                                <label class="stillage-checkbox-container">Все
-                                    <input type="checkbox">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-
-                                <label class="stillage-checkbox-container">Только акции
-                                    <input type="checkbox" checked="checked">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-
-                                <label class="stillage-checkbox-container">Только новинки
-                                    <input type="checkbox" checked="checked">
-                                    <span class="stillage-checkmark"></span>
-                                </label>
-                            </div>
-                        </li>
-                    </ul>
+                    @@include('src\components\wardrobe-accordion-filters/wardrobe-accordion-filters.html')
 
                     <div class="w-100 mt-4 py-4">
                         <button class="filter-reset-btn icon-button float-right">
                             Сбросить
                         </button>
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <div class="row" id="actionTileViewMode">
 
@@ -604,8 +404,6 @@
                 </div>
             </div>
 
-
-
             <div class="row hidden" id="actionListViewMode">
                 <div class="col-12">
                     <div class="stillage-constructor margin-bottom d-none d-md-flex flex-column justify-content-end">
@@ -626,7 +424,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div class="col-12">
                     @@include('src/components/action-catalog/action-card-horizontal/action-card-horizontal.html', {

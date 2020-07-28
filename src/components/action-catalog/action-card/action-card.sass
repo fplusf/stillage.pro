@@ -28,14 +28,16 @@
             width: 90px
             height: 20px
             margin-bottom: 5px
-            // position: absolute
             transform: translateX(-20px)
 
         &__actions
             font-size: 17px
 
-    &__title a
-        color: $black
+    &__title
+        max-height: 70px
+        overflow: hidden
+        a
+            color: $black
 
     &__info
         +respond-to(tablet)

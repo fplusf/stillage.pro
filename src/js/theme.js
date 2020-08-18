@@ -58,7 +58,8 @@ const searchForm = document.getElementById('searchForm'),
     ////////// Checkout additional comment //////////
     additionalCommentText = document.querySelector('.addition-comment-box'),
     additionalCommentClean = document.querySelector('.addition-comment-close'),
-    discountModalBtn = document.querySelectorAll('.discount__btn');
+    discountModalBtn = document.querySelectorAll('.discount__btn'),
+    clientsLogos = document.querySelectorAll('.client-logo');
 
 /************  Gloabal Tab and Button state Switcher Class ********/
 class TabContentAccordion {
@@ -603,5 +604,27 @@ detailTFabButton.forEach((tab, index) => {
     tab.addEventListener('click', () => {
         productDetailAccordion.toggleButtonState(tab);
         productDetailAccordion.toggleSections(allDetailPageSections[index]);
+    });
+});
+
+/**
+ * @decription Change logo picture on hover 
+ *  Pictures name for hover should have '-hover' text.
+*/
+let oldPath;
+
+clientsLogos.forEach((logo) => {
+    logo.addEventListener('mouseover', () => {
+        oldPath = logo.getAttribute('src');
+
+        let oldPathName = logo.getAttribute('src').split(/[^.]+$/)[0];
+
+        let oldPathExt = logo.getAttribute('src').split('.').pop();
+
+        logo.setAttribute('src', `${oldPathName.substring(0, oldPathName.length - 1)}-hover.${oldPathExt}`);
+    });
+
+    logo.addEventListener('mouseout', () => {
+        logo.setAttribute('src', oldPath);
     });
 });

@@ -12,7 +12,7 @@
         box-shadow: $shadow
 
     .content
-        height: 85px
+        height: 75px
 
     .header
         margin-bottom: 5px
@@ -34,9 +34,12 @@
             font-size: 17px
 
     &__title
-        max-height: 70px
-        overflow: hidden
         a
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
             color: $black
 
     &__info
